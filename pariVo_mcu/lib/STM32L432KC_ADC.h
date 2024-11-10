@@ -47,12 +47,12 @@ void initADC(int resolution);
  * The pin associated with that channel must be manually set to ANALOG_IN mode
  * This only works for 1 ADC channel at a time
  */
-void initChannel(int channel);
+void initChannel(int channel1, int channel2, int channel3, int channel4);
 
 /* Reads a single value from the enabled ADC Channel
  * returns: channel voltage
  * Note: this function is blocking, it is recommended to use the ADC conversion complete interrupt
  */
-uint16_t readADC();
+uint16_t* readADC();
 
 #endif
