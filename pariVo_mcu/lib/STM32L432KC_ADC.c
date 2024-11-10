@@ -28,8 +28,8 @@ void initADC(int resolution) {
   while (x-- > 0)
     __asm("nop");
 
-  // Set sampling resolution
-  ADC1->CFGR |= resolution;
+  // Set sampling resolution to 8 bits
+  ADC1->CFGR |= _VAL2FLD(ADC_CFGR_RES, 0b10);
 
   // Set left bit alignment
   //ADC1->CFGR |= ADC_CFGR_ALIGN;
@@ -58,9 +58,7 @@ void initChannel(int channel1, int channel2, int channel3, int channel4) {
   ADC1->SQR1 |= channel4 << ADC_SQR1_SQ4_Pos; // fourth
 }
 
-uint16_t* readADC() {
-  // initialize ADC values
-    uint16_t convertedVals[4];
+void readADC(uint16_t* convertedVals) {
 
   // Start conversion
   ADC1->CR |= ADC_CR_ADSTART;
@@ -77,7 +75,6 @@ uint16_t* readADC() {
 
   // end of regular sequence flag
   while (!(ADC1->ISR & ADC_ISR_EOS));
-
-  // Return the ADC value
-  return convertedVals;
+  ADC1 -> ISR |= 1 << ADC_ISR_EOC_Pos;
+  
 }

@@ -26,6 +26,7 @@
 #include "lib/STM32L432KC_GPIO.h"
 #include "lib/STM32L432KC_RCC.h"
 #include "lib/STM32L432KC_USART.h"
+#include "lib/STM32L432KC_TIM.h"
 #include "main.h"
 
 
@@ -64,6 +65,13 @@ int main(void) {
   pinMode(ANALOG_IN3, GPIO_ANALOG);
   pinMode(ANALOG_IN4, GPIO_ANALOG);
 
+  // Load and done pins
+  pinMode(PA7, GPIO_OUTPUT);  // LOAD
+  pinMode(PA6, GPIO_INPUT);   // DONE
+
+  // Artificial chip select signal to allow 8-bit CE-based SPI decoding on the logic analyzers.
+  pinMode(chipEnable, GPIO_OUTPUT);
+  digitalWrite(chipEnable, 1);
 
   /// Setup GPIO ///
   // Enable Clock for GPIO Ports A, B, and C
@@ -78,12 +86,18 @@ int main(void) {
   // Set up SPI
   initSPI(1,0,0);
 
+  // Enable timer 2 for delay function
+  RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN; //enable tim2
+
+  // Initialize timer
+  initTIM(printTIM); // 1ms
+
 
   ////////////////////////////////////////////
   ////// CALL ADC for EQ Fiters  
   ////////////////////////////////////////////
   // Setup ADC
-  initADC(ADC_12BIT_RESOLUTION);
+  initADC(ADC_8BIT_RESOLUTION);
   initChannel(ANALOG_IN_ADC_CHANNEL1, ANALOG_IN_ADC_CHANNEL2, ANALOG_IN_ADC_CHANNEL3, ANALOG_IN_ADC_CHANNEL4);
   
 
@@ -97,15 +111,35 @@ int main(void) {
     // Artificial chip select signal to allow 8-bit CE-based SPI decoding on the logic analyzers.
     pinMode(chipEnable, GPIO_OUTPUT);
     digitalWrite(chipEnable, 1);
-    uint16_t convertedVals[4];
+    uint16_t convertedVals[4] = {0, 0, 0, 0};
+    int i;
 
   while(1) {
 
-  convertedVals = readADC();
-  printf("1st channel: %d", convertedVals[0]);
-  printf("2nd channel: %d", convertedVals[1]);
-  printf("3rd channel: %d", convertedVals[2]);
-  printf("4th channel: %d", convertedVals[3]);
+  readADC(convertedVals);
+  printf("1st channel: %d \n", convertedVals[0]);
+  printf("2nd channel: %d \n", convertedVals[1]);
+  printf("3rd channel: %d \n", convertedVals[2]);
+  printf("4th channel: %d \n", convertedVals[3]);
+
+  delay_millis(printTIM, 1000);
+
+  // Write LOAD high
+  digitalWrite(PA5, 1);
+
+    // Send the key
+  for(i = 0; i < 4; i++) {
+    digitalWrite(PA11, 1); // Arificial CE high
+    spiSendReceive((char)convertedVals[i]);
+    digitalWrite(PA11, 0); // Arificial CE low
+  }
+  
+  while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
+  digitalWrite(PA5, 0); // Write LOAD low
+
+  // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
+  while(!digitalRead(PA6));
+
   }
 
 

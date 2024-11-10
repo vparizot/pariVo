@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "../lib/STM32L432KC.h"
+#include "lib/STM32L432KC.h"
 
 // constants 
 #define MCK_FREQ 100000
@@ -16,7 +16,11 @@
 #define ANALOG_IN_ADC_CHANNEL3 ADC_PA2
 #define ANALOG_IN_ADC_CHANNEL4 ADC_PA3
 
+#define printTIM TIM2
+
 
 
 // SPI Communication Pins
-#define FPGA_RESET PA11
+//#define FPGA_RESET PA11
+
+#endif

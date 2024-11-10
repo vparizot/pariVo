@@ -53,6 +53,6 @@ void initChannel(int channel1, int channel2, int channel3, int channel4);
  * returns: channel voltage
  * Note: this function is blocking, it is recommended to use the ADC conversion complete interrupt
  */
-uint16_t* readADC();
+void readADC(uint16_t* convertedVals);
 
 #endif
