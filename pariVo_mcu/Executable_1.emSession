@@ -35,6 +35,9 @@
  <Watch4>
   <Watches active="0" update="Never"/>
  </Watch4>
- <Files/>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="47" y="136" useTextEdit="1" path="main.c" left="0" selected="1" top="100" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="main.h" left="0" top="0" codecName="Default"/>
+ </Files>
  <EMStudioWindow activeProject="Executable_1" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/vparizot/E155/lab4_mvp/lib" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

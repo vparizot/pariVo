@@ -66,7 +66,7 @@ int main(void) {
   pinMode(ANALOG_IN4, GPIO_ANALOG);
 
   // Load and done pins
-  pinMode(PA7, GPIO_OUTPUT);  // LOAD
+  pinMode(PA9, GPIO_OUTPUT);  // LOAD
   pinMode(PA6, GPIO_INPUT);   // DONE
 
   // Artificial chip select signal to allow 8-bit CE-based SPI decoding on the logic analyzers.
@@ -125,7 +125,7 @@ int main(void) {
   delay_millis(printTIM, 1000);
 
   // Write LOAD high
-  digitalWrite(PA5, 1);
+  digitalWrite(PA9, 1);
 
     // Send the key
   for(i = 0; i < 4; i++) {
@@ -135,7 +135,7 @@ int main(void) {
   }
   
   while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
-  digitalWrite(PA5, 0); // Write LOAD low
+  digitalWrite(PA9, 0); // Write LOAD low
 
   // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
   while(!digitalRead(PA6));
