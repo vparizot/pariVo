@@ -5,7 +5,7 @@
 
 // constants 
 #define MCK_FREQ 100000
-#define chipEnable PA11
+//#define chipEnable PA11
 #define ANALOG_IN1 PA0
 #define ANALOG_IN2 PA1
 #define ANALOG_IN3 PA2

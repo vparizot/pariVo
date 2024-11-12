@@ -15,7 +15,7 @@ module spi_tb();
     logic delay;
     
     // device under test
-    eq_spi dut(sck, sdi, sdo, done, nonsense, eqVals)
+    eq_spi dut(sck, sdi, sdo, done, eqVals, nonsense)
     
     // test case
     initial begin   
@@ -47,30 +47,21 @@ module spi_tb();
     end
 
     
-	assign comb = {plaintext, key};
+
     // shift in test vectors, wait until done, and shift out result
     always @(posedge clk) begin
-      if (i == 256) load = 1'b0;
-      if (i<256) begin
-        #1; sdi = comb[255-i];
+      if (i == 32) load = 1'b0;
+      if (i<32) begin
+        #1; sdi = eqVals[31-i];
         #1; sck = 1; #5; sck = 0;
         i = i + 1;
       end else if (done && delay) begin
         #100; // Delay to make sure that the answer is held correctly on the cyphertext before shifting out
         delay = 0;
-      end else if (done && i < 384) begin
-        #1; sck = 1; 
-        #1; cyphertext[383-i] = sdo;
-        #4; sck = 0;
-        i = i + 1;
-      end else if (i == 384) begin
-            if (cyphertext == expected)
-                $display("Testbench ran successfully");
-            else $display("Error: cyphertext = %h, expected %h",
-                cyphertext, expected);
+      end 
             $stop();
       
-      end
+      
     end
     
 endmodule

@@ -12,6 +12,7 @@
   <ProjectSessionItem path="Executable_1"/>
   <ProjectSessionItem path="Executable_1;Executable_1"/>
   <ProjectSessionItem path="Executable_1;Executable_1;Source Files"/>
+  <ProjectSessionItem path="Executable_1;Executable_1;Source Files;lib"/>
  </Project>
  <Register1/>
  <Register2/>
@@ -36,8 +37,15 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="47" y="136" useTextEdit="1" path="main.c" left="0" selected="1" top="100" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="main.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="21" y="55" useTextEdit="1" path="main.c" left="0" selected="1" top="42" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="7" useTextEdit="1" path="main.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_ADC.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="10" useTextEdit="1" path="lib/STM32L432KC_SPI.h" left="0" top="3" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="43" y="21" useTextEdit="1" path="lib/STM32L432KC_SPI.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_TIM.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_USART.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="41" y="71" useTextEdit="1" path="lib/STM32L432KC_ADC.c" left="0" top="33" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="49" y="8" useTextEdit="1" path="lib/STM32L432KC_TIM.c" left="0" top="0" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="Executable_1" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/vparizot/E155/lab4_mvp/lib" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <EMStudioWindow activeProject="Executable_1" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/vparizot/E155/lab4_mvp/lib" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

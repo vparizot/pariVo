@@ -52,8 +52,8 @@ int _write(int file, char *ptr, int len) {
 
 int main(void) {
    // Configure flash and PLL at 80 MHz
-  configureFlash();
-  configureClock();
+  //configureFlash();
+  //configureClock();
 
   // Enable interrupts
   RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
@@ -70,8 +70,8 @@ int main(void) {
   pinMode(PA6, GPIO_INPUT);   // DONE
 
   // Artificial chip select signal to allow 8-bit CE-based SPI decoding on the logic analyzers.
-  pinMode(chipEnable, GPIO_OUTPUT);
-  digitalWrite(chipEnable, 1);
+  
+  //digitalWrite(SPI_CE, 1);
 
   /// Setup GPIO ///
   // Enable Clock for GPIO Ports A, B, and C
@@ -109,10 +109,31 @@ int main(void) {
   ////////////////////////////////////////////
 
     // Artificial chip select signal to allow 8-bit CE-based SPI decoding on the logic analyzers.
-    pinMode(chipEnable, GPIO_OUTPUT);
-    digitalWrite(chipEnable, 1);
+    pinMode(SPI_CE, GPIO_OUTPUT);
+    digitalWrite(SPI_CE, 1);
     uint16_t convertedVals[4] = {0, 0, 0, 0};
     int i;
+
+
+      // Write LOAD high
+  digitalWrite(PA9, 1);
+  
+  convertedVals[0] = (uint16_t) 0x0012;
+  convertedVals[1] = (uint16_t) 0x0034;
+  convertedVals[2] = (uint16_t) 0x0056;
+  convertedVals[3] = (uint16_t) 0x0078;
+    // Send the key
+  for(i = 0; i < 4; i++) {
+    digitalWrite(SPI_CE, 1); // Arificial CE high
+    spiSendReceive((char)convertedVals[i]);
+    digitalWrite(SPI_CE, 0); // Arificial CE low
+  }
+  
+  while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
+  digitalWrite(PA9, 0); // Write LOAD low
+
+  // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
+  while(!digitalRead(PA6));
 
   while(1) {
 
@@ -123,10 +144,14 @@ int main(void) {
   printf("4th channel: %d \n", convertedVals[3]);
 
   delay_millis(printTIM, 1000);
-
+/*
   // Write LOAD high
   digitalWrite(PA9, 1);
-
+  
+  convertedVals[0] = (uint16_t) 0x0012;
+  convertedVals[1] = (uint16_t) 0x0034;
+  convertedVals[2] = (uint16_t) 0x0056;
+  convertedVals[3] = (uint16_t) 0x0078;
     // Send the key
   for(i = 0; i < 4; i++) {
     digitalWrite(PA11, 1); // Arificial CE high
@@ -138,9 +163,11 @@ int main(void) {
   digitalWrite(PA9, 0); // Write LOAD low
 
   // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
-  while(!digitalRead(PA6));
+  while(!digitalRead(PA6)); */
 
   }
+
+
 
 
   ////////////////////////////////////////////

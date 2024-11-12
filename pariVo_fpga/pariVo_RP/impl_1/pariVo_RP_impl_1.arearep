@@ -1,0 +1,32 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  31 of 5280 (0.587%)
+I/O cells:      5
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        31          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         2          100.0
+                              IOL_B         2          100.0
+                               LUT4        11          100.0
+                                 OB         3          100.0
+SUB MODULES
+                             eq_spi         1
+                      hardware_test         1
+                              TOTAL        52
+----------------------------------------------------------------------
+Report for cell eq_spi.v1
+Instance Path : spi
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        31          100.0
+                              IOL_B         1           50.0
+                              TOTAL        32
+----------------------------------------------------------------------
+Report for cell hardware_test.v1
+Instance Path : ht
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              IOL_B         1           50.0
+                               LUT4        11          100.0
+                              TOTAL        12
