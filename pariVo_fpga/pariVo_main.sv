@@ -16,12 +16,12 @@
            //output logic sdo,
            //input  logic load,
 		   //input  logic ce,
-           //output logic done, 
 		   //output logic ledTest1,
 		   //output logic ledTest2,
 		   //output logic ledTest3);
              
     //logic [31:0] eqVals;
+	//logic done;
     //logic clk;
     //HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 	
@@ -79,6 +79,7 @@ module eq_spi(input logic reset,
 			shiftCount <= 0;
 		end
 		else if (ce) begin
+			// shift for 32 sclks to eqVals
 			eqVals <= {eqVals[30:0], sdi};
 			shiftCount <= nextShiftCount;
 			// test LEDs

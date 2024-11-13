@@ -132,7 +132,7 @@ int main(void) {
   while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
   digitalWrite(PA9, 0); // Write LOAD low
 
-
+/*
   while(1) {
   
   readADC(convertedVals);
@@ -164,6 +164,7 @@ int main(void) {
   while(!digitalRead(PA6)); 
 
   }
+  */
 
 
 
