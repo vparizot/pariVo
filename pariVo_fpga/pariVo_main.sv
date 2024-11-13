@@ -15,16 +15,19 @@ module top(input logic reset,
            input  logic sdi,
            output logic sdo,
            input  logic load,
+		   input  logic ce,
            output logic done, 
-		   output logic ledTest);
+		   output logic ledTest1,
+		   output logic ledTest2,
+		   output logic ledTest3);
              
     logic [31:0] nonsense, eqVals;
     logic clk;
     HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
             
-    eq_spi spi(reset, sck, sdi, sdo, done, load, eqVals, nonsense);   
+    eq_spi spi(reset, sck, sdi, sdo, done, ce, eqVals, nonsense, ledTest1, ledTest2, ledTest3);   
 	
-	hardware_test ht(clk, eqVals, ledTest);
+	//hardware_test ht(clk, eqVals, ledTest);
    
 endmodule
 
@@ -38,13 +41,16 @@ module eq_spi(input logic reset,
 			   input  logic sck, 
                input  logic sdi,
                output logic sdo,
-               input  logic done,
-			   input logic load,
+               output  logic done,
+			   input logic ce,
                output logic [31:0] eqVals,
-               input  logic [31:0] nonsense);
-/*
-    logic         sdodelayed, wasdone;
-    logic [31:0] nonsenseCaptured;
+               input  logic [31:0] nonsense,
+			   output logic ledTest1,
+			   output logic ledTest2,
+			   output logic ledTest3);
+
+    //logic         sdodelayed, wasdone;
+    //logic [31:0] nonsenseCaptured;
                
     // assert load
     // apply 32 sclks to shift in nonsense, starting with eqVals[31]
@@ -52,8 +58,11 @@ module eq_spi(input logic reset,
     // then apply 32 sclks to shift out eqVals, starting with nonsense[31]
     // SPI mode is equivalent to cpol = 0, cpha = 0 since data is sampled on first edge and the first
     // edge is a rising edge (clock going from low in the idle state to high).
-    always_ff @(posedge sck)
-        if (!wasdone)  {nonsenseCaptured, eqVals} = {nonsense, eqVals[30:0], sdi};
+   /* always_ff @(posedge sck)
+        if (!wasdone)  begin {nonsenseCaptured, eqVals} = {nonsense, eqVals[30:0], sdi};
+							if(eqVals[0]) ledTest <= 1;
+								else ledTest <= 0;
+						end
         else           {nonsenseCaptured, eqVals} = {nonsense[30:0], eqVals, sdi}; 
     
     // sdo should change on the negative edge of sck
@@ -64,8 +73,9 @@ module eq_spi(input logic reset,
     
     // when done is first asserted, shift out msb before clock edge
     assign sdo = (done & !wasdone) ? eqVals[31] : sdodelayed;
+	
+	assign sdo = 0;
     
-	assign sdo = 0; 
 	*/
 	logic [3:0] shiftCount, nextShiftCount;
 	
@@ -74,14 +84,17 @@ module eq_spi(input logic reset,
 			eqVals <= 0;
 			shiftCount <= 0;
 		end
-		else if (load) begin
+		else if (ce) begin
 			eqVals <= {eqVals[30:0], sdi};
 			shiftCount <= nextShiftCount;
+			ledTest1 <= eqVals[0];
+			ledTest2 <= eqVals[1];
+			ledTest3 <= eqVals[2];
 		end
 	end
 	
 	always_comb
 		if (shiftCount == 32) nextShiftCount = 0;
 		else nextShiftCount = shiftCount + 1;
-	assign done = ~load;
+	assign done = ~ce; 
 endmodule

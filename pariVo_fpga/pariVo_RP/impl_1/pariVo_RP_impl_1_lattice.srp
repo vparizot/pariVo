@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Nov 11 20:43:57 2024
+Tue Nov 12 16:35:30 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f pariVo_RP_impl_1_lattice.synproj -logfile pariVo_RP_impl_1_lattice.srp -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml 
@@ -135,9 +135,9 @@ Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(13): compiling module top. VERI-1018
 INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(36): compiling module eq_spi. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv(1): compiling module hardware_test. VERI-1018
-WARNING <35931002> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(20): net nonsense[31] does not have a driver. VDB-1002
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(40): compiling module eq_spi. VERI-1018
+WARNING <35901209> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(98): expression size 32 truncated to fit in target size 4. VERI-1209
+WARNING <35931002> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(24): net nonsense[31] does not have a driver. VDB-1002
                                                          
 
 
@@ -162,9 +162,10 @@ WARNING <35931002> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo
                                                          
 
 
+WARNING <35935047> - synthesis: Unused instance hf_osc is removed. VDB-5047
+CRITICAL <35002028> - synthesis: I/O Port sdo 's net has no driver and is unused.
 CRITICAL <35002028> - synthesis: I/O Port load 's net has no driver and is unused.
-CRITICAL <35002028> - synthesis: I/O Port done 's net has no driver and is unused.
-######## Missing driver on net done. Patching with GND.
+######## Missing driver on net sdo. Patching with GND.
 
 
 
@@ -172,36 +173,34 @@ CRITICAL <35002028> - synthesis: I/O Port load 's net has no driver and is unuse
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 31 of 5280 (0 % )
-FD1P3XZ => 31
-HSOSC_CORE => 1
-IB => 2
-IOL_B => 2
-LUT4 => 11
-OB => 3
+Number of register bits => 3 of 5280 (0 % )
+FD1P3XZ => 3
+IB => 4
+IOL_B => 3
+LUT4 => 2
+OB => 5
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
 Number of even-length carry chains : 0
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
+Number of Clocks: 1
   Net : sck_c, loads : 0
-  Net : clk, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
+  Net : ce_c, loads : 5
+  Net : reset_c, loads : 4
+  Net : spi/sck_c_enable_3, loads : 3
+  Net : spi/eqVals[0], loads : 2
+  Net : spi/eqVals[1], loads : 2
   Net : sdi_c, loads : 1
-  Net : spi/eqVals[30], loads : 1
-  Net : spi/eqVals[29], loads : 1
-  Net : spi/eqVals[28], loads : 1
-  Net : spi/eqVals[27], loads : 1
-  Net : spi/eqVals[26], loads : 1
-  Net : spi/eqVals[25], loads : 1
-  Net : spi/eqVals[24], loads : 1
-  Net : spi/eqVals[23], loads : 1
-  Net : spi/eqVals[22], loads : 1
+  Net : spi/eqVals[2], loads : 1
+  Net : spi/ce_c_N_4, loads : 0
+  Net : spi/ledTest1_c, loads : 0
+  Net : spi/ledTest2_c, loads : 0
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -214,10 +213,10 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 85 MB
+Peak Memory Usage: 84 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
+Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: a56802da45cceceed1299646ac0b97c4199b64eb
+Checksum -- synthesis -- netlist: 33cf5716ffa982e580a483d5e4829681373aa55

@@ -84,7 +84,7 @@ int main(void) {
   RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOAEN | RCC_AHB2ENR_GPIOBEN | RCC_AHB2ENR_GPIOCEN);
 
   // Set up SPI
-  initSPI(1,0,0);
+  initSPI(7,0,0);
 
   // Enable timer 2 for delay function
   RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN; //enable tim2
@@ -144,7 +144,7 @@ int main(void) {
   printf("4th channel: %d \n", convertedVals[3]);
 
   delay_millis(printTIM, 1000);
-/*
+
   // Write LOAD high
   digitalWrite(PA9, 1);
   
@@ -163,7 +163,7 @@ int main(void) {
   digitalWrite(PA9, 0); // Write LOAD low
 
   // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
-  while(!digitalRead(PA6)); */
+  while(!digitalRead(PA6)); 
 
   }
 

@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.1.0.34.2
 
-Mon Nov 11 20:44:10 2024
+Tue Nov 12 16:39:28 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -48,7 +48,6 @@ Package Status:                     Preliminary    Version 1.5
 
 1.1  SDC Constraints
 =====================
-create_clock -name {clk} -period 20.8333 [get_pins {hf_osc/CLKHF }] 
 
 1.2  Constraint Coverage
 ---------------------------
@@ -67,28 +66,14 @@ Constraint Coverage: 0%
 --------------------------------------
 
 Clocked but unconstrained timing start points
--------------------------------------------------------------------
-         Listing 1 Start Points         |           Type           
--------------------------------------------------------------------
-ht/ledTest/PADDO                        |          No required time
--------------------------------------------------------------------
-                                        |                          
-Number of unconstrained timing start po |                          
-ints                                    |                         1
-                                        |                          
--------------------------------------------------------------------
+--------------------------------------------------
+There is no start point satisfying reporting criteria
+
 
 Clocked but unconstrained timing end points
--------------------------------------------------------------------
-          Listing 1 End Points          |           Type           
--------------------------------------------------------------------
-ht/ledTest/DO0                          |           No arrival time
--------------------------------------------------------------------
-                                        |                          
-Number of unconstrained timing end poin |                          
-ts                                      |                         1
-                                        |                          
--------------------------------------------------------------------
+--------------------------------------------------
+There is no end point satisfying reporting criteria
+
 
 1.4.2  Start/End Points Without Timing Constraints
 ---------------------------------------------------
@@ -104,15 +89,20 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 4 Start or End Points      |           Type           
+     Listing 9 Start or End Points      |           Type           
 -------------------------------------------------------------------
+reset                                   |                     input
 sck                                     |                     input
 sdi                                     |                     input
+ce                                      |                     input
 load                                    |                     input
-ledTest                                 |                    output
+done                                    |                    output
+ledTest2                                |                    output
+ledTest1                                |                    output
+ledTest3                                |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         4
+Number of I/O ports without constraint  |                         9
                                         |                          
 -------------------------------------------------------------------
 
@@ -140,21 +130,6 @@ None
 
 2.1  Clock Summary
 =======================
-
-2.1.1 Clock "clk"
-=======================
-create_clock -name {clk} -period 20.8333 [get_pins {hf_osc/CLKHF }] 
-
-Single Clock Domain
--------------------------------------------------------------------------------------------------------
-               Clock clk                |                    |       Period       |     Frequency      
--------------------------------------------------------------------------------------------------------
- From clk                               |             Target |          20.833 ns |         48.000 MHz 
-                                        | Actual (all paths) |          20.792 ns |         48.095 MHz 
-hf_osc/CLKHF (MPW)                      |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
--------------------------------------------------------------------------------------------------------
-
-Clock Domain Crossing
 
 2.2  Endpoint slacks
 =======================
