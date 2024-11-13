@@ -84,7 +84,7 @@ int main(void) {
   RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOAEN | RCC_AHB2ENR_GPIOBEN | RCC_AHB2ENR_GPIOCEN);
 
   // Set up SPI
-  initSPI(7,0,0);
+  initSPI(1,0,0);
 
   // Enable timer 2 for delay function
   RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN; //enable tim2
@@ -122,7 +122,7 @@ int main(void) {
   convertedVals[1] = (uint16_t) 0x0034;
   convertedVals[2] = (uint16_t) 0x0056;
   convertedVals[3] = (uint16_t) 0x0078;
-    // Send the key
+  // Send the key
   for(i = 0; i < 4; i++) {
     digitalWrite(SPI_CE, 1); // Arificial CE high
     spiSendReceive((char)convertedVals[i]);
@@ -132,11 +132,9 @@ int main(void) {
   while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
   digitalWrite(PA9, 0); // Write LOAD low
 
-  // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
-  while(!digitalRead(PA6));
 
   while(1) {
-
+  
   readADC(convertedVals);
   printf("1st channel: %d \n", convertedVals[0]);
   printf("2nd channel: %d \n", convertedVals[1]);
@@ -154,9 +152,9 @@ int main(void) {
   convertedVals[3] = (uint16_t) 0x0078;
     // Send the key
   for(i = 0; i < 4; i++) {
-    digitalWrite(PA11, 1); // Arificial CE high
+    digitalWrite(SPI_CE, 1); // Arificial CE high
     spiSendReceive((char)convertedVals[i]);
-    digitalWrite(PA11, 0); // Arificial CE low
+    digitalWrite(SPI_CE, 0); // Arificial CE low
   }
   
   while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed

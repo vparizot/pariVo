@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Tue Nov 12 16:39:22 2024
+Mapped on: Tue Nov 12 19:27:03 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -91,21 +91,21 @@ Command line:   map -pdc
    Number of Clocks:  1
       Net sck_c: 6 loads, 6 rising, 0 falling (Driver: Port sck)
    Number of Clock Enables:  2
-      Net spi.sck_c_enable_3: 3 loads, 0 SLICEs
+      Net eqspi.sck_c_enable_3: 3 loads, 0 SLICEs
       Pin ce: 3 loads, 3 SLICEs (Net: ce_c)
    Number of LSRs:  1
       Pin reset: 3 loads, 3 SLICEs (Net: reset_c)
    Top 10 highest fanout non-clock nets:
       Net ce_c: 5 loads
       Net reset_c: 4 loads
-      Net spi.sck_c_enable_3: 3 loads
-      Net spi.eqVals[0]: 2 loads
-      Net spi.eqVals[1]: 2 loads
+      Net eqspi.sck_c_enable_3: 3 loads
+      Net eqspi.eqVals[0]: 2 loads
+      Net eqspi.eqVals[1]: 2 loads
       Net ce_c_N_4: 1 loads
+      Net eqspi.eqVals[2]: 1 loads
       Net ledTest1_c: 1 loads
       Net ledTest2_c: 1 loads
       Net sdi_c: 1 loads
-      Net spi.eqVals[2]: 1 loads
 
    Number of warnings:  2
    Number of criticals: 0
@@ -147,16 +147,16 @@ Block done_pad.vhi_inst was optimized away.
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
-Instance Name: spi/ledTest1
+Instance Name: eqspi/ledTest1
          Type: IOLOGIC
-Instance Name: spi/ledTest2
+Instance Name: eqspi/ledTest2
          Type: IOLOGIC
-Instance Name: spi/ledTest3
+Instance Name: eqspi/ledTest3
          Type: IOLOGIC
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 
-   Total number of constraints: 8
+   Total number of constraints: 9
    Total number of constraints dropped: 0
 
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
@@ -164,7 +164,7 @@ Instance Name: spi/ledTest3
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 63 MB
-Checksum -- map: 4de6d81a662143085ea8591751b99b7b9d7620d
+Checksum -- map: d96aef4f316a0439e4311c2784a4c71374172d14
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

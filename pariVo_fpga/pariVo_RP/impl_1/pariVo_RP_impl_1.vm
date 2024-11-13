@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.1.0.34.2
-// Netlist written on Tue Nov 12 16:35:31 2024
+// Netlist written on Tue Nov 12 19:26:59 2024
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv"
@@ -79,8 +79,8 @@ module top (input reset, input sck, input sdi, output sdo, input load,
     (* lineinfo="@1(14[19],14[22])" *) IB sck_pad (.I(sck), .O(sck_c));
     (* lineinfo="@1(15[25],15[28])" *) IB sdi_pad (.I(sdi), .O(sdi_c));
     (* lineinfo="@1(18[19],18[21])" *) IB ce_pad (.I(ce), .O(ce_c));
-    (* lineinfo="@1(28[12],28[95])" *) eq_spi spi (ledTest3_c, sck_c, ledTest1_c, 
-            ledTest2_c, sdi_c, ce_c, reset_c, ce_c_N_4);
+    (* lineinfo="@1(28[12],28[82])" *) eq_spi eqspi (ledTest3_c, sck_c, 
+            ledTest1_c, ledTest2_c, sdi_c, ce_c, reset_c, ce_c_N_4);
     VLO i1 (.Z(GND_net));
     
 endmodule
@@ -93,39 +93,39 @@ module eq_spi (output ledTest3_c, input sck_c, output ledTest1_c, output ledTest
             input sdi_c, input ce_c, input reset_c, output ce_c_N_4);
     
     (* is_clock=1, SET_AS_NETWORK="sck_c", lineinfo="@1(14[19],14[22])" *) wire sck_c;
-    (* lineinfo="@1(46[36],46[42])" *) wire [31:0]eqVals;
+    (* lineinfo="@1(45[36],45[42])" *) wire [31:0]eqVals;
     
     wire sck_c_enable_3, GND_net;
     
-    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=95, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(83[3],93[6])" *) IOL_B ledTest1 (.PADDI(GND_net), 
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=82, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(54[3],65[6])" *) IOL_B ledTest1 (.PADDI(GND_net), 
             .DO1(GND_net), .DO0(eqVals[0]), .CE(sck_c_enable_3), .IOLTO(GND_net), 
             .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(sck_c), .PADDO(ledTest1_c));
     defparam ledTest1.LATCHIN = "LATCH_REG";
     defparam ledTest1.DDROUT = "NO";
-    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=95, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(83[3],93[6])" *) IOL_B ledTest2 (.PADDI(GND_net), 
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=82, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(54[3],65[6])" *) IOL_B ledTest2 (.PADDI(GND_net), 
             .DO1(GND_net), .DO0(eqVals[1]), .CE(sck_c_enable_3), .IOLTO(GND_net), 
             .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(sck_c), .PADDO(ledTest2_c));
     defparam ledTest2.LATCHIN = "LATCH_REG";
     defparam ledTest2.DDROUT = "NO";
-    (* lineinfo="@1(83[3],93[6])" *) FD1P3XZ eqVals__0__i1 (.D(sdi_c), .SP(ce_c), 
+    (* lineinfo="@1(54[3],65[6])" *) FD1P3XZ eqVals__0__i1 (.D(sdi_c), .SP(ce_c), 
             .CK(sck_c), .SR(reset_c), .Q(eqVals[0]));
     defparam eqVals__0__i1.REGSET = "RESET";
     defparam eqVals__0__i1.SRMODE = "ASYNC";
-    (* lineinfo="@1(83[3],93[6])" *) FD1P3XZ eqVals__0__i3 (.D(eqVals[1]), 
+    (* lineinfo="@1(54[3],65[6])" *) FD1P3XZ eqVals__0__i3 (.D(eqVals[1]), 
             .SP(ce_c), .CK(sck_c), .SR(reset_c), .Q(eqVals[2]));
     defparam eqVals__0__i3.REGSET = "RESET";
     defparam eqVals__0__i3.SRMODE = "ASYNC";
-    (* lineinfo="@1(83[3],93[6])" *) FD1P3XZ eqVals__0__i2 (.D(eqVals[0]), 
+    (* lineinfo="@1(54[3],65[6])" *) FD1P3XZ eqVals__0__i2 (.D(eqVals[0]), 
             .SP(ce_c), .CK(sck_c), .SR(reset_c), .Q(eqVals[1]));
     defparam eqVals__0__i2.REGSET = "RESET";
     defparam eqVals__0__i2.SRMODE = "ASYNC";
-    (* lut_function="(!(A))", lineinfo="@1(99[16],99[19])" *) LUT4 ce_c_I_0_1_lut (.A(ce_c), 
+    (* lut_function="(!(A))", lineinfo="@1(72[16],72[19])" *) LUT4 ce_c_I_0_1_lut (.A(ce_c), 
             .Z(ce_c_N_4));
     defparam ce_c_I_0_1_lut.INIT = "0x5555";
-    (* lut_function="(!((B)+!A))", lineinfo="@1(83[3],93[6])" *) LUT4 i25_2_lut (.A(ce_c), 
+    (* lut_function="(!((B)+!A))", lineinfo="@1(54[3],65[6])" *) LUT4 i25_2_lut (.A(ce_c), 
             .B(reset_c), .Z(sck_c_enable_3));
     defparam i25_2_lut.INIT = "0x2222";
-    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=95, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(83[3],93[6])" *) IOL_B ledTest3 (.PADDI(GND_net), 
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=82, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(54[3],65[6])" *) IOL_B ledTest3 (.PADDI(GND_net), 
             .DO1(GND_net), .DO0(eqVals[2]), .CE(sck_c_enable_3), .IOLTO(GND_net), 
             .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(sck_c), .PADDO(ledTest3_c));
     defparam ledTest3.LATCHIN = "LATCH_REG";

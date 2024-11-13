@@ -14,7 +14,7 @@ SUB MODULES
                               TOTAL        18
 ----------------------------------------------------------------------
 Report for cell eq_spi.v1
-Instance Path : spi
+Instance Path : eqspi
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1P3XZ         3          100.0

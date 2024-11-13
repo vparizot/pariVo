@@ -25,7 +25,7 @@ void initSPI(int br, int cpol, int cpha) {
     pinMode(SPI_CE, GPIO_OUTPUT); //  Manual CS
 
     // Set output speed type to slow for SCK
-    GPIOB->OSPEEDR |= (GPIO_OSPEEDR_OSPEED1);
+    GPIOB->OSPEEDR |= (GPIO_OSPEEDR_OSPEED3);
 
     // Set to AF05 for SPI alternate functions
     GPIOB->AFR[0] |= _VAL2FLD(GPIO_AFRL_AFSEL3, 5);

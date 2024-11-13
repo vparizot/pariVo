@@ -14,7 +14,7 @@ SUB MODULES
                                 eq_spi	          1        33.3
 ---------------------------------------------------
 Report for cell eq_spi
-   Instance path: top/spi
+   Instance path: top/eqspi
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       3.00        100.0

@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="Map">
+    <Task name="Export">
         <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>load</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>load</Dynamic>
-        </Message>
-    </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>load</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>load</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>load</Dynamic>
-        </Message>
-        <Message>
-            <ID>71003020</ID>
-            <Severity>16</Severity>
-            <Dynamic>load</Dynamic>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
         </Message>
     </Task>
     <Task name="Synthesis">
@@ -399,19 +372,11 @@
         <Message>
             <ID>35901209</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(98): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(71): </Dynamic>
             <Dynamic>32</Dynamic>
-            <Dynamic>4</Dynamic>
+            <Dynamic>6</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>98</Navigation>
-        </Message>
-        <Message>
-            <ID>35931002</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(24): </Dynamic>
-            <Dynamic>nonsense[31]</Dynamic>
-            <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>24</Navigation>
+            <Navigation>71</Navigation>
         </Message>
         <Message>
             <ID>35935047</ID>
@@ -438,11 +403,38 @@
             <Severity>1</Severity>
         </Message>
     </Task>
-    <Task name="Export">
+    <Task name="PAR">
         <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>load</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>load</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>load</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>load</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>load</Dynamic>
+        </Message>
+        <Message>
+            <ID>71003020</ID>
+            <Severity>16</Severity>
+            <Dynamic>load</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>
