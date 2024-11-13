@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.1.0.34.2
 
-Tue Nov 12 19:27:09 2024
+Tue Nov 12 22:10:25 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -89,20 +89,17 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 9 Start or End Points      |           Type           
+     Listing 6 Start or End Points      |           Type           
 -------------------------------------------------------------------
-reset                                   |                     input
-sck                                     |                     input
-sdi                                     |                     input
-ce                                      |                     input
-load                                    |                     input
-done                                    |                    output
-ledTest2                                |                    output
-ledTest1                                |                    output
-ledTest3                                |                    output
+clk                                     |                     input
+nreset                                  |                     input
+din                                     |                     input
+bck                                     |                    output
+lrck                                    |                    output
+scki                                    |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         9
+Number of I/O ports without constraint  |                         6
                                         |                          
 -------------------------------------------------------------------
 
@@ -111,7 +108,7 @@ Define a clock on a top level port or a generated clock on a clock divider pin a
 -------------------------------------------------------------------
             Listing 1 Net(s)            |        Source pin        
 -------------------------------------------------------------------
-sck_c                                   |         sck_pad.bb_inst/O
+scki_c_c                                |      scki_c_pad.bb_inst/O
 -------------------------------------------------------------------
                                         |                          
 Number of clock nets without clock defi |                          

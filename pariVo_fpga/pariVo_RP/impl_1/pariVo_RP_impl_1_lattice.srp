@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Nov 12 19:26:57 2024
+Tue Nov 12 22:10:12 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f pariVo_RP_impl_1_lattice.synproj -logfile pariVo_RP_impl_1_lattice.srp -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml 
@@ -74,6 +74,7 @@ Mixed language design
 Verilog design file = C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.v
 Verilog design file = C:/Users/vparizot/E155/pariVo/pariVo_fpga/hardware_test.sv
 Verilog design file = C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv
+Verilog design file = C:/Users/vparizot/E155/pariVo/pariVo_fpga/i2s.sv
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -126,6 +127,7 @@ INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq_be.v(45): 
 INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2024.1/ip/pmi/pmi_dsp.v. VERI-1328
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv. VERI-1482
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv. VERI-1482
+Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd
 
@@ -133,10 +135,8 @@ INFO <35921014> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd(4): a
 INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(13): compiling module top. VERI-1018
-INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(40): compiling module eq_spi. VERI-1018
-WARNING <35901209> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(71): expression size 32 truncated to fit in target size 6. VERI-1209
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(36): compiling module top. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv(134): compiling module i2s. VERI-1018
                                                          
 
 
@@ -161,45 +161,40 @@ WARNING <35901209> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo
                                                          
 
 
-WARNING <35935047> - synthesis: Unused instance hf_osc is removed. VDB-5047
-CRITICAL <35002028> - synthesis: I/O Port sdo 's net has no driver and is unused.
-CRITICAL <35002028> - synthesis: I/O Port load 's net has no driver and is unused.
-######## Missing driver on net sdo. Patching with GND.
 
 
 
-CRITICAL <35002028> - synthesis: I/O Port load 's net has no driver and is unused.
-INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
+CRITICAL <35002028> - synthesis: I/O Port din 's net has no driver and is unused.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 3 of 5280 (0 % )
-FD1P3XZ => 3
-IB => 4
-IOL_B => 3
-LUT4 => 2
-OB => 5
+Number of register bits => 8 of 5280 (0 % )
+CCU2 => 5
+FD1P3XZ => 8
+IB => 2
+LUT4 => 1
+OB => 3
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 0
+Number of even-length carry chains : 1
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : sck_c, loads : 0
+  Net : scki_c_c, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : ce_c, loads : 5
-  Net : reset_c, loads : 4
-  Net : eqspi/sck_c_enable_3, loads : 3
-  Net : eqspi/eqVals[0], loads : 2
-  Net : eqspi/eqVals[1], loads : 2
-  Net : sdi_c, loads : 1
-  Net : eqspi/eqVals[2], loads : 1
-  Net : eqspi/ce_c_N_4, loads : 0
-  Net : eqspi/ledTest1_c, loads : 0
-  Net : eqspi/ledTest2_c, loads : 0
+  Net : n64, loads : 8
+  Net : pcm_in/n72, loads : 2
+  Net : pcm_in/n207, loads : 2
+  Net : pcm_in/n70, loads : 2
+  Net : pcm_in/n204, loads : 2
+  Net : pcm_in/n68, loads : 2
+  Net : pcm_in/n201, loads : 2
+  Net : pcm_in/n66, loads : 2
+  Net : pcm_in/n198, loads : 2
+  Net : pcm_in/n195, loads : 2
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -218,4 +213,4 @@ Peak Memory Usage: 84 MB
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: f5103231e6e252b6164bbfe23059aa0be1d0afd3
+Checksum -- synthesis -- netlist: 3afd01961a77a5f0c7840ca6f6eab8d4381ff027

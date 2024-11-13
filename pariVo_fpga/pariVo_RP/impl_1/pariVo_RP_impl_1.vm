@@ -1,135 +1,163 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.1.0.34.2
-// Netlist written on Tue Nov 12 19:26:59 2024
+// Netlist written on Tue Nov 12 22:10:14 2024
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv"
-// file 1 "c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv"
-// file 2 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v"
-// file 3 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd"
-// file 4 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ccu2_b.v"
-// file 5 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3bz.v"
-// file 6 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3dz.v"
-// file 7 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3iz.v"
-// file 8 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3jz.v"
-// file 9 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/hsosc.v"
-// file 10 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/hsosc1p8v.v"
-// file 11 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ib.v"
-// file 12 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ifd1p3az.v"
-// file 13 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/lsosc.v"
-// file 14 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/lsosc1p8v.v"
-// file 15 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ob.v"
-// file 16 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/obz_b.v"
-// file 17 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ofd1p3az.v"
-// file 18 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/pdp4k.v"
-// file 19 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/rgb.v"
-// file 20 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/rgb1p8v.v"
-// file 21 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/sp256k.v"
-// file 22 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/legacy.v"
-// file 23 "c:/lscc/radiant/2024.1/ip/common/adder/rtl/lscc_adder.v"
-// file 24 "c:/lscc/radiant/2024.1/ip/common/adder_subtractor/rtl/lscc_add_sub.v"
-// file 25 "c:/lscc/radiant/2024.1/ip/common/complex_mult/rtl/lscc_complex_mult.v"
-// file 26 "c:/lscc/radiant/2024.1/ip/common/counter/rtl/lscc_cntr.v"
-// file 27 "c:/lscc/radiant/2024.1/ip/common/fifo/rtl/lscc_fifo.v"
-// file 28 "c:/lscc/radiant/2024.1/ip/common/fifo_dc/rtl/lscc_fifo_dc.v"
-// file 29 "c:/lscc/radiant/2024.1/ip/common/mult_accumulate/rtl/lscc_mult_accumulate.v"
-// file 30 "c:/lscc/radiant/2024.1/ip/common/mult_add_sub/rtl/lscc_mult_add_sub.v"
-// file 31 "c:/lscc/radiant/2024.1/ip/common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v"
-// file 32 "c:/lscc/radiant/2024.1/ip/common/multiplier/rtl/lscc_multiplier.v"
-// file 33 "c:/lscc/radiant/2024.1/ip/common/ram_dp/rtl/lscc_ram_dp.v"
-// file 34 "c:/lscc/radiant/2024.1/ip/common/ram_dq/rtl/lscc_ram_dq.v"
-// file 35 "c:/lscc/radiant/2024.1/ip/common/rom/rtl/lscc_rom.v"
-// file 36 "c:/lscc/radiant/2024.1/ip/common/subtractor/rtl/lscc_subtractor.v"
-// file 37 "c:/lscc/radiant/2024.1/ip/pmi/pmi_add.v"
-// file 38 "c:/lscc/radiant/2024.1/ip/pmi/pmi_addsub.v"
-// file 39 "c:/lscc/radiant/2024.1/ip/pmi/pmi_complex_mult.v"
-// file 40 "c:/lscc/radiant/2024.1/ip/pmi/pmi_counter.v"
-// file 41 "c:/lscc/radiant/2024.1/ip/pmi/pmi_dsp.v"
-// file 42 "c:/lscc/radiant/2024.1/ip/pmi/pmi_fifo.v"
-// file 43 "c:/lscc/radiant/2024.1/ip/pmi/pmi_fifo_dc.v"
-// file 44 "c:/lscc/radiant/2024.1/ip/pmi/pmi_mac.v"
-// file 45 "c:/lscc/radiant/2024.1/ip/pmi/pmi_mult.v"
-// file 46 "c:/lscc/radiant/2024.1/ip/pmi/pmi_multaddsub.v"
-// file 47 "c:/lscc/radiant/2024.1/ip/pmi/pmi_multaddsubsum.v"
-// file 48 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dp.v"
-// file 49 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dp_be.v"
-// file 50 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq.v"
-// file 51 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq_be.v"
-// file 52 "c:/lscc/radiant/2024.1/ip/pmi/pmi_rom.v"
-// file 53 "c:/lscc/radiant/2024.1/ip/pmi/pmi_sub.v"
+// file 1 "c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv"
+// file 2 "c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv"
+// file 3 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v"
+// file 4 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd"
+// file 5 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ccu2_b.v"
+// file 6 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3bz.v"
+// file 7 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3dz.v"
+// file 8 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3iz.v"
+// file 9 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3jz.v"
+// file 10 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/hsosc.v"
+// file 11 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/hsosc1p8v.v"
+// file 12 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ib.v"
+// file 13 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ifd1p3az.v"
+// file 14 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/lsosc.v"
+// file 15 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/lsosc1p8v.v"
+// file 16 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ob.v"
+// file 17 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/obz_b.v"
+// file 18 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ofd1p3az.v"
+// file 19 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/pdp4k.v"
+// file 20 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/rgb.v"
+// file 21 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/rgb1p8v.v"
+// file 22 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/sp256k.v"
+// file 23 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/legacy.v"
+// file 24 "c:/lscc/radiant/2024.1/ip/common/adder/rtl/lscc_adder.v"
+// file 25 "c:/lscc/radiant/2024.1/ip/common/adder_subtractor/rtl/lscc_add_sub.v"
+// file 26 "c:/lscc/radiant/2024.1/ip/common/complex_mult/rtl/lscc_complex_mult.v"
+// file 27 "c:/lscc/radiant/2024.1/ip/common/counter/rtl/lscc_cntr.v"
+// file 28 "c:/lscc/radiant/2024.1/ip/common/fifo/rtl/lscc_fifo.v"
+// file 29 "c:/lscc/radiant/2024.1/ip/common/fifo_dc/rtl/lscc_fifo_dc.v"
+// file 30 "c:/lscc/radiant/2024.1/ip/common/mult_accumulate/rtl/lscc_mult_accumulate.v"
+// file 31 "c:/lscc/radiant/2024.1/ip/common/mult_add_sub/rtl/lscc_mult_add_sub.v"
+// file 32 "c:/lscc/radiant/2024.1/ip/common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v"
+// file 33 "c:/lscc/radiant/2024.1/ip/common/multiplier/rtl/lscc_multiplier.v"
+// file 34 "c:/lscc/radiant/2024.1/ip/common/ram_dp/rtl/lscc_ram_dp.v"
+// file 35 "c:/lscc/radiant/2024.1/ip/common/ram_dq/rtl/lscc_ram_dq.v"
+// file 36 "c:/lscc/radiant/2024.1/ip/common/rom/rtl/lscc_rom.v"
+// file 37 "c:/lscc/radiant/2024.1/ip/common/subtractor/rtl/lscc_subtractor.v"
+// file 38 "c:/lscc/radiant/2024.1/ip/pmi/pmi_add.v"
+// file 39 "c:/lscc/radiant/2024.1/ip/pmi/pmi_addsub.v"
+// file 40 "c:/lscc/radiant/2024.1/ip/pmi/pmi_complex_mult.v"
+// file 41 "c:/lscc/radiant/2024.1/ip/pmi/pmi_counter.v"
+// file 42 "c:/lscc/radiant/2024.1/ip/pmi/pmi_dsp.v"
+// file 43 "c:/lscc/radiant/2024.1/ip/pmi/pmi_fifo.v"
+// file 44 "c:/lscc/radiant/2024.1/ip/pmi/pmi_fifo_dc.v"
+// file 45 "c:/lscc/radiant/2024.1/ip/pmi/pmi_mac.v"
+// file 46 "c:/lscc/radiant/2024.1/ip/pmi/pmi_mult.v"
+// file 47 "c:/lscc/radiant/2024.1/ip/pmi/pmi_multaddsub.v"
+// file 48 "c:/lscc/radiant/2024.1/ip/pmi/pmi_multaddsubsum.v"
+// file 49 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dp.v"
+// file 50 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dp_be.v"
+// file 51 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq.v"
+// file 52 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq_be.v"
+// file 53 "c:/lscc/radiant/2024.1/ip/pmi/pmi_rom.v"
+// file 54 "c:/lscc/radiant/2024.1/ip/pmi/pmi_sub.v"
 
 //
 // Verilog Description of module top
 //
 
-module top (input reset, input sck, input sdi, output sdo, input load, 
-            input ce, output done, output ledTest1, output ledTest2, 
-            output ledTest3);
+module top (input clk, input nreset, input din, output bck, output lrck, 
+            output scki);
     
-    (* is_clock=1, SET_AS_NETWORK="sck_c", lineinfo="@1(14[19],14[22])" *) wire sck_c;
+    (* is_clock=1, lineinfo="@2(36[32],36[35])" *) wire scki_c_c;
     
-    wire reset_c, sdi_c, ce_c, ce_c_N_4, ledTest1_c, ledTest2_c, 
-        ledTest3_c, GND_net;
+    wire nreset_c, bck_c, lrck_c, n64, GND_net;
     
-    (* lineinfo="@1(19[25],19[29])" *) OB done_pad (.I(ce_c_N_4), .O(done));
-    (* lineinfo="@1(21[19],21[27])" *) OB ledTest2_pad (.I(ledTest2_c), .O(ledTest2));
-    (* lineinfo="@1(20[19],20[27])" *) OB ledTest1_pad (.I(ledTest1_c), .O(ledTest1));
-    (* lineinfo="@1(16[25],16[28])" *) OB sdo_pad (.I(GND_net), .O(sdo));
-    (* lineinfo="@1(22[19],22[27])" *) OB ledTest3_pad (.I(ledTest3_c), .O(ledTest3));
-    (* lineinfo="@1(13[24],13[29])" *) IB reset_pad (.I(reset), .O(reset_c));
-    (* lineinfo="@1(14[19],14[22])" *) IB sck_pad (.I(sck), .O(sck_c));
-    (* lineinfo="@1(15[25],15[28])" *) IB sdi_pad (.I(sdi), .O(sdi_c));
-    (* lineinfo="@1(18[19],18[21])" *) IB ce_pad (.I(ce), .O(ce_c));
-    (* lineinfo="@1(28[12],28[82])" *) eq_spi eqspi (ledTest3_c, sck_c, 
-            ledTest1_c, ledTest2_c, sdi_c, ce_c, reset_c, ce_c_N_4);
-    VLO i1 (.Z(GND_net));
+    VLO i6 (.Z(GND_net));
+    (* lineinfo="@2(40[32],40[35])" *) OB bck_pad (.I(bck_c), .O(bck));
+    (* lut_function="(!(A))", lineinfo="@2(37[32],37[38])" *) LUT4 i12_1_lut (.A(nreset_c), 
+            .Z(n64));
+    defparam i12_1_lut.INIT = "0x5555";
+    (* lineinfo="@2(53[6],53[70])" *) i2s pcm_in (scki_c_c, n64, lrck_c, 
+            bck_c);
+    (* lineinfo="@2(41[32],41[36])" *) OB lrck_pad (.I(lrck_c), .O(lrck));
+    (* lineinfo="@2(42[32],42[36])" *) OB scki_pad (.I(scki_c_c), .O(scki));
+    (* lineinfo="@2(36[32],36[35])" *) IB scki_c_pad (.I(clk), .O(scki_c_c));
+    (* lineinfo="@2(37[32],37[38])" *) IB nreset_pad (.I(nreset), .O(nreset_c));
     
 endmodule
 
 //
-// Verilog Description of module eq_spi
+// Verilog Description of module i2s
 //
 
-module eq_spi (output ledTest3_c, input sck_c, output ledTest1_c, output ledTest2_c, 
-            input sdi_c, input ce_c, input reset_c, output ce_c_N_4);
+module i2s (input scki_c_c, input n64, output lrck_c, output bck_c);
     
-    (* is_clock=1, SET_AS_NETWORK="sck_c", lineinfo="@1(14[19],14[22])" *) wire sck_c;
-    (* lineinfo="@1(45[36],45[42])" *) wire [31:0]eqVals;
+    (* is_clock=1, lineinfo="@2(36[32],36[35])" *) wire scki_c_c;
+    wire [7:0]n37;
     
-    wire sck_c_enable_3, GND_net;
+    wire n8, n2, n72, n207, GND_net, n70, n204, n3, n68, n201, 
+        n5, n4, n66, n198, n6, n195, VCC_net;
     
-    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=82, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(54[3],65[6])" *) IOL_B ledTest1 (.PADDI(GND_net), 
-            .DO1(GND_net), .DO0(eqVals[0]), .CE(sck_c_enable_3), .IOLTO(GND_net), 
-            .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(sck_c), .PADDO(ledTest1_c));
-    defparam ledTest1.LATCHIN = "LATCH_REG";
-    defparam ledTest1.DDROUT = "NO";
-    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=82, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(54[3],65[6])" *) IOL_B ledTest2 (.PADDI(GND_net), 
-            .DO1(GND_net), .DO0(eqVals[1]), .CE(sck_c_enable_3), .IOLTO(GND_net), 
-            .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(sck_c), .PADDO(ledTest2_c));
-    defparam ledTest2.LATCHIN = "LATCH_REG";
-    defparam ledTest2.DDROUT = "NO";
-    (* lineinfo="@1(54[3],65[6])" *) FD1P3XZ eqVals__0__i1 (.D(sdi_c), .SP(ce_c), 
-            .CK(sck_c), .SR(reset_c), .Q(eqVals[0]));
-    defparam eqVals__0__i1.REGSET = "RESET";
-    defparam eqVals__0__i1.SRMODE = "ASYNC";
-    (* lineinfo="@1(54[3],65[6])" *) FD1P3XZ eqVals__0__i3 (.D(eqVals[1]), 
-            .SP(ce_c), .CK(sck_c), .SR(reset_c), .Q(eqVals[2]));
-    defparam eqVals__0__i3.REGSET = "RESET";
-    defparam eqVals__0__i3.SRMODE = "ASYNC";
-    (* lineinfo="@1(54[3],65[6])" *) FD1P3XZ eqVals__0__i2 (.D(eqVals[0]), 
-            .SP(ce_c), .CK(sck_c), .SR(reset_c), .Q(eqVals[1]));
-    defparam eqVals__0__i2.REGSET = "RESET";
-    defparam eqVals__0__i2.SRMODE = "ASYNC";
-    (* lut_function="(!(A))", lineinfo="@1(72[16],72[19])" *) LUT4 ce_c_I_0_1_lut (.A(ce_c), 
-            .Z(ce_c_N_4));
-    defparam ce_c_I_0_1_lut.INIT = "0x5555";
-    (* lut_function="(!((B)+!A))", lineinfo="@1(54[3],65[6])" *) LUT4 i25_2_lut (.A(ce_c), 
-            .B(reset_c), .Z(sck_c_enable_3));
-    defparam i25_2_lut.INIT = "0x2222";
-    (* LSE_LINE_FILE_ID=73, LSE_LCOL=12, LSE_RCOL=82, LSE_LLINE=28, LSE_RLINE=28, lineinfo="@1(54[3],65[6])" *) IOL_B ledTest3 (.PADDI(GND_net), 
-            .DO1(GND_net), .DO0(eqVals[2]), .CE(sck_c_enable_3), .IOLTO(GND_net), 
-            .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(sck_c), .PADDO(ledTest3_c));
-    defparam ledTest3.LATCHIN = "LATCH_REG";
-    defparam ledTest3.DDROUT = "NO";
+    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i7 (.D(n37[6]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n2));
+    defparam prescaler_9_10__i7.REGSET = "RESET";
+    defparam prescaler_9_10__i7.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i8 (.D(n37[7]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(lrck_c));
+    defparam prescaler_9_10__i8.REGSET = "RESET";
+    defparam prescaler_9_10__i8.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_9 (.A0(GND_net), 
+            .B0(GND_net), .C0(lrck_c), .D0(n72), .CI0(n72), .A1(GND_net), 
+            .B1(GND_net), .C1(GND_net), .D1(n207), .CI1(n207), .CO0(n207), 
+            .S0(n37[7]));
+    defparam prescaler_9_10_add_4_9.INIT0 = "0xc33c";
+    defparam prescaler_9_10_add_4_9.INIT1 = "0xc33c";
+    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_7 (.A0(GND_net), 
+            .B0(GND_net), .C0(n3), .D0(n70), .CI0(n70), .A1(GND_net), 
+            .B1(GND_net), .C1(n2), .D1(n204), .CI1(n204), .CO0(n204), 
+            .CO1(n72), .S0(n37[5]), .S1(n37[6]));
+    defparam prescaler_9_10_add_4_7.INIT0 = "0xc33c";
+    defparam prescaler_9_10_add_4_7.INIT1 = "0xc33c";
+    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_5 (.A0(GND_net), 
+            .B0(GND_net), .C0(n5), .D0(n68), .CI0(n68), .A1(GND_net), 
+            .B1(GND_net), .C1(n4), .D1(n201), .CI1(n201), .CO0(n201), 
+            .CO1(n70), .S0(n37[3]), .S1(n37[4]));
+    defparam prescaler_9_10_add_4_5.INIT0 = "0xc33c";
+    defparam prescaler_9_10_add_4_5.INIT1 = "0xc33c";
+    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_3 (.A0(GND_net), 
+            .B0(GND_net), .C0(bck_c), .D0(n66), .CI0(n66), .A1(GND_net), 
+            .B1(GND_net), .C1(n6), .D1(n198), .CI1(n198), .CO0(n198), 
+            .CO1(n68), .S0(n37[1]), .S1(n37[2]));
+    defparam prescaler_9_10_add_4_3.INIT0 = "0xc33c";
+    defparam prescaler_9_10_add_4_3.INIT1 = "0xc33c";
+    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i6 (.D(n37[5]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n3));
+    defparam prescaler_9_10__i6.REGSET = "RESET";
+    defparam prescaler_9_10__i6.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i5 (.D(n37[4]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n4));
+    defparam prescaler_9_10__i5.REGSET = "RESET";
+    defparam prescaler_9_10__i5.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i4 (.D(n37[3]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n5));
+    defparam prescaler_9_10__i4.REGSET = "RESET";
+    defparam prescaler_9_10__i4.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i3 (.D(n37[2]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n6));
+    defparam prescaler_9_10__i3.REGSET = "RESET";
+    defparam prescaler_9_10__i3.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i2 (.D(n37[1]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(bck_c));
+    defparam prescaler_9_10__i2.REGSET = "RESET";
+    defparam prescaler_9_10__i2.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_1 (.A0(GND_net), 
+            .B0(GND_net), .C0(GND_net), .A1(GND_net), .B1(VCC_net), 
+            .C1(n8), .D1(n195), .CI1(n195), .CO0(n195), .CO1(n66), 
+            .S1(n37[0]));
+    defparam prescaler_9_10_add_4_1.INIT0 = "0xc33c";
+    defparam prescaler_9_10_add_4_1.INIT1 = "0xc33c";
+    VHI i2 (.Z(VCC_net));
+    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i1 (.D(n37[0]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n8));
+    defparam prescaler_9_10__i1.REGSET = "RESET";
+    defparam prescaler_9_10__i1.SRMODE = "CE_OVER_LSR";
     VLO i1 (.Z(GND_net));
     
 endmodule

@@ -10,25 +10,48 @@
 // aes
 //   Top level module with SPI interface and SPI core
 /////////////////////////////////////////////
-module top(input logic reset,
-		   input  logic sck, 
-           input  logic sdi,
-           output logic sdo,
-           input  logic load,
-		   input  logic ce,
-           output logic done, 
-		   output logic ledTest1,
-		   output logic ledTest2,
-		   output logic ledTest3);
+//module top(input logic reset,
+		   //input  logic sck, 
+           //input  logic sdi,
+           //output logic sdo,
+           //input  logic load,
+		   //input  logic ce,
+           //output logic done, 
+		   //output logic ledTest1,
+		   //output logic ledTest2,
+		   //output logic ledTest3);
              
-    logic [31:0] eqVals;
-    logic clk;
-    HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
-            
-    eq_spi eqspi(reset, sck, sdi, done, ce, eqVals, ledTest1, ledTest2, ledTest3);   
+    //logic [31:0] eqVals;
+    //logic clk;
+    //HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
 	
-	//hardware_test ht(clk, eqVals, ledTest);
+	
+    //eq_spi eqspi(reset, sck, sdi, done, ce, eqVals, ledTest1, ledTest2, ledTest3);   
+	
+	////hardware_test ht(clk, eqVals, ledTest);
    
+//endmodule
+
+
+module top (input logic        clk,   //   12MHz MAX1000 clk, P12
+            input logic        nreset, //  global reset,      P34
+            input logic        din, //     I2S DOUT,          P21
+
+            output logic       bck, //     I2S bit clock,     P18
+            output logic       lrck, //    I2S l/r clk,       P13
+            output logic       scki); //    PCM1808 sys clk,   P20
+           
+				  
+	// assign reset
+	logic reset;
+	assign reset = ~(nreset);
+	
+	// call i2S w/ audioIn
+	logic                             newsample;
+	logic [23:0]                      left, right;
+	//logic din = dout;
+	i2s pcm_in(clk, reset, din, bck, lrck, scki, left, right, newsample);
+	
 endmodule
 
 /////////////////////////////////////////////

@@ -1,23 +1,22 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  3 of 5280 (0.057%)
-I/O cells:      9
+Register bits:  8 of 5280 (0.152%)
+I/O cells:      5
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         3          100.0
-                                 IB         4          100.0
-                              IOL_B         3          100.0
-                               LUT4         2          100.0
-                                 OB         5          100.0
+                               CCU2         5          100.0
+                            FD1P3XZ         8          100.0
+                                 IB         2          100.0
+                               LUT4         1          100.0
+                                 OB         3          100.0
 SUB MODULES
-                             eq_spi         1
-                              TOTAL        18
+                                i2s         1
+                              TOTAL        20
 ----------------------------------------------------------------------
-Report for cell eq_spi.v1
-Instance Path : eqspi
+Report for cell i2s.v1
+Instance Path : pcm_in
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         3          100.0
-                              IOL_B         3          100.0
-                               LUT4         2          100.0
-                              TOTAL         8
+                                FA2         5          100.0
+                            FD1P3XZ         8          100.0
+                              TOTAL        13
