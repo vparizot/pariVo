@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "pariVo_RP_impl_1_map.udb"
-Tue Nov 12 22:10:22 2024
+Wed Nov 13 22:44:15 2024
 
 PAR: Place And Route Radiant Software (64-bit) 2024.1.0.34.2.
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
@@ -116,7 +116,7 @@ INFO - par: ASE feature is off due to non timing-driven settings.
 -----------------------------------------------------------------
 
 
-Start NBR router at 22:10:24 11/12/24
+Start NBR router at 22:44:17 11/13/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -145,7 +145,7 @@ Other clocks:
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 22:10:24 11/12/24
+Start NBR section for initial routing at 22:44:17 11/13/24
 Level 4, iteration 1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Routing in Serial Mode ......
@@ -155,11 +155,11 @@ Routing in Serial Mode ......
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 22:10:24 11/12/24
+Start NBR section for normal routing at 22:44:17 11/13/24
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 22:10:24 11/12/24
+Start NBR section for post-routing at 22:44:17 11/13/24
 
 End NBR router with 0 unrouted connection(s)
 
@@ -188,7 +188,7 @@ Note: user must run 'timing' for timing closure signoff.
 
 Total CPU  Time: 2 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 105.96 MB
+Peak Memory Usage: 105.66 MB
 
 
 par done!

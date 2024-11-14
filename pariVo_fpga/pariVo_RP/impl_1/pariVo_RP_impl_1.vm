@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.1.0.34.2
-// Netlist written on Tue Nov 12 22:10:14 2024
+// Netlist written on Wed Nov 13 22:44:07 2024
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv"
@@ -70,14 +70,14 @@ module top (input clk, input nreset, input din, output bck, output lrck,
     wire nreset_c, bck_c, lrck_c, n64, GND_net;
     
     VLO i6 (.Z(GND_net));
-    (* lineinfo="@2(40[32],40[35])" *) OB bck_pad (.I(bck_c), .O(bck));
+    (* lineinfo="@2(39[32],39[35])" *) OB bck_pad (.I(bck_c), .O(bck));
     (* lut_function="(!(A))", lineinfo="@2(37[32],37[38])" *) LUT4 i12_1_lut (.A(nreset_c), 
             .Z(n64));
     defparam i12_1_lut.INIT = "0x5555";
-    (* lineinfo="@2(53[6],53[70])" *) i2s pcm_in (scki_c_c, n64, lrck_c, 
+    (* lineinfo="@2(52[6],52[70])" *) i2s pcm_in (scki_c_c, n64, lrck_c, 
             bck_c);
-    (* lineinfo="@2(41[32],41[36])" *) OB lrck_pad (.I(lrck_c), .O(lrck));
-    (* lineinfo="@2(42[32],42[36])" *) OB scki_pad (.I(scki_c_c), .O(scki));
+    (* lineinfo="@2(40[32],40[36])" *) OB lrck_pad (.I(lrck_c), .O(lrck));
+    (* lineinfo="@2(41[32],41[36])" *) OB scki_pad (.I(scki_c_c), .O(scki));
     (* lineinfo="@2(36[32],36[35])" *) IB scki_c_pad (.I(clk), .O(scki_c_c));
     (* lineinfo="@2(37[32],37[38])" *) IB nreset_pad (.I(nreset), .O(nreset_c));
     

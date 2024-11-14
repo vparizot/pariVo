@@ -1,63 +1,63 @@
 // digitalFiltering d1(clk, reset, filterCoefficients, eqLow0, eqHigh0, audioIn, audioOut)
 // Implement FIR (Finite Impulse Response)
-module digitalFiltering(input logic clk, 
-                        input logic reset,
-                        //input logic filterCoefficients, // 
-                        input logic [7:0] eq, // Corner freq for low pass and high pass filter The four eq upper and lower bounds for channels 0 and 1
-                        input logic [23:0] musicPacketIn, // 24-bit block of the music to process
-                        output logic [23:0] musicPacketOut); 
-	// Define internal variables
-	//logic [23:0] filteredOutput;
-    //logic [23:0] audioIn;
-    logic [23:0] coeff[0:3] =  {24'd500, 24'd1000, 24'd1000, 24'd500};  // Coefficients for a 5-tap FIR filter
-    logic [23:0] shiftReg[0:3]; // Shift registers to hold prev values WILL THIS UPDATE FOR EACH TIME THIS FUNC IS CALLED
-    logic [3:0] i = 0;
-    logic [3:0] numTaps = 5;
+// module digitalFiltering(input logic clk, 
+//                         input logic reset,
+//                         //input logic filterCoefficients, // 
+//                         input logic [7:0] eq, // Corner freq for low pass and high pass filter The four eq upper and lower bounds for channels 0 and 1
+//                         input logic [23:0] musicPacketIn, // 24-bit block of the music to process
+//                         output logic [23:0] musicPacketOut); 
+// 	// Define internal variables
+// 	//logic [23:0] filteredOutput;
+//     //logic [23:0] audioIn;
+//     logic [23:0] coeff[0:3] =  {24'd500, 24'd1000, 24'd1000, 24'd500};  // Coefficients for a 5-tap FIR filter
+//     logic [23:0] shiftReg[0:3]; // Shift registers to hold prev values WILL THIS UPDATE FOR EACH TIME THIS FUNC IS CALLED
+//     logic [3:0] i = 0;
+//     logic [3:0] numTaps = 5;
 
-	// determine coefficients
+// 	// determine coefficients
 
-// hard code selections
-// make potentiometer a rotary switch
-// matlab simulation to determine TAPS for filter design
-    // miore taps we have between 5 and 10
-    // program multipliers
-    // look at ice40 website
-// on i2c ADC acts slave
-// DSP functional blocks and DSP functional useage guide
+// // hard code selections
+// // make potentiometer a rotary switch
+// // matlab simulation to determine TAPS for filter design
+//     // miore taps we have between 5 and 10
+//     // program multipliers
+//     // look at ice40 website
+// // on i2c ADC acts slave
+// // DSP functional blocks and DSP functional useage guide
 
-// LOW PASS FILTER w/ FIR
-    always @(posedge clk) begin
-        // Shift register to hold previous samples
-        for (i = numTaps; i > 0; i = i - 1)
-            shiftReg[i] <= shiftReg[i-1];
-        shiftReg[0] <= musicPacketIn;
+// // LOW PASS FILTER w/ FIR
+//     always @(posedge clk) begin
+//         // Shift register to hold previous samples
+//         for (i = numTaps; i > 0; i = i - 1)
+//             shiftReg[i] <= shiftReg[i-1];
+//         shiftReg[0] <= musicPacketIn;
 
-        // FIR filtering - multiply and accumulate
-        musicPacketOut <= 0;
-        for (i = 0; i <= numTaps; i = i + 1)
-            musicPacketOut <= musicPacketOut + (shiftReg[i] * coeff[i]);
-    end 
-
-
-endmodule
+//         // FIR filtering - multiply and accumulate
+//         musicPacketOut <= 0;
+//         for (i = 0; i <= numTaps; i = i + 1)
+//             musicPacketOut <= musicPacketOut + (shiftReg[i] * coeff[i]);
+//     end 
 
 
-module final_fpga(input logic        clk,   //   12MHz MAX1000 clk, H6
-                  input logic        reset, //  global reset,      E6 (right btn)
-                  input logic        din, //     I2S DOUT,          PB6_G12
-                  input logic        uscki, //   SPI clk,           PB3_J12
-                  input logic        umosi, //   SPI MOSI,          PB5_J13
-                  input logic        uce, //     SPI CE,            PA10_L12
-                  input logic [3:0]  sw1, //     threshold sel.     E1, C2, C1, D1 (DIP SW1)
-                  output logic       bck, //     I2S bit clock,     PA7_J2
-                  output logic       lrck, //    I2S l/r clk,       PA6_J1
-                  output logic       scki, //    PCM1808 sys clk,   PA5_H4
-                  output logic       fmt, //     PCM1808 FMT,       PA8_J10
-                  output logic [1:0] md, //      PCM1808 MD1 & MD0, PC7_H13, PA9_H10
-                  output logic       miso, //    SPI MISO,          PB4_K11
-                  output logic       LEDs, //    debug LEDs         (see MAX1000 user guide)
-                  output logic       beat_out // beat (to MCU)      H5 (thru a jumper to MCU)
-                  );
+// endmodule
+
+
+//module final_fpga(input logic        clk,   //   12MHz MAX1000 clk, H6
+                  //input logic        reset, //  global reset,      E6 (right btn)
+                  //input logic        din, //     I2S DOUT,          PB6_G12
+                  //input logic        uscki, //   SPI clk,           PB3_J12
+                  //input logic        umosi, //   SPI MOSI,          PB5_J13
+                  //input logic        uce, //     SPI CE,            PA10_L12
+                  //input logic [3:0]  sw1, //     threshold sel.     E1, C2, C1, D1 (DIP SW1)
+                  //output logic       bck, //     I2S bit clock,     PA7_J2
+                  //output logic       lrck, //    I2S l/r clk,       PA6_J1
+                  //output logic       scki, //    PCM1808 sys clk,   PA5_H4
+                  //output logic       fmt, //     PCM1808 FMT,       PA8_J10
+                  //output logic [1:0] md, //      PCM1808 MD1 & MD0, PC7_H13, PA9_H10
+                  //output logic       miso, //    SPI MISO,          PB4_K11
+                  //output logic       LEDs, //    debug LEDs         (see MAX1000 user guide)
+                  //output logic       beat_out // beat (to MCU)      H5 (thru a jumper to MCU)
+                  //);
 
    ///////////////////////////////// I2S/PCM1808
    //logic                             newsample;
@@ -127,7 +127,7 @@ module final_fpga(input logic        clk,   //   12MHz MAX1000 clk, H6
 //   end
    ///////////////////////////////// end beat tracking
    
-endmodule // final_fpga
+//endmodule // final_fpga
 
 
 

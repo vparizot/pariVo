@@ -35,8 +35,7 @@
 
 module top (input logic        clk,   //   12MHz MAX1000 clk, P12
             input logic        nreset, //  global reset,      P34
-            input logic        din, //     I2S DOUT,          P21
-
+            input logic			din, //     I2S DOUT,          P21
             output logic       bck, //     I2S bit clock,     P18
             output logic       lrck, //    I2S l/r clk,       P13
             output logic       scki); //    PCM1808 sys clk,   P20
@@ -60,38 +59,38 @@ endmodule
 //   Captures ciphertext when done, then shifts it out
 //   Tricky cases to properly change sdo on negedge clk
 /////////////////////////////////////////////
-module eq_spi(input logic reset, 
-			   input  logic sck, 
-               input  logic sdi,
-               output  logic done,
-			   input logic ce,
-               output logic [31:0] eqVals,
-			   output logic ledTest1,
-			   output logic ledTest2,
-			   output logic ledTest3);
+// module eq_spi(input logic reset, 
+// 			   input  logic sck, 
+//                input  logic sdi,
+//                output  logic done,
+// 			   input logic ce,
+//                output logic [31:0] eqVals,
+// 			   output logic ledTest1,
+// 			   output logic ledTest2,
+// 			   output logic ledTest3);
 
-	logic [5:0] shiftCount, nextShiftCount;
+// 	logic [5:0] shiftCount, nextShiftCount;
 	
-	// shift 32 bits at posedge of sck
-	always_ff @(posedge sck, posedge reset) begin
-		if(reset) begin
-			eqVals <= 0;
-			shiftCount <= 0;
-		end
-		else if (ce) begin
-			// shift for 32 sclks to eqVals
-			eqVals <= {eqVals[30:0], sdi};
-			shiftCount <= nextShiftCount;
-			// test LEDs
-			ledTest1 <= eqVals[0];
-			ledTest2 <= eqVals[1];
-			ledTest3 <= eqVals[2];
-		end
-	end
+// 	// shift 32 bits at posedge of sck
+// 	always_ff @(posedge sck, posedge reset) begin
+// 		if(reset) begin
+// 			eqVals <= 0;
+// 			shiftCount <= 0;
+// 		end
+// 		else if (ce) begin
+// 			// shift for 32 sclks to eqVals
+// 			eqVals <= {eqVals[30:0], sdi};
+// 			shiftCount <= nextShiftCount;
+// 			// test LEDs
+// 			ledTest1 <= eqVals[0];
+// 			ledTest2 <= eqVals[1];
+// 			ledTest3 <= eqVals[2];
+// 		end
+// 	end
 	
-	always_comb
-		// reset shiftCount after 32 bits
-		if (shiftCount == 32) nextShiftCount = 0;
-		else nextShiftCount = shiftCount + 1;
-	assign done = ~ce; 
-endmodule
+// 	always_comb
+// 		// reset shiftCount after 32 bits
+// 		if (shiftCount == 32) nextShiftCount = 0;
+// 		else nextShiftCount = shiftCount + 1;
+// 	assign done = ~ce; 
+// endmodule
