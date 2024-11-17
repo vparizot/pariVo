@@ -1,22 +1,23 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  8 of 5280 (0.152%)
-I/O cells:      5
+Register bits:  12 of 5280 (0.227%)
+I/O cells:      8
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2         5          100.0
-                            FD1P3XZ         8          100.0
-                                 IB         2          100.0
-                               LUT4         1          100.0
-                                 OB         3          100.0
+                            FD1P3XZ        12          100.0
+                                 IB         3          100.0
+                               LUT4         8          100.0
+                                 OB         5          100.0
 SUB MODULES
                                 i2s         1
-                              TOTAL        20
+                              TOTAL        34
 ----------------------------------------------------------------------
 Report for cell i2s.v1
 Instance Path : pcm_in
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2         5          100.0
-                            FD1P3XZ         8          100.0
-                              TOTAL        13
+                            FD1P3XZ        12          100.0
+                               LUT4         8          100.0
+                              TOTAL        25

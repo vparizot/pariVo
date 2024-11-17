@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Nov 13 22:44:06 2024
+Sun Nov 17 14:39:34 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f pariVo_RP_impl_1_lattice.synproj -logfile pariVo_RP_impl_1_lattice.srp -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml 
@@ -178,8 +178,10 @@ INFO <35921014> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd(4): a
 INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(36): compiling module top. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv(134): compiling module i2s. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(39): compiling module top. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv(147): compiling module i2s. VERI-1018
+WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(57): actual bit length 1 differs from formal bit length 24 for port left. VERI-1330
+WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(57): actual bit length 1 differs from formal bit length 24 for port right. VERI-1330
                                                          
 
 
@@ -207,18 +209,17 @@ INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv(13
 
 
 
-CRITICAL <35002028> - synthesis: I/O Port din 's net has no driver and is unused.
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (top)######################
-Number of register bits => 8 of 5280 (0 % )
+Number of register bits => 12 of 5280 (0 % )
 CCU2 => 5
-FD1P3XZ => 8
-IB => 2
-LUT4 => 1
-OB => 3
+FD1P3XZ => 12
+IB => 3
+LUT4 => 8
+OB => 5
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
 Number of even-length carry chains : 1
@@ -234,16 +235,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n64, loads : 8
-  Net : pcm_in/n72, loads : 2
-  Net : pcm_in/n207, loads : 2
-  Net : pcm_in/n70, loads : 2
-  Net : pcm_in/n204, loads : 2
-  Net : pcm_in/n68, loads : 2
-  Net : pcm_in/n201, loads : 2
-  Net : pcm_in/n66, loads : 2
-  Net : pcm_in/n198, loads : 2
-  Net : pcm_in/n195, loads : 2
+  Net : pcm_in/n71, loads : 10
+  Net : pcm_in/lrck_c, loads : 4
+  Net : nreset_c, loads : 3
+  Net : pcm_in/bit_state[2], loads : 3
+  Net : pcm_in/bit_state[1], loads : 3
+  Net : pcm_in/bit_state[3], loads : 3
+  Net : pcm_in/bit_state[4], loads : 3
+  Net : pcm_in/bit_state[0], loads : 3
+  Net : din_c, loads : 2
+  Net : pcm_in/bck_c, loads : 2
 ################### End Clock Report ##################
 
 
@@ -259,13 +260,13 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 85 MB
+Peak Memory Usage: 84 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 
 Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 46a01645214433081092b8c9800d5d7654a1043c
+Checksum -- synthesis -- netlist: d29c13d6f91258f2826afc762c183bfcb4f40ef
 
 
 

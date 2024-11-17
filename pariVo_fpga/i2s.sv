@@ -1,5 +1,5 @@
-// digitalFiltering d1(clk, reset, filterCoefficients, eqLow0, eqHigh0, audioIn, audioOut)
-// Implement FIR (Finite Impulse Response)
+// // digitalFiltering d1(clk, reset, filterCoefficients, eqLow0, eqHigh0, audioIn, audioOut)
+// // Implement FIR (Finite Impulse Response)
 // module digitalFiltering(input logic clk, 
 //                         input logic reset,
 //                         //input logic filterCoefficients, // 
@@ -9,8 +9,8 @@
 // 	// Define internal variables
 // 	//logic [23:0] filteredOutput;
 //     //logic [23:0] audioIn;
-//     logic [23:0] coeff[0:3] =  {24'd500, 24'd1000, 24'd1000, 24'd500};  // Coefficients for a 5-tap FIR filter
-//     logic [23:0] shiftReg[0:3]; // Shift registers to hold prev values WILL THIS UPDATE FOR EACH TIME THIS FUNC IS CALLED
+//     logic [23:0] coeff[3:0] =  {24'd500, 24'd1000, 24'd1000, 24'd500};  // Coefficients for a 5-tap FIR filter
+//     logic [23:0] shiftReg[3:0]; // Shift registers to hold prev values WILL THIS UPDATE FOR EACH TIME THIS FUNC IS CALLED
 //     logic [3:0] i = 0;
 //     logic [3:0] numTaps = 5;
 
@@ -41,35 +41,48 @@
 
 // endmodule
 
-
-//module final_fpga(input logic        clk,   //   12MHz MAX1000 clk, H6
-                  //input logic        reset, //  global reset,      E6 (right btn)
-                  //input logic        din, //     I2S DOUT,          PB6_G12
-                  //input logic        uscki, //   SPI clk,           PB3_J12
-                  //input logic        umosi, //   SPI MOSI,          PB5_J13
-                  //input logic        uce, //     SPI CE,            PA10_L12
-                  //input logic [3:0]  sw1, //     threshold sel.     E1, C2, C1, D1 (DIP SW1)
-                  //output logic       bck, //     I2S bit clock,     PA7_J2
-                  //output logic       lrck, //    I2S l/r clk,       PA6_J1
-                  //output logic       scki, //    PCM1808 sys clk,   PA5_H4
-                  //output logic       fmt, //     PCM1808 FMT,       PA8_J10
-                  //output logic [1:0] md, //      PCM1808 MD1 & MD0, PC7_H13, PA9_H10
-                  //output logic       miso, //    SPI MISO,          PB4_K11
-                  //output logic       LEDs, //    debug LEDs         (see MAX1000 user guide)
-                  //output logic       beat_out // beat (to MCU)      H5 (thru a jumper to MCU)
-                  //);
-
-   ///////////////////////////////// I2S/PCM1808
-   //logic                             newsample;
-   //logic [23:0]                      left, right;
-   //i2s pcm_in(clk, reset, din, bck, lrck, scki, left, right, newsample);
-   ///////////////////////////////// end I2S/PCM1808
+//module lowPassCoefficients(input clk, 
+                           //input eq, 
+                           //output coeffs);
+   //logic [] fc;
+   
 
 
-   ///////////////////////////////// Digital Filtering
-   //logic [7:0] eqHigh0, eqLow0, eqHigh1, eqLow1; // The four eq upper and lower bounds for channels 0 and 1
-   //logic [23:0] 
-   //logic signed [23:0]    
+
+
+//endmodule
+
+
+
+
+// module final_fpga(input logic        clk,   //   12MHz MAX1000 clk, H6
+//                   input logic        reset, //  global reset,      E6 (right btn)
+//                   input logic        din, //     I2S DOUT,          PB6_G12
+//                   input logic        uscki, //   SPI clk,           PB3_J12
+//                   input logic        umosi, //   SPI MOSI,          PB5_J13
+//                   input logic        uce, //     SPI CE,            PA10_L12
+//                   input logic [3:0]  sw1, //     threshold sel.     E1, C2, C1, D1 (DIP SW1)
+//                   output logic       bck, //     I2S bit clock,     PA7_J2
+//                   output logic       lrck, //    I2S l/r clk,       PA6_J1
+//                   output logic       scki, //    PCM1808 sys clk,   PA5_H4
+//                   output logic       fmt, //     PCM1808 FMT,       PA8_J10
+//                   output logic [1:0] md, //      PCM1808 MD1 & MD0, PC7_H13, PA9_H10
+//                   output logic       miso, //    SPI MISO,          PB4_K11
+//                   output logic       LEDs, //    debug LEDs         (see MAX1000 user guide)
+//                   output logic       beat_out // beat (to MCU)      H5 (thru a jumper to MCU)
+//                   );
+
+//    /////////////////////////////// I2S/PCM1808
+//    logic                             newsample;
+//    logic [23:0]                      left, right;
+//    i2s pcm_in(clk, reset, din, bck, lrck, scki, left, right, newsample);
+//    /////////////////////////////// end I2S/PCM1808
+
+
+//    /////////////////////////////// Digital Filtering
+//    logic [7:0] eqHigh0, eqLow0, eqHigh1, eqLow1; // The four eq upper and lower bounds for channels 0 and 1
+//    logic [23:0] 
+//    logic signed [23:0]    
 
 //    logic                             fft_start, fft_done, i2s_load, fft_load, fft_reset, fft_creset, fft_write;
 //    logic [31:0]                      fft_wd;
@@ -83,9 +96,9 @@
 //    fft fft(clk, fft_reset, fft_start, fft_load, fft_rd, fft_wd, fft_done);
 //    fft_control i2s_fft_glue(clk, reset, newsample, fft_done, fft_start, fft_load, fft_creset, fft_write, sample_ctr);
 
-   ///////////////////////////////// end Digital Filtering
+//    /////////////////////////////// end Digital Filtering
 
-   ///////////////////////////////// store result         
+//    /////////////////////////////// store result         
 //   logic [31:0]                      res_count; // result count
 //   logic                             posedge_fft_done;
 //   pos_edge pos_edge_fft_done(clk, fft_done, posedge_fft_done);
@@ -94,7 +107,7 @@
 //        if       (reset)    res_count <= 0;
 //        else if (posedge_fft_done) res_count <= res_count + 1'b1;
 //     end
-//
+
 //   logic [31:0]                       spectrum_result [0:31];
 //   always_ff @(posedge clk) begin
 //      if (fft_write) 
@@ -102,16 +115,16 @@
 //           spectrum_result[sample_ctr] <= fft_wd;
 //        end
 //   end
-   ///////////////////////////////// end store result
+//    /////////////////////////////// end store result
 
-   ///////////////////////////////// SPI
+//    /////////////////////////////// SPI
 //   logic [31:0] spi_data;
 //   logic [4:0]  spi_adr;
 //   assign spi_data = spectrum_result[spi_adr];
 //   spi_slave spi(clk, reset, uscki, umosi, uce, spi_data, spi_adr, miso);
-   ///////////////////////////////// end SPI
+//    /////////////////////////////// end SPI
 
-   ///////////////////////////////// beat tracking
+//    /////////////////////////////// beat tracking
 //   logic [7:0]  thresh, accum_stable;
 //   logic        beat_ctr, posedge_beat_out;
 //   assign thresh = {1'b0, sw1, 2'b0};
@@ -125,9 +138,9 @@
 //      else if (posedge_beat_out)
 //        beat_ctr <= beat_ctr + 1'b1;
 //   end
-   ///////////////////////////////// end beat tracking
+//    /////////////////////////////// end beat tracking
    
-//endmodule // final_fpga
+// endmodule // final_fpga
 
 
 
@@ -175,14 +188,14 @@ module i2s(input logic         clk,
    
    // shift register operation. samples DOUT only when shift_en.
    // this should be the only register that is not clocked directly from clk!!
-   always_ff @(posedge bck)
+   always_ff @(posedge clk)
      begin
         if (!lrck && shift_en)     // left
           begin
              lsreg <= {lsreg[22:0], din};
              rsreg <= rsreg;
           end
-        else if (lrck && shift_en) // right
+        if (lrck && shift_en) // right
           begin
              rsreg <= {rsreg[22:0], din};
              lsreg <= lsreg;

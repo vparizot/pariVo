@@ -3,19 +3,20 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         12        100.0
-                               LUTGATE	          2        100.0
+                                  LUT4	         23        100.0
+                               LUTGATE	         13        100.0
                                 LUTCCU	         10        100.0
-                                 IOBUF	          5        100.0
-                                PFUREG	          8        100.0
+                                 IOBUF	          8        100.0
+                                PFUREG	         12        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                                   i2s	          1        83.3
+                                   i2s	          1        78.3
 ---------------------------------------------------
 Report for cell i2s
    Instance path: top/pcm_in
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         10        83.3
+                                  LUT4	         18        78.3
+                               LUTGATE	          8        61.5
                                 LUTCCU	         10        100.0
-                                PFUREG	          8        100.0
+                                PFUREG	         12        100.0

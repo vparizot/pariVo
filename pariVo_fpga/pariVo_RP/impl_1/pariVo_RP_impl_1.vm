@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.1.0.34.2
-// Netlist written on Wed Nov 13 22:44:07 2024
+// Netlist written on Sun Nov 17 14:39:35 2024
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv"
@@ -63,23 +63,23 @@
 //
 
 module top (input clk, input nreset, input din, output bck, output lrck, 
-            output scki);
+            output scki, output left, output right);
     
-    (* is_clock=1, lineinfo="@2(36[32],36[35])" *) wire scki_c_c;
+    (* is_clock=1, lineinfo="@2(39[31],39[34])" *) wire scki_c_c;
     
-    wire nreset_c, bck_c, lrck_c, n64, GND_net;
+    wire nreset_c, din_c, bck_c, lrck_c, left_c, right_c, GND_net;
     
     VLO i6 (.Z(GND_net));
-    (* lineinfo="@2(39[32],39[35])" *) OB bck_pad (.I(bck_c), .O(bck));
-    (* lut_function="(!(A))", lineinfo="@2(37[32],37[38])" *) LUT4 i12_1_lut (.A(nreset_c), 
-            .Z(n64));
-    defparam i12_1_lut.INIT = "0x5555";
-    (* lineinfo="@2(52[6],52[70])" *) i2s pcm_in (scki_c_c, n64, lrck_c, 
-            bck_c);
-    (* lineinfo="@2(40[32],40[36])" *) OB lrck_pad (.I(lrck_c), .O(lrck));
-    (* lineinfo="@2(41[32],41[36])" *) OB scki_pad (.I(scki_c_c), .O(scki));
-    (* lineinfo="@2(36[32],36[35])" *) IB scki_c_pad (.I(clk), .O(scki_c_c));
-    (* lineinfo="@2(37[32],37[38])" *) IB nreset_pad (.I(nreset), .O(nreset_c));
+    (* lineinfo="@2(43[32],43[36])" *) OB lrck_pad (.I(lrck_c), .O(lrck));
+    (* lineinfo="@2(42[32],42[35])" *) OB bck_pad (.I(bck_c), .O(bck));
+    (* lineinfo="@2(57[6],57[70])" *) i2s pcm_in (right_c, scki_c_c, lrck_c, 
+            nreset_c, bck_c, din_c, left_c);
+    (* lineinfo="@2(44[32],44[36])" *) OB scki_pad (.I(scki_c_c), .O(scki));
+    (* lineinfo="@2(45[17],45[21])" *) OB left_pad (.I(left_c), .O(left));
+    (* lineinfo="@2(46[26],46[31])" *) OB right_pad (.I(right_c), .O(right));
+    (* lineinfo="@2(39[31],39[34])" *) IB scki_c_pad (.I(clk), .O(scki_c_c));
+    (* lineinfo="@2(40[32],40[38])" *) IB nreset_pad (.I(nreset), .O(nreset_c));
+    (* lineinfo="@2(41[27],41[30])" *) IB din_pad (.I(din), .O(din_c));
     
 endmodule
 
@@ -87,77 +87,127 @@ endmodule
 // Verilog Description of module i2s
 //
 
-module i2s (input scki_c_c, input n64, output lrck_c, output bck_c);
+module i2s (output right_c, input scki_c_c, output lrck_c, input nreset_c, 
+            output bck_c, input din_c, output left_c);
     
-    (* is_clock=1, lineinfo="@2(36[32],36[35])" *) wire scki_c_c;
+    (* is_clock=1, lineinfo="@2(39[31],39[34])" *) wire scki_c_c;
+    (* lineinfo="@1(178[39],178[44])" *) wire [23:0]rsreg;
+    
+    wire n74, n71, shift_en, n152, \prescaler[0] ;
+    (* lineinfo="@1(182[32],182[41])" *) wire [4:0]bit_state;
+    
+    wire n273;
+    (* lineinfo="@1(178[32],178[37])" *) wire [23:0]lsreg;
+    
+    wire n5;
     wire [7:0]n37;
     
-    wire n8, n2, n72, n207, GND_net, n70, n204, n3, n68, n201, 
-        n5, n4, n66, n198, n6, n195, VCC_net;
+    wire n67, n201, n365, GND_net, n199, n362, n197, n359, n250, 
+        n195, n356, n353, VCC_net;
     
-    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i7 (.D(n37[6]), 
-            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n2));
-    defparam prescaler_9_10__i7.REGSET = "RESET";
-    defparam prescaler_9_10__i7.SRMODE = "CE_OVER_LSR";
-    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i8 (.D(n37[7]), 
-            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(lrck_c));
-    defparam prescaler_9_10__i8.REGSET = "RESET";
-    defparam prescaler_9_10__i8.SRMODE = "CE_OVER_LSR";
-    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_9 (.A0(GND_net), 
-            .B0(GND_net), .C0(lrck_c), .D0(n72), .CI0(n72), .A1(GND_net), 
-            .B1(GND_net), .C1(GND_net), .D1(n207), .CI1(n207), .CO0(n207), 
+    (* lineinfo="@1(191[14],203[9])" *) FD1P3XZ i30 (.D(din_c), .SP(n152), 
+            .CK(scki_c_c), .SR(GND_net), .Q(lsreg[0]));
+    defparam i30.REGSET = "RESET";
+    defparam i30.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B)+!A))", lineinfo="@1(198[9],202[14])" *) LUT4 i2_2_lut (.A(shift_en), 
+            .B(lrck_c), .Z(n152));
+    defparam i2_2_lut.INIT = "0x2222";
+    (* lut_function="(!(A))", lineinfo="@2(40[32],40[38])" *) LUT4 i23_1_lut (.A(nreset_c), 
+            .Z(n71));
+    defparam i23_1_lut.INIT = "0x5555";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i149_4_lut (.A(\prescaler[0] ), 
+            .B(bit_state[2]), .C(bit_state[1]), .D(bck_c), .Z(n273));
+    defparam i149_4_lut.INIT = "0xfffe";
+    (* syn_use_carry_chain=1, lineinfo="@1(173[24],173[40])" *) FD1P3XZ prescaler_23_31__i1 (.D(n37[0]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n71), .Q(\prescaler[0] ));
+    defparam prescaler_23_31__i1.REGSET = "RESET";
+    defparam prescaler_23_31__i1.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!(A (B ((D)+!C))+!A (B)))", lineinfo="@1(211[14],228[9])" *) LUT4 i25_4_lut (.A(n5), 
+            .B(nreset_c), .C(lrck_c), .D(n273), .Z(n74));
+    defparam i25_4_lut.INIT = "0x33b3";
+    (* lineinfo="@1(191[14],203[9])" *) FD1P3XZ i29 (.D(din_c), .SP(n67), 
+            .CK(scki_c_c), .SR(GND_net), .Q(rsreg[0]));
+    defparam i29.REGSET = "RESET";
+    defparam i29.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(173[24],173[40])" *) FD1P3XZ prescaler_23_31__i8 (.D(n37[7]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n71), .Q(lrck_c));
+    defparam prescaler_23_31__i8.REGSET = "RESET";
+    defparam prescaler_23_31__i8.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(173[24],173[40])" *) FD1P3XZ prescaler_23_31__i7 (.D(n37[6]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n71), .Q(bit_state[4]));
+    defparam prescaler_23_31__i7.REGSET = "RESET";
+    defparam prescaler_23_31__i7.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B (C)))" *) LUT4 i1_2_lut_3_lut (.A(bit_state[3]), 
+            .B(bit_state[4]), .C(bit_state[0]), .Z(n5));
+    defparam i1_2_lut_3_lut.INIT = "0x8080";
+    (* syn_use_carry_chain=1, lineinfo="@1(173[24],173[40])" *) FD1P3XZ prescaler_23_31__i6 (.D(n37[5]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n71), .Q(bit_state[3]));
+    defparam prescaler_23_31__i6.REGSET = "RESET";
+    defparam prescaler_23_31__i6.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B))", lineinfo="@1(198[13],198[29])" *) LUT4 i17_2_lut (.A(lrck_c), 
+            .B(shift_en), .Z(n67));
+    defparam i17_2_lut.INIT = "0x8888";
+    (* lineinfo="@1(173[24],173[40])" *) FA2 prescaler_23_31_add_4_9 (.A0(GND_net), 
+            .B0(GND_net), .C0(lrck_c), .D0(n201), .CI0(n201), .A1(GND_net), 
+            .B1(GND_net), .C1(GND_net), .D1(n365), .CI1(n365), .CO0(n365), 
             .S0(n37[7]));
-    defparam prescaler_9_10_add_4_9.INIT0 = "0xc33c";
-    defparam prescaler_9_10_add_4_9.INIT1 = "0xc33c";
-    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_7 (.A0(GND_net), 
-            .B0(GND_net), .C0(n3), .D0(n70), .CI0(n70), .A1(GND_net), 
-            .B1(GND_net), .C1(n2), .D1(n204), .CI1(n204), .CO0(n204), 
-            .CO1(n72), .S0(n37[5]), .S1(n37[6]));
-    defparam prescaler_9_10_add_4_7.INIT0 = "0xc33c";
-    defparam prescaler_9_10_add_4_7.INIT1 = "0xc33c";
-    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_5 (.A0(GND_net), 
-            .B0(GND_net), .C0(n5), .D0(n68), .CI0(n68), .A1(GND_net), 
-            .B1(GND_net), .C1(n4), .D1(n201), .CI1(n201), .CO0(n201), 
-            .CO1(n70), .S0(n37[3]), .S1(n37[4]));
-    defparam prescaler_9_10_add_4_5.INIT0 = "0xc33c";
-    defparam prescaler_9_10_add_4_5.INIT1 = "0xc33c";
-    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_3 (.A0(GND_net), 
-            .B0(GND_net), .C0(bck_c), .D0(n66), .CI0(n66), .A1(GND_net), 
-            .B1(GND_net), .C1(n6), .D1(n198), .CI1(n198), .CO0(n198), 
-            .CO1(n68), .S0(n37[1]), .S1(n37[2]));
-    defparam prescaler_9_10_add_4_3.INIT0 = "0xc33c";
-    defparam prescaler_9_10_add_4_3.INIT1 = "0xc33c";
-    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i6 (.D(n37[5]), 
-            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n3));
-    defparam prescaler_9_10__i6.REGSET = "RESET";
-    defparam prescaler_9_10__i6.SRMODE = "CE_OVER_LSR";
-    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i5 (.D(n37[4]), 
-            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n4));
-    defparam prescaler_9_10__i5.REGSET = "RESET";
-    defparam prescaler_9_10__i5.SRMODE = "CE_OVER_LSR";
-    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i4 (.D(n37[3]), 
-            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n5));
-    defparam prescaler_9_10__i4.REGSET = "RESET";
-    defparam prescaler_9_10__i4.SRMODE = "CE_OVER_LSR";
-    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i3 (.D(n37[2]), 
-            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n6));
-    defparam prescaler_9_10__i3.REGSET = "RESET";
-    defparam prescaler_9_10__i3.SRMODE = "CE_OVER_LSR";
-    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i2 (.D(n37[1]), 
-            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(bck_c));
-    defparam prescaler_9_10__i2.REGSET = "RESET";
-    defparam prescaler_9_10__i2.SRMODE = "CE_OVER_LSR";
-    (* lineinfo="@1(160[24],160[40])" *) FA2 prescaler_9_10_add_4_1 (.A0(GND_net), 
+    defparam prescaler_23_31_add_4_9.INIT0 = "0xc33c";
+    defparam prescaler_23_31_add_4_9.INIT1 = "0xc33c";
+    (* lineinfo="@1(173[24],173[40])" *) FA2 prescaler_23_31_add_4_7 (.A0(GND_net), 
+            .B0(GND_net), .C0(bit_state[3]), .D0(n199), .CI0(n199), 
+            .A1(GND_net), .B1(GND_net), .C1(bit_state[4]), .D1(n362), 
+            .CI1(n362), .CO0(n362), .CO1(n201), .S0(n37[5]), .S1(n37[6]));
+    defparam prescaler_23_31_add_4_7.INIT0 = "0xc33c";
+    defparam prescaler_23_31_add_4_7.INIT1 = "0xc33c";
+    (* lineinfo="@1(173[24],173[40])" *) FA2 prescaler_23_31_add_4_5 (.A0(GND_net), 
+            .B0(GND_net), .C0(bit_state[1]), .D0(n197), .CI0(n197), 
+            .A1(GND_net), .B1(GND_net), .C1(bit_state[2]), .D1(n359), 
+            .CI1(n359), .CO0(n359), .CO1(n199), .S0(n37[3]), .S1(n37[4]));
+    defparam prescaler_23_31_add_4_5.INIT0 = "0xc33c";
+    defparam prescaler_23_31_add_4_5.INIT1 = "0xc33c";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i2_3_lut (.A(bit_state[0]), .B(bit_state[1]), 
+            .C(bit_state[2]), .Z(n250));
+    defparam i2_3_lut.INIT = "0xfefe";
+    (* lut_function="(!(A ((C (D))+!B)+!A !(B (C+(D)))))", lineinfo="@1(187[22],187[71])" *) LUT4 i2_4_lut (.A(n250), 
+            .B(nreset_c), .C(bit_state[3]), .D(bit_state[4]), .Z(shift_en));
+    defparam i2_4_lut.INIT = "0x4cc8";
+    (* lineinfo="@1(173[24],173[40])" *) FA2 prescaler_23_31_add_4_3 (.A0(GND_net), 
+            .B0(GND_net), .C0(bck_c), .D0(n195), .CI0(n195), .A1(GND_net), 
+            .B1(GND_net), .C1(bit_state[0]), .D1(n356), .CI1(n356), 
+            .CO0(n356), .CO1(n197), .S0(n37[1]), .S1(n37[2]));
+    defparam prescaler_23_31_add_4_3.INIT0 = "0xc33c";
+    defparam prescaler_23_31_add_4_3.INIT1 = "0xc33c";
+    (* lineinfo="@1(173[24],173[40])" *) FA2 prescaler_23_31_add_4_1 (.A0(GND_net), 
             .B0(GND_net), .C0(GND_net), .A1(GND_net), .B1(VCC_net), 
-            .C1(n8), .D1(n195), .CI1(n195), .CO0(n195), .CO1(n66), 
-            .S1(n37[0]));
-    defparam prescaler_9_10_add_4_1.INIT0 = "0xc33c";
-    defparam prescaler_9_10_add_4_1.INIT1 = "0xc33c";
+            .C1(\prescaler[0] ), .D1(n353), .CI1(n353), .CO0(n353), 
+            .CO1(n195), .S1(n37[0]));
+    defparam prescaler_23_31_add_4_1.INIT0 = "0xc33c";
+    defparam prescaler_23_31_add_4_1.INIT1 = "0xc33c";
+    (* syn_use_carry_chain=1, lineinfo="@1(173[24],173[40])" *) FD1P3XZ prescaler_23_31__i5 (.D(n37[4]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n71), .Q(bit_state[2]));
+    defparam prescaler_23_31__i5.REGSET = "RESET";
+    defparam prescaler_23_31__i5.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(173[24],173[40])" *) FD1P3XZ prescaler_23_31__i4 (.D(n37[3]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n71), .Q(bit_state[1]));
+    defparam prescaler_23_31__i4.REGSET = "RESET";
+    defparam prescaler_23_31__i4.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(173[24],173[40])" *) FD1P3XZ prescaler_23_31__i3 (.D(n37[2]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n71), .Q(bit_state[0]));
+    defparam prescaler_23_31__i3.REGSET = "RESET";
+    defparam prescaler_23_31__i3.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(173[24],173[40])" *) FD1P3XZ prescaler_23_31__i2 (.D(n37[1]), 
+            .SP(VCC_net), .CK(scki_c_c), .SR(n71), .Q(bck_c));
+    defparam prescaler_23_31__i2.REGSET = "RESET";
+    defparam prescaler_23_31__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=70, LSE_LLINE=57, LSE_RLINE=57, lineinfo="@1(211[14],228[9])" *) FD1P3XZ left__i1 (.D(lsreg[0]), 
+            .SP(n74), .CK(scki_c_c), .SR(n71), .Q(left_c));
+    defparam left__i1.REGSET = "RESET";
+    defparam left__i1.SRMODE = "CE_OVER_LSR";
     VHI i2 (.Z(VCC_net));
-    (* syn_use_carry_chain=1, lineinfo="@1(160[24],160[40])" *) FD1P3XZ prescaler_9_10__i1 (.D(n37[0]), 
-            .SP(VCC_net), .CK(scki_c_c), .SR(n64), .Q(n8));
-    defparam prescaler_9_10__i1.REGSET = "RESET";
-    defparam prescaler_9_10__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=70, LSE_LLINE=57, LSE_RLINE=57, lineinfo="@1(211[14],228[9])" *) FD1P3XZ right__i1 (.D(rsreg[0]), 
+            .SP(n74), .CK(scki_c_c), .SR(n71), .Q(right_c));
+    defparam right__i1.REGSET = "RESET";
+    defparam right__i1.SRMODE = "CE_OVER_LSR";
     VLO i1 (.Z(GND_net));
     
 endmodule

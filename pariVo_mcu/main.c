@@ -111,7 +111,7 @@ int main(void) {
     // Artificial chip select signal to allow 8-bit CE-based SPI decoding on the logic analyzers.
     pinMode(SPI_CE, GPIO_OUTPUT);
     digitalWrite(SPI_CE, 1);
-    uint16_t convertedVals[4] = {0, 0, 0, 0};
+    uint16_t convertedVals[5] = {0, 0, 0, 0, 0};
     int i;
 
 
@@ -122,8 +122,9 @@ int main(void) {
   convertedVals[1] = (uint16_t) 0x0034;
   convertedVals[2] = (uint16_t) 0x0056;
   convertedVals[3] = (uint16_t) 0x0078;
+  convertedVals[4] = (uint16_t) 0x0099;
   // Send the key
-  for(i = 0; i < 4; i++) {
+  for(i = 0; i < 5; i++) {
     digitalWrite(SPI_CE, 1); // Arificial CE high
     spiSendReceive((char)convertedVals[i]);
     digitalWrite(SPI_CE, 0); // Arificial CE low
@@ -145,11 +146,7 @@ int main(void) {
 
   // Write LOAD high
   digitalWrite(PA9, 1);
-  
-  convertedVals[0] = (uint16_t) 0x0012;
-  convertedVals[1] = (uint16_t) 0x0034;
-  convertedVals[2] = (uint16_t) 0x0056;
-  convertedVals[3] = (uint16_t) 0x0078;
+
     // Send the key
   for(i = 0; i < 4; i++) {
     digitalWrite(SPI_CE, 1); // Arificial CE high
