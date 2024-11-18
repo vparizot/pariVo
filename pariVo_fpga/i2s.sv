@@ -25,18 +25,18 @@
 // // on i2c ADC acts slave
 // // DSP functional blocks and DSP functional useage guide
 
-// // LOW PASS FILTER w/ FIR
-//     always @(posedge clk) begin
-//         // Shift register to hold previous samples
-//         for (i = numTaps; i > 0; i = i - 1)
-//             shiftReg[i] <= shiftReg[i-1];
-//         shiftReg[0] <= musicPacketIn;
+// LOW PASS FILTER w/ FIR
+   //  always @(posedge clk) begin
+   //      // Shift register to hold previous samples
+   //      for (i = numTaps; i > 0; i = i - 1)
+   //          shiftReg[i] <= shiftReg[i-1];
+   //      shiftReg[0] <= musicPacketIn;
 
-//         // FIR filtering - multiply and accumulate
-//         musicPacketOut <= 0;
-//         for (i = 0; i <= numTaps; i = i + 1)
-//             musicPacketOut <= musicPacketOut + (shiftReg[i] * coeff[i]);
-//     end 
+   //      // FIR filtering - multiply and accumulate
+   //      musicPacketOut <= 0;
+   //      for (i = 0; i <= numTaps; i = i + 1)
+   //          musicPacketOut <= musicPacketOut + (shiftReg[i] * coeff[i]);
+   //  end 
 
 
 // endmodule

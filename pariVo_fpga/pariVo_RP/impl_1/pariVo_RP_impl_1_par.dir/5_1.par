@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "pariVo_RP_impl_1_map.udb"
-Sun Nov 17 14:39:43 2024
+Mon Nov 18 09:40:41 2024
 
 PAR: Place And Route Radiant Software (64-bit) 2024.1.0.34.2.
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
@@ -20,7 +20,7 @@ Package: SG48
 Performance Grade:   High-Performance_1.2V
 
 Constraint Summary
-   Total number of constraints: 2
+   Total number of constraints: 8
    Total number of constraints dropped: 0
 
 Number of Signals: 45
@@ -50,9 +50,8 @@ Device utilization summary:
    OPENDRAIN          0/3             0% used
 
 Pin Constraint Summary:
-   2 out of 8 pins locked (25% locked).
-.
-...........
+   8 out of 8 pins locked (100% locked).
+
 Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
 
 
@@ -63,18 +62,18 @@ Starting Placer Phase 1. CPU time: 0 secs , REAL time: 0 secs
 ..  ..
 ....................
 
-Placer score = 2824.
+Placer score = 5365.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             14/2640         <1% used
+   SLICE             13/2640         <1% used
 
-Finished Placer Phase 1. CPU time: 2 secs , REAL time: 2 secs 
+Finished Placer Phase 1. CPU time: 1 secs , REAL time: 2 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  7934
-Finished Placer Phase 2.  CPU time: 2 secs , REAL time: 2 secs 
+Placer score =  13121
+Finished Placer Phase 2.  CPU time: 1 secs , REAL time: 2 secs 
 
 
 ------------------ Clock Report ------------------
@@ -96,15 +95,15 @@ I/O Bank Usage Summary:
 +----------+---------------+------------+------------+------------+
 | I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+---------------+------------+------------+------------+
-| 0        | 0 / 14 (  0%) | OFF        |            |            |
-| 1        | 8 / 14 ( 57%) | 3.3V       |            |            |
-| 2        | 0 / 8 (  0%)  | OFF        |            |            |
+| 0        | 1 / 14 (  7%) | 3.3V       |            |            |
+| 1        | 5 / 14 ( 35%) | 3.3V       |            |            |
+| 2        | 2 / 8 ( 25%)  | 3.3V       |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 2 secs , REAL time: 2 secs 
+Total Placer CPU time: 1 secs , REAL time: 2 secs 
 
 
-Checksum -- place: a4b6ebdcb5e709111f6e8f88ff5eb12bb41736c5
+Checksum -- place: 47a86f7dc9ed584a42d4127cbdff2d40add7eb75
 Writing design to file pariVo_RP_impl_1_par.dir/5_1.udb ...
 
 
@@ -113,7 +112,7 @@ INFO - par: ASE feature is off due to non timing-driven settings.
 -----------------------------------------------------------------
 
 
-Start NBR router at 14:39:45 11/17/24
+Start NBR router at 09:40:43 11/18/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -142,25 +141,25 @@ Other clocks:
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 14:39:46 11/17/24
+Start NBR section for initial routing at 09:40:44 11/18/24
 Level 4, iteration 1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 14:39:46 11/17/24
+Start NBR section for normal routing at 09:40:44 11/18/24
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 14:39:46 11/17/24
+Start NBR section for post-routing at 09:40:44 11/18/24
 
 End NBR router with 0 unrouted connection(s)
 
-Checksum -- route: d62b8dcc2d448ef664a1aaefedb1bb253027205
+Checksum -- route: 5dc007c4795865f3ffccf5fec80361484eff3bb
 
 Total CPU time 0 secs 
 Total REAL time: 0 secs 
@@ -185,7 +184,7 @@ Note: user must run 'timing' for timing closure signoff.
 
 Total CPU  Time: 2 secs 
 Total REAL Time: 3 secs 
-Peak Memory Usage: 106.25 MB
+Peak Memory Usage: 105.93 MB
 
 
 par done!

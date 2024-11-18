@@ -1,5 +1,134 @@
+module coeffs_sync(
+	input		logic [11:0] a,
+	input	 	logic 			clk,
+	output 	logic [15:0] y);
+            
+  // sbox implemented as a ROM
+  // This module is synchronous and will be inferred using BRAMs (Block RAMs)
+  logic [15:0] coeffs [0:2047];
+
+  initial   $readmemh("coeffs.txt", coeffs);
+	
+	// Synchronous version
+	always_ff @(posedge clk) begin
+		y <= coeffs[a];
+	end
+endmodule
+
+module get_tap(input logic clk,
+                input logic [3:0] filterNum,
+                input logic [2:0] tapnum,
+                output logic [15:0] tapcoeff);
+    
+            logic [11:0] baseAddr = (filterNum << 4) << 3;
+            logic [11:0] currentAddr = baseAddr + (tapnum << 4);
+            logic [15:0] tempCoeff;
+
+           // baseAddr = (filterNum << 4) << 3; // baseAddress = size of each tap (16 bits) * number of taps (8 taps) * filter #
+          //  currentAddr = baseAddr + (tapnum << 4); // baseAddress + currentTap# * size of tap (16 bit)
+            coeffs_sync gettap(currentAddr, clk, tempCoeff);
+
+            assign tapcoeff = tempCoeff;
+endmodule
+
+module all_taps(input logic clk, reset,
+                input logic [7:0] eqVal,
+                output logic [127:0] allTaps);
+            
+	logic [3:0] filterNum;
+    logic [2:0] tapnum;
+    logic [15:0] h0, h1, h2, h3, h4, h5, h6, h7;
+    logic [15:0] tapcoeff;
+
+	// define the states
+	typedef enum logic [3:0] {S0 = 0, S1 = 1, S2 = 2, S3 = 3, S4 = 4, S5 = 5, S6 = 6, S7 = 7} statetype;
+	statetype state, nextstate;
+
+	// state register
+	always_ff @(posedge clk, posedge reset)
+		if (reset) state <= S0;
+		else state <= nextstate;
+
+	// Next state logic
+	always_comb
+		case (state)
+			S0: nextstate = S1;
+			S1: nextstate = S2;
+			S2: nextstate = S3;	
+            S3: nextstate = S4;
+			S4: nextstate = S5;
+			S5: nextstate = S6;	
+            S6: nextstate = S7;
+            S7: nextstate = S0;
+			default: nextstate = S0;
+		endcase
+
+    // get tap number
+    always_ff @(posedge clk)
+	    case (state)
+			S0: begin 
+                    tapnum <= 3'b000;
+                    h0 <= tapcoeff;
+                end
+			S1: begin 
+                    tapnum <= 3'b001;
+                    h1 <= tapcoeff;
+                end
+			S2: begin 
+                    tapnum <= 3'b010;
+                    h2 <= tapcoeff;
+                end
+            S3: begin 
+                    tapnum <= 3'b011;
+                    h3 <= tapcoeff;
+                end
+			S4: begin 
+                    tapnum <= 3'b100;
+                    h4 <= tapcoeff;
+                end
+			S5: begin 
+                    tapnum <= 3'b101;
+                    h5 <= tapcoeff;
+                end
+            S6: begin 
+                    tapnum <= 3'b110;
+                    h6 <= tapcoeff;
+                end
+            S7: begin 
+                    tapnum <= 3'b111;
+                    h7 <= tapcoeff;
+                end
+		endcase
+
+    // get filter number
+    always_comb 
+			if      (eqVal < 16) filterNum = 4'h0;
+            else if (eqVal < 32) filterNum = 4'h1;
+            else if (eqVal < 48) filterNum = 4'h2;
+            else if (eqVal < 64) filterNum = 4'h3;
+            else if (eqVal < 80) filterNum = 4'h4;
+            else if (eqVal < 96) filterNum = 4'h5;
+            else if (eqVal < 112) filterNum = 4'h6;
+            else if (eqVal < 128) filterNum = 4'h7;
+            else if (eqVal < 144) filterNum = 4'h8;
+            else if (eqVal < 160) filterNum = 4'h9;
+            else if (eqVal < 176) filterNum = 4'ha;
+            else if (eqVal < 192) filterNum = 4'hb;
+            else if (eqVal < 208) filterNum = 4'hc;
+            else if (eqVal < 224) filterNum = 4'hd;
+            else if (eqVal < 240) filterNum = 4'he;
+            else                  filterNum = 4'hf;
+	
+
+	get_tap getalltaps(clk, filterNum, tapnum, tapcoeff);
+
+    assign alltaps = {h0, h1, h2, h3, h4, h5, h6, h7};
+
+endmodule
+/*
 // digitalFiltering d1(clk, reset, filterCoefficients, eqLow0, eqHigh0, audioIn, audioOut)
 // Implement FIR (Finite Impulse Response)
+
 module digitalFiltering(input logic clk, 
                         input logic reset,
                         //input logic filterCoefficients, // 
@@ -41,3 +170,4 @@ module digitalFiltering(input logic clk,
 
 endmodule
 
+*/

@@ -1,11 +1,9 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2024.1.0.34.2
-Sun Nov 17 13:57:37 2024
+Mon Nov 18 09:40:31 2024
 
-WARNING <71003020> - Top module port 'load' does not connect to anything.
-WARNING <71003020> - Top module port 'ce' does not connect to anything.
+WARNING <1027013> - No port matched 'sdi'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (2) : Can't resolve object 'sdi' in constraint 'ldc_set_location -site {10} [get_ports sdi]'.
 WARNING <1027013> - No port matched 'done'.
 WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (5) : Can't resolve object 'done' in constraint 'ldc_set_location -site {27} [get_ports done]'.
-WARNING <1027013> - No port matched 'lrck'.
-WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (10) : Can't resolve object 'lrck' in constraint 'ldc_set_location -site {13} [get_ports lrck]'.
-WARNING <1027013> - No port matched 'bck'.
-WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (11) : Can't resolve object 'bck' in constraint 'ldc_set_location -site {18} [get_ports bck]'.
+WARNING <1027013> - No port matched 'ledTest2'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (6) : Can't resolve object 'ledTest2' in constraint 'ldc_set_location -site {38} [get_ports ledTest2]'.
