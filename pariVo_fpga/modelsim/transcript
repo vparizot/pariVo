@@ -771,3 +771,143 @@ add wave -position end  sim:/get_all_taps_tb/dut/gettaps/currentAddr
 add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tempCoeff
 restart -f
 run 1000
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful with warnings.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# Load canceled
+# Load canceled
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# End time: 00:20:26 on Nov 19,2024, Elapsed time: 3:34:43
+# Errors: 0, Warnings: 3
+# vsim -gui work.get_all_taps_tb 
+# Start time: 00:20:26 on Nov 19,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'tapnum'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(20).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut/gettaps File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv Line: 873
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/allTaps
+add wave -position end  sim:/get_all_taps_tb/expected
+run 50000
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+run 50000
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'tapnum'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(20).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut/gettaps File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv Line: 873
+run 50000
+add wave -position end  sim:/get_all_taps_tb/dut/clk
+add wave -position end  sim:/get_all_taps_tb/dut/reset
+add wave -position end  sim:/get_all_taps_tb/dut/eqVal
+add wave -position end  sim:/get_all_taps_tb/dut/allTaps
+add wave -position end  sim:/get_all_taps_tb/dut/filterNum
+add wave -position end  sim:/get_all_taps_tb/dut/tapnum
+add wave -position end  sim:/get_all_taps_tb/dut/h0
+add wave -position end  sim:/get_all_taps_tb/dut/h1
+add wave -position end  sim:/get_all_taps_tb/dut/h2
+add wave -position end  sim:/get_all_taps_tb/dut/h3
+add wave -position end  sim:/get_all_taps_tb/dut/h4
+add wave -position end  sim:/get_all_taps_tb/dut/h5
+add wave -position end  sim:/get_all_taps_tb/dut/h6
+add wave -position end  sim:/get_all_taps_tb/dut/h7
+add wave -position end  sim:/get_all_taps_tb/dut/h8
+add wave -position end  sim:/get_all_taps_tb/dut/h9
+add wave -position end  sim:/get_all_taps_tb/dut/h10
+add wave -position end  sim:/get_all_taps_tb/dut/h11
+RESTART -F
+# invalid command name "RESTART"
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'tapnum'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(20).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut/gettaps File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv Line: 873
+run 50000
+add wave -position end  sim:/get_all_taps_tb/dut/tapcoeff
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'tapnum'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(20).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut/gettaps File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv Line: 873
+run 100000
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/clk
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/filterNum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapnum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/baseAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/currentAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tempCoeff
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (3) for port 'tapnum'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(20).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut/gettaps File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv Line: 873
+run 100000
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 50000
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 50000
+# ** Warning: (vsim-7) Failed to open readmem file "intcoeffs.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(10)
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut/gettaps/gettap
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 50000
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 50000
+run 100000
