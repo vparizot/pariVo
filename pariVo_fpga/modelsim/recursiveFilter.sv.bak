@@ -7,7 +7,7 @@ module coeffs_sync(
   // This module is synchronous and will be inferred using BRAMs (Block RAMs)
   logic [15:0] coeffs [0:2047];
 
-  initial   $readmemh("fakevalues.txt", coeffs);
+  initial   $readmemh("filename.txt", coeffs);
 	
 	// Synchronous version
 	always_ff @(posedge clk) begin
@@ -24,8 +24,8 @@ module get_tap(input logic clk,
             logic [15:0] currentAddr;
             logic [15:0] tempCoeff;
 
-            assign baseAddr = (filterNum << 4) << 3;
-            assign currentAddr =  baseAddr + (tapnum << 4);
+            assign baseAddr = (filterNum << 3);
+            assign currentAddr =  baseAddr + (tapnum);
            // baseAddr = (filterNum << 4) << 3; // baseAddress = size of each tap (16 bits) * number of taps (8 taps) * filter #
           //  currentAddr = baseAddr + (tapnum << 4); // baseAddress + currentTap# * size of tap (16 bit)
             coeffs_sync gettap(currentAddr, clk, tempCoeff);

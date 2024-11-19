@@ -18,7 +18,7 @@ module get_all_taps_tb();
 		end
 	initial
 		begin
-		eqVal = 8'h1; #10;
+		eqVal = 8'hF4; #10;
 		expected = 128'hd00000001000200030004000500060007;
 
 		#100

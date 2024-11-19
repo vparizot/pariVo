@@ -622,3 +622,152 @@ restart -f
 # Loading work.all_taps
 # Loading work.get_tap
 # Loading work.coeffs_sync
+run 1000
+vsim -gui work.gettaps_tb
+# End time: 20:37:19 on Nov 18,2024, Elapsed time: 0:19:10
+# Errors: 0, Warnings: 1
+# vsim -gui work.gettaps_tb 
+# Start time: 20:37:19 on Nov 18,2024
+# Loading sv_std.std
+# Loading work.gettaps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+restart -f
+run 2000
+add wave -position end  sim:/gettaps_tb/clk
+add wave -position end  sim:/gettaps_tb/reset
+add wave -position end  sim:/gettaps_tb/eqVal
+add wave -position end  sim:/gettaps_tb/allTaps
+add wave -position end  sim:/gettaps_tb/expected
+restart -f
+run 1000
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful with warnings.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 1000
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful with warnings.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful with warnings.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 1000
+vsim -gui work.all_taps
+# End time: 20:39:59 on Nov 18,2024, Elapsed time: 0:02:40
+# Errors: 0, Warnings: 1
+# vsim -gui work.all_taps 
+# Start time: 20:39:59 on Nov 18,2024
+# Loading sv_std.std
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 1000
+add wave -position end  sim:/all_taps/clk
+add wave -position end  sim:/all_taps/reset
+add wave -position end  sim:/all_taps/eqVal
+add wave -position end  sim:/all_taps/allTaps
+add wave -position end  sim:/all_taps/filterNum
+add wave -position end  sim:/all_taps/tapnum
+add wave -position end  sim:/all_taps/h0
+add wave -position end  sim:/all_taps/h1
+add wave -position end  sim:/all_taps/h2
+add wave -position end  sim:/all_taps/h3
+add wave -position end  sim:/all_taps/h4
+add wave -position end  sim:/all_taps/h5
+add wave -position end  sim:/all_taps/h6
+add wave -position end  sim:/all_taps/h7
+add wave -position end  sim:/all_taps/tapcoeff
+add wave -position end  sim:/all_taps/state
+add wave -position end  sim:/all_taps/nextstate
+restart -f
+run 1000
+vsim -gui work.gettaps_tb
+# End time: 20:41:44 on Nov 18,2024, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 1
+# vsim -gui work.gettaps_tb 
+# Start time: 20:41:44 on Nov 18,2024
+# Loading sv_std.std
+# Loading work.gettaps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+add wave -position end  sim:/gettaps_tb/clk
+add wave -position end  sim:/gettaps_tb/reset
+add wave -position end  sim:/gettaps_tb/eqVal
+add wave -position end  sim:/gettaps_tb/allTaps
+add wave -position end  sim:/gettaps_tb/expected
+restart -f
+run 2000
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful with warnings.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 200
+run 1000
+vsim -gui work.get_all_taps_tb
+# End time: 20:45:43 on Nov 18,2024, Elapsed time: 0:03:59
+# Errors: 0, Warnings: 1
+# vsim -gui work.get_all_taps_tb 
+# Start time: 20:45:43 on Nov 18,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/allTaps
+add wave -position end  sim:/get_all_taps_tb/expected
+restart -f
+run 1000
+add wave -position end  sim:/get_all_taps_tb/dut/clk
+add wave -position end  sim:/get_all_taps_tb/dut/reset
+add wave -position end  sim:/get_all_taps_tb/dut/eqVal
+add wave -position end  sim:/get_all_taps_tb/dut/allTaps
+add wave -position end  sim:/get_all_taps_tb/dut/filterNum
+add wave -position end  sim:/get_all_taps_tb/dut/tapnum
+add wave -position end  sim:/get_all_taps_tb/dut/h0
+add wave -position end  sim:/get_all_taps_tb/dut/h1
+add wave -position end  sim:/get_all_taps_tb/dut/h2
+add wave -position end  sim:/get_all_taps_tb/dut/h3
+add wave -position end  sim:/get_all_taps_tb/dut/h4
+add wave -position end  sim:/get_all_taps_tb/dut/h5
+add wave -position end  sim:/get_all_taps_tb/dut/h6
+add wave -position end  sim:/get_all_taps_tb/dut/h7
+add wave -position end  sim:/get_all_taps_tb/dut/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/state
+add wave -position end  sim:/get_all_taps_tb/dut/nextstate
+restart -f
+run 2000
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/filterNum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapnum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/baseAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/currentAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tempCoeff
+restart -f
+run 1000
