@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Mon Nov 18 09:40:38 2024
+Mapped on: Tue Nov 19 15:57:17 2024
 
 Design Information
 ------------------
@@ -39,7 +39,7 @@ Design Summary
       Number of IO sites used for PIO+I3C+OD+RGB: 8 out of 39 (21%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
-   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
    Number of Low Speed OSCs:   0 out of 1 (0%)
    Number of RGB PWM:          0 out of 1 (0%)
    Number of RGB Drivers:      0 out of 1 (0%)
@@ -50,16 +50,16 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net scki_c_c: 9 loads, 9 rising, 0 falling (Driver: Port clk)
-   Number of Clock Enables:  3
-      Net pcm_in.n152: 1 loads, 1 SLICEs
-      Net pcm_in.n74: 2 loads, 2 SLICEs
+      Net clk_c: 9 loads, 9 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+   Number of Clock Enables:  4
+      Net VCC_net: 1 loads, 0 SLICEs
+      Net pcm_in.n153: 1 loads, 1 SLICEs
+      Net pcm_in.n75: 2 loads, 2 SLICEs
       Net pcm_in.n67: 1 loads, 1 SLICEs
    Number of LSRs:  1
-      Net pcm_in.n71: 7 loads, 7 SLICEs
+      Net pcm_in.n72: 7 loads, 7 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net pcm_in.n71: 7 loads
-      Net lrck_c: 5 loads
+      Net pcm_in.n72: 7 loads
 
                                     Page 1
 
@@ -69,6 +69,7 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
+      Net lrck_c: 5 loads
       Net bck_c: 3 loads
       Net nreset_c: 3 loads
       Net pcm_in.bit_state[0]: 3 loads
@@ -76,7 +77,7 @@ Design Summary (cont)
       Net pcm_in.bit_state[2]: 3 loads
       Net pcm_in.bit_state[3]: 3 loads
       Net pcm_in.bit_state[4]: 3 loads
-      Net din_c: 2 loads
+      Net VCC_net: 3 loads
 
 
 
@@ -126,7 +127,6 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
-+---------------------+-----------+-----------+-------+-------+-----------+
 
                                     Page 2
 
@@ -136,6 +136,7 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
 | lrck                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | bck                 | OUTPUT    |           |       |       |           |
@@ -146,7 +147,7 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+-------+-------+-----------+
 | right               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| clk                 | INPUT     |           |       |       |           |
+| clk                 | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | nreset              | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -156,12 +157,28 @@ IO (PIO) Attributes (cont)
 Removed logic
 -------------
 
-Block scki_c_pad.vlo_inst was optimized away.
+Block i1 was optimized away.
+
+OSC Summary
+-----------
+
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            hf_osc
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          PIN,NODE clk_c
+  DIV Setting:                                  10
+
+ASIC Components
+---------------
+
+Instance Name: hf_osc
+         Type: HFOSC
 
 Constraint Summary
 ------------------
 
-   Total number of constraints: 11
+   Total number of constraints: 12
    Total number of constraints dropped: 3
    Dropped constraints are:
      ldc_set_location -site {10} [get_ports sdi]
@@ -174,24 +191,7 @@ Run Time and Memory Usage
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 63 MB
-Checksum -- map: 498fe9c0fccbb6d1c7d0600b4c56c4c5da459988
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Checksum -- map: 65191981f5c3e25c134a016343f2f0d9bc5ff90
 
 
                                     Page 3

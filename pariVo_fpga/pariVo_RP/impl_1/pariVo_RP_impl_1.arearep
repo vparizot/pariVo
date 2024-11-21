@@ -6,12 +6,13 @@ I/O cells:      8
                                cell     count   Res Usage(%)
                                CCU2         5          100.0
                             FD1P3XZ        12          100.0
-                                 IB         3          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         2          100.0
                                LUT4         8          100.0
-                                 OB         5          100.0
+                                 OB         6          100.0
 SUB MODULES
                                 i2s         1
-                              TOTAL        34
+                              TOTAL        35
 ----------------------------------------------------------------------
 Report for cell i2s.v1
 Instance Path : pcm_in

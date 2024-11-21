@@ -6,20 +6,20 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Mon Nov 18 09:40:43 2024
+Tue Nov 19 15:57:23 2024
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | Properties                               |
 +-----------+----------+--------------+-------+------------------------------------------+
 | bck       | 18/1     | LVCMOS33_OUT | PL23B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| clk       | 12/1     | LVCMOS33_IN  | PL19A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| din       | 21/1     | LVCMOS33_IN  | PL19B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| clk       | 12/1     | LVCMOS33_OUT | PL19A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| din       | 19/1     | LVCMOS33_IN  | PL22B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | left      | 47/2     | LVCMOS33_OUT | PL7A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | lrck      | 13/1     | LVCMOS33_OUT | PL20A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | nreset    | 34/0     | LVCMOS33_IN  | PR14B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | right     | 48/2     | LVCMOS33_OUT | PL8A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| scki      | 20/1     | LVCMOS33_OUT | PL20B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| scki      | 4/2      | LVCMOS33_OUT | PL10A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 +-----------+----------+--------------+-------+------------------------------------------+
 
 Vccio by Bank:
@@ -37,21 +37,21 @@ Pinout by Pin Number:
 +----------+---------------------+------------+--------------+-------+------------------+
 | 2/2      |     unused, PULL:UP |            |              | PL9A  |                  |
 | 3/2      |     unused, PULL:UP |            |              | PL10B |                  |
-| 4/2      |     unused, PULL:UP |            |              | PL10A |                  |
+| 4/2      | scki                | LOCATED    | LVCMOS33_OUT | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
 | 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
 | 10/1     |     unused, PULL:UP |            |              | PL17A |                  |
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
-| 12/1     | clk                 | LOCATED    | LVCMOS33_IN  | PL19A |                  |
+| 12/1     | clk                 | LOCATED    | LVCMOS33_OUT | PL19A |                  |
 | 13/1     | lrck                | LOCATED    | LVCMOS33_OUT | PL20A |                  |
 | 14/1     |     unused, PULL:UP |            |              | PL24A | SPI_SO           |
 | 15/1     |     unused, PULL:UP |            |              | PL25A | SPISCK           |
 | 16/1     |     unused, PULL:UP |            |              | PL25B | SPI_SS           |
 | 17/1     |     unused, PULL:UP |            |              | PL24B | SPI_SI           |
 | 18/1     | bck                 | LOCATED    | LVCMOS33_OUT | PL23B |                  |
-| 19/1     |     unused, PULL:UP |            |              | PL22B |                  |
-| 20/1     | scki                | LOCATED    | LVCMOS33_OUT | PL20B | PCLKT1_0         |
-| 21/1     | din                 | LOCATED    | LVCMOS33_IN  | PL19B |                  |
+| 19/1     | din                 | LOCATED    | LVCMOS33_IN  | PL22B |                  |
+| 20/1     |     unused, PULL:UP |            |              | PL20B | PCLKT1_0         |
+| 21/1     |     unused, PULL:UP |            |              | PL19B |                  |
 | 23/0     |     unused, PULL:UP |            |              | PR20A |                  |
 | 25/0     |     unused, PULL:UP |            |              | PR20B |                  |
 | 26/0     |     unused, PULL:UP |            |              | PR19A |                  |
@@ -98,12 +98,12 @@ Locate Constraints for each Pin:
 
 ldc_set_location -site {18} [ get_ports {bck} ]
 ldc_set_location -site {12} [ get_ports {clk} ]
-ldc_set_location -site {21} [ get_ports {din} ]
+ldc_set_location -site {19} [ get_ports {din} ]
 ldc_set_location -site {47} [ get_ports {left} ]
 ldc_set_location -site {13} [ get_ports {lrck} ]
 ldc_set_location -site {34} [ get_ports {nreset} ]
 ldc_set_location -site {48} [ get_ports {right} ]
-ldc_set_location -site {20} [ get_ports {scki} ]
+ldc_set_location -site {4} [ get_ports {scki} ]
 
 
 
@@ -111,5 +111,5 @@ ldc_set_location -site {20} [ get_ports {scki} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Mon Nov 18 09:40:43 2024
+Tue Nov 19 15:57:23 2024
 

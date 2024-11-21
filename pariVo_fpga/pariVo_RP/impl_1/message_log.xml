@@ -117,6 +117,11 @@
             <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
             <Navigation>6</Navigation>
         </Message>
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
     </Task>
     <Task name="Synthesis">
         <Message>
@@ -443,6 +448,30 @@
             <Navigation>17</Navigation>
         </Message>
         <Message>
+            <ID>35901372</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): </Dynamic>
+            <Dynamic>left</Dynamic>
+            <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
+            <Navigation>56</Navigation>
+        </Message>
+        <Message>
+            <ID>35901372</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): </Dynamic>
+            <Dynamic>right</Dynamic>
+            <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
+            <Navigation>56</Navigation>
+        </Message>
+        <Message>
+            <ID>35901203</ID>
+            <Severity>16</Severity>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): </Dynamic>
+            <Dynamic>left</Dynamic>
+            <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
+            <Navigation>56</Navigation>
+        </Message>
+        <Message>
             <ID>35921014</ID>
             <Severity>1</Severity>
             <Dynamic>c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd(4): </Dynamic>
@@ -459,10 +488,18 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(39): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(38): </Dynamic>
             <Dynamic>top</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>39</Navigation>
+            <Navigation>38</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>HSOSC(CLKHF_DIV=&quot;0b10&quot;)</Dynamic>
+            <Navigation>C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>756</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -475,22 +512,22 @@
         <Message>
             <ID>35901330</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(57): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(58): </Dynamic>
             <Dynamic>1</Dynamic>
             <Dynamic>24</Dynamic>
             <Dynamic>left</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>57</Navigation>
+            <Navigation>58</Navigation>
         </Message>
         <Message>
             <ID>35901330</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(57): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(58): </Dynamic>
             <Dynamic>1</Dynamic>
             <Dynamic>24</Dynamic>
             <Dynamic>right</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>57</Navigation>
+            <Navigation>58</Navigation>
         </Message>
     </Task>
 </BaliMessageLog>

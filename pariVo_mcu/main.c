@@ -11,8 +11,8 @@
     the cyphertext. The cyphertext is then compared against the solution
     listed in Appendix A of the AES FIPS 197 standard.
     @file lab7.c
-    @author Josh Brake
-    @version 1.0 7/13/2021
+    @author Audrey Vo
+    @version 1.0 11/19/2024
 */
 #include <string.h>
 #include <stdlib.h>
@@ -114,7 +114,7 @@ int main(void) {
     uint16_t convertedVals[5] = {0, 0, 0, 0, 0};
     int i;
 
-
+/*
       // Write LOAD high
   digitalWrite(PA9, 1);
   
@@ -133,7 +133,7 @@ int main(void) {
   while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
   digitalWrite(PA9, 0); // Write LOAD low
 
-/*
+*/
   while(1) {
   
   readADC(convertedVals);
@@ -142,7 +142,7 @@ int main(void) {
   printf("3rd channel: %d \n", convertedVals[2]);
   printf("4th channel: %d \n", convertedVals[3]);
 
-  delay_millis(printTIM, 1000);
+  delay_millis(printTIM, 100);
 
   // Write LOAD high
   digitalWrite(PA9, 1);
@@ -157,14 +157,9 @@ int main(void) {
   while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
   digitalWrite(PA9, 0); // Write LOAD low
 
-  // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
-  while(!digitalRead(PA6)); 
 
   }
-  */
-
-
-
+  
 
   ////////////////////////////////////////////
   ////// RECIEVE AUDIO FILE

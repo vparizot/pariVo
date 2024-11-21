@@ -146,10 +146,10 @@
 
 module i2s(input logic         clk,
            input logic         reset,
-           input logic         din, //  PCM1808 DOUT,         PB6_G12
-           output logic        bck, //  bit clock,            PA7_J2
-           output logic        lrck, // left/right clk,       PA6_J1
-           output logic        scki, // PCM1808 system clock, PA5_H4
+           input logic         din, //  PCM1808 DOUT,         PB6
+           output logic        bck, //  bit clock,            PA7
+           output logic        lrck, // left/right clk,       PA6
+           output logic        scki, // PCM1808 system clock, PA5
            output logic [23:0] left, 
            output logic [23:0] right,
            output logic        newsample_valid);

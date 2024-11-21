@@ -25,8 +25,7 @@ module top(input logic reset,
     logic [31:0] eqVals;
 	logic done;
     logic clk;
-    HSOSC hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));
-	
+ 	
 	
     eq_spi eqspi(reset, sck, sdi, done, ce, eqVals, ledTest1, ledTest2, ledTest3);   
 	
@@ -36,24 +35,26 @@ endmodule
 */
 
 
-module top(input logic        clk,   //   12MHz MAX1000 clk, P12
+module top( //input logic        clk,   //   12MHz MAX1000 clk, P12
             input logic        nreset, //  global reset,      P34
-            input logic			din, //     I2S DOUT,          P21
+            input logic			din, //     I2S DOUT,          P19
             output logic       bck, //     I2S bit clock,     P18
             output logic       lrck, //    I2S l/r clk,       P13
             output logic       scki,
 			output logic left, 
-            output logic right); //    PCM1808 sys clk,   P20
+            output logic right,
+			output logic clk); //    PCM1808 sys clk,   P4
            
-				  
+			
+	HSOSC #(.CLKHF_DIV ("0b10")) hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));	// set divider to 0b10 to get 12MHz clock
+	
 	// assign reset
 	logic reset;
 	assign reset = ~(nreset);
 	
-	// call i2S w/ audioIn
-	//logic                             newsample;
-	//logic [23:0]                      left, right;
-	//logic din = dout;
+	logic newsample;
+	logic [23:0] left, right;
+	
 	i2s pcm_in(clk, reset, din, bck, lrck, scki, left, right, newsample);
 	
 	

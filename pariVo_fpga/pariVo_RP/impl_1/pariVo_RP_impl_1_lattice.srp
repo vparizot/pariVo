@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Nov 18 09:37:40 2024
+Tue Nov 19 15:57:12 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f pariVo_RP_impl_1_lattice.synproj -logfile pariVo_RP_impl_1_lattice.srp -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml 
@@ -127,6 +127,9 @@ INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq_be.v(45): 
 INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2024.1/ip/pmi/pmi_dsp.v. VERI-1328
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv. VERI-1482
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv. VERI-1482
+WARNING <35901372> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): redeclaration of ansi port left is not allowed. VERI-1372
+WARNING <35901372> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): redeclaration of ansi port right is not allowed. VERI-1372
+WARNING <35901203> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): left was previously declared without a range. VERI-1203
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd
@@ -135,10 +138,11 @@ INFO <35921014> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd(4): a
 INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/impl_1". VHDL-1504
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(39): compiling module top. VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(38): compiling module top. VERI-1018
+INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV="0b10"). VERI-1018
 INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv(147): compiling module i2s. VERI-1018
-WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(57): actual bit length 1 differs from formal bit length 24 for port left. VERI-1330
-WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(57): actual bit length 1 differs from formal bit length 24 for port right. VERI-1330
+WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(58): actual bit length 1 differs from formal bit length 24 for port left. VERI-1330
+WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(58): actual bit length 1 differs from formal bit length 24 for port right. VERI-1330
                                                          
 
 
@@ -171,9 +175,10 @@ WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo
 Number of register bits => 12 of 5280 (0 % )
 CCU2 => 5
 FD1P3XZ => 12
-IB => 3
+HSOSC_CORE => 1
+IB => 2
 LUT4 => 8
-OB => 5
+OB => 6
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
 Number of even-length carry chains : 1
@@ -181,12 +186,12 @@ Number of even-length carry chains : 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : scki_c_c, loads : 1
+  Net : clk_c, loads : 2
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : pcm_in/n71, loads : 10
+  Net : pcm_in/n72, loads : 10
   Net : pcm_in/lrck_c, loads : 4
   Net : nreset_c, loads : 3
   Net : pcm_in/bit_state[2], loads : 3
@@ -208,10 +213,10 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 85 MB
+Peak Memory Usage: 84 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 
 Total REAL Time: 0 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: d29c13d6f91258f2826afc762c183bfcb4f40ef
+Checksum -- synthesis -- netlist: 4489bb09f5894920260bdfa6da299a34f6fe9362
