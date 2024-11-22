@@ -911,3 +911,96 @@ restart -f
 # Loading work.coeffs_sync
 run 50000
 run 100000
+# Load canceled
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 2 errors.
+# 5 compiles, 1 failed with 2 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 2 errors.
+# 5 compiles, 1 failed with 2 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 2 errors.
+# 5 compiles, 1 failed with 2 errors.
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/work/all_taps/_primary.dbs (19:19 1:1 1374 0 15607 1732241918 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/work/coeffs_sync/_primary.dbs (19:19 1:1 1367 0 447 1732241918 0x10b:0x101)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/work/get_tap/_primary.dbs (19:19 1:1 1371 0 637 1732241918 0x10b:0x101)
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# 5 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful.
+# Compile of dsp_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.dsp_tb
+# End time: 18:39:39 on Nov 21,2024, Elapsed time: 66:19:13
+# Errors: 0, Warnings: 11
+# vsim -gui work.dsp_tb 
+# Start time: 18:39:39 on Nov 21,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Error (suppressible): (vsim-3389) Port 'ce' not found in the connected module (2nd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'tap' not found in the connected module (3rd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'signal' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 14
+# ** Error (suppressible): (vsim-3389) Port 'dsp_output' not found in the connected module (5th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 14
+# Error loading design
+# End time: 18:39:46 on Nov 21,2024, Elapsed time: 0:00:07
+# Errors: 4, Warnings: 1
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful.
+# Compile of dsp_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.dsp_tb
+# vsim -gui work.dsp_tb 
+# Start time: 18:40:50 on Nov 21,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# ** Error: (vsim-3033) Instantiation of 'SB_MAC16' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 32
+#         Searched libraries:
+#             C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/work
+# Error loading design
+# End time: 18:40:57 on Nov 21,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 2
