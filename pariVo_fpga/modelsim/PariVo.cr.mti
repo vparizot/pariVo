@@ -5,28 +5,12 @@ Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
 Top level modules:
 	gettap_tb
 
-} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
--- Compiling module coeffs_sync
--- Compiling module get_tap
--- Compiling module all_taps
-
-Top level modules:
-	all_taps
-
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/coeffs_sync_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/coeffs_sync_tb.sv
 Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
 -- Compiling module coeffssync_tb
 
 Top level modules:
 	coeffssync_tb
-
-} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
--- Compiling module get_all_taps_tb
-
-Top level modules:
-	get_all_taps_tb
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv
 Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022

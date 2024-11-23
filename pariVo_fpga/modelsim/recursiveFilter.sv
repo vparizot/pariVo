@@ -1,18 +1,18 @@
 module coeffs_sync(
-	input		logic [15:0] a,
-	input	 	logic 			clk,
-	output 	logic [15:0] y);
+    input       logic [15:0] a,
+    input       logic           clk,
+    output  logic [15:0] y);
             
   // sbox implemented as a ROM
   // This module is synchronous and will be inferred using BRAMs (Block RAMs)
   logic [15:0] coeffs [0:2047];
 
-  initial   $readmemh("intcoeffs.txt", coeffs);
-	
-	// Synchronous version
-	always_ff @(posedge clk) begin
-		y <= coeffs[a];
-	end
+  initial   $readmemh("filename.txt", coeffs);
+    
+    // Synchronous version
+    always_ff @(posedge clk) begin
+        y <= coeffs[a];
+    end
 endmodule
 
 module get_tap(input logic clk,
@@ -24,7 +24,7 @@ module get_tap(input logic clk,
             logic [15:0] currentAddr;
             logic [15:0] tempCoeff;
 
-            assign baseAddr = (filterNum << 7);
+            assign baseAddr = (filterNum << 2);
             assign currentAddr =  baseAddr + (tapnum);
             // assign baseAddr = (filterNum << 4) << 3; // baseAddress = size of each tap (16 bits) * number of taps (8 taps) * filter #
             // assign  currentAddr = baseAddr + (tapnum << 4); // baseAddress + currentTap# * size of tap (16 bit)
@@ -33,6 +33,48 @@ module get_tap(input logic clk,
             assign tapcoeff = tempCoeff;
 endmodule
 
+module new_all_taps(input logic clk, reset,
+                input logic [7:0] eqVal,
+                output logic [63:0] allTaps,
+                output logic [7:0] tapnum);
+    
+    logic[3:0] filterNum;
+    logic [15:0] tapcoeff;
+    logic [7:0] counter = 0;
+
+    logic [15:0] returnTaps [0:3];
+
+    always_ff @(posedge clk)
+        if(reset) begin
+            tapnum <= 0;
+            returnTaps[tapnum] <= tapcoeff;
+            counter <= counter + 1;
+        end
+        else if (counter < 4) begin
+            tapnum <= 0;
+            returnTaps[tapnum] <= tapcoeff;
+            counter <= counter + 1;
+            end
+        else begin
+            tapnum <= counter;
+            returnTaps[tapnum] <= tapcoeff; // h0 for state 0
+            counter <= counter + 1;
+        end
+    
+
+    // get filter number
+    always_comb 
+            if      (eqVal < 20)  filterNum = 4'h0;
+            else                  filterNum = 4'h1;
+    
+
+    get_tap gettaps(clk, filterNum, tapnum, tapcoeff);
+
+    assign allTaps = returnTaps;
+
+endmodule
+
+/*
 module all_taps(input logic clk, reset,
                 input logic [7:0] eqVal,
                 output logic [2047:0] allTaps);

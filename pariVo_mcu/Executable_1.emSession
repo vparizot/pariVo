@@ -5,9 +5,7 @@
   <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
- <FrameBufferWindow>
-  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
- </FrameBufferWindow>
+ <FrameBuffer/>
  <Memory1>
   <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" viewType="4" addressOrder="0" columnsText="" refreshPeriod="0" name="Executable_1_Debug" sizeText="" addressText=""/>
  </Memory1>
@@ -23,6 +21,7 @@
  <Project>
   <ProjectSessionItem path="Executable_1"/>
   <ProjectSessionItem path="Executable_1;Executable_1"/>
+  <ProjectSessionItem path="Executable_1;Executable_1;CMSIS Files"/>
   <ProjectSessionItem path="Executable_1;Executable_1;Source Files"/>
   <ProjectSessionItem path="Executable_1;Executable_1;Source Files;lib"/>
   <ProjectSessionItem path="Executable_1;Executable_1;System Files"/>
@@ -58,18 +57,23 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="26" y="126" useTextEdit="1" path="main.c" left="0" selected="1" top="137" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="26" y="150" useTextEdit="1" path="main.c" left="0" top="60" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="22" y="8" useTextEdit="1" path="main.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="21" y="16" useTextEdit="1" path="lib/STM32L432KC_SPI.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="6" useTextEdit="1" path="lib/STM32L432KC_SPI.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_ADC.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="8" useTextEdit="1" path="lib/STM32L432KC_SPI.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="38" y="30" useTextEdit="1" path="lib/STM32L432KC_SPI.c" left="0" top="16" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_TIM.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="17" useTextEdit="1" path="lib/STM32L432KC_TIM.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_USART.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="41" y="71" useTextEdit="1" path="lib/STM32L432KC_ADC.c" left="0" top="43" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="49" y="8" useTextEdit="1" path="lib/STM32L432KC_TIM.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="63" useTextEdit="1" path="lib/STM32L432KC_GPIO.c" left="0" top="35" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="27" y="55" useTextEdit="1" path="lib/STM32L432KC_DAC.c" left="0" top="55" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="228" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="209" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="4" y="19" useTextEdit="1" path="lib/STM32L432KC_I2S.c" left="0" selected="1" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="712" useTextEdit="1" path="STM32L4xx/Device/Include/stm32l432xx.h" left="0" top="690" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="11" useTextEdit="1" path="lib/STM32L432KC_I2S.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_RCC.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="16" useTextEdit="1" path="lib/STM32L432KC_RCC.h" left="0" top="0" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="Executable_1" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/vparizot/E155/lab4_mvp/lib" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <EMStudioWindow activeProject="Executable_1" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/vparizot/E155/lab4_mvp/lib" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

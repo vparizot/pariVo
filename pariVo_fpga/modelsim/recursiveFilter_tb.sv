@@ -7,10 +7,12 @@
 module get_all_taps_tb();
 	logic clk, reset;
     logic [7:0] eqVal;
-    logic [2047:0] allTaps;
-    logic [127:0] expected;
+    logic [63:0] allTaps;
+	logic [7:0] tapnum;
+	logic [63:0] expected;
+    //logic [127:0] expected;
 
-	all_taps dut(.clk(clk), .reset(reset), .eqVal(eqVal), .allTaps(allTaps));
+	all_taps dut(.clk(clk), .reset(reset), .eqVal(eqVal), .allTaps(allTaps), .tapnum(tapnum));
 	always
 		begin
 		clk = 0; #5;
@@ -18,10 +20,9 @@ module get_all_taps_tb();
 		end
 	initial
 		begin
-		eqVal = 8'hF4; #10;
-		expected = 128'hdFCFCFFF700100037006b;
-
-		
+		eqVal = 8'hF4;
+		expected = 64'h0004000500060007;
 		end
 
 endmodule
+

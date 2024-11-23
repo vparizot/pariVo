@@ -1,14 +1,33 @@
-module dsp(input logic clk, 
-            input logic ce,
-            input logic [2047:0] tap,
-            input logic [23:0] signal,
-            output logic [31:0] dsp_output);
+module signalwindow (input logic clk,
+                    input logic [24:0] signal,
+                    output logic [63:0] signalWindow);
+   
+   // question: what should enable the shifting?
+    logic [15:0] shortSignal;
+    assign shortSignal = signal & 0'hFFFF0; 
+
+    always_ff @(posedge clk)
+     begin
+        signalWindow <= {signalWindow[47:0], shortSignal};
+     end // shift register operation 
+
+
+
+
+endmodule 
+
+module dsp(input logic clk, ce,
+            input logic [15:0] allTaps [0:3],
+            input logic [7:0] tapnum,
+            input logic [15:0] signalWindow [0:3],
+            output logic [31:0] dsp_output,
+            output logic done);
 
         logic [15:0] B;
-        assign B = signal & 0'hFFFF0;
+        assign B = signalWindow[3-tapnum];
         logic [15:0] A;
-        assign A = tap;
-        logic [6:0] state;
+        assign A = allTaps[tapnum];
+        //logic [6:0] state;
 
         logic C;
         logic D;
@@ -28,6 +47,8 @@ module dsp(input logic clk,
         logic ADDSUBBOT;
         logic CO;
         logic CI;
+        logic CE;
+        logic O;
 
 
         SB_MAC16 i_sbmac16
@@ -36,9 +57,9 @@ module dsp(input logic clk,
         .B(B),
         .C(C),
         .D(D),
-        .O(dsp_output),
+        .O(O),
         .CLK(clk),
-        .CE(ce),
+        .CE(CE),
         .IRSTTOP(IRSTTOP),
         .IRSTBOT(IRSTBOT),
         .ORSTTOP(ORSTTOP),
@@ -71,7 +92,7 @@ module dsp(input logic clk,
 
         // reset when counter get to 128
         initial begin
-            state = 0;
+            tapnum = 0;
             O = 0;
             CE = 1;
         end
@@ -85,7 +106,7 @@ module dsp(input logic clk,
             IRSTBOT <= 0;
             ORSTTOP <= 0;
             ORSTBOT <= 0;
-            AHOLD <= 0
+            AHOLD <= 0;
             BHOLD <= 0;
             CHOLD <= 0;
             DHOLD <= 0;
@@ -98,26 +119,28 @@ module dsp(input logic clk,
             CO <= 0;
             CI <= 0;
 
-            if(state == 0) 
+            if(tapnum == 0) 
             begin  
-                A <= tap[state];
-                B <= signal;
+                A <= allTaps[tapnum];
+                B <= signalWindow[3-tapnum];
                 D <= 0;
                 OLOADBOT <= 1; //load in accumulator for bottom (lowest 16bits)
-                state <= state + 1;
-                //dsp_output <= O;
+                done <= 0;
+                //tapnum <= state + 1;
+                dsp_output <= O;
             end
-            else if (state < 5)
+            else if (tapnum < 3)
             begin
-                A <= tap[state];
-                B <= signal
+                A <= allTaps[tapnum];
+                B <= signalWindow[3-tapnum];
+                done <= 0;
                 dsp_output <= O;
                 //state <= state + 1;
             end
             else 
             begin
-                state <= 0;
                 dsp_output <= O;
+                done <= 1;
             end
 
 

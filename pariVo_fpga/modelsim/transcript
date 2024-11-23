@@ -5,3 +5,31 @@
 # Compile of dsp.sv was successful.
 # Compile of dsp_tb.sv was successful.
 # 6 compiles, 0 failed with no errors.
+# Compile of recursiveFilter.sv failed with 1 errors.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 7 errors.
+# Compile of dsp_tb.sv was successful.
+# 6 compiles, 2 failed with 8 errors.
+# Compile of recursiveFilter.sv failed with 1 errors.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 5 errors.
+# Compile of dsp_tb.sv was successful.
+# 6 compiles, 2 failed with 6 errors.
+# Compile of recursiveFilter.sv failed with 1 errors.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 5 errors.
+# Compile of dsp_tb.sv was successful.
+# 6 compiles, 2 failed with 6 errors.
+# Compile of recursiveFilter.sv failed with 1 errors.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 5 errors.
+# Compile of dsp_tb.sv was successful.
+# 6 compiles, 2 failed with 6 errors.
