@@ -52,11 +52,15 @@ module top( //input logic        clk,   //   12MHz MAX1000 clk, P12
 	logic reset;
 	assign reset = ~(nreset);
 	
-	logic newsample;
-	logic [23:0] left, right;
+	// logic [23:0] left, right;
 	
-	i2s pcm_in(clk, reset, din, bck, lrck, scki, left, right, newsample);
-	
+	i2s pcm_in(clk, reset, din, bck, lrck, scki, left, right);
+
+	logic [15:0] leftOut = left[23:7];
+	logic [15:0] rightOut = right[23:7];
+
+	i2sOut audio_out(clk, reset, leftOut, rightOut, bckout, lrckout, dout);
+	 
 	
 endmodule
 

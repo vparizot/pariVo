@@ -142,8 +142,6 @@
    
 // endmodule // final_fpga
 
-
-
 module i2s(input logic         clk,
            input logic         reset,
            input logic         din, //  PCM1808 DOUT,         PB6
@@ -151,8 +149,7 @@ module i2s(input logic         clk,
            output logic        lrck, // left/right clk,       PA6
            output logic        scki, // PCM1808 system clock, PA5
            output logic [23:0] left, 
-           output logic [23:0] right,
-           output logic        newsample_valid);
+           output logic [23:0] right);
 
    /////////////////// clock ////////////////////////////////////
   
@@ -161,9 +158,6 @@ module i2s(input logic         clk,
    assign scki = clk;          // 256 * Fs = 12 MHz
    assign bck  = prescaler[1]; // 64  * Fs = 3 MHz = 12 MHz / 4
    assign lrck = prescaler[7]; // 1   * Fs = 12 Mhz / 256
-   
-	//logic dintemp;
-	//assign dintemp = din;
 	
    always_ff @(posedge clk)
      begin
@@ -227,4 +221,54 @@ module i2s(input logic         clk,
           end
      end
    
+endmodule // i2s
+
+
+module i2sOut(input logic         clk,
+              input logic         reset,
+              input logic [15:0]  left, right, // data to send
+              output logic        bck, //  source clock,            
+              output logic        lrck, // left-right clk,       
+              output logic        dout);
+
+   /////////////////// clock ////////////////////////////////////
+   //   Fs = 46.875 KHz
+   logic [8:0] prescaler; // 9-bit prescaler
+   // assign scki = clk;          // 256 * Fs = 12 MHz
+   assign bck  = prescaler[1]; // 64  * Fs = 3 MHz = 12 MHz / 4
+   assign lrck = prescaler[7]; // 1   * Fs = 12 Mhz / 256
+	
+   always_ff @(posedge clk)
+     begin
+        if (reset)
+          prescaler <= 0;
+        else
+          prescaler <= prescaler + 9'd1;
+     end   
+   /////////////////// end clock ////////////////////////////////
+
+   // samples the prescaler to figure out what bit should currently be sampled.
+   // sampling occurs on bit 1 and bit 24, NOT bit 0!
+   logic [4:0]  bitCounterLeft, bitCounterRight;   
+   logic  transmitting;
+   
+   // shift register operation. samples DOUT only when shift_en.
+   // this should be the only register that is not clocked directly from clk!!
+   always_ff @(posedge clk)
+     begin
+      if (reset) begin
+         dout <= 0;
+         bitCounterLeft <= 0;
+         bitCounterRight <= 0;
+      end else if (!lrck && transmitting && (bitCounterLeft < 16))  begin   // left
+         dout <= left[15 - bitCounterLeft]; 
+         bitCounterLeft <= bitCounterLeft + 1;
+
+      end else if (lrck && transmitting && (bitCounterLeft < 16)) begin// right
+         data <= right[15 - bitCounterRight]; 
+         bitCounterRight <= bitCounterRight + 1;
+      end
+
+     end // shift register operation 
+
 endmodule // i2s
