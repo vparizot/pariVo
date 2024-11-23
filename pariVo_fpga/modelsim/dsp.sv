@@ -1,6 +1,6 @@
 module dsp(input logic clk, 
             input logic ce,
-            input logic [15:0] tap,
+            input logic [2047:0] tap,
             input logic [23:0] signal,
             output logic [31:0] dsp_output);
 
@@ -8,6 +8,7 @@ module dsp(input logic clk,
         assign B = signal & 0'hFFFF0;
         logic [15:0] A;
         assign A = tap;
+        logic [6:0] state;
 
         logic C;
         logic D;
@@ -69,4 +70,57 @@ module dsp(input logic clk,
 
 
         // reset when counter get to 128
+        initial begin
+            state = 0;
+            O = 0;
+            CE = 1;
+        end
+
+        always @(posedge clk)
+        begin
+            //default for the dsp
+            C <= 0;
+            D <= 0;
+            IRSTTOP <= 0;
+            IRSTBOT <= 0;
+            ORSTTOP <= 0;
+            ORSTBOT <= 0;
+            AHOLD <= 0
+            BHOLD <= 0;
+            CHOLD <= 0;
+            DHOLD <= 0;
+            OHOLDTOP <= 0;
+            OHOLDBOT <= 0;
+            OLOADTOP <= 0;
+            OLOADBOT <= 0;
+            ADDSUBTOP <= 0;
+            ADDSUBBOT <= 0;
+            CO <= 0;
+            CI <= 0;
+
+            if(state == 0) 
+            begin  
+                A <= tap[state];
+                B <= signal;
+                D <= 0;
+                OLOADBOT <= 1; //load in accumulator for bottom (lowest 16bits)
+                state <= state + 1;
+                //dsp_output <= O;
+            end
+            else if (state < 5)
+            begin
+                A <= tap[state];
+                B <= signal
+                dsp_output <= O;
+                //state <= state + 1;
+            end
+            else 
+            begin
+                state <= 0;
+                dsp_output <= O;
+            end
+
+
+
+        end
 endmodule
