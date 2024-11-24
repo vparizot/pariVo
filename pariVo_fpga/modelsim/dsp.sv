@@ -1,14 +1,15 @@
-module signalwindow (input logic clk,
+
+module signalwindow (input logic clk, en,
                     input logic [24:0] signal,
                     output logic [63:0] signalWindow);
    
    // question: what should enable the shifting?
     logic [15:0] shortSignal;
-    assign shortSignal = signal & 0'hFFFF0; 
+    assign shortSignal = signal[23:8]; 
 
     always_ff @(posedge clk)
      begin
-        signalWindow <= {signalWindow[47:0], shortSignal};
+        if(en) signalWindow <= {signalWindow[47:0], shortSignal};
      end // shift register operation 
 
 
@@ -17,16 +18,16 @@ module signalwindow (input logic clk,
 endmodule 
 
 module dsp(input logic clk, ce,
-            input logic [15:0] allTaps [0:3],
+            input logic [15:0] tap,
             input logic [7:0] tapnum,
             input logic [15:0] signalWindow [0:3],
             output logic [31:0] dsp_output,
             output logic done);
 
         logic [15:0] B;
-        assign B = signalWindow[3-tapnum];
+        //assign B = signalWindow[3-tapnum];
         logic [15:0] A;
-        assign A = allTaps[tapnum];
+        //assign A = tap;
         //logic [6:0] state;
 
         logic C;
@@ -51,7 +52,7 @@ module dsp(input logic clk, ce,
         logic O;
 
 
-        SB_MAC16 i_sbmac16
+        MAC16 i_sbmac16
         ( // port interfaces
         .A(A),
         .B(B),
@@ -92,7 +93,6 @@ module dsp(input logic clk, ce,
 
         // reset when counter get to 128
         initial begin
-            tapnum = 0;
             O = 0;
             CE = 1;
         end
@@ -121,7 +121,7 @@ module dsp(input logic clk, ce,
 
             if(tapnum == 0) 
             begin  
-                A <= allTaps[tapnum];
+                A <= tap;
                 B <= signalWindow[3-tapnum];
                 D <= 0;
                 OLOADBOT <= 1; //load in accumulator for bottom (lowest 16bits)
@@ -131,7 +131,7 @@ module dsp(input logic clk, ce,
             end
             else if (tapnum < 3)
             begin
-                A <= allTaps[tapnum];
+                A <= tap;
                 B <= signalWindow[3-tapnum];
                 done <= 0;
                 dsp_output <= O;
@@ -147,3 +147,4 @@ module dsp(input logic clk, ce,
 
         end
 endmodule
+

@@ -5,6 +5,114 @@ Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
 Top level modules:
 	gettap_tb
 
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module get_all_taps_tb
+
+Top level modules:
+	get_all_taps_tb
+
+} {} {}} C:/lscc/radiant/2024.1/cae_library/synthesis/verilog/iCE40UP.v {1 {vlog -work work -stats=none C:/lscc/radiant/2024.1/cae_library/synthesis/verilog/iCE40UP.v
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module MAC16
+-- Compiling module EBR_B
+-- Compiling module FILTER
+-- Compiling module HSOSC_CORE
+-- Compiling module I2C_B
+-- Compiling module BB_I3C
+-- Compiling module IOL_B
+-- Compiling module RGBPWM
+-- Compiling module LSOSC_CORE
+-- Compiling module BB_OD
+-- Compiling module BB_B
+-- Compiling module PLL_B
+-- Compiling module PUR
+-- Compiling module RGB_CORE
+-- Compiling module OB_RGB
+-- Compiling module FD1P3XZ
+-- Compiling module LUT4
+-- Compiling module FA2
+-- Compiling module VHI
+-- Compiling module VLO
+-- Compiling module INV
+-- Compiling module BUF
+-- Compiling module RGB
+-- Compiling module FD1P3BZ
+-- Compiling module FD1P3DZ
+-- Compiling module FD1P3IZ
+-- Compiling module FD1P3JZ
+-- Compiling module IB
+-- Compiling module OB
+-- Compiling module OBZ_B
+-- Compiling module IFD1P3AZ
+-- Compiling module OFD1P3AZ
+-- Compiling module PDP4K
+-- Compiling module CCU2_B
+-- Compiling module SP256K
+-- Compiling module HSOSC
+-- Compiling module LSOSC
+-- Compiling module HSOSC1P8V
+-- Compiling module LSOSC1P8V
+-- Compiling module RGB1P8V
+-- Compiling module SPI_B
+-- Compiling module VFB_B
+-- Compiling module WARMBOOT
+
+Top level modules:
+	MAC16
+	EBR_B
+	FILTER
+	HSOSC_CORE
+	I2C_B
+	BB_I3C
+	IOL_B
+	RGBPWM
+	LSOSC_CORE
+	BB_OD
+	BB_B
+	PLL_B
+	PUR
+	RGB_CORE
+	OB_RGB
+	FD1P3XZ
+	LUT4
+	FA2
+	VHI
+	VLO
+	INV
+	BUF
+	RGB
+	FD1P3BZ
+	FD1P3DZ
+	FD1P3IZ
+	FD1P3JZ
+	IB
+	OB
+	OBZ_B
+	IFD1P3AZ
+	OFD1P3AZ
+	PDP4K
+	CCU2_B
+	SP256K
+	HSOSC
+	LSOSC
+	HSOSC1P8V
+	LSOSC1P8V
+	RGB1P8V
+	SPI_B
+	VFB_B
+	WARMBOOT
+
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv {2 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module signalwindow
+-- Compiling module dsp
+** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(23): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+
+Top level modules:
+	signalwindow
+	dsp
+
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/coeffs_sync_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/coeffs_sync_tb.sv
 Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
 -- Compiling module coeffssync_tb

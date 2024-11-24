@@ -1,0 +1,3 @@
+new_all_taps,/,C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv
+aes,/,C:/Users/vparizot/E155/pariVo/pariVo_fpga/spi.sv
+get_all_taps_tb,/,C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv

@@ -1,0 +1,12 @@
+<RadiantSimulationProject name="sim" version="2.0" path="." language="1" simType="QuestaSim Qrun" stage="0">
+    <Source langstandard="System Verilog" type="VERILOG" worklib="work" path="../modelsim/dsp.sv" include="none"/>
+    <Source langstandard="System Verilog" type="VERILOG" worklib="work" path="../modelsim/recursiveFilter.sv" include="none"/>
+    <Source langstandard="System Verilog" type="VERILOG" worklib="work" path="../hardware_test.sv" include="none"/>
+    <Source langstandard="System Verilog" type="VERILOG" worklib="work" path="../spi.sv" include="none"/>
+    <Source langstandard="System Verilog" type="VERILOG" worklib="work" path="../modelsim/recursiveFilter_tb.sv" include="none"/>
+    <SimLib value="pmi_work ovi_ice40up"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <Udo value=""/>
+    <TopModule name="get_all_taps_tb" language="VERILOG" instance=""/>
+</RadiantSimulationProject>

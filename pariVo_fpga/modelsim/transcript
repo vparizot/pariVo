@@ -5,31 +5,182 @@
 # Compile of dsp.sv was successful.
 # Compile of dsp_tb.sv was successful.
 # 6 compiles, 0 failed with no errors.
-# Compile of recursiveFilter.sv failed with 1 errors.
+# Load canceled
+# Compile of recursiveFilter.sv was successful.
 # Compile of recursiveFilter_tb.sv was successful.
 # Compile of coeffs_sync_tb.sv was successful.
 # Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv failed with 7 errors.
+# Compile of dsp.sv failed with 2 errors.
 # Compile of dsp_tb.sv was successful.
-# 6 compiles, 2 failed with 8 errors.
-# Compile of recursiveFilter.sv failed with 1 errors.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of recursiveFilter.sv was successful.
 # Compile of recursiveFilter_tb.sv was successful.
 # Compile of coeffs_sync_tb.sv was successful.
 # Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv failed with 5 errors.
+# Compile of dsp.sv failed with 6 errors.
 # Compile of dsp_tb.sv was successful.
-# 6 compiles, 2 failed with 6 errors.
-# Compile of recursiveFilter.sv failed with 1 errors.
-# Compile of recursiveFilter_tb.sv was successful.
-# Compile of coeffs_sync_tb.sv was successful.
-# Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv failed with 5 errors.
-# Compile of dsp_tb.sv was successful.
-# 6 compiles, 2 failed with 6 errors.
-# Compile of recursiveFilter.sv failed with 1 errors.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 1 failed with 6 errors.
+# Compile of recursiveFilter.sv was successful.
 # Compile of recursiveFilter_tb.sv was successful.
 # Compile of coeffs_sync_tb.sv was successful.
 # Compile of get_tap_tb.sv was successful.
 # Compile of dsp.sv failed with 5 errors.
 # Compile of dsp_tb.sv was successful.
-# 6 compiles, 2 failed with 6 errors.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 1 failed with 5 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# vsim -gui work.get_all_taps_tb 
+# Start time: 15:42:36 on Nov 23,2024
+# //  ModelSim DE-64 2022.3 Jul 18 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Error (suppressible): (vsim-3389) Port 'tapnum' not found in the connected module (5th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2048) does not match connection size (64) for port 'allTaps'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(38).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
+# Error loading design
+# End time: 15:42:47 on Nov 23,2024, Elapsed time: 0:00:11
+# Errors: 1, Warnings: 11
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# vsim -gui work.get_all_taps_tb 
+# Start time: 15:44:36 on Nov 23,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Error (suppressible): (vsim-3389) Port 'desiredTap' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
+# ** Error (suppressible): (vsim-3389) Port 'tapnum' not found in the connected module (5th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
+# Error loading design
+# End time: 15:44:39 on Nov 23,2024, Elapsed time: 0:00:03
+# Errors: 2, Warnings: 2
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# vsim -gui work.get_all_taps_tb 
+# Start time: 15:45:05 on Nov 23,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/desiredTap
+add wave -position end  sim:/get_all_taps_tb/tapnum
+add wave -position end  sim:/get_all_taps_tb/expected
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+# Load canceled
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f run 100
+# Warning: Invalid arguments 'run 100' to restart ignored.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Error: (vsim-3063) Port 'desiredTap' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
