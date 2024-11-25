@@ -61,7 +61,39 @@ module dsp_tb();
 
 endmodule 
 
+module faketop_tb();
+	logic clk;
+	logic reset;
+	logic signal_en;
+    logic [23:0] signal;
+    logic [7:0] eqVal;
+    logic [32:0] result_o;
+    logic done;
 
+	faketop dut(.clk(clk), .reset(reset), .signal_en(signal_en), .signal(signal), .eqVal(eqVal), .result_o(result_o), .done(done));
+
+	always
+		begin
+		clk = 0; #5;
+		clk = 1; #5;
+		end
+	initial
+		begin
+		signal_en = 1;
+		signal = 24'h000111;
+		#10 
+		signal = 24'h000400;
+		#10 
+		signal = 24'h000200;
+		#10 
+		signal = 24'h000300;
+	
+        eqVal = 8'h01;
+		//tap = 16'h1234;
+
+        end
+
+endmodule 
 module signalwindow_tb();
     logic clk;
     logic en;

@@ -25,7 +25,7 @@ module get_all_taps_tb();
 		reset = 1;
 		#10;
 		reset = 0;
-		eqVal = 8'hF4;
+		eqVal = 8'h00;
 		expected = 64'h0004000500060007;
 		end
 

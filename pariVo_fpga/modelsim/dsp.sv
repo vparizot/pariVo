@@ -1,6 +1,6 @@
 
 module signalwindow (input logic clk, en,
-                    input logic [24:0] signal,
+                    input logic [23:0] signal,
                     output logic [15:0] signalWindow [0:3]);
    
    // question: what should enable the shifting?
@@ -24,6 +24,61 @@ module signalwindow (input logic clk, en,
 
 
 endmodule 
+
+
+module fakedsp(input logic clk, ce,
+            input logic [15:0] tap,
+            input logic [7:0] tapnum,
+            input logic [15:0] signalWindow [0:3],
+            output logic [32:0] result_o,
+            output logic done);
+
+    logic [15:0] A;
+    logic [15:0] B;
+    logic [32:0] prevValue = 0;
+    
+
+    //always_ff @(posedge clk) begin  
+       assign A = tap;
+       assign B = signalWindow[3-tapnum];
+    //end
+
+    always_comb begin
+        if(tapnum < 3) done = 0;
+        else done = 1;
+    end
+
+    logic en;
+    logic reset;
+    fakeMac16 fakemac(en, clk, A, B, reset, result_o);
+        
+endmodule 
+
+module faketop(input logic clk, reset,
+                input logic signal_en,
+                input logic [23:0] signal,
+                input logic [7:0] eqVal,
+                output logic [32:0] result_o,
+                output logic done);
+
+logic [15:0] tapcoeff;
+logic [7:0] tapnum;
+logic [15:0] signalWindow [0:3];
+
+logic ce;
+
+
+assign en = 1;
+
+logic tap;
+
+new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
+
+signalwindow getsignal(clk, signal_en, signal, signalWindow);
+
+fakedsp dspoutput(clk, ce, tapcoeff, tapnum, signalWindow, result_o, done);
+
+endmodule
 
 
 module dsp(input logic clk, ce,
@@ -474,53 +529,3 @@ module dsp(input logic clk, ce,
         end
 endmodule
 
-
-module fakedsp(input logic clk, ce,
-            input logic [15:0] tap,
-            input logic [7:0] tapnum,
-            input logic [15:0] signalWindow [0:3],
-            output logic [32:0] result_o,
-            output logic done);
-
-    logic [15:0] A;
-    logic [15:0] B;
-    logic [32:0] prevValue = 0;
-    
-
-    always_ff @(posedge clk) begin  
-       A <= tap;
-       B <= signalWindow[3-tapnum];
-    end
-
-    always_comb begin
-        if(tapnum < 3) done = 0;
-        else done = 1;
-    end
-
-    logic en;
-    logic reset;
-    fakeMac16 fakemac(en, clk, A, B, reset, result_o);
-        
-endmodule 
-
-module faketop(input logic clk, reset,
-                input logic [24:0] signal,
-                input logic [7:0] eqVal,
-                output logic result_o,
-                output logic done);
-
-logic [15:0] tapcoeff;
-logic [7:0] tapnum;
-logic [15:0] signalWindow [0:3];
-
-logic ce;
-
-logic tap;
-
-new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
-
-signalwindow getsignal(clk, en, signal, signalWindow);
-
-fakedsp dspoutput(clk, ce, tapcoeff, tapnum, signalWindow, result_o, done);
-
-endmodule
