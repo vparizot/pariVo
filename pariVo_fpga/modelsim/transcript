@@ -2,34 +2,557 @@
 # Compile of recursiveFilter_tb.sv was successful.
 # Compile of coeffs_sync_tb.sv was successful.
 # Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv was successful.
+# Compile of dsp.sv was successful with warnings.
 # Compile of dsp_tb.sv was successful.
-# 6 compiles, 0 failed with no errors.
-# Load canceled
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# vsim -gui work.get_all_taps_tb 
+# Start time: 17:54:26 on Nov 24,2024
+# //  ModelSim DE-64 2022.3 Jul 18 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/tapnum
+add wave -position end  sim:/get_all_taps_tb/expected
+run 100
+run 100
 # Compile of recursiveFilter.sv was successful.
 # Compile of recursiveFilter_tb.sv was successful.
 # Compile of coeffs_sync_tb.sv was successful.
 # Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv failed with 2 errors.
+# Compile of dsp.sv was successful with warnings.
 # Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+resstart -f
+# invalid command name "resstart"
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv(15): [TFMPC] - Missing connection for port 'nexttapcoeff'.
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# End time: 18:18:41 on Nov 24,2024, Elapsed time: 0:24:15
+# Errors: 0, Warnings: 4
+# vsim -gui work.get_all_taps_tb 
+# Start time: 18:18:41 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 6, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv(15): [TFMPC] - Missing connection for port 'nexttapcoeff'.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# End time: 18:19:42 on Nov 24,2024, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 4
+# vsim -gui work.get_all_taps_tb 
+# Start time: 18:19:42 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/nexttapcoeff
+add wave -position end  sim:/get_all_taps_tb/tapnum
+add wave -position end  sim:/get_all_taps_tb/expected
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 'tapnum'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(20).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut/gettaps File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv Line: 70
+# Warning in wave window restart: (vish-4014) No objects found matching '/get_all_taps_tb/nexttapcoeff'. 
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+vsim -gui work.dsp_tb
+# End time: 18:30:14 on Nov 24,2024, Elapsed time: 0:10:32
+# Errors: 0, Warnings: 1
+# vsim -gui work.dsp_tb 
+# Start time: 18:30:14 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.MAC16
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 14
+# ** Error: (vsim-3063) Port 'signal' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 14
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv(14): [TFMPC] - Missing connection for port 'tapnum'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv(14): [TFMPC] - Missing connection for port 'signalWindow'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv(14): [TFMPC] - Missing connection for port 'done'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_sbmac16'.  Expected 118, found 27.
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 55
+# ** Error: (vsim-3063) Port 'A' not found in the connected module (1st connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 55
+# ** Error: (vsim-3063) Port 'B' not found in the connected module (2nd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 55
+# ** Error: (vsim-3063) Port 'C' not found in the connected module (3rd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 55
+# ** Error: (vsim-3063) Port 'D' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 55
+# ** Error: (vsim-3063) Port 'O' not found in the connected module (5th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 55
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'C0'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'A0'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'B0'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'D0'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O31'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O30'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O29'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O28'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O27'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O26'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O25'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O24'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O23'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O22'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O21'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O20'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O19'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O18'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O17'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O16'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(55): [TFMPC] - Missing connection for port 'O0'.
+# Error loading design
+# End time: 18:30:21 on Nov 24,2024, Elapsed time: 0:00:07
+# Errors: 6, Warnings: 102
+# Compile of recursiveFilter.sv failed with 1 errors.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# vsim -gui work.get_all_taps_tb 
+# Start time: 18:47:29 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/tapnum
+add wave -position end  sim:/get_all_taps_tb/expected
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+vsim -gui work.dsp_tb
+# End time: 19:01:37 on Nov 24,2024, Elapsed time: 0:14:08
+# Errors: 0, Warnings: 1
+# vsim -gui work.dsp_tb 
+# Start time: 19:01:37 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.MAC16
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 7, found 5.
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 14
+# ** Error: (vsim-3063) Port 'signal' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 14
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv(14): [TFMPC] - Missing connection for port 'tapnum'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv(14): [TFMPC] - Missing connection for port 'signalWindow'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv(14): [TFMPC] - Missing connection for port 'done'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_sbmac16'.  Expected 118, found 27.
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 56
+# ** Error: (vsim-3063) Port 'A' not found in the connected module (1st connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 56
+# ** Error: (vsim-3063) Port 'B' not found in the connected module (2nd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 56
+# ** Error: (vsim-3063) Port 'C' not found in the connected module (3rd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 56
+# ** Error: (vsim-3063) Port 'D' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 56
+# ** Error: (vsim-3063) Port 'O' not found in the connected module (5th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 56
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'C0'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'A0'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'B0'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'D0'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O31'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O30'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O29'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O28'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O27'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O26'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O25'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O24'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O23'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O22'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O21'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O20'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O19'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O18'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O17'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O16'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O15'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O14'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O13'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O12'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O11'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O10'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O9'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O8'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O7'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O6'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O5'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O4'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O3'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O2'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O1'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(56): [TFMPC] - Missing connection for port 'O0'.
+# Error loading design
+# End time: 19:01:44 on Nov 24,2024, Elapsed time: 0:00:07
+# Errors: 6, Warnings: 102
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# Compile of dsp_tb.sv failed with 2 errors.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 2 failed with 3 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful.
+# Compile of dsp_tb.sv failed with 2 errors.
 # Compile of iCE40UP.v was successful.
 # 7 compiles, 1 failed with 2 errors.
 # Compile of recursiveFilter.sv was successful.
 # Compile of recursiveFilter_tb.sv was successful.
 # Compile of coeffs_sync_tb.sv was successful.
 # Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv failed with 6 errors.
+# Compile of dsp.sv was successful.
 # Compile of dsp_tb.sv was successful.
 # Compile of iCE40UP.v was successful.
-# 7 compiles, 1 failed with 6 errors.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.signalwindow_tb
+# vsim -gui work.signalwindow_tb 
+# Start time: 19:37:04 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.signalwindow_tb
+# Loading work.signalwindow
+add wave -position end  sim:/signalwindow_tb/clk
+add wave -position end  sim:/signalwindow_tb/en
+add wave -position end  sim:/signalwindow_tb/signal
+add wave -position end  sim:/signalwindow_tb/signalWindow
+run 100
 # Compile of recursiveFilter.sv was successful.
 # Compile of recursiveFilter_tb.sv was successful.
 # Compile of coeffs_sync_tb.sv was successful.
 # Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv failed with 5 errors.
+# Compile of dsp.sv was successful.
 # Compile of dsp_tb.sv was successful.
 # Compile of iCE40UP.v was successful.
-# 7 compiles, 1 failed with 5 errors.
+# 7 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.signalwindow_tb
+# Loading work.signalwindow
+run 100
+# Can't move the Now cursor.
+# Can't move the Now cursor.
 # Compile of recursiveFilter.sv was successful.
 # Compile of recursiveFilter_tb.sv was successful.
 # Compile of coeffs_sync_tb.sv was successful.
@@ -46,88 +569,74 @@
 # Compile of dsp_tb.sv was successful.
 # Compile of iCE40UP.v was successful.
 # 7 compiles, 0 failed with no errors.
-vsim -gui work.get_all_taps_tb
-# vsim -gui work.get_all_taps_tb 
-# Start time: 15:42:36 on Nov 23,2024
-# //  ModelSim DE-64 2022.3 Jul 18 2022
-# //
-# //  Copyright 1991-2022 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  ModelSim DE-64 and its associated documentation contain trade
-# //  secrets and commercial or financial information that are the property of
-# //  Mentor Graphics Corporation and are privileged, confidential,
-# //  and exempt from disclosure under the Freedom of Information Act,
-# //  5 U.S.C. Section 552. Furthermore, this information
-# //  is prohibited from disclosure under the Trade Secrets Act,
-# //  18 U.S.C. Section 1905.
-# //
-# Loading sv_std.std
-# Loading work.get_all_taps_tb
-# Loading work.all_taps
-# Loading work.get_tap
-# Loading work.coeffs_sync
-# ** Error (suppressible): (vsim-3389) Port 'tapnum' not found in the connected module (5th connection).
-#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
-# ** Warning: (vsim-3015) [PCDPC] - Port size (2048) does not match connection size (64) for port 'allTaps'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv(38).
-#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
-# Error loading design
-# End time: 15:42:47 on Nov 23,2024, Elapsed time: 0:00:11
-# Errors: 1, Warnings: 11
-# Compile of recursiveFilter.sv was successful.
-# Compile of recursiveFilter_tb.sv was successful.
-# Compile of coeffs_sync_tb.sv was successful.
-# Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv was successful with warnings.
-# Compile of dsp_tb.sv was successful.
-# Compile of iCE40UP.v was successful.
-# 7 compiles, 0 failed with no errors.
-vsim -gui work.get_all_taps_tb
-# vsim -gui work.get_all_taps_tb 
-# Start time: 15:44:36 on Nov 23,2024
-# Loading sv_std.std
-# Loading work.get_all_taps_tb
-# Loading work.all_taps
-# Loading work.get_tap
-# Loading work.coeffs_sync
-# ** Error (suppressible): (vsim-3389) Port 'desiredTap' not found in the connected module (4th connection).
-#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
-# ** Error (suppressible): (vsim-3389) Port 'tapnum' not found in the connected module (5th connection).
-#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
-# Error loading design
-# End time: 15:44:39 on Nov 23,2024, Elapsed time: 0:00:03
-# Errors: 2, Warnings: 2
-# Compile of recursiveFilter.sv was successful.
-# Compile of recursiveFilter_tb.sv was successful.
-# Compile of coeffs_sync_tb.sv was successful.
-# Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv was successful with warnings.
-# Compile of dsp_tb.sv was successful.
-# Compile of iCE40UP.v was successful.
-# 7 compiles, 0 failed with no errors.
-vsim -gui work.get_all_taps_tb
-# vsim -gui work.get_all_taps_tb 
-# Start time: 15:45:05 on Nov 23,2024
-# Loading sv_std.std
-# Loading work.get_all_taps_tb
-# Loading work.new_all_taps
-# Loading work.get_tap
-# Loading work.coeffs_sync
-add wave -position end  sim:/get_all_taps_tb/clk
-add wave -position end  sim:/get_all_taps_tb/reset
-add wave -position end  sim:/get_all_taps_tb/eqVal
-add wave -position end  sim:/get_all_taps_tb/desiredTap
-add wave -position end  sim:/get_all_taps_tb/tapnum
-add wave -position end  sim:/get_all_taps_tb/expected
-# Compile of recursiveFilter.sv was successful.
-# Compile of recursiveFilter_tb.sv was successful.
-# Compile of coeffs_sync_tb.sv was successful.
-# Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv was successful with warnings.
-# Compile of dsp_tb.sv was successful.
-# Compile of iCE40UP.v was successful.
-# 7 compiles, 0 failed with no errors.
 # Load canceled
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv failed with 1 errors.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.dsp_tb
+# End time: 20:00:10 on Nov 24,2024, Elapsed time: 0:23:06
+# Errors: 0, Warnings: 5
+# vsim -gui work.dsp_tb 
+# Start time: 20:00:10 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.MAC16
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i_sbmac16'.  Expected 118, found 116.
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut/i_sbmac16 File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv Line: 169
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(169): [TFMPC] - Missing connection for port 'CLK'.
+# ** Warning: (vsim-3722) C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(169): [TFMPC] - Missing connection for port 'CE'.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.dsp_tb
+# End time: 20:01:30 on Nov 24,2024, Elapsed time: 0:01:20
+# Errors: 0, Warnings: 5
+# vsim -gui work.dsp_tb 
+# Start time: 20:01:30 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.MAC16
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of iCE40UP.v was successful.
+# 7 compiles, 0 failed with no errors.
+run 100
+add wave -position end  sim:/dsp_tb/clk
+add wave -position end  sim:/dsp_tb/ce
+add wave -position end  sim:/dsp_tb/tap
+add wave -position end  sim:/dsp_tb/tapnum
+add wave -position end  sim:/dsp_tb/signalWindow
+add wave -position end  sim:/dsp_tb/dsp_output
+add wave -position end  sim:/dsp_tb/done
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.MAC16
 run 100
 # Compile of recursiveFilter.sv was successful.
 # Compile of recursiveFilter_tb.sv was successful.
@@ -139,48 +648,289 @@ run 100
 # 7 compiles, 0 failed with no errors.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.get_all_taps_tb
-# Loading work.new_all_taps
-# Loading work.get_tap
-# Loading work.coeffs_sync
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.MAC16
 run 100
-# Compile of recursiveFilter.sv was successful.
-# Compile of recursiveFilter_tb.sv was successful.
-# Compile of coeffs_sync_tb.sv was successful.
-# Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv was successful with warnings.
-# Compile of dsp_tb.sv was successful.
-# Compile of iCE40UP.v was successful.
-# 7 compiles, 0 failed with no errors.
+add wave -position end  sim:/dsp_tb/dut/A15
+add wave -position end  sim:/dsp_tb/dut/A14
+add wave -position end  sim:/dsp_tb/dut/A13
+add wave -position end  sim:/dsp_tb/dut/A12
+add wave -position end  sim:/dsp_tb/dut/A11
+add wave -position end  sim:/dsp_tb/dut/A10
+add wave -position end  sim:/dsp_tb/dut/A9
+add wave -position end  sim:/dsp_tb/dut/A8
+add wave -position end  sim:/dsp_tb/dut/A7
+add wave -position end  sim:/dsp_tb/dut/A6
+add wave -position end  sim:/dsp_tb/dut/A5
+add wave -position end  sim:/dsp_tb/dut/A4
+add wave -position end  sim:/dsp_tb/dut/A3
+add wave -position end  sim:/dsp_tb/dut/A2
+add wave -position end  sim:/dsp_tb/dut/A1
+add wave -position end  sim:/dsp_tb/dut/A0
 restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.get_all_taps_tb
-# Loading work.new_all_taps
-# Loading work.get_tap
-# Loading work.coeffs_sync
 run 100
-# Compile of recursiveFilter.sv was successful.
-# Compile of recursiveFilter_tb.sv was successful.
-# Compile of coeffs_sync_tb.sv was successful.
-# Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv was successful with warnings.
-# Compile of dsp_tb.sv was successful.
-# Compile of iCE40UP.v was successful.
-# 7 compiles, 0 failed with no errors.
-restart -f run 100
-# Warning: Invalid arguments 'run 100' to restart ignored.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.get_all_taps_tb
-# Loading work.new_all_taps
-# Loading work.get_tap
-# Loading work.coeffs_sync
-# ** Error: (vsim-3063) Port 'desiredTap' not found in the connected module (4th connection).
-#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
-# Compile of recursiveFilter.sv was successful.
-# Compile of recursiveFilter_tb.sv was successful.
-# Compile of coeffs_sync_tb.sv was successful.
-# Compile of get_tap_tb.sv was successful.
-# Compile of dsp.sv was successful with warnings.
-# Compile of dsp_tb.sv was successful.
-# Compile of iCE40UP.v was successful.
-# 7 compiles, 0 failed with no errors.
+add wave -position end  sim:/dsp_tb/dut/B
+add wave -position end  sim:/dsp_tb/dut/O31
+add wave -position end  sim:/dsp_tb/dut/O30
+add wave -position end  sim:/dsp_tb/dut/O29
+add wave -position end  sim:/dsp_tb/dut/O28
+add wave -position end  sim:/dsp_tb/dut/O27
+add wave -position end  sim:/dsp_tb/dut/O26
+add wave -position end  sim:/dsp_tb/dut/O25
+add wave -position end  sim:/dsp_tb/dut/O24
+add wave -position end  sim:/dsp_tb/dut/O23
+add wave -position end  sim:/dsp_tb/dut/O22
+add wave -position end  sim:/dsp_tb/dut/O21
+add wave -position end  sim:/dsp_tb/dut/O20
+add wave -position end  sim:/dsp_tb/dut/O19
+add wave -position end  sim:/dsp_tb/dut/O18
+add wave -position end  sim:/dsp_tb/dut/O17
+add wave -position end  sim:/dsp_tb/dut/O16
+add wave -position end  sim:/dsp_tb/dut/O15
+add wave -position end  sim:/dsp_tb/dut/O14
+add wave -position end  sim:/dsp_tb/dut/O13
+add wave -position end  sim:/dsp_tb/dut/O12
+add wave -position end  sim:/dsp_tb/dut/O11
+add wave -position end  sim:/dsp_tb/dut/O10
+add wave -position end  sim:/dsp_tb/dut/O9
+add wave -position end  sim:/dsp_tb/dut/O8
+add wave -position end  sim:/dsp_tb/dut/O7
+add wave -position end  sim:/dsp_tb/dut/O6
+add wave -position end  sim:/dsp_tb/dut/O5
+add wave -position end  sim:/dsp_tb/dut/O4
+add wave -position end  sim:/dsp_tb/dut/O3
+add wave -position end  sim:/dsp_tb/dut/O2
+add wave -position end  sim:/dsp_tb/dut/O1
+add wave -position end  sim:/dsp_tb/dut/O0
+rstart -f
+# invalid command name "rstart"
+run 100
+add wave -position end  sim:/dsp_tb/dut/B15
+add wave -position end  sim:/dsp_tb/dut/B14
+add wave -position end  sim:/dsp_tb/dut/B13
+add wave -position end  sim:/dsp_tb/dut/B12
+add wave -position end  sim:/dsp_tb/dut/B11
+add wave -position end  sim:/dsp_tb/dut/B10
+add wave -position end  sim:/dsp_tb/dut/B9
+add wave -position end  sim:/dsp_tb/dut/B8
+add wave -position end  sim:/dsp_tb/dut/B7
+add wave -position end  sim:/dsp_tb/dut/B6
+add wave -position end  sim:/dsp_tb/dut/B5
+add wave -position end  sim:/dsp_tb/dut/B4
+add wave -position end  sim:/dsp_tb/dut/B3
+add wave -position end  sim:/dsp_tb/dut/B2
+add wave -position end  sim:/dsp_tb/dut/B1
+add wave -position end  sim:/dsp_tb/dut/B0
+restart -f
+run 100
+add wave -position 27  sim:/dsp_tb/dut/O31
+add wave -position 28  sim:/dsp_tb/dut/O30
+add wave -position 29  sim:/dsp_tb/dut/O29
+add wave -position 30  sim:/dsp_tb/dut/O28
+add wave -position 31  sim:/dsp_tb/dut/O27
+add wave -position 32  sim:/dsp_tb/dut/O26
+add wave -position 33  sim:/dsp_tb/dut/O25
+add wave -position 34  sim:/dsp_tb/dut/O24
+add wave -position 35  sim:/dsp_tb/dut/O23
+add wave -position 36  sim:/dsp_tb/dut/O22
+add wave -position 37  sim:/dsp_tb/dut/O21
+add wave -position 38  sim:/dsp_tb/dut/O20
+add wave -position 39  sim:/dsp_tb/dut/O19
+add wave -position 40  sim:/dsp_tb/dut/O18
+add wave -position 41  sim:/dsp_tb/dut/O17
+add wave -position 42  sim:/dsp_tb/dut/O16
+add wave -position 43  sim:/dsp_tb/dut/O15
+add wave -position 44  sim:/dsp_tb/dut/O14
+add wave -position 45  sim:/dsp_tb/dut/O13
+add wave -position 46  sim:/dsp_tb/dut/O12
+add wave -position 47  sim:/dsp_tb/dut/O11
+add wave -position 48  sim:/dsp_tb/dut/O10
+add wave -position 49  sim:/dsp_tb/dut/O9
+add wave -position 50  sim:/dsp_tb/dut/O8
+add wave -position 51  sim:/dsp_tb/dut/O7
+add wave -position 52  sim:/dsp_tb/dut/O6
+add wave -position 53  sim:/dsp_tb/dut/O5
+add wave -position 54  sim:/dsp_tb/dut/O4
+add wave -position 55  sim:/dsp_tb/dut/O3
+add wave -position 56  sim:/dsp_tb/dut/O2
+add wave -position 57  sim:/dsp_tb/dut/O1
+add wave -position 58  sim:/dsp_tb/dut/O0
+add wave -position end  sim:/dsp_tb/dut/O31
+add wave -position end  sim:/dsp_tb/dut/O30
+add wave -position end  sim:/dsp_tb/dut/O29
+add wave -position end  sim:/dsp_tb/dut/O28
+add wave -position end  sim:/dsp_tb/dut/O27
+add wave -position end  sim:/dsp_tb/dut/O26
+add wave -position end  sim:/dsp_tb/dut/O25
+add wave -position end  sim:/dsp_tb/dut/O24
+add wave -position end  sim:/dsp_tb/dut/O23
+add wave -position end  sim:/dsp_tb/dut/O22
+add wave -position end  sim:/dsp_tb/dut/O21
+add wave -position end  sim:/dsp_tb/dut/O20
+add wave -position end  sim:/dsp_tb/dut/O19
+add wave -position end  sim:/dsp_tb/dut/O18
+add wave -position end  sim:/dsp_tb/dut/O17
+add wave -position end  sim:/dsp_tb/dut/O16
+add wave -position end  sim:/dsp_tb/dut/O15
+add wave -position end  sim:/dsp_tb/dut/O14
+add wave -position end  sim:/dsp_tb/dut/O13
+add wave -position end  sim:/dsp_tb/dut/O12
+add wave -position end  sim:/dsp_tb/dut/O11
+add wave -position end  sim:/dsp_tb/dut/O10
+add wave -position end  sim:/dsp_tb/dut/O9
+add wave -position end  sim:/dsp_tb/dut/O8
+add wave -position end  sim:/dsp_tb/dut/O7
+add wave -position end  sim:/dsp_tb/dut/O6
+add wave -position end  sim:/dsp_tb/dut/O5
+add wave -position end  sim:/dsp_tb/dut/O4
+add wave -position end  sim:/dsp_tb/dut/O3
+add wave -position end  sim:/dsp_tb/dut/O2
+add wave -position end  sim:/dsp_tb/dut/O1
+add wave -position end  sim:/dsp_tb/dut/O0
+restart -f
+run 100
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/NEG_TRIGGER
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A_REG
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B_REG
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C_REG
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D_REG
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/TOP_8x8_MULT_REG
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/BOT_8x8_MULT_REG
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/PIPELINE_16x16_MULT_REG1
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/PIPELINE_16x16_MULT_REG2
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/TOPOUTPUT_SELECT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/TOPADDSUB_LOWERINPUT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/TOPADDSUB_UPPERINPUT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/TOPADDSUB_CARRYSELECT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/BOTOUTPUT_SELECT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/BOTADDSUB_LOWERINPUT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/BOTADDSUB_UPPERINPUT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/BOTADDSUB_CARRYSELECT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/MODE_8x8
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A_SIGNED
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B_SIGNED
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/CLK
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/CE
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C15
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C14
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C13
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C12
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C11
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C10
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C9
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C8
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C7
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C6
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C5
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C4
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C3
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C2
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C1
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/C0
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A15
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A14
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A13
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A12
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A11
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A10
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A9
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A8
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A7
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A6
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A5
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A4
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A3
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A2
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A1
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/A0
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B15
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B14
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B13
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B12
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B11
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B10
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B9
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B8
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B7
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B6
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B5
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B4
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B3
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B2
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B1
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/B0
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D15
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D14
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D13
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D12
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D11
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D10
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D9
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D8
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D7
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D6
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D5
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D4
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D3
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D2
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D1
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/D0
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/AHOLD
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/BHOLD
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/CHOLD
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/DHOLD
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/IRSTTOP
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/IRSTBOT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/ORSTTOP
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/ORSTBOT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/OLOADTOP
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/OLOADBOT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/ADDSUBTOP
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/ADDSUBBOT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/OHOLDTOP
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/OHOLDBOT
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/CI
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/ACCUMCI
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/SIGNEXTIN
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O31
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O30
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O29
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O28
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O27
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O26
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O25
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O24
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O23
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O22
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O21
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O20
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O19
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O18
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O17
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O16
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O15
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O14
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O13
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O12
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O11
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O10
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O9
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O8
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O7
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O6
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O5
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O4
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O3
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O2
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O1
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/O0
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/CO
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/ACCUMCO
+add wave -position end  sim:/dsp_tb/dut/i_sbmac16/SIGNEXTOUT
+restart -f
+run 100
+# Load canceled
+quit -sim
+# End time: 21:36:33 on Nov 24,2024, Elapsed time: 1:35:03
+# Errors: 0, Warnings: 1

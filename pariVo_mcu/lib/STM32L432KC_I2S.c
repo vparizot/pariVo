@@ -94,3 +94,16 @@ SAI1_Block_A->SLOTR |= _VAL2FLD(SAI_xSLOTR_SLOTSZ, 0b01);
 SAI1_Block_A->CR1 |= _VAL2FLD(SAI_xCR1_SAIEN, 0b1); // enable audio block
 
 }
+
+/* Transmits a character (1 byte) over SPI and returns the received character.
+ *    -- send: the character to send over SPI
+ *    -- return: the character received over SPI */
+int32_t i2sReceive() {
+
+    while(!(SPI1->SR & SPI_SR_RXNE)); // Wait until data has been received
+    char rec = (volatile char) SPI1->DR;
+    
+    return rec; // Return received character
+
+
+}

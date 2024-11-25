@@ -141,7 +141,7 @@
 //    /////////////////////////////// end beat tracking
    
 // endmodule // final_fpga
-
+/*
 module i2s(input logic         clk,
            input logic         reset,
            input logic         din, //  PCM1808 DOUT,         PB6
@@ -272,3 +272,5 @@ module i2sOut(input logic         clk,
      end // shift register operation 
 
 endmodule // i2s
+
+*/

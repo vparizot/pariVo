@@ -1,24 +1,62 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  12 of 5280 (0.227%)
-I/O cells:      8
+Register bits:  63 of 5280 (1.193%)
+I/O cells:      3
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2         5          100.0
-                            FD1P3XZ        12          100.0
+                               CCU2        17          100.0
+                            FD1P3XZ        63          100.0
                          HSOSC_CORE         1          100.0
-                                 IB         2          100.0
-                               LUT4         8          100.0
-                                 OB         6          100.0
+                                 IB         1          100.0
+                               LUT4        12          100.0
+                              MAC16         1          100.0
+                                 OB         2          100.0
 SUB MODULES
-                                i2s         1
-                              TOTAL        35
+                           SB_MAC16         1
+SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")         1
+SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP")         1
+SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off")         1
+                              TOTAL       101
 ----------------------------------------------------------------------
-Report for cell i2s.v1
-Instance Path : pcm_in
+Report for cell SB_MAC16.v1
+Instance Path : i_sbmac16
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2         5          100.0
-                            FD1P3XZ        12          100.0
-                               LUT4         8          100.0
-                              TOTAL        25
+                                FA2        17          100.0
+                            FD1P3XZ        63          100.0
+                              MAC16         1          100.0
+SUB MODULES
+SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")         1
+SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP")         1
+SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off")         1
+                              TOTAL        84
+----------------------------------------------------------------------
+Report for cell SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP").v1
+Instance Path : i_sbmac16.lscc_mult_accumulate_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        17          100.0
+                            FD1P3XZ        63          100.0
+                              MAC16         1          100.0
+SUB MODULES
+SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP")         1
+SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off")         1
+                              TOTAL        83
+----------------------------------------------------------------------
+Report for cell SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP").v1
+Instance Path : i_sbmac16.lscc_mult_accumulate_inst.u_lscc_multiplier
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        31           49.2
+                              MAC16         1          100.0
+SUB MODULES
+SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off")         1
+                              TOTAL        33
+----------------------------------------------------------------------
+Report for cell SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off").v1
+Instance Path : i_sbmac16.lscc_mult_accumulate_inst.u_lscc_multiplier.genblk1.u_lscc_multiplier_dsp
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        31           49.2
+                              MAC16         1          100.0
+                              TOTAL        32

@@ -3,20 +3,53 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         23        100.0
-                               LUTGATE	         13        100.0
-                                LUTCCU	         10        100.0
-                                 IOBUF	          8        100.0
-                                PFUREG	         12        100.0
+                                  LUT4	         79        100.0
+                               LUTGATE	         45        100.0
+                                LUTCCU	         34        100.0
+                                 IOBUF	          3        100.0
+                                PFUREG	         63        100.0
+                                   DSP	          1        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                                   i2s	          1        78.3
+                              SB_MAC16	          1        43.0
 ---------------------------------------------------
-Report for cell i2s
-   Instance path: top/pcm_in
+Report for cell SB_MAC16
+   Instance path: top/i_sbmac16
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         18        78.3
-                               LUTGATE	          8        61.5
-                                LUTCCU	         10        100.0
-                                PFUREG	         12        100.0
+                                  LUT4	         34        43.0
+                                LUTCCU	         34        100.0
+                                PFUREG	         63        100.0
+                                   DSP	          1        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")	          1        43.0
+---------------------------------------------------
+Report for cell SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")
+   Instance path: top/i_sbmac16/lscc_mult_accumulate_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         34        43.0
+                                LUTCCU	         34        100.0
+                                PFUREG	         63        100.0
+                                   DSP	          1        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP")	          1         0.0
+---------------------------------------------------
+Report for cell SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP")
+   Instance path: top/i_sbmac16/lscc_mult_accumulate_inst/u_lscc_multiplier
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         31        49.2
+                                   DSP	          1        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off")	          1         0.0
+---------------------------------------------------
+Report for cell SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off")
+   Instance path: top/i_sbmac16/lscc_mult_accumulate_inst/u_lscc_multiplier/genblk1.u_lscc_multiplier_dsp
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         31        49.2
+                                   DSP	          1        100.0

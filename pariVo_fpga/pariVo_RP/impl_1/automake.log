@@ -1,4 +1,374 @@
 
+pnmainc -log pnmain "pariVo_RP_impl_1_map.tcl"
+map:  version Radiant Software (64-bit) 2024.1.0.34.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:   map -pdc C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc -i pariVo_RP_impl_1_syn.udb -o pariVo_RP_impl_1_map.udb -mp pariVo_RP_impl_1.mrp -hierrpt -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml 
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2024.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+
+
+
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (1) : No port matched &apos;din&apos;.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (3) : No port matched &apos;left&apos;.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (4) : No port matched &apos;clk&apos;.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (5) : No port matched &apos;done&apos;.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (6) : No port matched &apos;right&apos;.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (7) : No port matched &apos;scki&apos;.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (9) : No port matched &apos;lrck&apos;.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (10) : No port matched &apos;bck&apos;.
+WARNING <1027013> - No port matched 'din'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (1) : Can&apos;t resolve object &apos;din&apos; in constraint &apos;ldc_set_location -site {19} [get_ports din]&apos;.
+WARNING <1027013> - No port matched 'left'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (3) : Can&apos;t resolve object &apos;left&apos; in constraint &apos;ldc_set_location -site {47} [get_ports left]&apos;.
+WARNING <1027013> - No port matched 'clk'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (4) : Can&apos;t resolve object &apos;clk&apos; in constraint &apos;ldc_set_location -site {12} [get_ports clk]&apos;.
+WARNING <1027013> - No port matched 'done'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (5) : Can&apos;t resolve object &apos;done&apos; in constraint &apos;ldc_set_location -site {27} [get_ports done]&apos;.
+WARNING <1027013> - No port matched 'right'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (6) : Can&apos;t resolve object &apos;right&apos; in constraint &apos;ldc_set_location -site {48} [get_ports right]&apos;.
+WARNING <1027013> - No port matched 'scki'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (7) : Can&apos;t resolve object &apos;scki&apos; in constraint &apos;ldc_set_location -site {4} [get_ports scki]&apos;.
+WARNING <1027013> - No port matched 'lrck'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (9) : Can&apos;t resolve object &apos;lrck&apos; in constraint &apos;ldc_set_location -site {13} [get_ports lrck]&apos;.
+WARNING <1027013> - No port matched 'bck'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (10) : Can&apos;t resolve object &apos;bck&apos; in constraint &apos;ldc_set_location -site {18} [get_ports bck]&apos;.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {19} [get_ports din]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {47} [get_ports left]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {12} [get_ports clk]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {27} [get_ports done]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {48} [get_ports right]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {4} [get_ports scki]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {13} [get_ports lrck]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {18} [get_ports bck]'.
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+Running general design DRC...
+
+WARNING <71003020> - Top module port 'sck' does not connect to anything.
+WARNING <71003020> - Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - Top module port 'load' does not connect to anything.
+WARNING <71003020> - Top module port 'ce' does not connect to anything.
+
+
+
+Design Summary:
+   Number of slice registers:  63 out of  5280 (1%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:            79 out of  5280 (1%)
+      Number of logic LUT4s:              14
+      Number of inserted feedthru LUT4s:  31
+      Number of ripple logic:             17 (34 LUT4s)
+   Number of IO sites used:   3 out of 39 (8%)
+      Number of IO sites used for general PIO: 3
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 3 out of 36 (8%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 3 out of 39 (8%)
+   Number of DSPs:             1 out of 8 (13%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  1
+      Net clk_i: 48 loads, 48 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+   Number of Clock Enables:  1
+      Net VCC_net: 1 loads, 0 SLICEs
+   Number of LSRs:  1
+      Net reset_c_N_34: 48 loads, 48 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net reset_c_N_34: 48 loads
+      Net VCC_net: 5 loads
+      Net result_o[11]: 2 loads
+      Net result_o[13]: 2 loads
+      Net result_o[14]: 2 loads
+      Net result_o[15]: 2 loads
+      Net result_o[21]: 2 loads
+      Net result_o[27]: 2 loads
+      Net result_o[30]: 2 loads
+      Net result_o[31]: 2 loads
+Running physical design DRC...
+
+WARNING <71003020> - Top module port 'sck' does not connect to anything.
+WARNING <71003020> - Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - Top module port 'load' does not connect to anything.
+WARNING <71003020> - Top module port 'ce' does not connect to anything.
+ 
+
+
+   Number of warnings:  40
+   Number of criticals: 0
+   Number of errors:    0
+
+Constraint Summary:
+   Total number of constraints: 13
+   Total number of constraints dropped: 8
+   Dropped constraints are:
+     ldc_set_location -site {19} [get_ports din]
+     ldc_set_location -site {47} [get_ports left]
+     ldc_set_location -site {12} [get_ports clk]
+     ldc_set_location -site {27} [get_ports done]
+     ldc_set_location -site {48} [get_ports right]
+     ldc_set_location -site {4} [get_ports scki]
+     ldc_set_location -site {13} [get_ports lrck]
+     ldc_set_location -site {18} [get_ports bck]
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 65 MB
+
+Checksum -- map: cb9fda4e376eedb0a23f6139aeea784966059005
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /0 secs 
+
+pnmainc -log pnmain "pariVo_RP_impl_1_par.tcl"
+
+Lattice Place and Route Report for Design "pariVo_RP_impl_1_map.udb"
+Sun Nov 24 21:33:38 2024
+
+PAR: Place And Route Radiant Software (64-bit) 2024.1.0.34.2.
+Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
+	pariVo_RP_impl_1_map.udb pariVo_RP_impl_1_par.dir/5_1.udb 
+
+Loading pariVo_RP_impl_1_map.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2024.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+WARNING <77001032> - Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+WARNING <77001031> - In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+
+Constraint Summary
+   Total number of constraints: 3
+   Total number of constraints dropped: 1
+   Dropped constraints are:
+     ldc_set_location -site {10} [get_ports sdi]
+
+WARNING <77001032> - Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+WARNING <77001031> - In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+WARNING <71003020> - Top module port 'sck' does not connect to anything.
+WARNING <71003020> - Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - Top module port 'load' does not connect to anything.
+WARNING <71003020> - Top module port 'ce' does not connect to anything.
+WARNING <71003020> - Top module port 'sck' does not connect to anything.
+WARNING <71003020> - Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - Top module port 'load' does not connect to anything.
+WARNING <71003020> - Top module port 'ce' does not connect to anything.
+WARNING <71003020> - Top module port 'sck' does not connect to anything.
+WARNING <71003020> - Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - Top module port 'load' does not connect to anything.
+WARNING <71003020> - Top module port 'ce' does not connect to anything.
+WARNING <71003020> - Top module port 'sck' does not connect to anything.
+WARNING <71003020> - Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - Top module port 'load' does not connect to anything.
+WARNING <71003020> - Top module port 'ce' does not connect to anything.
+Number of Signals: 206
+Number of Connections: 370
+Device utilization summary:
+
+   SLICE (est.)      44/2640          2% used
+     LUT             79/5280          1% used
+     REG             63/5280          1% used
+   PIO                3/56            5% used
+                      3/36            8% bonded
+   IOLOGIC            0/56            0% used
+   DSP                1/8            13% used
+   I2C                0/2             0% used
+   HFOSC              1/1           100% used
+   LFOSC              0/1             0% used
+   LEDDA_IP           0/1             0% used
+   RGBA_DRV           0/1             0% used
+   FILTER             0/2             0% used
+   SRAM               0/4             0% used
+   WARMBOOT           0/1             0% used
+   SPI                0/2             0% used
+   EBR                0/30            0% used
+   PLL                0/1             0% used
+   RGBOUTBUF          0/3             0% used
+   I3C                0/2             0% used
+   OPENDRAIN          0/3             0% used
+
+Pin Constraint Summary:
+   2 out of 3 pins locked (66% locked).
+.
+..........
+Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
+
+
+................
+Finished Placer Phase 0 (AP).  CPU time: 0 secs , REAL time: 0 secs 
+
+Starting Placer Phase 1. CPU time: 0 secs , REAL time: 0 secs 
+..  ..
+....................
+
+Placer score = 20031.
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE             43/2640          1% used
+
+WARNING <77001032> - Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+WARNING <77001031> - In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+Finished Placer Phase 1. CPU time: 4 secs , REAL time: 4 secs 
+
+Starting Placer Phase 2.
+.
+
+Placer score =  33660
+Finished Placer Phase 2.  CPU time: 4 secs , REAL time: 4 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clocks :
+  PRIMARY "clk_i" from comp "hf_osc" on site "HFOSC_R1C32", clk load = 33, ce load = 0, sr load = 0
+
+  PRIMARY  : 1 out of 8 (12%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   3 out of 56 (5.4%) I/O sites used.
+   3 out of 36 (8.3%) bonded I/O sites used.
+   Number of I/O components: 3; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 2 / 14 ( 14%) | 3.3V       |            |            |
+| 1        | 0 / 14 (  0%) | OFF        |            |            |
+| 2        | 1 / 8 ( 12%)  | 3.3V       |            |            |
++----------+---------------+------------+------------+------------+
+
+Total Placer CPU time: 4 secs , REAL time: 4 secs 
+
+
+Checksum -- place: 154c3881943f8774366557efcdb1d870fcd55d34
+Writing design to file pariVo_RP_impl_1_par.dir/5_1.udb ...
+
+WARNING <77001032> - Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+WARNING <77001031> - In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+
+Start NBR router at 21:33:42 11/24/24
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Starting routing resource preassignment
+Preassignment Summary:
+--------------------------------------------------------------------------------
+1 global clock signals routed
+129 connections routed (of 340 total) (37.94%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (1 used out of 8 available):
+#4  Signal "clk_i"
+       Clock   loads: 33    out of    33 routed (100.00%)
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Completed routing resource preassignment
+    TimerIf::skewscore 0
+                
+Start NBR section for initial routing at 21:33:43 11/24/24
+Level 4, iteration 1
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Routing in Serial Mode ......
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 67.091ns/0.000ns; real time: 0 secs 
+
+Info: Initial congestion level at 75.00% usage is 0
+Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 21:33:43 11/24/24
+Level 4, iteration 1
+        0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 67.091ns/0.000ns; real time: 0 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 21:33:43 11/24/24
+Changing speed to m;   changing temperature to -40
+Changing speed to 6;   changing temperature to 100
+
+Start NBR section for post-routing at 21:33:43 11/24/24
+
+End NBR router with 0 unrouted connection(s)
+Changing speed to m;   changing temperature to -40
+Changing speed to 6;   changing temperature to 100
+
+Checksum -- route: e60c2fe4883684d1f9d2d272505a711b4c3ff60f
+
+Total CPU time 1 secs 
+Total REAL time: 0 secs 
+Completely routed.
+End of route.  340 routed (100.00%); 0 unrouted.
+
+Writing design to file pariVo_RP_impl_1_par.dir/5_1.udb ...
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Estimated worst slack<setup/<ns>> = 67.322
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Estimated worst slack<hold/<ns>> = 1.913
+PAR_SUMMARY::Timing score<hold/<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Note: user must run 'timing' for timing closure signoff.
+
+Total CPU  Time: 5 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 125.73 MB
+
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /5 secs 
+
 timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "pariVo_RP_impl_1.twr" "pariVo_RP_impl_1.udb" 
 timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt pariVo_RP_impl_1.twr pariVo_RP_impl_1.udb -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml
 Starting design reading...
@@ -14,7 +384,7 @@ Performance Grade:   High-Performance_1.2V
 
 
 
-Successfully loading udb, 0.05 seconds
+Successfully loading udb, 0.03 seconds
 
 Initializing timer
 Starting design annotation....
@@ -22,13 +392,72 @@ High-Performance_1.2V
 
 Starting full timing analysis...
 Performance Hardware Data Status:   Advanced       Version 1.0.
-Connections ignored  13  counted  81  covered  59
+Connections ignored  95  counted  235  covered  157
 Changing speed to m;   changing temperature to -40
 
 STA Runtime and Peak Memory Usage :
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 99 MB
+Peak Memory Usage: 101 MB
 
- 0.601824s wall, 0.453125s user + 0.109375s system = 0.562500s CPU (93.5%)
+ 0.628808s wall, 0.515625s user + 0.093750s system = 0.609375s CPU (96.9%)
 
+
+tmcheck -par "pariVo_RP_impl_1.par"  
+
+pnmainc -log pnmain "pariVo_RP_impl_1_bit.tcl"
+Loading pariVo_RP_impl_1.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2024.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+WARNING <77001032> - bitgen: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+
+WARNING <77001031> - bitgen: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+
+
+Constraint Summary
+   Total number of constraints: 3
+   Total number of constraints dropped: 1
+   Dropped constraints are:
+     ldc_set_location -site {10} [get_ports sdi]
+
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+
+
+BITGEN: Bitstream Generator Radiant Software (64-bit) 2024.1.0.34.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/impl_1/pariVo_RP_impl_1.bin".
+Bitstream generation complete!
+
+Total CPU Time: 0 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 115 MB
+
+Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /4 secs 

@@ -1,0 +1,17 @@
+C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/testbench/dut_inst.v {0 {vlog -work work -stats=none {C:\Users\vparizot\E155\pariVo\pariVo_fpga\pariVo_RP\SB_MAC16\testbench\dut_inst.v}
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+** Error: (vlog-13069) C:\Users\vparizot\E155\pariVo\pariVo_fpga\pariVo_RP\SB_MAC16\testbench\dut_inst.v(1): near "u_SB_MAC16": syntax error, unexpected IDENTIFIER.
+** Error: C:\Users\vparizot\E155\pariVo\pariVo_fpga\pariVo_RP\SB_MAC16\testbench\dut_inst.v(1): (vlog-13205) Syntax error found in the scope following 'SB_MAC16'. Is there a missing '::'?
+
+} {3.0 5.0} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/testbench/tb_top.v {1 {vlog -work work -stats=none {C:\Users\vparizot\E155\pariVo\pariVo_fpga\pariVo_RP\SB_MAC16\testbench\tb_top.v}
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+-- Compiling module tb_top
+
+Top level modules:
+	tb_top
+
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/testbench/dut_params.v {0 {vlog -work work -stats=none {C:\Users\vparizot\E155\pariVo\pariVo_fpga\pariVo_RP\SB_MAC16\testbench\dut_params.v}
+Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+** Error: C:\Users\vparizot\E155\pariVo\pariVo_fpga\pariVo_RP\SB_MAC16\testbench\dut_params.v(1): (vlog-2155) Global declarations are illegal in Verilog 2001 syntax.
+
+} {3.0 4.0} {}}

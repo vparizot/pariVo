@@ -11,30 +11,54 @@
 //   Top level module with SPI interface and SPI core
 /////////////////////////////////////////////
 
-/*
+
 module top(input logic reset,
 		   input  logic sck, 
            input  logic sdi,
            output logic sdo,
            input  logic load,
 		   input  logic ce,
-		   output logic ledTest1,
-		   output logic ledTest2,
-		   output logic ledTest3);
+		   output logic ledTest);
              
     logic [31:0] eqVals;
 	logic done;
     logic clk;
  	
+	HSOSC #(.CLKHF_DIV ("0b10")) hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk_i));	// set divider to 0b10 to get 12MHz clock
 	
-    eq_spi eqspi(reset, sck, sdi, done, ce, eqVals, ledTest1, ledTest2, ledTest3);   
+	
+   // eq_spi eqspi(reset, sck, sdi, done, ce, eqVals, ledTest1, ledTest2, ledTest3);   
 	
 	//hardware_test ht(clk, eqVals, ledTest);
+	
+	logic [15:0] data_a_i;
+	logic [15:0] data_b_i;
+	logic [32:0] result_o;
+	logic clk_en_i;
+	logic clk_i;
+	logic rst_i;
+	assign rst_i = ~reset;
+	
+	
+	SB_MAC16 i_sbmac16 
+	(.clk_en_i(clk_en_i), .clk_i(clk_i),  .data_a_i(data_a_i), .data_b_i(data_b_i), .rst_i(rst_i), .result_o(result_o));
+	
+            
+        assign clk_en_i = 1;
+		assign data_a_i = 16'h0002;
+		assign data_b_i = 16'h0003;
+
+		
+		always_comb 
+            begin
+				if      (result_o == 32'h00000006)  ledTest = 1;
+				else                  ledTest = 0;
+            end
    
 endmodule
-*/
 
 
+/*
 module top( //input logic        clk,   //   12MHz MAX1000 clk, P12
             input logic        nreset, //  global reset,      P34
             input logic			din, //     I2S DOUT,          P19
@@ -63,6 +87,7 @@ module top( //input logic        clk,   //   12MHz MAX1000 clk, P12
 	 
 	
 endmodule
+*/
 
 /////////////////////////////////////////////
 // aes_spi
@@ -110,3 +135,44 @@ module eq_spi(input logic reset,
 		else nextShiftCount = shiftCount + 1;
 	assign done = ~ce; 
 endmodule
+
+module dsp(output logic ledTest);
+	/*SB_MAC16 i_sbmac16
+        ( // port interfaces
+        .A(A),
+        .B(B),
+        .C(C),
+        .D(D),
+        .O(O),
+        .CLK(clk),
+        .CE(CE),
+        .IRSTTOP(IRSTTOP),
+        .IRSTBOT(IRSTBOT),
+        .ORSTTOP(ORSTTOP),
+        .ORSTBOT(ORSTBOT),
+        .AHOLD(AHOLD),
+        .BHOLD(BHOLD),
+        .CHOLD(CHOLD),
+        .DHOLD(DHOLD),
+        .OHOLDTOP(OHOLDTOP),
+        .OHOLDBOT(OHOLDBOT),
+        .OLOADTOP(OLOADTOP),
+        .OLOADBOT(OLOADBOT),
+        .ADDSUBTOP(ADDSUBTOP),
+        .ADDSUBBOT(ADDSUBBOT),
+        .CO(CO),
+        .CI(CI),
+        .ACCUMCI(),
+        .ACCUMCO(),
+        .SIGNEXTIN(),
+        .SIGNEXTOUT()
+        ); 
+        defparam i_sbmac16.TOPOUTPUT_SELECT = 2'b01; //add/subtractor registered
+        defparam i_sbmac16.BOTOUTPUT_SELECT = 2'b01; //add/subtractor registered
+        defparam i_sbmac16.TOPADDSUB_LOWERINPUT = 2'b10; // top add sub upper input 
+        defparam i_sbmac16.BOTADDSUB_LOWERINPUT = 2'b10; // bot add sub upper input 
+        defparam i_sbmac16.PIPELINE_16x16_MULT_REG2 = 1'b1;//Mult16x16 output registered
+        defparam i_sbmac16.A_SIGNED = 1'b1; // Signed coefficient
+        defparam i_sbmac16.B_SIGNED = 1'b0; // Unsigned signal
+		*/
+endmodule 

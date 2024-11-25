@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RadiantModule architecture="ice40tp" date="2024 11 24 21:16:21" device="iCE40UP5K" device_int="itpa08" family="iCE40UP" gen_platform="Radiant" gen_platform_version="2024.1.0.34.2" generator="ipgen" library="module" module="mult_accumulate" name="SB_MAC16" operation="Industrial" package="SG48" package_int="SG48" partnumber="iCE40UP5K-SG48I" source_format="Verilog" speed="High-Performance_1.2V" speed_int="6" vendor="latticesemi.com" version="2.0.0">
+ <Package>
+  <File modified="2024 11 24 21:16:21" name="rtl/SB_MAC16_bb.v" type="black_box_verilog"/>
+  <File modified="2024 11 24 21:16:21" name="SB_MAC16.cfg" type="cfg"/>
+  <File modified="2024 11 24 21:16:21" name="misc/SB_MAC16_tmpl.v" type="template_verilog"/>
+  <File modified="2024 11 24 21:16:21" name="misc/SB_MAC16_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2024 11 24 21:16:21" name="rtl/SB_MAC16.v" type="top_level_verilog"/>
+  <File modified="2024 11 24 21:16:21" name="constraints/SB_MAC16.ldc" type="timing_constraints"/>
+  <File modified="2024 11 24 21:16:21" name="testbench/dut_params.v" type="dependency_file"/>
+  <File modified="2024 11 24 21:16:21" name="testbench/dut_inst.v" type="dependency_file"/>
+  <File modified="2024 11 24 21:16:21" name="eval/dut_params.v" type="dependency_file"/>
+  <File modified="2024 11 24 21:16:21" name="eval/dut_inst.v" type="dependency_file"/>
+  <File modified="2024 11 24 21:16:21" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2024 11 24 21:16:21" name="design.xml" type="IP-XACT_design"/>
+  <File modified="2021 06 01 00:50:24" name="testbench/tb_top.v" type="testbench_verilog"/>
+  <File modified="2023 10 24 08:31:51" name="eval/constraint.pdc" type="eval"/>
+ </Package>
+</RadiantModule>

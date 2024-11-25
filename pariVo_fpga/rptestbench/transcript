@@ -1,0 +1,401 @@
+# Load canceled
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv failed with 1 errors.
+# Compile of fakeMactb.sv failed with 1 errors.
+# 9 compiles, 2 failed with 2 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv failed with 2 errors.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 2 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv failed with 2 errors.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 2 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.fakeMac16_tb
+# vsim -gui work.fakeMac16_tb 
+# Start time: 23:23:07 on Nov 24,2024
+# Loading sv_std.std
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+add wave -position end  sim:/fakeMac16_tb/clk_en_i
+add wave -position end  sim:/fakeMac16_tb/clk_i
+add wave -position end  sim:/fakeMac16_tb/prevValue
+add wave -position end  sim:/fakeMac16_tb/data_a_i
+add wave -position end  sim:/fakeMac16_tb/data_b_i
+add wave -position end  sim:/fakeMac16_tb/rst_i
+add wave -position end  sim:/fakeMac16_tb/result_o
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv failed with 1 errors.
+# 9 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+run 100
+add wave -position end  sim:/fakeMac16_tb/dut/tempResult1
+add wave -position end  sim:/fakeMac16_tb/dut/tempResult2
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+run 100
+add wave -position end  sim:/fakeMac16_tb/dut/tempResult3
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 3 errors.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 3 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv failed with 1 errors.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.fakeMac16_tb
+# End time: 00:21:12 on Nov 25,2024, Elapsed time: 0:58:05
+# Errors: 0, Warnings: 9
+# vsim -gui work.fakeMac16_tb 
+# Start time: 00:21:12 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+# Load canceled
+add wave -position end  sim:/fakeMac16_tb/clk_en_i
+add wave -position end  sim:/fakeMac16_tb/clk_i
+add wave -position end  sim:/fakeMac16_tb/prevValue
+add wave -position end  sim:/fakeMac16_tb/data_a_i
+add wave -position end  sim:/fakeMac16_tb/data_b_i
+add wave -position end  sim:/fakeMac16_tb/rst_i
+add wave -position end  sim:/fakeMac16_tb/result_o
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.fakeMac16_tb
+# End time: 00:46:44 on Nov 25,2024, Elapsed time: 0:25:32
+# Errors: 0, Warnings: 2
+# vsim -gui work.fakeMac16_tb 
+# Start time: 00:46:44 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+add wave -position end  sim:/fakeMac16_tb/clk_en_i
+add wave -position end  sim:/fakeMac16_tb/clk_i
+add wave -position end  sim:/fakeMac16_tb/prevValue
+add wave -position end  sim:/fakeMac16_tb/data_a_i
+add wave -position end  sim:/fakeMac16_tb/data_b_i
+add wave -position end  sim:/fakeMac16_tb/rst_i
+add wave -position end  sim:/fakeMac16_tb/result_o
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.fakeMac16_tb
+# End time: 00:49:36 on Nov 25,2024, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 2
+# vsim -gui work.fakeMac16_tb 
+# Start time: 00:49:36 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+vsim -gui work.fakeMac16_tb
+# End time: 00:49:59 on Nov 25,2024, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 1
+# vsim -gui work.fakeMac16_tb 
+# Start time: 00:49:59 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+add wave -position end  sim:/fakeMac16_tb/clk_en_i
+add wave -position end  sim:/fakeMac16_tb/clk_i
+add wave -position end  sim:/fakeMac16_tb/prevValue
+add wave -position end  sim:/fakeMac16_tb/data_a_i
+add wave -position end  sim:/fakeMac16_tb/data_b_i
+add wave -position end  sim:/fakeMac16_tb/rst_i
+add wave -position end  sim:/fakeMac16_tb/result_o
+restart -f 
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv failed with 1 errors.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+run 100
+vsim -gui work.fakeMac16_tb
+# End time: 00:59:03 on Nov 25,2024, Elapsed time: 0:09:04
+# Errors: 0, Warnings: 1
+# vsim -gui work.fakeMac16_tb 
+# Start time: 00:59:03 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+add wave -position end  sim:/fakeMac16_tb/clk_en_i
+add wave -position end  sim:/fakeMac16_tb/clk_i
+add wave -position end  sim:/fakeMac16_tb/prevValue
+add wave -position end  sim:/fakeMac16_tb/data_a_i
+add wave -position end  sim:/fakeMac16_tb/data_b_i
+add wave -position end  sim:/fakeMac16_tb/rst_i
+add wave -position end  sim:/fakeMac16_tb/result_o
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv failed with 1 errors.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# 9 compiles, 0 failed with no errors.
+vsim -gui work.fakeMac16_tb
+# End time: 01:20:25 on Nov 25,2024, Elapsed time: 0:21:22
+# Errors: 0, Warnings: 2
+# vsim -gui work.fakeMac16_tb 
+# Start time: 01:20:26 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.fakeMac16_tb
+# Loading work.fakeMac16
+vsim -gui work.dsp_tb
+# End time: 01:21:30 on Nov 25,2024, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 1
+# vsim -gui work.dsp_tb 
+# Start time: 01:21:30 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.MAC16

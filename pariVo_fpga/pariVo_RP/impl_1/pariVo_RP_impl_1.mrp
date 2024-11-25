@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Tue Nov 19 15:57:17 2024
+Mapped on: Sun Nov 24 21:33:34 2024
 
 Design Information
 ------------------
@@ -22,22 +22,22 @@ Command line:   map -pdc
 Design Summary
 --------------
 
-   Number of slice registers:  12 out of  5280 (<1%)
+   Number of slice registers:  63 out of  5280 (1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            23 out of  5280 (<1%)
-      Number of logic LUT4s:               9
-      Number of inserted feedthru LUT4s:   4
-      Number of ripple logic:              5 (10 LUT4s)
-   Number of IO sites used:   8 out of 39 (21%)
-      Number of IO sites used for general PIO: 8
+   Number of LUT4s:            79 out of  5280 (1%)
+      Number of logic LUT4s:              14
+      Number of inserted feedthru LUT4s:  31
+      Number of ripple logic:             17 (34 LUT4s)
+   Number of IO sites used:   3 out of 39 (8%)
+      Number of IO sites used for general PIO: 3
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 8 out of 36 (22%)
+      Number of IO sites used for PIO+I3C: 3 out of 36 (8%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 8 out of 39 (21%)
-   Number of DSPs:             0 out of 8 (0%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 3 out of 39 (8%)
+   Number of DSPs:             1 out of 8 (13%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  1 out of 1 (100%)
    Number of Low Speed OSCs:   0 out of 1 (0%)
@@ -50,16 +50,16 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk_c: 9 loads, 9 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
-   Number of Clock Enables:  4
+      Net clk_i: 48 loads, 48 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+   Number of Clock Enables:  1
       Net VCC_net: 1 loads, 0 SLICEs
-      Net pcm_in.n153: 1 loads, 1 SLICEs
-      Net pcm_in.n75: 2 loads, 2 SLICEs
-      Net pcm_in.n67: 1 loads, 1 SLICEs
    Number of LSRs:  1
-      Net pcm_in.n72: 7 loads, 7 SLICEs
+      Net reset_c_N_34: 48 loads, 48 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net pcm_in.n72: 7 loads
+      Net reset_c_N_34: 48 loads
+      Net VCC_net: 5 loads
+      Net result_o[11]: 2 loads
+      Net result_o[13]: 2 loads
 
                                     Page 1
 
@@ -69,21 +69,18 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net lrck_c: 5 loads
-      Net bck_c: 3 loads
-      Net nreset_c: 3 loads
-      Net pcm_in.bit_state[0]: 3 loads
-      Net pcm_in.bit_state[1]: 3 loads
-      Net pcm_in.bit_state[2]: 3 loads
-      Net pcm_in.bit_state[3]: 3 loads
-      Net pcm_in.bit_state[4]: 3 loads
-      Net VCC_net: 3 loads
+      Net result_o[14]: 2 loads
+      Net result_o[15]: 2 loads
+      Net result_o[21]: 2 loads
+      Net result_o[27]: 2 loads
+      Net result_o[30]: 2 loads
+      Net result_o[31]: 2 loads
 
 
 
 
 
-   Number of warnings:  12
+   Number of warnings:  40
    Number of criticals: 0
    Number of errors:    0
 
@@ -91,35 +88,102 @@ Design Errors/Criticals/Warnings
 --------------------------------
 
 WARNING <1026001> - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (2) : No
-     port matched 'sdi'.
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (1) : No
+     port matched 'din'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (3) : No
+     port matched 'left'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (4) : No
+     port matched 'clk'.
 WARNING <1026001> - map:
      C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (5) : No
      port matched 'done'.
 WARNING <1026001> - map:
      C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (6) : No
-     port matched 'ledTest2'.
-WARNING <1027013> - map: No port matched 'sdi'.
+     port matched 'right'.
 WARNING <1026001> - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (2) : Can't
-     resolve object 'sdi' in constraint 'ldc_set_location -site {10} [get_ports
-     sdi]'.
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (7) : No
+     port matched 'scki'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (9) : No
+     port matched 'lrck'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (10) : No
+     port matched 'bck'.
+WARNING <1027013> - map: No port matched 'din'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (1) : Can't
+     resolve object 'din' in constraint 'ldc_set_location -site {19} [get_ports
+     din]'.
+WARNING <1027013> - map: No port matched 'left'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (3) : Can't
+     resolve object 'left' in constraint 'ldc_set_location -site {47} [get_ports
+     left]'.
+WARNING <1027013> - map: No port matched 'clk'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (4) : Can't
+     resolve object 'clk' in constraint 'ldc_set_location -site {12} [get_ports
+     clk]'.
 WARNING <1027013> - map: No port matched 'done'.
+
+                                    Page 2
+
+
+
+
+
+Design Errors/Criticals/Warnings (cont)
+---------------------------------------
 WARNING <1026001> - map:
      C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (5) : Can't
      resolve object 'done' in constraint 'ldc_set_location -site {27} [get_ports
      done]'.
-WARNING <1027013> - map: No port matched 'ledTest2'.
+WARNING <1027013> - map: No port matched 'right'.
 WARNING <1026001> - map:
      C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (6) : Can't
-     resolve object 'ledTest2' in constraint 'ldc_set_location -site {38}
-     [get_ports ledTest2]'.
-WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {10}
-     [get_ports sdi]'.
+     resolve object 'right' in constraint 'ldc_set_location -site {48}
+     [get_ports right]'.
+WARNING <1027013> - map: No port matched 'scki'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (7) : Can't
+     resolve object 'scki' in constraint 'ldc_set_location -site {4} [get_ports
+     scki]'.
+WARNING <1027013> - map: No port matched 'lrck'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (9) : Can't
+     resolve object 'lrck' in constraint 'ldc_set_location -site {13} [get_ports
+     lrck]'.
+WARNING <1027013> - map: No port matched 'bck'.
+WARNING <1026001> - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (10) : Can't
+     resolve object 'bck' in constraint 'ldc_set_location -site {18} [get_ports
+     bck]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {19}
+     [get_ports din]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {47}
+     [get_ports left]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {12}
+     [get_ports clk]'.
 WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {27}
      [get_ports done]'.
-WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {38}
-     [get_ports ledTest2]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {48}
+     [get_ports right]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {4}
+     [get_ports scki]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {13}
+     [get_ports lrck]'.
+WARNING <1011001> - map: Remove invalid constraint 'ldc_set_location -site {18}
+     [get_ports bck]'.
+WARNING <71003020> - map: Top module port 'sck' does not connect to anything.
+WARNING <71003020> - map: Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - map: Top module port 'load' does not connect to anything.
+WARNING <71003020> - map: Top module port 'ce' does not connect to anything.
+WARNING <71003020> - map: Top module port 'sck' does not connect to anything.
+WARNING <71003020> - map: Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - map: Top module port 'load' does not connect to anything.
+WARNING <71003020> - map: Top module port 'ce' does not connect to anything.
 
 IO (PIO) Attributes
 -------------------
@@ -127,8 +191,10 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdo                 | OUTPUT    |           |       |       |           |
 
-                                    Page 2
+                                    Page 3
 
 
 
@@ -137,27 +203,10 @@ IO (PIO) Attributes
 IO (PIO) Attributes (cont)
 --------------------------
 +---------------------+-----------+-----------+-------+-------+-----------+
-| lrck                | OUTPUT    |           |       |       |           |
+| ledTest             | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| bck                 | OUTPUT    |           |       |       |           |
+| reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| scki                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| clk                 | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| nreset              | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| din                 | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-
-Removed logic
--------------
-
-Block i1 was optimized away.
 
 OSC Summary
 -----------
@@ -166,7 +215,7 @@ OSC 1:                                 Pin/Node Value
   OSC Instance Name:                            hf_osc
   Power UP:                            NODE     VCC_net
   Enable Signal:                       NODE     VCC_net
-  OSC Output:                          PIN,NODE clk_c
+  OSC Output:                          NODE     clk_i
   DIV Setting:                                  10
 
 ASIC Components
@@ -174,27 +223,44 @@ ASIC Components
 
 Instance Name: hf_osc
          Type: HFOSC
+Instance Name: i_sbmac16/lscc_mult_accumulate_inst/u_lscc_multiplier/genblk1.u_l
+     scc_multiplier_dsp/mult_9
+         Type: DSP
 
 Constraint Summary
 ------------------
 
-   Total number of constraints: 12
-   Total number of constraints dropped: 3
+   Total number of constraints: 13
+   Total number of constraints dropped: 8
    Dropped constraints are:
-     ldc_set_location -site {10} [get_ports sdi]
+     ldc_set_location -site {19} [get_ports din]
+     ldc_set_location -site {47} [get_ports left]
+     ldc_set_location -site {12} [get_ports clk]
      ldc_set_location -site {27} [get_ports done]
-     ldc_set_location -site {38} [get_ports ledTest2]
+     ldc_set_location -site {48} [get_ports right]
+     ldc_set_location -site {4} [get_ports scki]
+     ldc_set_location -site {13} [get_ports lrck]
+     ldc_set_location -site {18} [get_ports bck]
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 63 MB
-Checksum -- map: 65191981f5c3e25c134a016343f2f0d9bc5ff90
+   Peak Memory Usage: 65 MB
+Checksum -- map: cb9fda4e376eedb0a23f6139aeea784966059005
 
 
-                                    Page 3
+
+
+
+
+
+
+
+
+
+                                    Page 4
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

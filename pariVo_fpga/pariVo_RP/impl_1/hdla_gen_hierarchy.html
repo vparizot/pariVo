@@ -3,13 +3,19 @@ Starting: parse design source files
 (VERI-1482) Analyzing Verilog file 'C:/lscc/radiant/2024.1/cae_library/synthesis/verilog/iCE40UP.v'
 (VERI-1482) Analyzing Verilog file 'C:/Users/vparizot/E155/pariVo/pariVo_fpga/hardware_test.sv'
 (VERI-1482) Analyzing Verilog file 'C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv'
-WARNING <2049991> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(56,15-56,19) (VERI-1372) redeclaration of ANSI port 'left' is not allowed
-WARNING <2049991> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(56,21-56,26) (VERI-1372) redeclaration of ANSI port 'right' is not allowed
-WARNING <2049991> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(56,2-56,14) (VERI-1203) 'left' was previously declared without a range
+INFO <2049992> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(62,50-62,56) (VERI-2561) undeclared symbol 'bckout', assumed default net type 'wire'
+INFO <2049992> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(62,58-62,65) (VERI-2561) undeclared symbol 'lrckout', assumed default net type 'wire'
+INFO <2049992> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(62,67-62,71) (VERI-2561) undeclared symbol 'dout', assumed default net type 'wire'
+ERROR <2049990> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(59,25-59,35) (VERI-1011) cannot index into non-array type logic for 'left'
+ERROR <2049990> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(60,26-60,37) (VERI-1011) cannot index into non-array type logic for 'right'
+ERROR <2049990> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(38,1-65,10) (VERI-1072) module 'top' is ignored due to previous errors
+ERROR <2049990> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(74,1-112,10) (VERI-1072) module 'eq_spi' is ignored due to previous errors
+(VERI-1483) Verilog file 'C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv' ignored due to errors
 (VERI-1482) Analyzing Verilog file 'C:/Users/vparizot/E155/pariVo/pariVo_fpga/i2s.sv'
-INFO <2049992> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(38,8-38,11) (VERI-1018) compiling module 'top'
-WARNING <2049991> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(58,47-58,51) (VERI-1330) actual bit length 1 differs from formal bit length 24 for port 'left'
-WARNING <2049991> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv(58,53-58,58) (VERI-1330) actual bit length 1 differs from formal bit length 24 for port 'right'
-Done: design load finished with (0) errors, and (5) warnings
+INFO <2049992> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/i2s.sv(204,11-204,26) (VERI-2561) undeclared symbol 'newsample_valid', assumed default net type 'wire'
+ERROR <2049990> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/i2s.sv(268,10-268,14) (VERI-1128) 'data' is not declared
+ERROR <2049990> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/i2s.sv(227,1-274,10) (VERI-1072) module 'i2sOut' is ignored due to previous errors
+(VERI-1483) Verilog file 'C:/Users/vparizot/E155/pariVo/pariVo_fpga/i2s.sv' ignored due to errors
+Done: design load finished with (6) errors, and (0) warnings
 
 </PRE></BODY></HTML>

@@ -36,12 +36,15 @@
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
+-sdc "pariVo_RP_impl_1_cpe.ldc"
+-path "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16"
 -path "C:/lscc/radiant/2024.1/ispfpga/ice40tp/data" "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/impl_1" "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP"
 -ver "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.vhd"
 -sver "C:/Users/vparizot/E155/pariVo/pariVo_fpga/hardware_test.sv"
 "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv"
 "C:/Users/vparizot/E155/pariVo/pariVo_fpga/i2s.sv"
+-ver "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v"
 
 
 -path "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP"

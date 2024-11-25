@@ -1,11 +1,23 @@
 DRC: Design Rule Check Radiant Software (64-bit) 2024.1.0.34.2
-Tue Nov 19 15:07:33 2024
+Sun Nov 24 21:33:30 2024
 
-WARNING <1027013> - No port matched 'sdi'.
-WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (2) : Can't resolve object 'sdi' in constraint 'ldc_set_location -site {10} [get_ports sdi]'.
+WARNING <71003020> - Top module port 'sck' does not connect to anything.
+WARNING <71003020> - Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - Top module port 'load' does not connect to anything.
+WARNING <71003020> - Top module port 'ce' does not connect to anything.
+WARNING <1027013> - No port matched 'din'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (1) : Can't resolve object 'din' in constraint 'ldc_set_location -site {19} [get_ports din]'.
+WARNING <1027013> - No port matched 'left'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (3) : Can't resolve object 'left' in constraint 'ldc_set_location -site {47} [get_ports left]'.
 WARNING <1027013> - No port matched 'clk'.
 WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (4) : Can't resolve object 'clk' in constraint 'ldc_set_location -site {12} [get_ports clk]'.
 WARNING <1027013> - No port matched 'done'.
 WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (5) : Can't resolve object 'done' in constraint 'ldc_set_location -site {27} [get_ports done]'.
-WARNING <1027013> - No port matched 'ledTest2'.
-WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (6) : Can't resolve object 'ledTest2' in constraint 'ldc_set_location -site {38} [get_ports ledTest2]'.
+WARNING <1027013> - No port matched 'right'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (6) : Can't resolve object 'right' in constraint 'ldc_set_location -site {48} [get_ports right]'.
+WARNING <1027013> - No port matched 'scki'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (7) : Can't resolve object 'scki' in constraint 'ldc_set_location -site {4} [get_ports scki]'.
+WARNING <1027013> - No port matched 'lrck'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (9) : Can't resolve object 'lrck' in constraint 'ldc_set_location -site {13} [get_ports lrck]'.
+WARNING <1027013> - No port matched 'bck'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc (10) : Can't resolve object 'bck' in constraint 'ldc_set_location -site {18} [get_ports bck]'.

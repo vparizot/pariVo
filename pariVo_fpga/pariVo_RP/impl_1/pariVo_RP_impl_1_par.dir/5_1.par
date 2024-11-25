@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "pariVo_RP_impl_1_map.udb"
-Tue Nov 19 15:57:21 2024
+Sun Nov 24 21:33:38 2024
 
 PAR: Place And Route Radiant Software (64-bit) 2024.1.0.34.2.
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
@@ -18,22 +18,48 @@ Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
+WARNING <77001032> - par: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+
+WARNING <77001031> - par: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+
 
 Constraint Summary
-   Total number of constraints: 9
-   Total number of constraints dropped: 0
+   Total number of constraints: 3
+   Total number of constraints dropped: 1
+   Dropped constraints are:
+     ldc_set_location -site {10} [get_ports sdi]
 
-Number of Signals: 45
-Number of Connections: 94
+WARNING <77001032> - par: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+
+WARNING <77001031> - par: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+
+WARNING <71003020> - par: Top module port 'sck' does not connect to anything.
+WARNING <71003020> - par: Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - par: Top module port 'load' does not connect to anything.
+WARNING <71003020> - par: Top module port 'ce' does not connect to anything.
+WARNING <71003020> - par: Top module port 'sck' does not connect to anything.
+WARNING <71003020> - par: Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - par: Top module port 'load' does not connect to anything.
+WARNING <71003020> - par: Top module port 'ce' does not connect to anything.
+WARNING <71003020> - par: Top module port 'sck' does not connect to anything.
+WARNING <71003020> - par: Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - par: Top module port 'load' does not connect to anything.
+WARNING <71003020> - par: Top module port 'ce' does not connect to anything.
+WARNING <71003020> - par: Top module port 'sck' does not connect to anything.
+WARNING <71003020> - par: Top module port 'sdi' does not connect to anything.
+WARNING <71003020> - par: Top module port 'load' does not connect to anything.
+WARNING <71003020> - par: Top module port 'ce' does not connect to anything.
+Number of Signals: 206
+Number of Connections: 370
 Device utilization summary:
 
-   SLICE (est.)      15/2640          1% used
-     LUT             23/5280         <1% used
-     REG             12/5280         <1% used
-   PIO                8/56           14% used
-                      8/36           22% bonded
+   SLICE (est.)      44/2640          2% used
+     LUT             79/5280          1% used
+     REG             63/5280          1% used
+   PIO                3/56            5% used
+                      3/36            8% bonded
    IOLOGIC            0/56            0% used
-   DSP                0/8             0% used
+   DSP                1/8            13% used
    I2C                0/2             0% used
    HFOSC              1/1           100% used
    LFOSC              0/1             0% used
@@ -50,8 +76,9 @@ Device utilization summary:
    OPENDRAIN          0/3             0% used
 
 Pin Constraint Summary:
-   8 out of 8 pins locked (100% locked).
-
+   2 out of 3 pins locked (66% locked).
+.
+..........
 Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
 
 
@@ -62,24 +89,28 @@ Starting Placer Phase 1. CPU time: 0 secs , REAL time: 0 secs
 ..  ..
 ....................
 
-Placer score = 7775.
+Placer score = 20031.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             14/2640         <1% used
+   SLICE             43/2640          1% used
 
-Finished Placer Phase 1. CPU time: 2 secs , REAL time: 2 secs 
+WARNING <77001032> - par: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
+
+WARNING <77001031> - par: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+
+Finished Placer Phase 1. CPU time: 4 secs , REAL time: 4 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  9975
-Finished Placer Phase 2.  CPU time: 2 secs , REAL time: 2 secs 
+Placer score =  33660
+Finished Placer Phase 2.  CPU time: 4 secs , REAL time: 4 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
-  PRIMARY "clk_c" from comp "hf_osc" on site "HFOSC_R1C32", clk load = 9, ce load = 0, sr load = 0
+  PRIMARY "clk_i" from comp "hf_osc" on site "HFOSC_R1C32", clk load = 33, ce load = 0, sr load = 0
 
   PRIMARY  : 1 out of 8 (12%)
 
@@ -87,28 +118,32 @@ Global Clocks :
 
 
 I/O Usage Summary (final):
-   8 out of 56 (14.3%) I/O sites used.
-   8 out of 36 (22.2%) bonded I/O sites used.
-   Number of I/O components: 8; differential: 0
+   3 out of 56 (5.4%) I/O sites used.
+   3 out of 36 (8.3%) bonded I/O sites used.
+   Number of I/O components: 3; differential: 0
    Number of Vref pins used: 0
 
 I/O Bank Usage Summary:
 +----------+---------------+------------+------------+------------+
 | I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+---------------+------------+------------+------------+
-| 0        | 1 / 14 (  7%) | 3.3V       |            |            |
-| 1        | 4 / 14 ( 28%) | 3.3V       |            |            |
-| 2        | 3 / 8 ( 37%)  | 3.3V       |            |            |
+| 0        | 2 / 14 ( 14%) | 3.3V       |            |            |
+| 1        | 0 / 14 (  0%) | OFF        |            |            |
+| 2        | 1 / 8 ( 12%)  | 3.3V       |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 2 secs , REAL time: 2 secs 
+Total Placer CPU time: 4 secs , REAL time: 4 secs 
 
 
-Checksum -- place: cef8a054fe4a577d4d06e331df785d5866eabbfd
+Checksum -- place: 154c3881943f8774366557efcdb1d870fcd55d34
 Writing design to file pariVo_RP_impl_1_par.dir/5_1.udb ...
 
+WARNING <77001032> - par: Unable to find the instance/port 'sdi' in the constraint 'ldc_set_location -site {10} [get_ports sdi]'
 
-Start NBR router at 15:57:23 11/19/24
+WARNING <77001031> - par: In the constraint 'ldc_set_location -site {10} [get_ports sdi]', the locate object is not specified
+
+
+Start NBR router at 21:33:42 11/24/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -126,51 +161,45 @@ Note: NBR uses a different method to calculate timing slacks. The
 Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
-21 connections routed (of 94 total) (22.34%)
+1 global clock signals routed
+129 connections routed (of 340 total) (37.94%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
-#4  Signal "clk_c"
-       Clock   loads: 0     out of     9 routed (  0.00%)
-       Data    loads: 0     out of     2 routed (  0.00%)
+#4  Signal "clk_i"
+       Clock   loads: 33    out of    33 routed (100.00%)
 ---------------------------------------------------------
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
+
+Start NBR section for initial routing at 21:33:43 11/24/24
+Level 4, iteration 1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Start NBR section for initial routing at 15:57:24 11/19/24
-Level 4, iteration 1
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 72.482ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 67.091ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 15:57:24 11/19/24
+Start NBR section for normal routing at 21:33:43 11/24/24
 Level 4, iteration 1
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 72.482ns/0.000ns; real time: 0 secs 
-Level 4, iteration 2
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 72.482ns/0.000ns; real time: 0 secs 
-Level 4, iteration 3
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 72.482ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 67.091ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 15:57:24 11/19/24
+Start NBR section for setup/hold timing optimization with effort level 3 at 21:33:43 11/24/24
 
-Start NBR section for post-routing at 15:57:24 11/19/24
+Start NBR section for post-routing at 21:33:43 11/24/24
 
 End NBR router with 0 unrouted connection(s)
 
-Checksum -- route: 2bf0fe70badcbd356d1515574f194f5b5bc82a97
+Checksum -- route: e60c2fe4883684d1f9d2d272505a711b4c3ff60f
 
 Total CPU time 1 secs 
 Total REAL time: 0 secs 
 Completely routed.
-End of route.  94 routed (100.00%); 0 unrouted.
+End of route.  340 routed (100.00%); 0 unrouted.
 
 Writing design to file pariVo_RP_impl_1_par.dir/5_1.udb ...
 
@@ -180,17 +209,17 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Estimated worst slack<setup/<ns>> = 72.482
+PAR_SUMMARY::Estimated worst slack<setup/<ns>> = 67.322
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Estimated worst slack<hold/<ns>> = 1.743
+PAR_SUMMARY::Estimated worst slack<hold/<ns>> = 1.913
 PAR_SUMMARY::Timing score<hold/<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
 Note: user must run 'timing' for timing closure signoff.
 
-Total CPU  Time: 3 secs 
-Total REAL Time: 4 secs 
-Peak Memory Usage: 123.90 MB
+Total CPU  Time: 5 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 125.73 MB
 
 
 par done!

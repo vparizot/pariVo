@@ -1,0 +1,4 @@
+module adcClock();
+    
+
+endmodule
