@@ -23,11 +23,40 @@ module dsp_tb();
 		begin
         ce = 1;
 		tapnum = 8'h00;
-		tap = 16'h1234;
+		tap = 16'h0004;
 		signalWindow[0] = 16'h0001;
 		signalWindow[1] = 16'h0002;
 		signalWindow[2] = 16'h0003;
 		signalWindow[3] = 16'h0004;
+
+		#10 
+		 ce = 1;
+		tapnum = 8'h01;
+		tap = 16'h0001;
+		signalWindow[0] = 16'h0001;
+		signalWindow[1] = 16'h0002;
+		signalWindow[2] = 16'h0003;
+		signalWindow[3] = 16'h0004;
+
+		#10 
+		 ce = 1;
+		tapnum = 8'h02;
+		tap = 16'h0002;
+		signalWindow[0] = 16'h0001;
+		signalWindow[1] = 16'h0002;
+		signalWindow[2] = 16'h0003;
+		signalWindow[3] = 16'h0004;
+
+		#10 
+		 ce = 1;
+		tapnum = 8'h03;
+		tap = 16'h0001;
+		signalWindow[0] = 16'h0001;
+		signalWindow[1] = 16'h0002;
+		signalWindow[2] = 16'h0003;
+		signalWindow[3] = 16'h0004;
+
+
         end
 
 endmodule 

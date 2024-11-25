@@ -479,18 +479,17 @@ module fakedsp(input logic clk, ce,
             input logic [15:0] tap,
             input logic [7:0] tapnum,
             input logic [15:0] signalWindow [0:3],
-            output logic [33:0] result_o,
+            output logic [32:0] result_o,
             output logic done);
 
     logic [15:0] A;
     logic [15:0] B;
-    logic [33:0] prevValue;
+    logic [32:0] prevValue = 0;
     
 
     always_ff @(posedge clk) begin  
-        A <= tap;
-        B <= signalWindow[3-tapnum];
-        prevValue <= result_o;
+       A <= tap;
+       B <= signalWindow[3-tapnum];
     end
 
     always_comb begin
@@ -500,6 +499,28 @@ module fakedsp(input logic clk, ce,
 
     logic en;
     logic reset;
-    fakeMac16 fakemac(en, clk, prevValue, A, B, reset, result_o);
+    fakeMac16 fakemac(en, clk, A, B, reset, result_o);
         
 endmodule 
+
+module faketop(input logic clk, reset,
+                input logic [24:0] signal,
+                input logic [7:0] eqVal,
+                output logic result_o,
+                output logic done);
+
+logic [15:0] tapcoeff;
+logic [7:0] tapnum;
+logic [15:0] signalWindow [0:3];
+
+logic ce;
+
+logic tap;
+
+new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
+
+signalwindow getsignal(clk, en, signal, signalWindow);
+
+fakedsp dspoutput(clk, ce, tapcoeff, tapnum, signalWindow, result_o, done);
+
+endmodule
