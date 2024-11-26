@@ -36,20 +36,18 @@ endmodule
 module new_all_taps(input logic clk, reset,
                 input logic [7:0] eqVal,
                 output logic [15:0] tapcoeff,
-                output logic [7:0] tapnum);
+                output logic [7:0] outputTapnum);
     
     logic[3:0] filterNum;
     logic [15:0] currenttapcoeff;
     logic [7:0] counter = 0;
     logic [7:0] nextCounter = 0;
+    logic [7:0] tapnum;
    
     //logic [15:0] returnTaps [0:3];
 
     always_ff @(posedge clk)
         if(reset) begin
-            //tapnum <= 0;
-            //desiredTap <= 0;
-            //nextCounter <= 0;
             counter <= 0;
         end
         else begin
@@ -70,6 +68,7 @@ module new_all_taps(input logic clk, reset,
     //assign tapcoeff = nexttapcoeff;
     get_tap gettaps(clk, filterNum, tapnum, tapcoeff);
     assign tapnum = counter;
+    assign outputTapnum = counter;
     //assign nexttapcoeff = currenttapcoeff;
 
    // assign allTaps = returnTaps;

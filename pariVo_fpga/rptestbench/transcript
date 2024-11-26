@@ -1402,3 +1402,1135 @@ add wave -position end  sim:/faketop_tb/dut/dspoutput/A
 add wave -position end  sim:/faketop_tb/dut/dspoutput/B
 restart -f
 run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv failed with 9 errors.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 1 failed with 9 errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.dsp_tb
+# End time: 16:56:16 on Nov 25,2024, Elapsed time: 1:32:46
+# Errors: 0, Warnings: 5
+# vsim -gui work.dsp_tb 
+# Start time: 16:56:17 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.MAC16
+# ** Error (suppressible): (vsim-3389) Port 'clk_i' not found in the connected module (1st connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 17
+# ** Error (suppressible): (vsim-3389) Port 'clk_en_i' not found in the connected module (2nd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 17
+# ** Error (suppressible): (vsim-3389) Port 'rst_i' not found in the connected module (3rd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 17
+# ** Error (suppressible): (vsim-3389) Port 'result_o' not found in the connected module (7th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 17
+# Error loading design
+# End time: 16:56:24 on Nov 25,2024, Elapsed time: 0:00:07
+# Errors: 4, Warnings: 1
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.dsp_tb
+# vsim -gui work.dsp_tb 
+# Start time: 16:57:13 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+# ** Warning: (vsim-3015) [PCDPC] - Port size (33) does not match connection size (34) for port 'result_o'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(33).
+#    Time: 0 ns  Iteration: 0  Instance: /dsp_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 17
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+add wave -position end  sim:/dsp_tb/clk_i
+add wave -position end  sim:/dsp_tb/clk_en_i
+add wave -position end  sim:/dsp_tb/tap
+add wave -position end  sim:/dsp_tb/tapnum
+add wave -position end  sim:/dsp_tb/signalWindow
+add wave -position end  sim:/dsp_tb/result_o
+add wave -position end  sim:/dsp_tb/done
+add wave -position end  sim:/dsp_tb/rst_i
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+add wave -position end  sim:/dsp_tb/dut/tap
+add wave -position end  sim:/dsp_tb/dut/tapnum
+add wave -position end  sim:/dsp_tb/dut/signalWindow
+add wave -position end  sim:/dsp_tb/dut/result_o
+add wave -position end  sim:/dsp_tb/dut/done
+add wave -position end  sim:/dsp_tb/dut/data_a_i
+add wave -position end  sim:/dsp_tb/dut/data_b_i
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# End time: 18:22:01 on Nov 25,2024, Elapsed time: 1:24:48
+# Errors: 0, Warnings: 2
+# vsim -gui work.get_all_taps_tb 
+# Start time: 18:22:01 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/tapnum
+add wave -position end  sim:/get_all_taps_tb/expected
+run 100
+restart -f
+run 200
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+add wave -position end  sim:/get_all_taps_tb/dut/eqVal
+add wave -position end  sim:/get_all_taps_tb/dut/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/tapnum
+add wave -position end  sim:/get_all_taps_tb/dut/filterNum
+restart -f
+run 100
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/filterNum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapnum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/baseAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/currentAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tempCoeff
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# ** Error: (vsim-3063) Port 'tapnum' not found in the connected module (5th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /get_all_taps_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv Line: 15
+# Load canceled
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.get_all_taps_tb
+# vsim -gui work.get_all_taps_tb 
+# Start time: 18:22:01 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Warning in wave window restart: ** UI-Msg (Warning): (vish-4014) No objects found matching '/get_all_taps_tb/tapnum'. 
+run 100
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/outputTapnum
+add wave -position end  sim:/get_all_taps_tb/expected
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/clk
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/filterNum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapnum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/baseAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/currentAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tempCoeff
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/clk
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/filterNum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapnum
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/baseAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/currentAddr
+add wave -position end  sim:/get_all_taps_tb/dut/gettaps/tempCoeff
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run 100
+vsim -gui work.dsp_tb
+# End time: 18:48:15 on Nov 25,2024, Elapsed time: 0:26:14
+# Errors: 0, Warnings: 1
+# vsim -gui work.dsp_tb 
+# Start time: 18:48:16 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/dsp_tb/clk_i
+add wave -position end  sim:/dsp_tb/clk_en_i
+add wave -position end  sim:/dsp_tb/tap
+add wave -position end  sim:/dsp_tb/tapnum
+add wave -position end  sim:/dsp_tb/signalWindow
+add wave -position end  sim:/dsp_tb/result_o
+add wave -position end  sim:/dsp_tb/done
+add wave -position end  sim:/dsp_tb/rst_i
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.faketop_tb
+# End time: 18:50:25 on Nov 25,2024, Elapsed time: 0:02:09
+# Errors: 0, Warnings: 2
+# vsim -gui work.faketop_tb 
+# Start time: 18:50:25 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/faketop_tb/clk
+add wave -position end  sim:/faketop_tb/reset
+add wave -position end  sim:/faketop_tb/signal_en
+add wave -position end  sim:/faketop_tb/signal
+add wave -position end  sim:/faketop_tb/eqVal
+add wave -position end  sim:/faketop_tb/result_o
+add wave -position end  sim:/faketop_tb/done
+run 100
+add wave -position end  sim:/faketop_tb/dut/getalltaps/eqVal
+add wave -position end  sim:/faketop_tb/dut/getalltaps/tapcoeff
+add wave -position end  sim:/faketop_tb/dut/getalltaps/outputTapnum
+add wave -position end  sim:/faketop_tb/dut/getalltaps/filterNum
+add wave -position end  sim:/faketop_tb/dut/getalltaps/currenttapcoeff
+add wave -position end  sim:/faketop_tb/dut/getalltaps/counter
+add wave -position end  sim:/faketop_tb/dut/getalltaps/nextCounter
+add wave -position end  sim:/faketop_tb/dut/getalltaps/tapnum
+add wave -position end  sim:/faketop_tb/dut/getsignal/signal
+add wave -position end  sim:/faketop_tb/dut/getsignal/signalWindow
+add wave -position end  sim:/faketop_tb/dut/getsignal/shortSignal
+add wave -position end  sim:/faketop_tb/dut/getsignal/tempsignalWindow
+restart -f
+run 100
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+add wave -position end  sim:/faketop_tb/dut/getalltaps/clk
+add wave -position end  sim:/faketop_tb/dut/getalltaps/reset
+add wave -position end  sim:/faketop_tb/dut/getalltaps/eqVal
+add wave -position end  sim:/faketop_tb/dut/getalltaps/tapcoeff
+add wave -position end  sim:/faketop_tb/dut/getalltaps/outputTapnum
+add wave -position end  sim:/faketop_tb/dut/getalltaps/filterNum
+add wave -position end  sim:/faketop_tb/dut/getalltaps/currenttapcoeff
+add wave -position end  sim:/faketop_tb/dut/getalltaps/counter
+add wave -position end  sim:/faketop_tb/dut/getalltaps/nextCounter
+add wave -position end  sim:/faketop_tb/dut/getalltaps/tapnum
+vsim -gui work.get_all_taps_tb
+# End time: 19:08:18 on Nov 25,2024, Elapsed time: 0:17:53
+# Errors: 0, Warnings: 1
+# vsim -gui work.get_all_taps_tb 
+# Start time: 19:08:18 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+add wave -position end  sim:/get_all_taps_tb/clk
+add wave -position end  sim:/get_all_taps_tb/reset
+add wave -position end  sim:/get_all_taps_tb/eqVal
+add wave -position end  sim:/get_all_taps_tb/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/outputTapnum
+add wave -position end  sim:/get_all_taps_tb/expected
+run 100
+add wave -position end  sim:/get_all_taps_tb/dut/clk
+add wave -position end  sim:/get_all_taps_tb/dut/reset
+add wave -position end  sim:/get_all_taps_tb/dut/eqVal
+add wave -position end  sim:/get_all_taps_tb/dut/tapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/outputTapnum
+add wave -position end  sim:/get_all_taps_tb/dut/filterNum
+add wave -position end  sim:/get_all_taps_tb/dut/currenttapcoeff
+add wave -position end  sim:/get_all_taps_tb/dut/counter
+add wave -position end  sim:/get_all_taps_tb/dut/nextCounter
+add wave -position end  sim:/get_all_taps_tb/dut/tapnum
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restaet -f
+# invalid command name "restaet"
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.get_all_taps_tb
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+run100
+# invalid command name "run100"
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.dsp_tb
+# End time: 19:27:38 on Nov 25,2024, Elapsed time: 0:19:20
+# Errors: 0, Warnings: 2
+# vsim -gui work.dsp_tb 
+# Start time: 19:27:38 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/dsp_tb/clk_i
+add wave -position end  sim:/dsp_tb/clk_en_i
+add wave -position end  sim:/dsp_tb/tap
+add wave -position end  sim:/dsp_tb/tapnum
+add wave -position end  sim:/dsp_tb/signalWindow
+add wave -position end  sim:/dsp_tb/result_o
+add wave -position end  sim:/dsp_tb/done
+add wave -position end  sim:/dsp_tb/rst_i
+restart -f
+run 100
+vsim -gui work.faketop_tb
+# End time: 19:28:54 on Nov 25,2024, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 1
+# vsim -gui work.faketop_tb 
+# Start time: 19:28:54 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/faketop_tb/clk
+add wave -position end  sim:/faketop_tb/reset
+add wave -position end  sim:/faketop_tb/signal_en
+add wave -position end  sim:/faketop_tb/signal
+add wave -position end  sim:/faketop_tb/eqVal
+add wave -position end  sim:/faketop_tb/result_o
+add wave -position end  sim:/faketop_tb/done
+run 100
+add wave -position end sim:/faketop_tb/dut/getalltaps/*
+add wave -position end sim:/faketop_tb/dut/getsignal/*
+restart -f
+run 100
+add wave -position end  sim:/faketop_tb/dut/getsignal/signalWindow
+restart -f
+run 100
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tap
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tapnum
+add wave -position end  sim:/faketop_tb/dut/dspoutput/signalWindow
+add wave -position end  sim:/faketop_tb/dut/dspoutput/result_o
+add wave -position end  sim:/faketop_tb/dut/dspoutput/done
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_a_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_b_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/prevValue
+restart -f
+run 100
+add wave -position end  sim:/faketop_tb/dut/dspoutput/rst_i
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.dsp_tb
+# End time: 19:39:20 on Nov 25,2024, Elapsed time: 0:10:26
+# Errors: 0, Warnings: 2
+# vsim -gui work.dsp_tb 
+# Start time: 19:39:20 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/dsp_tb/clk_i
+add wave -position end  sim:/dsp_tb/clk_en_i
+add wave -position end  sim:/dsp_tb/tap
+add wave -position end  sim:/dsp_tb/tapnum
+add wave -position end  sim:/dsp_tb/signalWindow
+add wave -position end  sim:/dsp_tb/result_o
+add wave -position end  sim:/dsp_tb/done
+add wave -position end  sim:/dsp_tb/rst_i
+restart -f
+run 100
+vsim -gui work.faketop_tb
+# End time: 19:41:06 on Nov 25,2024, Elapsed time: 0:01:46
+# Errors: 0, Warnings: 1
+# vsim -gui work.faketop_tb 
+# Start time: 19:41:06 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/faketop_tb/clk
+add wave -position end  sim:/faketop_tb/reset
+add wave -position end  sim:/faketop_tb/signal_en
+add wave -position end  sim:/faketop_tb/signal
+add wave -position end  sim:/faketop_tb/eqVal
+add wave -position end  sim:/faketop_tb/result_o
+add wave -position end  sim:/faketop_tb/done
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tap
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tapnum
+add wave -position end  sim:/faketop_tb/dut/dspoutput/signalWindow
+add wave -position end  sim:/faketop_tb/dut/dspoutput/result_o
+add wave -position end  sim:/faketop_tb/dut/dspoutput/done
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_a_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_b_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/prevValue
+restart -f
+run 100
+add wave -position end  sim:/faketop_tb/dut/dspoutput/clk_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/clk_en_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/rst_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tap
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tapnum
+add wave -position end  sim:/faketop_tb/dut/dspoutput/signalWindow
+add wave -position end  sim:/faketop_tb/dut/dspoutput/result_o
+add wave -position end  sim:/faketop_tb/dut/dspoutput/done
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_a_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_b_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/prevValue
+add wave -position end  sim:/faketop_tb/dut/dspoutput/clk_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/clk_en_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/rst_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tap
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tapnum
+add wave -position end  sim:/faketop_tb/dut/dspoutput/signalWindow
+add wave -position end  sim:/faketop_tb/dut/dspoutput/result_o
+add wave -position end  sim:/faketop_tb/dut/dspoutput/done
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_a_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_b_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/prevValue
+restart -f
+run 100
+add wave -position end  sim:/faketop_tb/dut/getsignal/clk
+add wave -position end  sim:/faketop_tb/dut/getsignal/en
+add wave -position end  sim:/faketop_tb/dut/getsignal/signal
+add wave -position end  sim:/faketop_tb/dut/getsignal/signalWindow
+add wave -position end  sim:/faketop_tb/dut/getsignal/shortSignal
+add wave -position end  sim:/faketop_tb/dut/getsignal/tempsignalWindow
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+vsim -gui work.faketop_tb
+# End time: 20:02:22 on Nov 25,2024, Elapsed time: 0:21:16
+# Errors: 0, Warnings: 1
+# vsim -gui work.faketop_tb 
+# Start time: 20:02:22 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/faketop_tb/clk
+add wave -position end  sim:/faketop_tb/reset
+add wave -position end  sim:/faketop_tb/clk_en_i
+add wave -position end  sim:/faketop_tb/signal_en
+add wave -position end  sim:/faketop_tb/signal
+add wave -position end  sim:/faketop_tb/eqVal
+add wave -position end  sim:/faketop_tb/result_o
+add wave -position end  sim:/faketop_tb/done
+restart -f
+run 100
+add wave -position end  sim:/faketop_tb/dut/dspoutput/clk_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/clk_en_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/rst_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tap
+add wave -position end  sim:/faketop_tb/dut/dspoutput/tapnum
+add wave -position end  sim:/faketop_tb/dut/dspoutput/signalWindow
+add wave -position end  sim:/faketop_tb/dut/dspoutput/result_o
+add wave -position end  sim:/faketop_tb/dut/dspoutput/done
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_a_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/data_b_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/prevValue
+restart -f
+run 100
+run 5000
+restart -f
+run100
+# invalid command name "run100"
+run 100
+vsim -gui work.dsp_tb
+# End time: 20:36:55 on Nov 25,2024, Elapsed time: 0:34:33
+# Errors: 0, Warnings: 1
+# vsim -gui work.dsp_tb 
+# Start time: 20:36:55 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/dsp_tb/clk_i
+add wave -position end  sim:/dsp_tb/clk_en_i
+add wave -position end  sim:/dsp_tb/tap
+add wave -position end  sim:/dsp_tb/tapnum
+add wave -position end  sim:/dsp_tb/signalWindow
+add wave -position end  sim:/dsp_tb/result_o
+add wave -position end  sim:/dsp_tb/done
+add wave -position end  sim:/dsp_tb/rst_i
+restart -f
+run 100
+vsim -gui work.faketop_tb
+# End time: 20:37:42 on Nov 25,2024, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 1
+# vsim -gui work.faketop_tb 
+# Start time: 20:37:42 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/faketop_tb/clk
+add wave -position end  sim:/faketop_tb/reset
+add wave -position end  sim:/faketop_tb/clk_en_i
+add wave -position end  sim:/faketop_tb/signal_en
+add wave -position end  sim:/faketop_tb/signal
+add wave -position end  sim:/faketop_tb/eqVal
+add wave -position end  sim:/faketop_tb/result_o
+add wave -position end  sim:/faketop_tb/done
+restart -f
+run 100
+add wave -position end  sim:/faketop_tb/dut/dspoutput/realmac/clk_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/realmac/clk_en_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/realmac/rst_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/realmac/data_a_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/realmac/data_b_i
+add wave -position end  sim:/faketop_tb/dut/dspoutput/realmac/result_o
+restart -f
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv failed with 1 errors.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv failed with 1 errors.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 1 failed with 1 error.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+vsim -gui work.secondtop_tb
+# End time: 21:01:27 on Nov 25,2024, Elapsed time: 0:23:45
+# Errors: 0, Warnings: 1
+# vsim -gui work.secondtop_tb 
+# Start time: 21:01:27 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.secondtop_tb
+# Loading work.secondtop
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'result_o'.
+#    Time: 0 ns  Iteration: 0  Instance: /secondtop_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 172
+# ** Warning: (vsim-3015) [PCDPC] - Port size (33) does not match connection size (1) for port 'result_o'. The port definition is at: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(85).
+#    Time: 0 ns  Iteration: 0  Instance: /secondtop_tb/dut File: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv Line: 172
+# Error loading design
+# End time: 21:01:34 on Nov 25,2024, Elapsed time: 0:00:07
+# Errors: 1, Warnings: 2
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.secondtop_tb
+# vsim -gui work.secondtop_tb 
+# Start time: 21:02:06 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.secondtop_tb
+# Loading work.secondtop
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/secondtop_tb/clk
+add wave -position end  sim:/secondtop_tb/reset
+add wave -position end  sim:/secondtop_tb/clk_en_i
+add wave -position end  sim:/secondtop_tb/signal_en
+add wave -position end  sim:/secondtop_tb/signal
+add wave -position end  sim:/secondtop_tb/tapcoeff
+add wave -position end  sim:/secondtop_tb/tapnum
+add wave -position end  sim:/secondtop_tb/result_o
+add wave -position end  sim:/secondtop_tb/done
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run 100
+add wave -position end  sim:/secondtop_tb/dut/getsignal/clk
+add wave -position end  sim:/secondtop_tb/dut/getsignal/en
+add wave -position end  sim:/secondtop_tb/dut/getsignal/signal
+add wave -position end  sim:/secondtop_tb/dut/getsignal/signalWindow
+add wave -position end  sim:/secondtop_tb/dut/getsignal/shortSignal
+add wave -position end  sim:/secondtop_tb/dut/getsignal/tempsignalWindow
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/clk_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/clk_en_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/rst_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/tap
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/tapnum
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/signalWindow
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/result_o
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/done
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/data_a_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/data_b_i
+restart -f
+run 100
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/clk_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/clk_en_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/rst_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/tap
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/tapnum
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/signalWindow
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/result_o
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/done
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/data_a_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/data_b_i
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.secondtop_tb
+# Loading work.secondtop
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/clk_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/clk_en_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/rst_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/data_a_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/data_b_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/result_o
+restart -f
+run 100
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/clk_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/clk_en_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/rst_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/data_a_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/data_b_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/result_o
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/clk_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/clk_en_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/rst_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/data_a_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/data_b_i
+add wave -position end  sim:/secondtop_tb/dut/dspoutput/realmac/lscc_mult_accumulate_inst/result_o
+vsim -gui work.dsp_tb
+# End time: 21:12:23 on Nov 25,2024, Elapsed time: 0:10:17
+# Errors: 0, Warnings: 1
+# vsim -gui work.dsp_tb 
+# Start time: 21:12:23 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/dsp_tb/clk_i
+add wave -position end  sim:/dsp_tb/clk_en_i
+add wave -position end  sim:/dsp_tb/tap
+add wave -position end  sim:/dsp_tb/tapnum
+add wave -position end  sim:/dsp_tb/signalWindow
+add wave -position end  sim:/dsp_tb/result_o
+add wave -position end  sim:/dsp_tb/done
+add wave -position end  sim:/dsp_tb/rst_i
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dsp_tb
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+run 100
+restart -f
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+run 100
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+# Compile of recursiveFilter.sv was successful.
+# Compile of recursiveFilter_tb.sv was successful.
+# Compile of coeffs_sync_tb.sv was successful.
+# Compile of get_tap_tb.sv was successful.
+# Compile of dsp.sv was successful with warnings.
+# Compile of dsp_tb.sv was successful.
+# Compile of adcClock.sv was successful.
+# Compile of fakeMac16.sv was successful.
+# Compile of fakeMactb.sv was successful.
+# Compile of SB_MAC16.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.faketop_tb
+# End time: 22:44:48 on Nov 25,2024, Elapsed time: 1:32:25
+# Errors: 0, Warnings: 4
+# vsim -gui work.faketop_tb 
+# Start time: 22:44:48 on Nov 25,2024
+# Loading sv_std.std
+# Loading work.faketop_tb
+# Loading work.faketop
+# Loading work.new_all_taps
+# Loading work.get_tap
+# Loading work.coeffs_sync
+# Loading work.signalwindow
+# Loading work.dsp
+# Loading work.SB_MAC16
+# Loading work.SB_MAC16_ipgen_lscc_mult_accumulate
+# Loading work.SB_MAC16_ipgen_lscc_multiplier
+# Loading work.SB_MAC16_ipgen_lscc_multiplier_dsp
+add wave -position end  sim:/faketop_tb/clk
+add wave -position end  sim:/faketop_tb/reset
+add wave -position end  sim:/faketop_tb/clk_en_i
+add wave -position end  sim:/faketop_tb/signal_en
+add wave -position end  sim:/faketop_tb/signal
+add wave -position end  sim:/faketop_tb/eqVal
+add wave -position end  sim:/faketop_tb/result_o
+add wave -position end  sim:/faketop_tb/done
+run 100
+add wave -position end  sim:/faketop_tb/dut/getalltaps/eqVal
+add wave -position end  sim:/faketop_tb/dut/getalltaps/tapcoeff
+add wave -position end  sim:/faketop_tb/dut/getalltaps/outputTapnum
+add wave -position end  sim:/faketop_tb/dut/getalltaps/filterNum
+add wave -position end  sim:/faketop_tb/dut/getalltaps/currenttapcoeff
+add wave -position end  sim:/faketop_tb/dut/getalltaps/counter
+add wave -position end  sim:/faketop_tb/dut/getalltaps/nextCounter
+add wave -position end  sim:/faketop_tb/dut/getalltaps/tapnum
+add wave -position end  sim:/faketop_tb/dut/getsignal/en
+add wave -position end  sim:/faketop_tb/dut/getsignal/signal
+add wave -position end  sim:/faketop_tb/dut/getsignal/signalWindow
+add wave -position end  sim:/faketop_tb/dut/getsignal/shortSignal
+add wave -position end  sim:/faketop_tb/dut/getsignal/tempsignalWindow
+restart -f
+run 100

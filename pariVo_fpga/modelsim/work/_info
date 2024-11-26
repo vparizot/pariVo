@@ -11,7 +11,7 @@ cModel Technology
 dC:/Program Files/Modelsim/examples
 vadcClock
 Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z1 !s110 1732576973
+Z1 !s110 1732603474
 !i10b 1
 !s100 EFzR:Z<gK2T0fKBj<5;^d3
 I0X6Ld==[nA41?BoLC4M=]2
@@ -20,14 +20,14 @@ Z2 dC:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim
 w1732515493
 8C:\Users\vparizot\E155\pariVo\pariVo_fpga\modelsim\adcClock.sv
 FC:\Users\vparizot\E155\pariVo\pariVo_fpga\modelsim\adcClock.sv
-!i122 1049
+!i122 1358
 L0 1 4
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 OP;L;2022.3;75
 r1
 !s85 0
 31
-Z5 !s108 1732576973.000000
+Z5 !s108 1732603474.000000
 !s107 C:\Users\vparizot\E155\pariVo\pariVo_fpga\modelsim\adcClock.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\vparizot\E155\pariVo\pariVo_fpga\modelsim\adcClock.sv|
 !i113 1
@@ -181,10 +181,10 @@ R1
 IG[1S`;B^n9lSN^iA@h@8z0
 S1
 R2
-Z20 w1732576924
+Z20 w1732588892
 R8
 R9
-!i122 1043
+!i122 1352
 L0 1 16
 R3
 R4
@@ -208,7 +208,7 @@ R2
 w1731985335
 8C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/coeffs_sync_tb.sv
 FC:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/coeffs_sync_tb.sv
-!i122 1045
+!i122 1354
 Z21 L0 7 19
 R3
 R4
@@ -225,15 +225,15 @@ vdsp
 R0
 R1
 !i10b 1
-!s100 RfZ7A_1nYbHoPF<;`85NN3
-II=4gP1Ez[RM4ITD9Fgz0S1
+!s100 h]BlZk?eSVfm^[HClnA?B3
+IQ5[UDT^`<_gM^o]K;h[NW1
 S1
 R2
-Z22 w1732574665
+Z22 w1732596453
 Z23 8C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv
 Z24 FC:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv
-!i122 1047
-L0 84 447
+!i122 1356
+L0 29 25
 R3
 R4
 r1
@@ -249,15 +249,15 @@ vdsp_tb
 R0
 R1
 !i10b 1
-!s100 5>k<XOA>`aLAD`HXRQfAg3
-I<@CZ0BMk?URK<7_:O5<[33
+!s100 ^e<D]UVMCSzo14Y9a8j:[1
+I0f?U``G>FO:0l0W=bCg_<2
 S1
 R2
-Z27 w1732576968
+Z27 w1732600853
 Z28 8C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv
 Z29 FC:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv
-!i122 1048
-L0 7 56
+!i122 1357
+L0 7 60
 R3
 R4
 r1
@@ -319,15 +319,15 @@ vfakedsp
 R0
 R1
 !i10b 1
-!s100 OS^bmjWgOTUC>@[jZbP=I1
-ILh64<1iFo>ohYZFf>B8VR2
+!s100 XcU:4@nnC5Ba3[f^aEkiA2
+IIVdPh^8H]2j3Q>4QQz1:`1
 S1
 R2
 R22
 R23
 R24
-!i122 1047
-L0 29 27
+!i122 1356
+L0 103 447
 R3
 R4
 r1
@@ -350,7 +350,7 @@ R2
 w1732557488
 8C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMac16.sv
 FC:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMac16.sv
-!i122 1050
+!i122 1359
 L0 1 26
 R3
 R4
@@ -375,7 +375,7 @@ R2
 w1732557523
 8C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMactb.sv
 FC:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMactb.sv
-!i122 1051
+!i122 1360
 L0 7 35
 R3
 R4
@@ -393,15 +393,15 @@ vfaketop
 R0
 R1
 !i10b 1
-!s100 ]7hWDP^AdB^SL3e8]gMGV1
-I:UUz8W_57O2?4B7mdSS3A3
+!s100 :?[9ITWLKTh6_53NhV[HB1
+IaC3A;zcil`B8FY@i8h_Ej0
 S1
 R2
 R22
 R23
 R24
-!i122 1047
-L0 57 25
+!i122 1356
+L0 55 23
 R3
 R4
 r1
@@ -417,15 +417,15 @@ vfaketop_tb
 R0
 R1
 !i10b 1
-!s100 j`6R>0L45[EbPCbajf^3`0
-IgIHVf@F>?10;8Gf4znV5?0
+!s100 8?5i67dRG]b<V<K79e=[X3
+I3Va@:]NHUY@@g;68C;`Ai0
 S1
 R2
 R27
 R28
 R29
-!i122 1048
-L0 64 33
+!i122 1357
+L0 70 44
 R3
 R4
 r1
@@ -579,23 +579,23 @@ vget_all_taps_tb
 R0
 R1
 !i10b 1
-!s100 Q2ZYn;NJ^^lZ0aS01WS<O0
-IS`P=kEDzbHL;BQg7Om0l_3
+!s100 JLL[R:XHH2Rl3ZAdCGCES3
+I0B:l7NcTQX1:L]_55FBW30
 S1
 R2
-w1732575811
+w1732591367
 Z32 8C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv
 Z33 FC:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv
-!i122 1044
-L0 7 26
+!i122 1353
+Z34 L0 7 27
 R3
 R4
 r1
 !s85 0
 31
 R5
-Z34 !s107 C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv|
-Z35 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv|
+Z35 !s107 C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv|
+Z36 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv|
 !i113 1
 R6
 R7
@@ -610,7 +610,7 @@ R2
 R20
 R8
 R9
-!i122 1043
+!i122 1352
 L0 18 17
 R3
 R4
@@ -634,8 +634,8 @@ R2
 w1731986757
 8C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/get_tap_tb.sv
 FC:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/get_tap_tb.sv
-!i122 1046
-L0 7 27
+!i122 1355
+R34
 R3
 R4
 r1
@@ -666,8 +666,8 @@ r1
 !s85 0
 31
 !s108 1731986953.000000
-R34
 R35
+R36
 !i113 1
 R6
 R7
@@ -974,15 +974,15 @@ vnew_all_taps
 R0
 R1
 !i10b 1
-!s100 EUC7lnJGn2dC`_4UC0GN81
-I4F7<1L;Ci?0O:?1TmIYdC2
+!s100 BPZ1iP]Uhb:4_97=a>3g92
+IU8Ni?l4B]8Y8X>VI8916@3
 S1
 R2
 R20
 R8
 R9
-!i122 1043
-L0 36 42
+!i122 1352
+L0 36 41
 R3
 R4
 r1
@@ -1247,6 +1247,169 @@ R18
 R19
 R7
 n@r@g@b@p@w@m
+vSB_MAC16
+R1
+!i10b 1
+!s100 V9UPL6G3IM6afVbM?Mn;43
+Ij]dD2SgH>aKHoOHh?aUU=3
+R2
+Z37 w1732511781
+Z38 8C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v
+Z39 FC:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v
+!i122 1361
+L0 11 29
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v|
+Z40 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v|
+!i113 1
+R19
+R7
+n@s@b_@m@a@c16
+vSB_MAC16_ipgen_lscc_mult_accumulate
+R1
+!i10b 1
+!s100 1<TUak4kV><n1JIL1`B4O2
+Ig1k2kV3MgJAO?jofIJX=`0
+R2
+R37
+R38
+R39
+!i122 1361
+L0 98 84
+R3
+R4
+r1
+!s85 0
+31
+R5
+Z41 !s107 C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v|
+R40
+!i113 1
+R19
+R7
+n@s@b_@m@a@c16_ipgen_lscc_mult_accumulate
+vSB_MAC16_ipgen_lscc_multiplier
+R1
+!i10b 1
+!s100 IXl^DXlZbV`^ZkC163b7X1
+IO3T5=a7b9<567g`Z[d7G;2
+R2
+R37
+R38
+R39
+!i122 1361
+L0 244 91
+R3
+R4
+r1
+!s85 0
+31
+R5
+R41
+R40
+!i113 1
+R19
+R7
+n@s@b_@m@a@c16_ipgen_lscc_multiplier
+vSB_MAC16_ipgen_lscc_multiplier_dsp
+R1
+!i10b 1
+!s100 oFWDCD]A`ZbC[^hja9Q@S2
+Ial^ND<HI;fcD2=hLKE@`Z0
+R2
+R37
+R38
+R39
+!i122 1361
+L0 599 252
+R3
+R4
+r1
+!s85 0
+31
+R5
+R41
+R40
+!i113 1
+R19
+R7
+n@s@b_@m@a@c16_ipgen_lscc_multiplier_dsp
+vSB_MAC16_ipgen_lscc_multiplier_lut
+R1
+!i10b 1
+!s100 U9RIE3FzbJ_9J<jHoiDjO2
+I?_jS5FI`1<nbk>^L85Pj^3
+R2
+R37
+R38
+R39
+!i122 1361
+L0 341 252
+R3
+R4
+r1
+!s85 0
+31
+R5
+R41
+R40
+!i113 1
+R19
+R7
+n@s@b_@m@a@c16_ipgen_lscc_multiplier_lut
+vsecondtop
+R0
+R1
+!i10b 1
+!s100 WfdonZP=i_LNeE[<0E38b1
+IJ^HSa8C6BLL;R@j<G8hz@2
+S1
+R2
+R22
+R23
+R24
+!i122 1356
+L0 79 22
+R3
+R4
+r1
+!s85 0
+31
+R5
+R25
+R26
+!i113 1
+R6
+R7
+vsecondtop_tb
+R0
+R1
+!i10b 1
+!s100 CNhHB[?OEW=b?:E`ZIO<o3
+I9anz3<F6<6[XTU^VMCzmR3
+S1
+R2
+R27
+R28
+R29
+!i122 1357
+L0 158 58
+R3
+R4
+r1
+!s85 0
+31
+R5
+R30
+R31
+!i113 1
+R6
+R7
 vsignalwindow
 R0
 R1
@@ -1258,7 +1421,7 @@ R2
 R22
 R23
 R24
-!i122 1047
+!i122 1356
 L0 2 25
 R3
 R4
@@ -1275,15 +1438,15 @@ vsignalwindow_tb
 R0
 R1
 !i10b 1
-!s100 bNZojBfRcV>KF9HD6Yi^53
-I:0IRD;KloJPZ4nEYOMCe00
+!s100 Wan;>c6ZK_Yh5A?]98TU82
+IX8R2kcbQP2cVMFZPFiQ>R3
 S1
 R2
 R27
 R28
 R29
-!i122 1048
-L0 97 42
+!i122 1357
+L0 115 42
 R3
 R4
 r1

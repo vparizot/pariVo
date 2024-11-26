@@ -5,23 +5,29 @@
 `timescale 1ns/1ns
 
 module dsp_tb();
-    logic clk;
-    logic ce;
+    logic clk_i;
+    logic clk_en_i;
     logic [15:0] tap;
 	logic [7:0] tapnum;
     logic [15:0] signalWindow [0:3];
-    logic [33:0] result_o;
+    logic [32:0] result_o;
 	logic done;
+	logic rst_i;
 
-	fakedsp dut(.clk(clk), .ce(ce), .tap(tap), .tapnum(tapnum), .signalWindow(signalWindow), .result_o(result_o), .done(done));
+	dsp dut(.clk_i(clk_i), .clk_en_i(clk_en_i), .rst_i(rst_i), .tap(tap), .tapnum(tapnum), .signalWindow(signalWindow), .result_o(result_o), .done(done));
 	always
 		begin
-		clk = 0; #5;
-		clk = 1; #5;
+		clk_i = 0; #5;
+		clk_i = 1; #5;
 		end
 	initial
 		begin
-        ce = 1;
+
+		rst_i = 0; #10;
+		rst_i = 1; #10;
+		rst_i = 0;
+
+        clk_en_i = 1;
 		tapnum = 8'h00;
 		tap = 16'h0004;
 		signalWindow[0] = 16'h0001;
@@ -30,7 +36,7 @@ module dsp_tb();
 		signalWindow[3] = 16'h0004;
 
 		#10 
-		 ce = 1;
+	
 		tapnum = 8'h01;
 		tap = 16'h0001;
 		signalWindow[0] = 16'h0001;
@@ -39,7 +45,6 @@ module dsp_tb();
 		signalWindow[3] = 16'h0004;
 
 		#10 
-		 ce = 1;
 		tapnum = 8'h02;
 		tap = 16'h0002;
 		signalWindow[0] = 16'h0001;
@@ -48,7 +53,6 @@ module dsp_tb();
 		signalWindow[3] = 16'h0004;
 
 		#10 
-		 ce = 1;
 		tapnum = 8'h03;
 		tap = 16'h0001;
 		signalWindow[0] = 16'h0001;
@@ -61,16 +65,19 @@ module dsp_tb();
 
 endmodule 
 
+
+
 module faketop_tb();
 	logic clk;
 	logic reset;
+	logic clk_en_i;
 	logic signal_en;
     logic [23:0] signal;
     logic [7:0] eqVal;
     logic [32:0] result_o;
     logic done;
 
-	faketop dut(.clk(clk), .reset(reset), .signal_en(signal_en), .signal(signal), .eqVal(eqVal), .result_o(result_o), .done(done));
+	faketop dut(.clk(clk), .reset(reset), .clk_en_i(clk_en_i), .signal_en(signal_en), .signal(signal), .eqVal(eqVal), .result_o(result_o), .done(done));
 
 	always
 		begin
@@ -79,6 +86,16 @@ module faketop_tb();
 		end
 	initial
 		begin
+		eqVal = 8'hF4;
+		reset = 0;
+		#10;
+		reset = 1;
+		#10;
+		reset = 0;
+
+		
+
+		clk_en_i = 1;
 		signal_en = 1;
 		signal = 24'h000111;
 		#10 
@@ -88,12 +105,13 @@ module faketop_tb();
 		#10 
 		signal = 24'h000300;
 	
-        eqVal = 8'h01;
+        //eqVal = 8'h01;
 		//tap = 16'h1234;
 
         end
 
 endmodule 
+
 module signalwindow_tb();
     logic clk;
     logic en;
@@ -136,5 +154,66 @@ module signalwindow_tb();
         end
 
 endmodule
+
+module secondtop_tb();
+ 	logic clk;
+	logic reset;
+    logic clk_en_i;
+	logic signal_en;
+	logic [23:0] signal;
+	logic [15:0] tapcoeff;
+	logic [7:0] tapnum;
+	logic [32:0] result_o;
+	logic done;
+
+
+	secondtop dut(.clk(clk), .reset(reset), .clk_en_i(clk_en_i), .signal_en(signal_en), .signal(signal), .tapcoeff(tapcoeff), .tapnum(tapnum), .result_o(result_o), .done(done));
+
+	always
+		begin
+		clk = 0; #5;
+		clk = 1; #5;
+		end
+	initial
+		begin
+		reset = 0; #5;
+		reset = 1; #5;
+		reset = 0; 
+
+        signal_en = 1;
+		clk_en_i = 1;
+		signal = 24'h111111;
+		//tap = 16'h1234;
+
+		#10
+		signal = 24'h000000;
+		tapcoeff = 16'h0004;
+		tapnum = 8'h01;
+
+		#10
+		signal = 24'h222222;
+		tapcoeff = 16'h0003;
+		tapnum = 8'h02;
+
+		#10
+		signal = 24'h333333;
+		tapcoeff = 16'h0003;
+		tapnum = 8'h03;
+
+		#10
+		signal = 24'h444444;
+		tapcoeff = 16'h0003;
+		tapnum = 8'h00;
+
+		#10
+		signal = 24'h555555;
+		tapcoeff = 16'h0003;
+		tapnum = 8'h01;
+
+        end
+
+endmodule
+
+
 
 

@@ -26,21 +26,20 @@ module signalwindow (input logic clk, en,
 endmodule 
 
 
-module fakedsp(input logic clk, ce,
+module dsp(input logic clk_i, clk_en_i, rst_i,
             input logic [15:0] tap,
             input logic [7:0] tapnum,
             input logic [15:0] signalWindow [0:3],
             output logic [32:0] result_o,
             output logic done);
 
-    logic [15:0] A;
-    logic [15:0] B;
-    logic [32:0] prevValue = 0;
+    logic [15:0] data_a_i;
+    logic [15:0] data_b_i;
     
 
     //always_ff @(posedge clk) begin  
-       assign A = tap;
-       assign B = signalWindow[3-tapnum];
+       assign data_a_i = tap;
+       assign data_b_i = signalWindow[3-tapnum];
     //end
 
     always_comb begin
@@ -48,13 +47,13 @@ module fakedsp(input logic clk, ce,
         else done = 1;
     end
 
-    logic en;
-    logic reset;
-    fakeMac16 fakemac(en, clk, A, B, reset, result_o);
+    
+    SB_MAC16 realmac(.clk_i(clk_i), .clk_en_i(clk_en_i), .rst_i(rst_i), .data_a_i(data_a_i), .data_b_i(data_b_i), .result_o(result_o));
         
 endmodule 
 
 module faketop(input logic clk, reset,
+                input logic clk_en_i,
                 input logic signal_en,
                 input logic [23:0] signal,
                 input logic [7:0] eqVal,
@@ -65,10 +64,7 @@ logic [15:0] tapcoeff;
 logic [7:0] tapnum;
 logic [15:0] signalWindow [0:3];
 
-logic ce;
 
-
-assign en = 1;
 
 logic tap;
 
@@ -76,12 +72,35 @@ new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
 
 signalwindow getsignal(clk, signal_en, signal, signalWindow);
 
-fakedsp dspoutput(clk, ce, tapcoeff, tapnum, signalWindow, result_o, done);
+dsp dspoutput(clk, clk_en_i, reset, tapcoeff, tapnum, signalWindow, result_o, done);
+
+endmodule
+
+module secondtop(input logic clk, reset,
+                input logic clk_en_i,
+                input logic signal_en,
+                input logic [23:0] signal,
+                input logic [15:0] tapcoeff,
+                input logic [7:0] tapnum,
+                output logic [32:0] result_o,
+                output logic done);
+
+
+logic [15:0] signalWindow [0:3];
+
+
+logic tap;
+
+//new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
+
+signalwindow getsignal(clk, signal_en, signal, signalWindow);
+
+dsp dspoutput(clk, clk_en_i, reset, tapcoeff, tapnum, signalWindow, result_o, done);
 
 endmodule
 
 
-module dsp(input logic clk, ce,
+module fakedsp(input logic clk, ce,
             input logic [15:0] tap,
             input logic [7:0] tapnum,
             input logic [15:0] signalWindow [0:3],
