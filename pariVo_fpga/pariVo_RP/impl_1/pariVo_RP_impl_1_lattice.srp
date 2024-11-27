@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Nov 24 21:32:35 2024
+Tue Nov 26 15:14:00 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f pariVo_RP_impl_1_lattice.synproj -logfile pariVo_RP_impl_1_lattice.srp -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml 
@@ -131,7 +131,6 @@ INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v(17): an
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/parivo_rp/sb_mac16/rtl/sb_mac16.v. VERI-1482
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv. VERI-1482
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv. VERI-1482
-WARNING <35901362> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(61): clk_i is already implicitly declared earlier. VERI-1362
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/i2s.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd
@@ -180,49 +179,40 @@ CRITICAL <35002028> - synthesis: I/O Port ce 's net has no driver and is unused.
 
 
 
-WARNING <1009991> - synthesis: Attribute syn_multstyle on instance mult_9 has unsupported value "DSP"
-
-Mapped 1 multiplier(s)
-
-
 CRITICAL <35002028> - synthesis: I/O Port sck 's net has no driver and is unused.
 CRITICAL <35002028> - synthesis: I/O Port sdi 's net has no driver and is unused.
 CRITICAL <35002028> - synthesis: I/O Port load 's net has no driver and is unused.
 CRITICAL <35002028> - synthesis: I/O Port ce 's net has no driver and is unused.
-CRITICAL <35001747> - synthesis: Bit(s) of register driving \i_sbmac16/lscc_mult_accumulate_inst/AxB_se[64:0] stuck at '0': 0
-WARNING <35935040> - synthesis: Register \i_sbmac16/lscc_mult_accumulate_inst/result_o_7__i0 clock is stuck at Zero. VDB-5040
 
 ################### Begin Area Report (top)######################
-Number of register bits => 63 of 5280 (1 % )
-CCU2 => 17
-FD1P3XZ => 63
+Number of register bits => 2 of 5280 (0 % )
+CCU2 => 1
+FD1P3XZ => 2
 HSOSC_CORE => 1
 IB => 1
-LUT4 => 12
-MAC16 => 1
-OB => 2
+LUT4 => 1
+OB => 3
 ################### End Area Report ##################
-Number of odd-length carry chains : 0
-Number of even-length carry chains : 1
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 0
 
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk_i, loads : 0
+  Net : clk_i_c, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : reset_c_N_34, loads : 63
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n252, loads : 2
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n717, loads : 2
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n254, loads : 2
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n242, loads : 2
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n702, loads : 2
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n244, loads : 2
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n240, loads : 2
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n699, loads : 2
-  Net : i_sbmac16/lscc_mult_accumulate_inst/n250, loads : 2
+  Net : reset_c_N_2, loads : 2
+  Net : realmac/lscc_mult_accumulate_inst/n71, loads : 2
+  Net : reset_c, loads : 1
+  Net : realmac/lscc_mult_accumulate_inst/ledTest_c_N_1[0], loads : 1
+  Net : realmac/lscc_mult_accumulate_inst/ledTest_c, loads : 0
+  Net : clk_i, loads : 0
+  Net : ledTest, loads : 0
+  Net : sdo, loads : 0
+  Net : realmac/lscc_mult_accumulate_inst/u_lscc_multiplier/genblk1.u_lscc_multiplier_dsp/AxB_se[0], loads : -1
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -235,10 +225,10 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 92 MB
+Peak Memory Usage: 90 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 3c74dfef9aae81dafeaddd3dfe38c01a850a2cd
+Checksum -- synthesis -- netlist: d9225a16cd9b0299843338c8756ed46a60f818d

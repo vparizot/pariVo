@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ ?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1732512832">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1732512832"/>
+        <Milestone name="Export" build_result="2" build_time="1732662861">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1732662861"/>
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1732512814">
-            <Task name="Map" build_result="2" update_result="0" update_time="1732512814"/>
+        <Milestone name="Map" build_result="2" build_time="1732662846">
+            <Task name="Map" build_result="2" update_result="0" update_time="1732662846"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="1731386457"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1732512824">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1732512824"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1732512824"/>
+        <Milestone name="PAR" build_result="2" build_time="1732662852">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1732662852"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1732662853"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1732512757">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1732512757"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1732512771"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1732662842">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1732662842"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1732662853"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1732511581"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1732511581"/>
         </Milestone>
@@ -28,14 +28,14 @@
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name="pariVo_RP_impl_1.bgn" last_build_time="1732512832" last_build_size="1153"/>
-        <Report name="pariVo_RP_impl_1.bin" last_build_time="1732512832" last_build_size="104156"/>
+        <Report name="pariVo_RP_impl_1.bgn" last_build_time="1732662861" last_build_size="1153"/>
+        <Report name="pariVo_RP_impl_1.bin" last_build_time="1732662861" last_build_size="104156"/>
         <Report name="pariVo_RP_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="pariVo_RP_impl_1.twr.html" last_build_time="1732512824" last_build_size="474423"/>
-        <Report name="pariVo_RP_impl_1.udb" last_build_time="1732512823" last_build_size="15702"/>
-        <Report name="pariVo_RP_impl_1_map.udb" last_build_time="1732512814" last_build_size="10860"/>
-        <Report name="pariVo_RP_impl_1_rtl.udb" last_build_time="1732512756" last_build_size="9092"/>
-        <Report name="pariVo_RP_impl_1_syn.udb" last_build_time="1732512757" last_build_size="7770"/>
+        <Report name="pariVo_RP_impl_1.twr.html" last_build_time="1732662853" last_build_size="32524"/>
+        <Report name="pariVo_RP_impl_1.udb" last_build_time="1732662852" last_build_size="3387"/>
+        <Report name="pariVo_RP_impl_1_map.udb" last_build_time="1732662846" last_build_size="2917"/>
+        <Report name="pariVo_RP_impl_1_rtl.udb" last_build_time="1732662841" last_build_size="8633"/>
+        <Report name="pariVo_RP_impl_1_syn.udb" last_build_time="1732662842" last_build_size="2293"/>
     </Strategy>
 </BuildStatus>
-                
+   

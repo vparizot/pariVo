@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Nov 24 21:33:48 2024
+Tue Nov 26 15:14:17 2024
 
 
 Command: bitgen -w -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml -freq 0 pariVo_RP_impl_1.udb C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/impl_1/pariVo_RP_impl_1 

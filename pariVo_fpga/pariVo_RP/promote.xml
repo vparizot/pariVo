@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<userSetting name="C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml" version="Diamond (64-bit) 2024.1.0.34.2" date="Sun Nov 24 21:33:52 2024" vendor="Lattice Semiconductor Corporation" >
+<userSetting name="C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/promote.xml" version="Diamond (64-bit) 2024.1.0.34.2" date="Tue Nov 26 15:14:21 2024" vendor="Lattice Semiconductor Corporation" >
   <msg mid="35901220" type="Warning" internal="true" />
   <msg mid="35901328" type="Info" internal="true" />
   <msg mid="35921504" type="Info" internal="true" />
+  <msg mid="35901137" type="Warning" internal="true" />
   <msg mid="35901209" type="Warning" internal="true" />
   <msg mid="35901599" type="Error" internal="true" />
   <msg mid="35931002" type="Warning" internal="true" />

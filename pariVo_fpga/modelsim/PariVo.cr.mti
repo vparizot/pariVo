@@ -36,11 +36,13 @@ Top level modules:
 Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
 -- Compiling module signalwindow
 -- Compiling module dsp
-** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(32): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(43): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module gainred
 -- Compiling module faketop
 -- Compiling module secondtop
+** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(137): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 -- Compiling module fakedsp
-** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(106): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(154): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 
 Top level modules:
 	faketop

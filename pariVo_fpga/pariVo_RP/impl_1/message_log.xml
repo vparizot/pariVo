@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>No port matched 'din'.</Dynamic>
+            <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Dynamic>
+            <Dynamic>3</Dynamic>
+            <Dynamic>No port matched 'left'.</Dynamic>
+            <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Dynamic>No port matched 'clk'.</Dynamic>
+            <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Dynamic>
+            <Dynamic>5</Dynamic>
+            <Dynamic>No port matched 'done'.</Dynamic>
+            <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Dynamic>
+            <Dynamic>6</Dynamic>
+            <Dynamic>No port matched 'right'.</Dynamic>
+            <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Dynamic>
+            <Dynamic>7</Dynamic>
+            <Dynamic>No port matched 'scki'.</Dynamic>
+            <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Dynamic>
+            <Dynamic>9</Dynamic>
+            <Dynamic>No port matched 'lrck'.</Dynamic>
+            <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>1026001</ID>
+            <Severity>16</Severity>
+            <Dynamic>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Dynamic>
+            <Dynamic>10</Dynamic>
+            <Dynamic>No port matched 'bck'.</Dynamic>
+            <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/pariVo.pdc</Navigation>
+            <Navigation>10</Navigation>
+        </Message>
+    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35935050</ID>
@@ -500,14 +574,6 @@
             <Navigation>17</Navigation>
         </Message>
         <Message>
-            <ID>35901362</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(61): </Dynamic>
-            <Dynamic>clk_i</Dynamic>
-            <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>61</Navigation>
-        </Message>
-        <Message>
             <ID>35921014</ID>
             <Severity>1</Severity>
             <Dynamic>c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd(4): </Dynamic>
@@ -604,12 +670,6 @@
             <Dynamic>ce</Dynamic>
         </Message>
         <Message>
-            <ID>1009991</ID>
-            <Severity>16</Severity>
-            <Dynamic>Attribute syn_multstyle on instance mult_9 has unsupported value &quot;DSP&quot;
-</Dynamic>
-        </Message>
-        <Message>
             <ID>35002028</ID>
             <Severity>256</Severity>
             <Dynamic>sck</Dynamic>
@@ -630,23 +690,11 @@
             <Dynamic>ce</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>driving \i_sbmac16/lscc_mult_accumulate_inst/AxB_se[64:0]</Dynamic>
-            <Dynamic>0</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\i_sbmac16/lscc_mult_accumulate_inst/result_o_7__i0</Dynamic>
-            <Dynamic>Zero</Dynamic>
-        </Message>
-        <Message>
             <ID>35811117</ID>
             <Severity>16</Severity>
             <Dynamic>LATTICE_IP_GENERATED</Dynamic>
             <Dynamic>Instance</Dynamic>
-            <Dynamic>i_sbmac16</Dynamic>
+            <Dynamic>realmac</Dynamic>
             <Dynamic>top</Dynamic>
         </Message>
         <Message>

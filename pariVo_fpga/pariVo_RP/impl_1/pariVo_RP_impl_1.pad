@@ -6,15 +6,16 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Sun Nov 24 21:33:42 2024
+Tue Nov 26 15:14:11 2024
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | Properties                               |
 +-----------+----------+--------------+-------+------------------------------------------+
-| ledTest   | 38/0     | LVCMOS33_OUT | PR9B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| clk_i     | 44/2     | LVCMOS33_OUT | PL7B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| ledTest   | 2/2      | LVCMOS33_OUT | PL9A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | reset     | 34/0     | LVCMOS33_IN  | PR14B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| sdo       | 2/2      | LVCMOS33_OUT | PL9A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| sdo       | 38/0     | LVCMOS33_OUT | PR9B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 +-----------+----------+--------------+-------+------------------------------------------+
 
 Vccio by Bank:
@@ -29,7 +30,7 @@ Pinout by Pin Number:
 +----------+---------------------+------------+--------------+-------+------------------+
 | Pin/Bank | Pin Info            | Constraint | Buffer Type  | Site  | Dual Function    |
 +----------+---------------------+------------+--------------+-------+------------------+
-| 2/2      | sdo                 |            | LVCMOS33_OUT | PL9A  |                  |
+| 2/2      | ledTest             | LOCATED    | LVCMOS33_OUT | PL9A  |                  |
 | 3/2      |     unused, PULL:UP |            |              | PL10B |                  |
 | 4/2      |     unused, PULL:UP |            |              | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
@@ -57,13 +58,13 @@ Pinout by Pin Number:
 | 35/0     |     unused, PULL:UP |            |              | PR13B | GPLL_IN/PCLKT0_1 |
 | 36/0     |     unused, PULL:UP |            |              | PR10B |                  |
 | 37/0     |     unused, PULL:UP |            |              | PR14A | PCLKT0_0         |
-| 38/0     | ledTest             | LOCATED    | LVCMOS33_OUT | PR9B  |                  |
+| 38/0     | sdo                 |            | LVCMOS33_OUT | PR9B  |                  |
 | 39/0     |                     |            |              | PR5A  | RGB0             |
 | 40/0     |                     |            |              | PR6A  | RGB1             |
 | 41/0     |                     |            |              | PR7A  | RGB2             |
 | 42/0     |     unused, PULL:UP |            |              | PR9A  |                  |
 | 43/0     |     unused, PULL:UP |            |              | PR10A |                  |
-| 44/2     |     unused, PULL:UP |            |              | PL7B  | PCLKT2_0         |
+| 44/2     | clk_i               | LOCATED    | LVCMOS33_OUT | PL7B  | PCLKT2_0         |
 | 45/2     |     unused, PULL:UP |            |              | PL8B  |                  |
 | 46/2     |     unused, PULL:UP |            |              | PL6A  |                  |
 | 47/2     |     unused, PULL:UP |            |              | PL7A  |                  |
@@ -90,9 +91,10 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
-ldc_set_location -site {38} [ get_ports {ledTest} ]
+ldc_set_location -site {44} [ get_ports {clk_i} ]
+ldc_set_location -site {2} [ get_ports {ledTest} ]
 ldc_set_location -site {34} [ get_ports {reset} ]
-ldc_set_location -site {2} [ get_ports {sdo} ]
+ldc_set_location -site {38} [ get_ports {sdo} ]
 
 
 
@@ -100,5 +102,5 @@ ldc_set_location -site {2} [ get_ports {sdo} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sun Nov 24 21:33:42 2024
+Tue Nov 26 15:14:11 2024
 

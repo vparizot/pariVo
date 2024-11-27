@@ -3,53 +3,48 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         79        100.0
-                               LUTGATE	         45        100.0
-                                LUTCCU	         34        100.0
-                                 IOBUF	          3        100.0
-                                PFUREG	         63        100.0
-                                   DSP	          1        100.0
+                                  LUT4	          6        100.0
+                               LUTGATE	          4        100.0
+                                LUTCCU	          2        100.0
+                                 IOBUF	          4        100.0
+                                PFUREG	          2        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                              SB_MAC16	          1        43.0
+                              SB_MAC16	          1        33.3
 ---------------------------------------------------
 Report for cell SB_MAC16
-   Instance path: top/i_sbmac16
+   Instance path: top/realmac
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         34        43.0
-                                LUTCCU	         34        100.0
-                                PFUREG	         63        100.0
-                                   DSP	          1        100.0
+                                  LUT4	          2        33.3
+                                LUTCCU	          2        100.0
+                                PFUREG	          2        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")	          1        43.0
+SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")	          1        33.3
 ---------------------------------------------------
 Report for cell SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP")
-   Instance path: top/i_sbmac16/lscc_mult_accumulate_inst
+   Instance path: top/realmac/lscc_mult_accumulate_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         34        43.0
-                                LUTCCU	         34        100.0
-                                PFUREG	         63        100.0
-                                   DSP	          1        100.0
+                                  LUT4	          2        33.3
+                                LUTCCU	          2        100.0
+                                PFUREG	          2        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
 SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP")	          1         0.0
 ---------------------------------------------------
 Report for cell SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP")
-   Instance path: top/i_sbmac16/lscc_mult_accumulate_inst/u_lscc_multiplier
+   Instance path: top/realmac/lscc_mult_accumulate_inst/u_lscc_multiplier
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                PFUREG	         31        49.2
-                                   DSP	          1        100.0
+                                PFUREG	          1        50.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
 SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off")	          1         0.0
 ---------------------------------------------------
 Report for cell SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off")
-   Instance path: top/i_sbmac16/lscc_mult_accumulate_inst/u_lscc_multiplier/genblk1.u_lscc_multiplier_dsp
+   Instance path: top/realmac/lscc_mult_accumulate_inst/u_lscc_multiplier/genblk1.u_lscc_multiplier_dsp
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                PFUREG	         31        49.2
-                                   DSP	          1        100.0
+                                PFUREG	          1        50.0

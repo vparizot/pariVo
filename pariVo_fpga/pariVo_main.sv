@@ -18,7 +18,8 @@ module top(input logic reset,
            output logic sdo,
            input  logic load,
 		   input  logic ce,
-		   output logic ledTest);
+		   output logic ledTest,
+		   output logic clk_i);
              
     logic [31:0] eqVals;
 	logic done;
@@ -35,25 +36,20 @@ module top(input logic reset,
 	logic [15:0] data_b_i;
 	logic [32:0] result_o;
 	logic clk_en_i;
-	logic clk_i;
+	//logic clk_i;
 	logic rst_i;
 	assign rst_i = ~reset;
+	assign clk_en_i = 1;
 	
-	
-	SB_MAC16 i_sbmac16 
-	(.clk_en_i(clk_en_i), .clk_i(clk_i),  .data_a_i(data_a_i), .data_b_i(data_b_i), .rst_i(rst_i), .result_o(result_o));
-	
-            
-        assign clk_en_i = 1;
-		assign data_a_i = 16'h0002;
-		assign data_b_i = 16'h0003;
 
-		
-		always_comb 
-            begin
-				if      (result_o == 32'h00000006)  ledTest = 1;
-				else                  ledTest = 0;
-            end
+    //always_ff @(posedge clk_i) begin  
+       assign data_a_i = 16'h0001;
+       assign data_b_i = 16'h0001;
+    //end
+	
+	SB_MAC16 realmac(.clk_i(clk_i), .clk_en_i(clk_en_i), .rst_i(rst_i), .data_a_i(data_a_i), .data_b_i(data_b_i), .result_o(result_o));
+	
+	assign ledTest = result_o[0];
    
 endmodule
 
