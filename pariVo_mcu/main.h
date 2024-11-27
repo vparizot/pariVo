@@ -2,6 +2,8 @@
 #define MAIN_H
 
 #include "lib/STM32L432KC.h"
+#include <stdint.h>
+#include <stm32l432xx.h>
 
 // constants 
 #define MCK_FREQ 100000

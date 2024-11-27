@@ -53,18 +53,18 @@ module top(input logic reset,
    
 endmodule
 
-
+////////////////////////////////////
+//Victoria's top module 11/26
+/////////////////////////////////////
 /*
-module top( //input logic        clk,   //   12MHz MAX1000 clk, P12
-            input logic        nreset, //  global reset,      P34
+module top( input logic        nreset, //  global reset,      P34
             input logic			din, //     I2S DOUT,          P19
             output logic       bck, //     I2S bit clock,     P18
             output logic       lrck, //    I2S l/r clk,       P13
             output logic       scki,
-			output logic left, 
-            output logic right,
-			output logic clk); //    PCM1808 sys clk,   P4
-           
+			//output logic bck, 
+            output logic dout, left1, right1, newsample_valid);
+			//output logic lrck);    
 			
 	HSOSC #(.CLKHF_DIV ("0b10")) hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));	// set divider to 0b10 to get 12MHz clock
 	
@@ -73,14 +73,18 @@ module top( //input logic        clk,   //   12MHz MAX1000 clk, P12
 	assign reset = ~(nreset);
 	
 	// logic [23:0] left, right;
+	i2spcm pcm_in(clk, reset, din, bck, lrck, scki, left1, right1, newsample_valid);
+
+	//logic [15:0] leftOut;
+	//assign leftOut = left[15:0];
+	//logic [15:0] rightOut;
+	//assign rightOut = right[15:0];
 	
-	i2s pcm_in(clk, reset, din, bck, lrck, scki, left, right);
+	
+	i2sOut audio_out(clk, reset, dout, left1, right1);// newsample_valid); 
 
-	logic [15:0] leftOut = left[23:7];
-	logic [15:0] rightOut = right[23:7];
-
-	i2sOut audio_out(clk, reset, leftOut, rightOut, bckout, lrckout, dout);
-	 
+	//i2sOut audio_out(clk, bck, lrck, dout, left1, right1, newsample);
+	//i2sOut audio_out(clk, bck, lrck, reset, left1, right1, dout);
 	
 endmodule
 */
