@@ -1,6 +1,6 @@
 module signalwindow (input logic clk, en, reset,
                     input logic [23:0] signal,
-                    output logic [15:0] signalWindow [0:3]);
+                    output logic [15:0] signalWindow [0:9]);
    
    // question: what should enable the shifting?
    // ans: enable from the adc when it gets a new signal
@@ -20,12 +20,24 @@ module signalwindow (input logic clk, en, reset,
 
     always_ff @(posedge clk)
       if (reset) begin
+            signalWindow[9] <= 0;
+            signalWindow[8] <= 0;
+            signalWindow[7] <= 0;
+            signalWindow[6] <= 0;
+            signalWindow[5] <= 0;
+            signalWindow[4] <= 0;
             signalWindow[3] <= 0;
             signalWindow[2] <= 0;
             signalWindow[1] <= 0;
             signalWindow[0] <= 0;
       end
       else if(en) begin
+            signalWindow[9] <= signalWindow[8];
+            signalWindow[8] <= signalWindow[7];
+            signalWindow[7] <= signalWindow[6];
+            signalWindow[6] <= signalWindow[5];
+            signalWindow[5] <= signalWindow[4];
+            signalWindow[4] <= signalWindow[3];
             signalWindow[3] <= signalWindow[2];
             signalWindow[2] <= signalWindow[1];
             signalWindow[1] <= signalWindow[0];
@@ -40,9 +52,10 @@ endmodule
 module dsp(input logic clk_i, clk_en_i, rst_i,
             input logic [15:0] tap,
             input logic [7:0] tapnum,
-            input logic [15:0] signalWindow [0:3],
+            input logic [15:0] signalWindow [0:9],
             output logic [32:0] result_o,
-            output logic done);
+            output logic done,
+            output logic dataDone);
 
     logic [15:0] data_a_i;
     logic [15:0] data_b_i;
@@ -55,15 +68,16 @@ module dsp(input logic clk_i, clk_en_i, rst_i,
        end 
        else begin
        data_a_i <= tap;
-       data_b_i <= signalWindow[3-tapnum];
+       data_b_i <= signalWindow[9-tapnum];
        end
     end
 
     always_comb begin
-        if(tapnum != 2) done = 0; // delayed by 3 clock cycles
+        if(tapnum != 2) dataDone = 0;
+        else dataDone = 1;
+        if(tapnum != 3) done = 0; // delayed by 3 clock cycles
         else done = 1;
    
-        
     end
 
     //assign data_a_i = 16'h0001;
@@ -89,7 +103,8 @@ module gainred(input logic clk, reset,
     end
 
     always_comb begin
-        if (done) finalVal = tempResult[32:17];
+        // change this to msb (previously 32:17)
+        if (done) finalVal = tempResult[15:0];
     end
 
 
@@ -105,19 +120,39 @@ module faketop(input logic clk, reset, rst_i,
 
 logic [15:0] tapcoeff;
 logic [7:0] tapnum;
-logic [15:0] signalWindow [0:3];
+logic [15:0] signalWindow [0:9];
 
+logic dspreset;
+logic tapReset;
+logic [7:0] resetCounter = 0;
+logic [7:0] nextresetCounter = 0;
+logic dataDone;
 
-logic [15:0] signalWindow2 [0:3];
-logic [15:0] tapcoeff2;
-logic [7:0] tapnum2;
-assign tapcoeff2 = 4'h1;
-assign tapnum2 = 8'h02;
-assign signalWindow2[0] = 16'h0001;
-assign signalWindow2[1] = 16'h0002;
-assign signalWindow2[2] = 16'h0003;
-assign signalWindow2[3] = 16'h0004;
+/*
+always_ff @(posedge clk)
+    if(reset | done) begin
+        resetCounter <= 0;
+    end
+    else begin
+        resetCounter <= nextresetCounter;
+    end
 
+always_comb begin
+    dspreset = done | rst_i;
+    if(resetCounter < 5 | reset) begin
+        tapReset = 1;
+        nextresetCounter = resetCounter + 1;
+    end
+    else begin
+        tapReset = 0;
+        nextresetCounter = resetCounter + 1;
+    end
+end
+*/
+
+always_comb begin
+    dspreset = done | rst_i;
+end
 
 logic tap;
 
@@ -125,8 +160,7 @@ new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
 
 signalwindow getsignal(clk, signal_en, reset, signal, signalWindow);
 
-
-dsp dspoutput(clk, clk_en_i, rst_i, tapcoeff, tapnum, signalWindow, result_o, done);
+dsp dspoutput(clk, clk_en_i, dspreset, tapcoeff, tapnum, signalWindow, result_o, done, dataDone);
 
 
 endmodule
@@ -134,16 +168,17 @@ endmodule
 module secondtop(input logic clk_i, clk_en_i, rst_i,
             input logic [15:0] tap,
             input logic [7:0] tapnum,
-            input logic [15:0] signalWindow [0:3],
+            input logic [15:0] signalWindow [0:9],
             output logic [15:0] finalVal);
 
     logic [3:0] gain;
     assign gain = 4'h2;
     logic [32:0] result_o;
     logic done;
+    logic dataDone;
 
-    dsp dspoutput(clk_i, clk_en_i, rst_i, tap, tapnum, signalWindow, result_o, done);
-    gainred getfinalVal(clk_i, rst_i, done, gain, result_o, finalVal);
+    dsp dspoutput(clk_i, clk_en_i, rst_i, tap, tapnum, signalWindow, result_o, done, dataDone);
+    gainred getfinalVal(clk_i, rst_i, dataDone, gain, result_o, finalVal);
 
 endmodule
 

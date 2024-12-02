@@ -1,5 +1,5 @@
 C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v {1 {vlog -work work -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module SB_MAC16
 -- Compiling module SB_MAC16_ipgen_lscc_mult_accumulate
 -- Compiling module SB_MAC16_ipgen_lscc_multiplier
@@ -10,14 +10,14 @@ Top level modules:
 	SB_MAC16
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/get_tap_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/get_tap_tb.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module gettap_tb
 
 Top level modules:
 	gettap_tb
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module coeffs_sync
 -- Compiling module get_tap
 -- Compiling module new_all_taps
@@ -26,52 +26,48 @@ Top level modules:
 	new_all_taps
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMactb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMactb.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module fakeMac16_tb
 
 Top level modules:
 	fakeMac16_tb
 
-} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv {2 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
--- Compiling module signalwindow
--- Compiling module dsp
-** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(43): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling module gainred
--- Compiling module faketop
--- Compiling module secondtop
-** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(137): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling module fakedsp
-** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(154): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	faketop
-	secondtop
-	fakedsp
-
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module get_all_taps_tb
 
 Top level modules:
 	get_all_taps_tb
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMac16.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMac16.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module fakeMac16
 
 Top level modules:
 	fakeMac16
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/coeffs_sync_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/coeffs_sync_tb.sv
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module coeffssync_tb
 
 Top level modules:
 	coeffssync_tb
 
-} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/adcClock.sv {1 {vlog -work work -sv -stats=none {C:\Users\vparizot\E155\pariVo\pariVo_fpga\modelsim\adcClock.sv}
-Model Technology ModelSim DE-64 vlog 2022.3 Compiler 2022.07 Jul 18 2022
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module dsp_tb
+-- Compiling module faketop_tb
+-- Compiling module signalwindow_tb
+-- Compiling module gain_tb
+
+Top level modules:
+	dsp_tb
+	faketop_tb
+	signalwindow_tb
+	gain_tb
+
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/adcClock.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/adcClock.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module adcClock
 
 Top level modules:

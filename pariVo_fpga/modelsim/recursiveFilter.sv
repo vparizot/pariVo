@@ -60,7 +60,7 @@ module new_all_taps(input logic clk, reset,
             begin
             if      (eqVal < 20)  filterNum = 4'h0;
             else                  filterNum = 4'h1;
-            if(counter < 3) nextCounter = counter + 1;
+            if(counter < 9) nextCounter = counter + 1;
             else nextCounter = 0;
             end
 

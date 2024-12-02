@@ -9,7 +9,7 @@ module dsp_tb();
     logic clk_en_i;
     logic [15:0] tap;
 	logic [7:0] tapnum;
-    logic [15:0] signalWindow [0:3];
+    logic [15:0] signalWindow [0:9];
     logic [32:0] result_o;
 	logic done;
 	logic rst_i;
@@ -60,7 +60,7 @@ module dsp_tb();
 		signalWindow[2] = 16'h0003;
 		signalWindow[3] = 16'h0004;
 
-		#50
+		#55
 		rst_i = 1;
 		tapnum = 8'h03;
 		tap = 16'h0001;
@@ -116,6 +116,41 @@ module faketop_tb();
 		signal = 24'h000200;
 		#10 
 		signal = 24'h000300;
+		#10 
+		signal = 24'h000100;
+		#10 
+		signal = 24'h000200;
+		#10 
+		signal = 24'h000100;
+		#10 
+		signal = 24'h000400;
+		#10 
+		signal = 24'h000200;
+		#10 
+		signal = 24'h000100;
+		#10 
+		signal = 24'h000200;
+		signal = 24'h000111;
+		#10 
+		signal = 24'h000400;
+		#10 
+		signal = 24'h000200;
+		#10 
+		signal = 24'h000300;
+		#10 
+		signal = 24'h000100;
+		#10 
+		signal = 24'h000200;
+		#10 
+		signal = 24'h000100;
+		#10 
+		signal = 24'h000400;
+		#10 
+		signal = 24'h000200;
+		#10 
+		signal = 24'h000100;
+		#10 
+		signal = 24'h000200;
 	
         //eqVal = 8'h01;
 		//tap = 16'h1234;
@@ -171,7 +206,7 @@ module gain_tb();
     logic clk_i, clk_en_i, rst_i;
     logic [15:0] tap;
     logic [7:0] tapnum;
-    logic [15:0] signalWindow [0:3];
+    logic [15:0] signalWindow [0:9];
     logic [15:0] finalVal;
 
 	//secondtop dut(.clk_i(clk_i), .clk_en_i(clk_en_i), .rst_i(rst_i), .tap(tap), .tapnum(tapnum), .signalWindow(signalWindow), .finalVal(finalVal));
@@ -192,43 +227,214 @@ module gain_tb();
         clk_en_i = 1;
 		tapnum = 8'h00;
 		tap = 16'h0004;
-		signalWindow[0] = 16'h0001;
-		signalWindow[1] = 16'h0002;
-		signalWindow[2] = 16'h0003;
-		signalWindow[3] = 16'h0004;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
 
 		#5 
 	
 		tapnum = 8'h01;
 		tap = 16'h0001;
-		signalWindow[0] = 16'h0001;
-		signalWindow[1] = 16'h0002;
-		signalWindow[2] = 16'h0003;
-		signalWindow[3] = 16'h0004;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
 
 		#10 
 		tapnum = 8'h02;
 		tap = 16'h0002;
-		signalWindow[0] = 16'h0001;
-		signalWindow[1] = 16'h0002;
-		signalWindow[2] = 16'h0003;
-		signalWindow[3] = 16'h0004;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
 
 		#10 
 		tapnum = 8'h03;
-		tap = 16'h0001;
-		signalWindow[0] = 16'h0001;
-		signalWindow[1] = 16'h0002;
-		signalWindow[2] = 16'h0003;
-		signalWindow[3] = 16'h0004;
+		tap = 16'h0003;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h04;
+		tap = 16'h0004;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h05;
+		tap = 16'h0005;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h06;
+		tap = 16'h0006;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h07;
+		tap = 16'h0007;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h08;
+		tap = 16'h0008;
+		signalWindow[0] = 16'h0003;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h09;
+		tap = 16'h0009;
+		signalWindow[0] = 16'h0003;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
 
 		#10 
 		tapnum = 8'h00;
+		tap = 16'h0000;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h01;
+		tap = 16'h0001;
+		signalWindow[0] = 16'h0000;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h02;
 		tap = 16'h0002;
-		signalWindow[0] = 16'h0001;
-		signalWindow[1] = 16'h0002;
-		signalWindow[2] = 16'h0003;
-		signalWindow[3] = 16'h0004;
+		signalWindow[0] = 16'h0003;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		
+		#10 
+		tapnum = 8'h03;
+		tap = 16'h0003;
+		signalWindow[0] = 16'h0003;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
+
+		#10 
+		tapnum = 8'h04;
+		tap = 16'h0004;
+		signalWindow[0] = 16'h0003;
+		signalWindow[1] = 16'h0001;
+		signalWindow[2] = 16'h0002;
+		signalWindow[3] = 16'h0003;
+		signalWindow[4] = 16'h0004;
+		signalWindow[5] = 16'h0005;
+		signalWindow[6] = 16'h0006;
+		signalWindow[7] = 16'h0007;
+		signalWindow[8] = 16'h0008;
+		signalWindow[9] = 16'h0009;
 
 
         end
