@@ -1,0 +1,339 @@
+<HTML>
+<HEAD>
+<TITLE>Map Report</TITLE>
+<link href="" rel="stylesheet" type="text/css" media="screen"/>
+<link href="" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Mrp"></A>                         Lattice Mapping Report File
+
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
+Mapped on: Wed Dec  4 15:32:16 2024
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -pdc
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc -i
+     ProjectPariVo_impl_1_syn.udb -o ProjectPariVo_impl_1_map.udb -mp
+     ProjectPariVo_impl_1.mrp -hierrpt -gui -msgset
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/promote.xml
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+
+   Number of slice registers:  96 out of  5280 (2%)
+   Number of I/O registers:      2 out of   117 (2%)
+   Number of LUT4s:           109 out of  5280 (2%)
+      Number of logic LUT4s:              18
+      Number of inserted feedthru LUT4s:  80
+      Number of replicated LUT4s:          1
+      Number of ripple logic:              5 (10 LUT4s)
+   Number of IO sites used:   10 out of 39 (26%)
+      Number of IO sites used for general PIO: 10
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 10 out of 36 (28%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 10 out of 39 (26%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  3
+      Net scki_c: 30 loads, 30 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+      Net sck_c: 41 loads, 39 rising, 2 falling (Driver: Port sck)
+      Net bclk_c: 24 loads, 24 rising, 0 falling (Driver: Pin
+     nowitllwork.prescaler_19_26__i2/Q)
+   Number of Clock Enables:  5
+      Net VCC_net: 1 loads, 0 SLICEs
+      Net coretest.done_c_N_65: 8 loads, 8 SLICEs
+      Pin load: 8 loads, 8 SLICEs (Net: load_c)
+      Net nowitllwork.bclk_c_enable_1: 24 loads, 23 SLICEs
+      Net nowitllwork.n114: 8 loads, 8 SLICEs
+   Number of LSRs:  1
+      Net nowitllwork.n116: 13 loads, 13 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net nowitllwork.bclk_c_enable_1: 24 loads
+      Net nowitllwork.n116: 13 loads
+      Net load_c: 10 loads
+      Net coretest.done_c_N_65: 8 loads
+      Net eqspi1.wasdone: 8 loads
+      Net nowitllwork.n114: 8 loads
+      Net nowitllwork.bit_state[0]: 4 loads
+      Net nowitllwork.bit_state[1]: 4 loads
+      Net nowitllwork.bit_state[2]: 4 loads
+      Net nowitllwork.bit_state[3]: 4 loads
+
+   Number of warnings:  28
+   Number of criticals: 0
+   Number of errors:    0
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Criticals/Warnings</big></U></B>
+
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (2) : No
+     port matched &apos;leftMsb6&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (10) : No
+     port matched &apos;leftMsb2&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (11) : No
+     port matched &apos;leftMsb&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (12) : No
+     port matched &apos;testSig&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (15) : No
+     port matched &apos;leftMsb3&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (16) : No
+     port matched &apos;leftMsb4&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (17) : No
+     port matched &apos;leftMsb5&apos;.
+WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb6&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (2) :
+     Can&apos;t resolve object &apos;leftMsb6&apos; in constraint &apos;ldc_set_location -site {20}
+     [get_ports leftMsb6]&apos;.
+WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb2&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (10) :
+     Can&apos;t resolve object &apos;leftMsb2&apos; in constraint &apos;ldc_set_location -site {46}
+     [get_ports leftMsb2]&apos;.
+WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (11) :
+     Can&apos;t resolve object &apos;leftMsb&apos; in constraint &apos;ldc_set_location -site {45}
+     [get_ports leftMsb]&apos;.
+WARNING &lt;1027013&gt; - map: No port matched &apos;testSig&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (12) :
+     Can&apos;t resolve object &apos;testSig&apos; in constraint &apos;ldc_set_location -site {11}
+     [get_ports testSig]&apos;.
+WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb3&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (15) :
+     Can&apos;t resolve object &apos;leftMsb3&apos; in constraint &apos;ldc_set_location -site {3}
+     [get_ports leftMsb3]&apos;.
+WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb4&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (16) :
+     Can&apos;t resolve object &apos;leftMsb4&apos; in constraint &apos;ldc_set_location -site {44}
+     [get_ports leftMsb4]&apos;.
+WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb5&apos;.
+WARNING &lt;1026001&gt; - map:
+     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (17) :
+     Can&apos;t resolve object &apos;leftMsb5&apos; in constraint &apos;ldc_set_location -site {9}
+     [get_ports leftMsb5]&apos;.
+WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {20}
+     [get_ports leftMsb6]&apos;.
+WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {46}
+     [get_ports leftMsb2]&apos;.
+WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {45}
+     [get_ports leftMsb]&apos;.
+WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {11}
+     [get_ports testSig]&apos;.
+WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {3}
+     [get_ports leftMsb3]&apos;.
+WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {44}
+     [get_ports leftMsb4]&apos;.
+WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {9}
+     [get_ports leftMsb5]&apos;.
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| bclk                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| lrck                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| scki                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdo                 | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| done                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| nreset              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| din                 | INPUT     |           | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sck                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdi                 | INPUT     |           | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| load                | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block eqspi1/i9_1_lut was optimized away.
+Block i1 was optimized away.
+
+<A name="mrp_osc"></A><B><U><big>OSC Summary</big></U></B>
+
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            hf_osc
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          PIN,NODE scki_c
+  DIV Setting:                                  10
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+
+Instance Name: hf_osc
+         Type: HFOSC
+Instance Name: eqspi1/eqVals__i1
+         Type: IOLOGIC
+Instance Name: nowitllwork/lsreg_i0_i0
+         Type: IOLOGIC
+
+<A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
+
+   Total number of constraints: 18
+   Total number of constraints dropped: 7
+   Dropped constraints are:
+     ldc_set_location -site {20} [get_ports leftMsb6]
+     ldc_set_location -site {46} [get_ports leftMsb2]
+     ldc_set_location -site {45} [get_ports leftMsb]
+     ldc_set_location -site {11} [get_ports testSig]
+     ldc_set_location -site {3} [get_ports leftMsb3]
+     ldc_set_location -site {44} [get_ports leftMsb4]
+     ldc_set_location -site {9} [get_ports leftMsb5]
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+
+   Total CPU Time: 0 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 64 MB
+Checksum -- map: f9de5a2ead5282a18b2bc5fbf9cc4c73ac9648e
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&amp;T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor
+     Corporation,  All rights reserved.
+</PRE></DIV>
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#mrp_di>Design Information</A></LI>
+<LI><A href=#mrp_ds>Design Summary</A></LI>
+<LI><A href=#mrp_dwe>Design Errors/Criticals/Warnings</A></LI>
+<LI><A href=#mrp_ioa>IO (PIO) Attributes</A></LI>
+<LI><A href=#mrp_rm>Removed logic</A></LI>
+<LI><A href=#mrp_osc>OSC Summary</A></LI>
+<LI><A href=#mrp_asic>ASIC Components</A></LI>
+<LI><A href=#mrp_consum>Constraint Summary</A></LI>
+<LI><A href=#mrp_runtime>Run Time and Memory Usage</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

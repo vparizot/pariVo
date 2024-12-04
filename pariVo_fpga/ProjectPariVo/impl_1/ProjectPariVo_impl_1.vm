@@ -1,0 +1,686 @@
+// Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.1.0.34.2
+// Netlist written on Wed Dec  4 15:32:12 2024
+// Source file index table: 
+// Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
+// file 0 "c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv"
+// file 1 "c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv"
+// file 2 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v"
+// file 3 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd"
+// file 4 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ccu2_b.v"
+// file 5 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3bz.v"
+// file 6 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3dz.v"
+// file 7 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3iz.v"
+// file 8 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/fd1p3jz.v"
+// file 9 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/hsosc.v"
+// file 10 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/hsosc1p8v.v"
+// file 11 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ib.v"
+// file 12 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ifd1p3az.v"
+// file 13 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/lsosc.v"
+// file 14 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/lsosc1p8v.v"
+// file 15 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ob.v"
+// file 16 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/obz_b.v"
+// file 17 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/ofd1p3az.v"
+// file 18 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/pdp4k.v"
+// file 19 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/rgb.v"
+// file 20 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/rgb1p8v.v"
+// file 21 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/sp256k.v"
+// file 22 "c:/lscc/radiant/2024.1/cae_library/simulation/verilog/ice40up/legacy.v"
+// file 23 "c:/lscc/radiant/2024.1/ip/common/adder/rtl/lscc_adder.v"
+// file 24 "c:/lscc/radiant/2024.1/ip/common/adder_subtractor/rtl/lscc_add_sub.v"
+// file 25 "c:/lscc/radiant/2024.1/ip/common/complex_mult/rtl/lscc_complex_mult.v"
+// file 26 "c:/lscc/radiant/2024.1/ip/common/counter/rtl/lscc_cntr.v"
+// file 27 "c:/lscc/radiant/2024.1/ip/common/fifo/rtl/lscc_fifo.v"
+// file 28 "c:/lscc/radiant/2024.1/ip/common/fifo_dc/rtl/lscc_fifo_dc.v"
+// file 29 "c:/lscc/radiant/2024.1/ip/common/mult_accumulate/rtl/lscc_mult_accumulate.v"
+// file 30 "c:/lscc/radiant/2024.1/ip/common/mult_add_sub/rtl/lscc_mult_add_sub.v"
+// file 31 "c:/lscc/radiant/2024.1/ip/common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v"
+// file 32 "c:/lscc/radiant/2024.1/ip/common/multiplier/rtl/lscc_multiplier.v"
+// file 33 "c:/lscc/radiant/2024.1/ip/common/ram_dp/rtl/lscc_ram_dp.v"
+// file 34 "c:/lscc/radiant/2024.1/ip/common/ram_dq/rtl/lscc_ram_dq.v"
+// file 35 "c:/lscc/radiant/2024.1/ip/common/rom/rtl/lscc_rom.v"
+// file 36 "c:/lscc/radiant/2024.1/ip/common/subtractor/rtl/lscc_subtractor.v"
+// file 37 "c:/lscc/radiant/2024.1/ip/pmi/pmi_add.v"
+// file 38 "c:/lscc/radiant/2024.1/ip/pmi/pmi_addsub.v"
+// file 39 "c:/lscc/radiant/2024.1/ip/pmi/pmi_complex_mult.v"
+// file 40 "c:/lscc/radiant/2024.1/ip/pmi/pmi_counter.v"
+// file 41 "c:/lscc/radiant/2024.1/ip/pmi/pmi_dsp.v"
+// file 42 "c:/lscc/radiant/2024.1/ip/pmi/pmi_fifo.v"
+// file 43 "c:/lscc/radiant/2024.1/ip/pmi/pmi_fifo_dc.v"
+// file 44 "c:/lscc/radiant/2024.1/ip/pmi/pmi_mac.v"
+// file 45 "c:/lscc/radiant/2024.1/ip/pmi/pmi_mult.v"
+// file 46 "c:/lscc/radiant/2024.1/ip/pmi/pmi_multaddsub.v"
+// file 47 "c:/lscc/radiant/2024.1/ip/pmi/pmi_multaddsubsum.v"
+// file 48 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dp.v"
+// file 49 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dp_be.v"
+// file 50 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq.v"
+// file 51 "c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq_be.v"
+// file 52 "c:/lscc/radiant/2024.1/ip/pmi/pmi_rom.v"
+// file 53 "c:/lscc/radiant/2024.1/ip/pmi/pmi_sub.v"
+
+//
+// Verilog Description of module top
+//
+
+module top (input nreset, input din, input sck, input sdi, output bclk, 
+            output lrck, output scki, output sdo, input load, output done);
+    
+    (* is_clock=1, SET_AS_NETWORK="sck_c", lineinfo="@1(18[19],18[22])" *) wire sck_c;
+    (* is_clock=1, SET_AS_NETWORK="bclk_c", lineinfo="@1(21[25],21[29])" *) wire bclk_c;
+    (* is_clock=1, lineinfo="@1(40[8],40[11])" *) wire scki_c;
+    
+    wire VCC_net, nreset_c, din_c, sdi_c, lrck_c, sdo_c, load_c, 
+        done_c;
+    (* lineinfo="@1(43[14],43[22])" *) wire [7:0]finalVal;
+    (* lineinfo="@1(45[15],45[19])" *) wire [23:0]left;
+    
+    wire GND_net;
+    
+    VLO i1 (.Z(GND_net));
+    (* syn_instantiated=1 *) HSOSC_CORE hf_osc (.CLKHFPU(VCC_net), .CLKHFEN(VCC_net), 
+            .TRIM9(GND_net), .TRIM8(GND_net), .TRIM7(GND_net), .TRIM6(GND_net), 
+            .TRIM5(GND_net), .TRIM4(GND_net), .TRIM3(GND_net), .TRIM2(GND_net), 
+            .TRIM1(GND_net), .TRIM0(GND_net), .CLKHF(scki_c));
+    defparam hf_osc.CLKHF_DIV = "0b10";
+    defparam hf_osc.FABRIC_TRIME = "DISABLE";
+    (* lineinfo="@1(21[25],21[29])" *) OB bclk_pad (.I(bclk_c), .O(bclk));
+    (* lineinfo="@1(22[31],22[35])" *) OB lrck_pad (.I(lrck_c), .O(lrck));
+    (* lineinfo="@1(23[31],23[35])" *) OB scki_pad (.I(scki_c), .O(scki));
+    (* lineinfo="@1(25[25],25[28])" *) OB sdo_pad (.I(sdo_c), .O(sdo));
+    (* lineinfo="@1(32[19],32[23])" *) OB done_pad (.I(done_c), .O(done));
+    (* lineinfo="@1(15[24],15[30])" *) IB nreset_pad (.I(nreset), .O(nreset_c));
+    (* lineinfo="@1(16[18],16[21])" *) IB din_pad (.I(din), .O(din_c));
+    (* lineinfo="@1(18[19],18[22])" *) IB sck_pad (.I(sck), .O(sck_c));
+    (* lineinfo="@1(19[25],19[28])" *) IB sdi_pad (.I(sdi), .O(sdi_c));
+    (* lineinfo="@1(26[25],26[29])" *) IB load_pad (.I(load), .O(load_c));
+    VHI i2 (.Z(VCC_net));
+    (* lineinfo="@1(56[11],56[68])" *) eq1_core coretest (left[16], load_c, 
+            scki_c, done_c, {finalVal}, left[17], left[18], left[19], 
+            left[20], left[21], left[22], left[23]);
+    (* lineinfo="@1(55[10],55[55])" *) eq1_spi eqspi1 (done_c, sdi_c, sck_c, 
+            {finalVal}, sdo_c);
+    (* lineinfo="@1(58[6],58[65])" *) i2s nowitllwork (din_c, bclk_c, nreset_c, 
+            left[16], scki_c, lrck_c, left[17], left[18], left[19], 
+            left[20], left[21], left[22], left[23]);
+    
+endmodule
+
+//
+// Verilog Description of module eq1_core
+//
+
+module eq1_core (input \left[16] , input load_c, input scki_c, output done_c, 
+            output [7:0]finalVal, input \left[17] , input \left[18] , 
+            input \left[19] , input \left[20] , input \left[21] , input \left[22] , 
+            input \left[23] );
+    
+    (* is_clock=1, lineinfo="@1(40[8],40[11])" *) wire scki_c;
+    (* lineinfo="@1(104[13],104[21])" *) wire [7:0]leftTemp;
+    
+    wire done_c_N_65, GND_net, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ done (.D(done_c_N_65), 
+            .SP(VCC_net), .CK(scki_c), .SR(GND_net), .Q(done_c));
+    defparam done.REGSET = "RESET";
+    defparam done.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ finalVal_i0_i0 (.D(leftTemp[0]), 
+            .SP(done_c_N_65), .CK(scki_c), .SR(GND_net), .Q(finalVal[0]));
+    defparam finalVal_i0_i0.REGSET = "RESET";
+    defparam finalVal_i0_i0.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ leftTemp_i0_i1 (.D(\left[17] ), 
+            .SP(load_c), .CK(scki_c), .SR(GND_net), .Q(leftTemp[1]));
+    defparam leftTemp_i0_i1.REGSET = "RESET";
+    defparam leftTemp_i0_i1.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!(A))", lineinfo="@1(107[2],120[6])" *) LUT4 i5_1_lut (.A(load_c), 
+            .Z(done_c_N_65));
+    defparam i5_1_lut.INIT = "0x5555";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ leftTemp_i0_i2 (.D(\left[18] ), 
+            .SP(load_c), .CK(scki_c), .SR(GND_net), .Q(leftTemp[2]));
+    defparam leftTemp_i0_i2.REGSET = "RESET";
+    defparam leftTemp_i0_i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ leftTemp_i0_i3 (.D(\left[19] ), 
+            .SP(load_c), .CK(scki_c), .SR(GND_net), .Q(leftTemp[3]));
+    defparam leftTemp_i0_i3.REGSET = "RESET";
+    defparam leftTemp_i0_i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ leftTemp_i0_i4 (.D(\left[20] ), 
+            .SP(load_c), .CK(scki_c), .SR(GND_net), .Q(leftTemp[4]));
+    defparam leftTemp_i0_i4.REGSET = "RESET";
+    defparam leftTemp_i0_i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ leftTemp_i0_i5 (.D(\left[21] ), 
+            .SP(load_c), .CK(scki_c), .SR(GND_net), .Q(leftTemp[5]));
+    defparam leftTemp_i0_i5.REGSET = "RESET";
+    defparam leftTemp_i0_i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ leftTemp_i0_i6 (.D(\left[22] ), 
+            .SP(load_c), .CK(scki_c), .SR(GND_net), .Q(leftTemp[6]));
+    defparam leftTemp_i0_i6.REGSET = "RESET";
+    defparam leftTemp_i0_i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ leftTemp_i0_i7 (.D(\left[23] ), 
+            .SP(load_c), .CK(scki_c), .SR(GND_net), .Q(leftTemp[7]));
+    defparam leftTemp_i0_i7.REGSET = "RESET";
+    defparam leftTemp_i0_i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ finalVal_i0_i1 (.D(leftTemp[1]), 
+            .SP(done_c_N_65), .CK(scki_c), .SR(GND_net), .Q(finalVal[1]));
+    defparam finalVal_i0_i1.REGSET = "RESET";
+    defparam finalVal_i0_i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ finalVal_i0_i2 (.D(leftTemp[2]), 
+            .SP(done_c_N_65), .CK(scki_c), .SR(GND_net), .Q(finalVal[2]));
+    defparam finalVal_i0_i2.REGSET = "RESET";
+    defparam finalVal_i0_i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ finalVal_i0_i3 (.D(leftTemp[3]), 
+            .SP(done_c_N_65), .CK(scki_c), .SR(GND_net), .Q(finalVal[3]));
+    defparam finalVal_i0_i3.REGSET = "RESET";
+    defparam finalVal_i0_i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ finalVal_i0_i4 (.D(leftTemp[4]), 
+            .SP(done_c_N_65), .CK(scki_c), .SR(GND_net), .Q(finalVal[4]));
+    defparam finalVal_i0_i4.REGSET = "RESET";
+    defparam finalVal_i0_i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ finalVal_i0_i5 (.D(leftTemp[5]), 
+            .SP(done_c_N_65), .CK(scki_c), .SR(GND_net), .Q(finalVal[5]));
+    defparam finalVal_i0_i5.REGSET = "RESET";
+    defparam finalVal_i0_i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ finalVal_i0_i6 (.D(leftTemp[6]), 
+            .SP(done_c_N_65), .CK(scki_c), .SR(GND_net), .Q(finalVal[6]));
+    defparam finalVal_i0_i6.REGSET = "RESET";
+    defparam finalVal_i0_i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ finalVal_i0_i7 (.D(leftTemp[7]), 
+            .SP(done_c_N_65), .CK(scki_c), .SR(GND_net), .Q(finalVal[7]));
+    defparam finalVal_i0_i7.REGSET = "RESET";
+    defparam finalVal_i0_i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=11, LSE_RCOL=68, LSE_LLINE=56, LSE_RLINE=56, lineinfo="@1(106[11],121[4])" *) FD1P3XZ leftTemp_i0_i0 (.D(\left[16] ), 
+            .SP(load_c), .CK(scki_c), .SR(GND_net), .Q(leftTemp[0]));
+    defparam leftTemp_i0_i0.REGSET = "RESET";
+    defparam leftTemp_i0_i0.SRMODE = "CE_OVER_LSR";
+    VHI i2 (.Z(VCC_net));
+    VLO i1 (.Z(GND_net));
+    
+endmodule
+
+//
+// Verilog Description of module eq1_spi
+//
+
+module eq1_spi (input done_c, input sdi_c, input sck_c, input [7:0]finalVal, 
+            output sdo_c);
+    
+    (* is_clock=1, lineinfo="@1(18[19],18[22])" *) wire sck_c_derived_2;
+    (* is_clock=1, SET_AS_NETWORK="sck_c", lineinfo="@1(18[19],18[22])" *) wire sck_c;
+    
+    wire wasdone;
+    (* lineinfo="@1(72[14],72[30])" *) wire [7:0]finalValCaptured;
+    
+    wire sdodelayed;
+    wire [0:0]seq_reg_0;
+    wire [7:0]finalValCaptured_6__N_18;
+    (* lineinfo="@1(44[15],44[21])" *) wire [31:0]eqVals;
+    wire [0:0]seq_reg_1;
+    wire [0:0]seq_reg_2;
+    wire [0:0]seq_reg_3;
+    wire [0:0]seq_reg_4;
+    wire [0:0]seq_reg_5;
+    wire [0:0]seq_reg_6;
+    wire [0:0]seq_reg_7;
+    wire [0:0]seq_reg_8;
+    wire [0:0]seq_reg_9;
+    wire [0:0]seq_reg_10;
+    wire [0:0]seq_reg_11;
+    wire [0:0]seq_reg_12;
+    wire [0:0]seq_reg_13;
+    wire [0:0]seq_reg_14;
+    wire [0:0]seq_reg_15;
+    wire [0:0]seq_reg_16;
+    wire [0:0]seq_reg_17;
+    wire [0:0]seq_reg_18;
+    wire [0:0]seq_reg_19;
+    wire [0:0]seq_reg_20;
+    wire [0:0]seq_reg_21;
+    wire [0:0]seq_reg_22;
+    wire [0:0]seq_reg_23;
+    wire [0:0]seq_reg_24;
+    wire [0:0]seq_reg_25;
+    wire [0:0]seq_reg_26;
+    wire [0:0]seq_reg_27;
+    wire [0:0]seq_reg_28;
+    wire [0:0]seq_reg_29;
+    wire [0:0]eqVals_31__N_9;
+    
+    wire VCC_net, GND_net;
+    
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(85[15],88[8])" *) FD1P3XZ sdodelayed_c (.D(finalValCaptured[6]), 
+            .SP(VCC_net), .CK(sck_c_derived_2), .SR(GND_net), .Q(sdodelayed));
+    defparam sdodelayed_c.REGSET = "RESET";
+    defparam sdodelayed_c.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) IOL_B eqVals__i1 (.PADDI(sdi_c), 
+            .DO1(GND_net), .DO0(GND_net), .CE(VCC_net), .IOLTO(GND_net), 
+            .HOLD(GND_net), .INCLK(sck_c), .OUTCLK(GND_net), .DI0(seq_reg_0[0]));
+    defparam eqVals__i1.LATCHIN = "NONE_REG";
+    defparam eqVals__i1.DDROUT = "NO";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ finalValCaptured_i7 (.D(finalValCaptured_6__N_18[6]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(finalValCaptured[6]));
+    defparam finalValCaptured_i7.REGSET = "RESET";
+    defparam finalValCaptured_i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ finalValCaptured_i6 (.D(finalValCaptured_6__N_18[5]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(finalValCaptured[5]));
+    defparam finalValCaptured_i6.REGSET = "RESET";
+    defparam finalValCaptured_i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ finalValCaptured_i5 (.D(finalValCaptured_6__N_18[4]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(finalValCaptured[4]));
+    defparam finalValCaptured_i5.REGSET = "RESET";
+    defparam finalValCaptured_i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ finalValCaptured_i4 (.D(finalValCaptured_6__N_18[3]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(finalValCaptured[3]));
+    defparam finalValCaptured_i4.REGSET = "RESET";
+    defparam finalValCaptured_i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ finalValCaptured_i3 (.D(finalValCaptured_6__N_18[2]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(finalValCaptured[2]));
+    defparam finalValCaptured_i3.REGSET = "RESET";
+    defparam finalValCaptured_i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ finalValCaptured_i2 (.D(finalValCaptured_6__N_18[1]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(finalValCaptured[1]));
+    defparam finalValCaptured_i2.REGSET = "RESET";
+    defparam finalValCaptured_i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ finalValCaptured_i1 (.D(finalValCaptured_6__N_18[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(finalValCaptured[0]));
+    defparam finalValCaptured_i1.REGSET = "RESET";
+    defparam finalValCaptured_i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i2 (.D(seq_reg_0[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_1[0]));
+    defparam eqVals__i2.REGSET = "RESET";
+    defparam eqVals__i2.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@1(77[9],80[6])" *) LUT4 mux_20_i1_3_lut (.A(finalVal[0]), 
+            .B(eqVals[31]), .C(wasdone), .Z(finalValCaptured_6__N_18[0]));
+    defparam mux_20_i1_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+((D)+!C))+!A !(((D)+!C)+!B))", lineinfo="@1(92[19],92[63])" *) LUT4 finalVal_7__I_0_4_lut (.A(sdodelayed), 
+            .B(finalVal[7]), .C(done_c), .D(wasdone), .Z(sdo_c));
+    defparam finalVal_7__I_0_4_lut.INIT = "0xaaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@1(77[9],80[6])" *) LUT4 mux_20_i2_3_lut (.A(finalVal[1]), 
+            .B(finalValCaptured[0]), .C(wasdone), .Z(finalValCaptured_6__N_18[1]));
+    defparam mux_20_i2_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@1(77[9],80[6])" *) LUT4 mux_20_i3_3_lut (.A(finalVal[2]), 
+            .B(finalValCaptured[1]), .C(wasdone), .Z(finalValCaptured_6__N_18[2]));
+    defparam mux_20_i3_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@1(77[9],80[6])" *) LUT4 mux_20_i4_3_lut (.A(finalVal[3]), 
+            .B(finalValCaptured[2]), .C(wasdone), .Z(finalValCaptured_6__N_18[3]));
+    defparam mux_20_i4_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@1(77[9],80[6])" *) LUT4 mux_20_i5_3_lut (.A(finalVal[4]), 
+            .B(finalValCaptured[3]), .C(wasdone), .Z(finalValCaptured_6__N_18[4]));
+    defparam mux_20_i5_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@1(77[9],80[6])" *) LUT4 mux_20_i6_3_lut (.A(finalVal[5]), 
+            .B(finalValCaptured[4]), .C(wasdone), .Z(finalValCaptured_6__N_18[5]));
+    defparam mux_20_i6_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@1(77[9],80[6])" *) LUT4 mux_20_i7_3_lut (.A(finalVal[6]), 
+            .B(finalValCaptured[5]), .C(wasdone), .Z(finalValCaptured_6__N_18[6]));
+    defparam mux_20_i7_3_lut.INIT = "0xcaca";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i3 (.D(seq_reg_1[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_2[0]));
+    defparam eqVals__i3.REGSET = "RESET";
+    defparam eqVals__i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i4 (.D(seq_reg_2[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_3[0]));
+    defparam eqVals__i4.REGSET = "RESET";
+    defparam eqVals__i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i5 (.D(seq_reg_3[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_4[0]));
+    defparam eqVals__i5.REGSET = "RESET";
+    defparam eqVals__i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i6 (.D(seq_reg_4[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_5[0]));
+    defparam eqVals__i6.REGSET = "RESET";
+    defparam eqVals__i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i7 (.D(seq_reg_5[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_6[0]));
+    defparam eqVals__i7.REGSET = "RESET";
+    defparam eqVals__i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i8 (.D(seq_reg_6[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_7[0]));
+    defparam eqVals__i8.REGSET = "RESET";
+    defparam eqVals__i8.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i9 (.D(seq_reg_7[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_8[0]));
+    defparam eqVals__i9.REGSET = "RESET";
+    defparam eqVals__i9.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i10 (.D(seq_reg_8[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_9[0]));
+    defparam eqVals__i10.REGSET = "RESET";
+    defparam eqVals__i10.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i11 (.D(seq_reg_9[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_10[0]));
+    defparam eqVals__i11.REGSET = "RESET";
+    defparam eqVals__i11.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i12 (.D(seq_reg_10[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_11[0]));
+    defparam eqVals__i12.REGSET = "RESET";
+    defparam eqVals__i12.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i13 (.D(seq_reg_11[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_12[0]));
+    defparam eqVals__i13.REGSET = "RESET";
+    defparam eqVals__i13.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i14 (.D(seq_reg_12[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_13[0]));
+    defparam eqVals__i14.REGSET = "RESET";
+    defparam eqVals__i14.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i15 (.D(seq_reg_13[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_14[0]));
+    defparam eqVals__i15.REGSET = "RESET";
+    defparam eqVals__i15.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i16 (.D(seq_reg_14[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_15[0]));
+    defparam eqVals__i16.REGSET = "RESET";
+    defparam eqVals__i16.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i17 (.D(seq_reg_15[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_16[0]));
+    defparam eqVals__i17.REGSET = "RESET";
+    defparam eqVals__i17.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i18 (.D(seq_reg_16[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_17[0]));
+    defparam eqVals__i18.REGSET = "RESET";
+    defparam eqVals__i18.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i19 (.D(seq_reg_17[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_18[0]));
+    defparam eqVals__i19.REGSET = "RESET";
+    defparam eqVals__i19.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i20 (.D(seq_reg_18[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_19[0]));
+    defparam eqVals__i20.REGSET = "RESET";
+    defparam eqVals__i20.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i21 (.D(seq_reg_19[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_20[0]));
+    defparam eqVals__i21.REGSET = "RESET";
+    defparam eqVals__i21.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i22 (.D(seq_reg_20[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_21[0]));
+    defparam eqVals__i22.REGSET = "RESET";
+    defparam eqVals__i22.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i23 (.D(seq_reg_21[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_22[0]));
+    defparam eqVals__i23.REGSET = "RESET";
+    defparam eqVals__i23.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i24 (.D(seq_reg_22[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_23[0]));
+    defparam eqVals__i24.REGSET = "RESET";
+    defparam eqVals__i24.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i25 (.D(seq_reg_23[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_24[0]));
+    defparam eqVals__i25.REGSET = "RESET";
+    defparam eqVals__i25.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i26 (.D(seq_reg_24[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_25[0]));
+    defparam eqVals__i26.REGSET = "RESET";
+    defparam eqVals__i26.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i27 (.D(seq_reg_25[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_26[0]));
+    defparam eqVals__i27.REGSET = "RESET";
+    defparam eqVals__i27.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i28 (.D(seq_reg_26[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_27[0]));
+    defparam eqVals__i28.REGSET = "RESET";
+    defparam eqVals__i28.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i29 (.D(seq_reg_27[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_28[0]));
+    defparam eqVals__i29.REGSET = "RESET";
+    defparam eqVals__i29.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i30 (.D(seq_reg_28[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(seq_reg_29[0]));
+    defparam eqVals__i30.REGSET = "RESET";
+    defparam eqVals__i30.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i31 (.D(seq_reg_29[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(eqVals_31__N_9[0]));
+    defparam eqVals__i31.REGSET = "RESET";
+    defparam eqVals__i31.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(76[12],81[8])" *) FD1P3XZ eqVals__i32 (.D(eqVals_31__N_9[0]), 
+            .SP(VCC_net), .CK(sck_c), .SR(GND_net), .Q(eqVals[31]));
+    defparam eqVals__i32.REGSET = "RESET";
+    defparam eqVals__i32.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@1(85[17],85[28])" *) INV i9_1_lut (.A(sck_c), .Z(sck_c_derived_2));
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=10, LSE_RCOL=55, LSE_LLINE=55, LSE_RLINE=55, lineinfo="@1(85[15],88[8])" *) FD1P3XZ wasdone_c (.D(done_c), 
+            .SP(VCC_net), .CK(sck_c_derived_2), .SR(GND_net), .Q(wasdone));
+    defparam wasdone_c.REGSET = "RESET";
+    defparam wasdone_c.SRMODE = "CE_OVER_LSR";
+    VHI i1 (.Z(VCC_net));
+    VLO i3 (.Z(GND_net));
+    
+endmodule
+
+//
+// Verilog Description of module i2s
+//
+
+module i2s (input din_c, output bclk_c, input nreset_c, output \left[16] , 
+            input scki_c, output lrck_c, output \left[17] , output \left[18] , 
+            output \left[19] , output \left[20] , output \left[21] , output \left[22] , 
+            output \left[23] );
+    
+    (* is_clock=1, SET_AS_NETWORK="bclk_c", lineinfo="@1(21[25],21[29])" *) wire bclk_c;
+    (* is_clock=1, lineinfo="@1(40[8],40[11])" *) wire scki_c;
+    
+    wire bclk_c_enable_1;
+    (* lineinfo="@1(156[32],156[37])" *) wire [23:0]lsreg;
+    
+    wire n205, n367, GND_net;
+    (* lineinfo="@1(160[32],160[41])" *) wire [4:0]bit_state;
+    
+    wire n207;
+    wire [7:0]n37;
+    
+    wire n270, n10, n114, n274, n116, n4, n291;
+    (* lineinfo="@1(141[32],141[41])" *) wire [8:0]prescaler;
+    
+    wire n370, n203, n364, n201, n361, n358, VCC_net;
+    
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i12 (.D(lsreg[11]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[12]));
+    defparam lsreg_i0_i12.REGSET = "RESET";
+    defparam lsreg_i0_i12.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i11 (.D(lsreg[10]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[11]));
+    defparam lsreg_i0_i11.REGSET = "RESET";
+    defparam lsreg_i0_i11.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i10 (.D(lsreg[9]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[10]));
+    defparam lsreg_i0_i10.REGSET = "RESET";
+    defparam lsreg_i0_i10.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@1(151[24],151[40])" *) FA2 prescaler_19_26_add_4_7 (.A0(GND_net), 
+            .B0(GND_net), .C0(bit_state[3]), .D0(n205), .CI0(n205), 
+            .A1(GND_net), .B1(GND_net), .C1(bit_state[4]), .D1(n367), 
+            .CI1(n367), .CO0(n367), .CO1(n207), .S0(n37[5]), .S1(n37[6]));
+    defparam prescaler_19_26_add_4_7.INIT0 = "0xc33c";
+    defparam prescaler_19_26_add_4_7.INIT1 = "0xc33c";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i9 (.D(lsreg[8]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[9]));
+    defparam lsreg_i0_i9.REGSET = "RESET";
+    defparam lsreg_i0_i9.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!(A (B)+!A !((C)+!B)))", lineinfo="@1(189[14],208[9])" *) LUT4 i21_3_lut (.A(n270), 
+            .B(nreset_c), .C(n10), .Z(n114));
+    defparam i21_3_lut.INIT = "0x7373";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(189[14],208[9])" *) FD1P3XZ left__i1 (.D(lsreg[16]), 
+            .SP(n114), .CK(scki_c), .SR(n116), .Q(\left[16] ));
+    defparam left__i1.REGSET = "RESET";
+    defparam left__i1.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B+(C+(D))))" *) LUT4 i139_4_lut (.A(bit_state[3]), 
+            .B(bit_state[0]), .C(bit_state[2]), .D(bit_state[1]), .Z(n274));
+    defparam i139_4_lut.INIT = "0xaaa8";
+    (* syn_use_carry_chain=1, lineinfo="@1(151[24],151[40])" *) FD1P3XZ prescaler_19_26__i1 (.D(n37[0]), 
+            .SP(VCC_net), .CK(scki_c), .SR(n116), .Q(prescaler[0]));
+    defparam prescaler_19_26__i1.REGSET = "RESET";
+    defparam prescaler_19_26__i1.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B)+!A))", lineinfo="@1(171[13],171[30])" *) LUT4 i1_2_lut (.A(nreset_c), 
+            .B(lrck_c), .Z(n4));
+    defparam i1_2_lut.INIT = "0x2222";
+    (* lut_function="(A+(B+(C+(D))))", lineinfo="@1(171[13],171[30])" *) LUT4 i154_4_lut (.A(bit_state[1]), 
+            .B(bit_state[2]), .C(bit_state[3]), .D(bit_state[0]), .Z(n291));
+    defparam i154_4_lut.INIT = "0xfffe";
+    (* lut_function="(!(A ((C (D))+!B)+!A ((C+!(D))+!B)))", lineinfo="@1(171[13],171[30])" *) LUT4 i2_4_lut (.A(n291), 
+            .B(n4), .C(n274), .D(bit_state[4]), .Z(bclk_c_enable_1));
+    defparam i2_4_lut.INIT = "0x0c88";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i13 (.D(lsreg[12]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[13]));
+    defparam lsreg_i0_i13.REGSET = "RESET";
+    defparam lsreg_i0_i13.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i8 (.D(lsreg[7]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[8]));
+    defparam lsreg_i0_i8.REGSET = "RESET";
+    defparam lsreg_i0_i8.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i7 (.D(lsreg[6]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[7]));
+    defparam lsreg_i0_i7.REGSET = "RESET";
+    defparam lsreg_i0_i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i6 (.D(lsreg[5]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[6]));
+    defparam lsreg_i0_i6.REGSET = "RESET";
+    defparam lsreg_i0_i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i5 (.D(lsreg[4]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[5]));
+    defparam lsreg_i0_i5.REGSET = "RESET";
+    defparam lsreg_i0_i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i4 (.D(lsreg[3]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[4]));
+    defparam lsreg_i0_i4.REGSET = "RESET";
+    defparam lsreg_i0_i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i3 (.D(lsreg[2]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[3]));
+    defparam lsreg_i0_i3.REGSET = "RESET";
+    defparam lsreg_i0_i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i2 (.D(lsreg[1]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[2]));
+    defparam lsreg_i0_i2.REGSET = "RESET";
+    defparam lsreg_i0_i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i1 (.D(lsreg[0]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[1]));
+    defparam lsreg_i0_i1.REGSET = "RESET";
+    defparam lsreg_i0_i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i14 (.D(lsreg[13]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[14]));
+    defparam lsreg_i0_i14.REGSET = "RESET";
+    defparam lsreg_i0_i14.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i15 (.D(lsreg[14]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[15]));
+    defparam lsreg_i0_i15.REGSET = "RESET";
+    defparam lsreg_i0_i15.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i16 (.D(lsreg[15]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[16]));
+    defparam lsreg_i0_i16.REGSET = "RESET";
+    defparam lsreg_i0_i16.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i17 (.D(lsreg[16]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[17]));
+    defparam lsreg_i0_i17.REGSET = "RESET";
+    defparam lsreg_i0_i17.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i18 (.D(lsreg[17]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[18]));
+    defparam lsreg_i0_i18.REGSET = "RESET";
+    defparam lsreg_i0_i18.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i19 (.D(lsreg[18]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[19]));
+    defparam lsreg_i0_i19.REGSET = "RESET";
+    defparam lsreg_i0_i19.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i20 (.D(lsreg[19]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[20]));
+    defparam lsreg_i0_i20.REGSET = "RESET";
+    defparam lsreg_i0_i20.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i21 (.D(lsreg[20]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[21]));
+    defparam lsreg_i0_i21.REGSET = "RESET";
+    defparam lsreg_i0_i21.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i22 (.D(lsreg[21]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[22]));
+    defparam lsreg_i0_i22.REGSET = "RESET";
+    defparam lsreg_i0_i22.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) FD1P3XZ lsreg_i0_i23 (.D(lsreg[22]), 
+            .SP(bclk_c_enable_1), .CK(bclk_c), .SR(GND_net), .Q(lsreg[23]));
+    defparam lsreg_i0_i23.REGSET = "RESET";
+    defparam lsreg_i0_i23.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(189[14],208[9])" *) FD1P3XZ left__i2 (.D(lsreg[17]), 
+            .SP(n114), .CK(scki_c), .SR(n116), .Q(\left[17] ));
+    defparam left__i2.REGSET = "RESET";
+    defparam left__i2.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@1(151[24],151[40])" *) FA2 prescaler_19_26_add_4_9 (.A0(GND_net), 
+            .B0(GND_net), .C0(lrck_c), .D0(n207), .CI0(n207), .A1(GND_net), 
+            .B1(GND_net), .C1(GND_net), .D1(n370), .CI1(n370), .CO0(n370), 
+            .S0(n37[7]));
+    defparam prescaler_19_26_add_4_9.INIT0 = "0xc33c";
+    defparam prescaler_19_26_add_4_9.INIT1 = "0xc33c";
+    (* lineinfo="@1(151[24],151[40])" *) FA2 prescaler_19_26_add_4_5 (.A0(GND_net), 
+            .B0(GND_net), .C0(bit_state[1]), .D0(n203), .CI0(n203), 
+            .A1(GND_net), .B1(GND_net), .C1(bit_state[2]), .D1(n364), 
+            .CI1(n364), .CO0(n364), .CO1(n205), .S0(n37[3]), .S1(n37[4]));
+    defparam prescaler_19_26_add_4_5.INIT0 = "0xc33c";
+    defparam prescaler_19_26_add_4_5.INIT1 = "0xc33c";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(189[14],208[9])" *) FD1P3XZ left__i3 (.D(lsreg[18]), 
+            .SP(n114), .CK(scki_c), .SR(n116), .Q(\left[18] ));
+    defparam left__i3.REGSET = "RESET";
+    defparam left__i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(189[14],208[9])" *) FD1P3XZ left__i4 (.D(lsreg[19]), 
+            .SP(n114), .CK(scki_c), .SR(n116), .Q(\left[19] ));
+    defparam left__i4.REGSET = "RESET";
+    defparam left__i4.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!(A))", lineinfo="@1(15[24],15[30])" *) LUT4 i19_1_lut (.A(nreset_c), 
+            .Z(n116));
+    defparam i19_1_lut.INIT = "0x5555";
+    (* lut_function="(A (B (C (D))))" *) LUT4 i4_4_lut (.A(bit_state[0]), 
+            .B(bit_state[4]), .C(lrck_c), .D(bit_state[3]), .Z(n10));
+    defparam i4_4_lut.INIT = "0x8000";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i135_4_lut (.A(prescaler[0]), 
+            .B(bit_state[2]), .C(bclk_c), .D(bit_state[1]), .Z(n270));
+    defparam i135_4_lut.INIT = "0xfffe";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(189[14],208[9])" *) FD1P3XZ left__i5 (.D(lsreg[20]), 
+            .SP(n114), .CK(scki_c), .SR(n116), .Q(\left[20] ));
+    defparam left__i5.REGSET = "RESET";
+    defparam left__i5.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(189[14],208[9])" *) FD1P3XZ left__i6 (.D(lsreg[21]), 
+            .SP(n114), .CK(scki_c), .SR(n116), .Q(\left[21] ));
+    defparam left__i6.REGSET = "RESET";
+    defparam left__i6.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(189[14],208[9])" *) FD1P3XZ left__i7 (.D(lsreg[22]), 
+            .SP(n114), .CK(scki_c), .SR(n116), .Q(\left[22] ));
+    defparam left__i7.REGSET = "RESET";
+    defparam left__i7.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(189[14],208[9])" *) FD1P3XZ left__i8 (.D(lsreg[23]), 
+            .SP(n114), .CK(scki_c), .SR(n116), .Q(\left[23] ));
+    defparam left__i8.REGSET = "RESET";
+    defparam left__i8.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(151[24],151[40])" *) FD1P3XZ prescaler_19_26__i2 (.D(n37[1]), 
+            .SP(VCC_net), .CK(scki_c), .SR(n116), .Q(bclk_c));
+    defparam prescaler_19_26__i2.REGSET = "RESET";
+    defparam prescaler_19_26__i2.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(151[24],151[40])" *) FD1P3XZ prescaler_19_26__i3 (.D(n37[2]), 
+            .SP(VCC_net), .CK(scki_c), .SR(n116), .Q(bit_state[0]));
+    defparam prescaler_19_26__i3.REGSET = "RESET";
+    defparam prescaler_19_26__i3.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(151[24],151[40])" *) FD1P3XZ prescaler_19_26__i4 (.D(n37[3]), 
+            .SP(VCC_net), .CK(scki_c), .SR(n116), .Q(bit_state[1]));
+    defparam prescaler_19_26__i4.REGSET = "RESET";
+    defparam prescaler_19_26__i4.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(151[24],151[40])" *) FD1P3XZ prescaler_19_26__i5 (.D(n37[4]), 
+            .SP(VCC_net), .CK(scki_c), .SR(n116), .Q(bit_state[2]));
+    defparam prescaler_19_26__i5.REGSET = "RESET";
+    defparam prescaler_19_26__i5.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(151[24],151[40])" *) FD1P3XZ prescaler_19_26__i6 (.D(n37[5]), 
+            .SP(VCC_net), .CK(scki_c), .SR(n116), .Q(bit_state[3]));
+    defparam prescaler_19_26__i6.REGSET = "RESET";
+    defparam prescaler_19_26__i6.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(151[24],151[40])" *) FD1P3XZ prescaler_19_26__i7 (.D(n37[6]), 
+            .SP(VCC_net), .CK(scki_c), .SR(n116), .Q(bit_state[4]));
+    defparam prescaler_19_26__i7.REGSET = "RESET";
+    defparam prescaler_19_26__i7.SRMODE = "CE_OVER_LSR";
+    (* syn_use_carry_chain=1, lineinfo="@1(151[24],151[40])" *) FD1P3XZ prescaler_19_26__i8 (.D(n37[7]), 
+            .SP(VCC_net), .CK(scki_c), .SR(n116), .Q(lrck_c));
+    defparam prescaler_19_26__i8.REGSET = "RESET";
+    defparam prescaler_19_26__i8.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@1(151[24],151[40])" *) FA2 prescaler_19_26_add_4_3 (.A0(GND_net), 
+            .B0(GND_net), .C0(bclk_c), .D0(n201), .CI0(n201), .A1(GND_net), 
+            .B1(GND_net), .C1(bit_state[0]), .D1(n361), .CI1(n361), 
+            .CO0(n361), .CO1(n203), .S0(n37[1]), .S1(n37[2]));
+    defparam prescaler_19_26_add_4_3.INIT0 = "0xc33c";
+    defparam prescaler_19_26_add_4_3.INIT1 = "0xc33c";
+    (* lineinfo="@1(151[24],151[40])" *) FA2 prescaler_19_26_add_4_1 (.A0(GND_net), 
+            .B0(GND_net), .C0(GND_net), .A1(GND_net), .B1(VCC_net), 
+            .C1(prescaler[0]), .D1(n358), .CI1(n358), .CO0(n358), .CO1(n201), 
+            .S1(n37[0]));
+    defparam prescaler_19_26_add_4_1.INIT0 = "0xc33c";
+    defparam prescaler_19_26_add_4_1.INIT1 = "0xc33c";
+    VHI i2 (.Z(VCC_net));
+    (* LSE_LINE_FILE_ID=73, LSE_LCOL=6, LSE_RCOL=65, LSE_LLINE=58, LSE_RLINE=58, lineinfo="@1(169[14],181[9])" *) IOL_B lsreg_i0_i0 (.PADDI(din_c), 
+            .DO1(GND_net), .DO0(GND_net), .CE(bclk_c_enable_1), .IOLTO(GND_net), 
+            .HOLD(GND_net), .INCLK(bclk_c), .OUTCLK(GND_net), .DI0(lsreg[0]));
+    defparam lsreg_i0_i0.LATCHIN = "NONE_REG";
+    defparam lsreg_i0_i0.DDROUT = "NO";
+    VLO i1 (.Z(GND_net));
+    
+endmodule

@@ -57,9 +57,9 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="20" y="223" useTextEdit="1" path="main.c" left="0" top="186" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="15" y="326" useTextEdit="1" path="main.c" left="0" top="376" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="22" y="8" useTextEdit="1" path="main.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="46" useTextEdit="1" path="lib/STM32L432KC_SPI.c" left="0" top="34" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="46" useTextEdit="1" path="lib/STM32L432KC_SPI.c" left="0" top="27" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="6" useTextEdit="1" path="lib/STM32L432KC_SPI.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_ADC.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="6" y="17" useTextEdit="1" path="lib/STM32L432KC_TIM.h" left="0" top="0" codecName="Default"/>
@@ -69,8 +69,8 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="63" useTextEdit="1" path="lib/STM32L432KC_GPIO.c" left="0" top="35" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="27" y="55" useTextEdit="1" path="lib/STM32L432KC_DAC.c" left="0" top="55" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="228" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="209" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="41" y="22" useTextEdit="1" path="lib/STM32L432KC_I2S.c" left="0" top="27" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="98" y="1035" useTextEdit="1" path="STM32L4xx/Device/Include/stm32l432xx.h" left="0" selected="1" top="1020" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="41" y="22" useTextEdit="1" path="lib/STM32L432KC_I2S.c" left="0" selected="1" top="17" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="98" y="1035" useTextEdit="1" path="STM32L4xx/Device/Include/stm32l432xx.h" left="0" top="1020" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="17" y="9" useTextEdit="1" path="lib/STM32L432KC_I2S.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="lib/STM32L432KC_RCC.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="6" y="16" useTextEdit="1" path="lib/STM32L432KC_RCC.h" left="0" top="0" codecName="Default"/>

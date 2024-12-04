@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.vhd"
+-ver "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/SB_MAC16/rtl/SB_MAC16.v"
+-sdc "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/SB_MAC16/constraints/SB_MAC16.ldc"
+-path "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/SB_MAC16" "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo"
+-top SB_MAC16
+-a "iCE40UP"
+-t "iCE40UP5K"

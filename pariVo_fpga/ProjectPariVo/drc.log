@@ -1,0 +1,6 @@
+DRC: Design Rule Check Radiant Software (64-bit) 2024.1.0.34.2
+Tue Dec  3 21:19:41 2024
+
+WARNING <71003020> - Top module port 'load' does not connect to anything.
+WARNING <1027013> - No port matched 'testSig'.
+WARNING <1026001> - C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (12) : Can't resolve object 'testSig' in constraint 'ldc_set_location -site {11} [get_ports testSig]'.

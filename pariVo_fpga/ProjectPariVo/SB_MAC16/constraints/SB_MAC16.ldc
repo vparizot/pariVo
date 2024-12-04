@@ -1,0 +1,25 @@
+set device "iCE40UP5K"
+set device_int "itpa08"
+set package "SG48"
+set package_int "SG48"
+set speed "High-Performance_1.2V"
+set speed_int "6"
+set operation "Industrial"
+set family "iCE40UP"
+set architecture "ice40tp"
+set partnumber "iCE40UP5K-SG48I"
+set WRAPPER_INST "lscc_mult_accumulate_inst"
+set ADD_SUB "add"
+set A_WIDTH 16
+set B_WIDTH 16
+set ACC_WIDTH 33
+set A_SIGNED "on"
+set B_SIGNED "off"
+set USE_IREG "off"
+set USE_OREG "on"
+set PIPELINES 1
+set IMPL "DSP"
+set FAMILY "iCE40UP"
+
+
+# Please refer to eval/constraint.pdc

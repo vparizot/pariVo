@@ -1,13 +1,13 @@
-
-module i2spcm(input logic         clk,
+module i2spcm(input logic      clk,
            input logic         reset,
+		   input logic         load,
            input logic         din, //  PCM1808 DOUT,         PB6
            output logic        bck, //  bit clock,            PA7
            output logic        lrck, // left/right clk,       PA6
            output logic        scki, // PCM1808 system clock, PA5
            output logic [23:0] left, 
            output logic [23:0] right,
-		   output logic newsample_valid);
+		   //output logic done);
 
    /////////////////// clock ////////////////////////////////////
   
@@ -28,6 +28,9 @@ module i2spcm(input logic         clk,
 
    // left and right shift registers
    logic [23:0]                lsreg, rsreg;
+   logic [23:0]                lsreg2, rsreg2;
+   
+   logic lselec, rselec;
 
    // samples the prescaler to figure out what bit should currently be sampled.
    // sampling occurs on bit 1 and bit 24, NOT bit 0!
@@ -44,14 +47,40 @@ module i2spcm(input logic         clk,
      begin
         if (!lrck && shift_en)     // left
           begin
-             lsreg <= {lsreg[22:0], din};
-             rsreg <= rsreg;
-          end
-        if (lrck && shift_en) // right
-          begin
+				 if(lselec) begin
+				 lsreg <= {lsreg[22:0], din};
+				 rsreg <= rsreg;
+				 lsreg2 <= lsreg2;
+				 rsreg2 <= rsreg2;
+			 end
+				 else begin
+				 lsreg2 <= {lsreg2[22:0], din};
+				 rsreg2 <= rsreg2;
+				 lsreg <= lsreg;
+				 rsreg <= rsreg;
+				 end
+			 end
+
+        else if (lrck && shift_en) // right
+
+			 if(rselec) begin 
              rsreg <= {rsreg[22:0], din};
              lsreg <= lsreg;
+			 lsreg2 <= lsreg2;
+			 rsreg2 <= rsreg2;
           end
+			 else begin
+			 rsreg2 <= {rsreg2[22:0], din};
+             lsreg <= lsreg;
+			 lsreg2 <= lsreg2;
+			 rsreg <= rsreg;
+		  end
+		  else begin
+			  rsreg <= 24'd0;
+			  lsreg <= 24'd0;
+			  rsreg2 <= 24'd0;
+			  lsreg2 <= 24'd0;
+			end
      end // shift register operation 
 
    // load shift regs into output regs.
@@ -59,27 +88,32 @@ module i2spcm(input logic         clk,
    // this way, left and right will always contain a valid sample.
    logic newsample;
    assign newsample = (bit_state == 25 && lrck && prescaler[1:0] == 0); // once every cycle
-   assign newsample_valid = (bit_state == 26 && lrck && prescaler[1:0] == 0); // once we can sample it!
+   assign done = (bit_state == 26 && lrck && prescaler[1:0] == 0); // once we can sample it!
+   logic counter;
+   
    always_ff @(posedge clk)
      begin
-        if (reset)
+        if (reset|load)
           begin  
              left <= 0;
              right <= 0;
+			 
           end
-        //else if (newsample)
-        //  begin
-             left <= lsreg;
-             right <= rsreg;
-         // end
-        //else
-        //  begin
-        //     left <= left;
-        //     right <= right;
-        //  end
+        else if (newsample)
+          begin
+			 if(lselec) left <= lsreg2;
+		     else left <= lsreg;
+             if(rselec) right <= rsreg2;
+		     else right <= rsreg;
+          end
+        else
+          begin
+             left <= left;
+             right <= right;
+          end
      end
 endmodule 
-
+/*
 module i2sOut( 
     input   logic           clk, //clk
     input   logic           reset,
@@ -175,3 +209,4 @@ module i2sOut(
     
 
 endmodule
+*/

@@ -7,16 +7,6 @@ module signalwindow (input logic clk, en, reset,
     logic [15:0] shortSignal;
     assign shortSignal = signal[23:8]; 
     logic [15:0] tempsignalWindow [0:3];
-    
-    /*
-        always_comb
-            if(en) begin
-            signalWindow[3] = 16'h001;
-            signalWindow[2] = 16'h002;
-            signalWindow[1] = 16'h003;
-            signalWindow[0] = 16'h004;
-            end
-    */
 
     always_ff @(posedge clk)
       if (reset) begin
@@ -54,8 +44,7 @@ module dsp(input logic clk_i, clk_en_i, rst_i,
             input logic [7:0] tapnum,
             input logic [15:0] signalWindow [0:9],
             output logic [32:0] result_o,
-            output logic done,
-            output logic dataDone);
+            output logic done);
 
     logic [15:0] data_a_i;
     logic [15:0] data_b_i;
@@ -73,15 +62,10 @@ module dsp(input logic clk_i, clk_en_i, rst_i,
     end
 
     always_comb begin
-        if(tapnum != 2) dataDone = 0;
-        else dataDone = 1;
-        if(tapnum != 3) done = 0; // delayed by 3 clock cycles
+        if(tapnum != 3) done = 0;  // wait until after data is done sending
         else done = 1;
    
     end
-
-    //assign data_a_i = 16'h0001;
-    //assign data_b_i = 16'h0001;
 
     SB_MAC16 realmac(.clk_i(clk_i), .clk_en_i(clk_en_i), .rst_i(rst_i), .data_a_i(data_a_i), .data_b_i(data_b_i), .result_o(result_o));
 
@@ -91,20 +75,28 @@ endmodule
 
 module gainred(input logic clk, reset, 
             input logic done,
-            input logic [3:0] gain,
             input logic [32:0] result,
             output logic [15:0] finalVal);
 
     logic [32:0] tempResult;
+    logic[3:0] gain;
+
+    assign gain = 4'h2;
+
 
     always_ff @(posedge clk) begin
-        if(reset) tempResult <= 0;
-        else tempResult <= result >> gain;
+        if(reset) begin 
+            tempResult <= 0;
+        end
+        else begin 
+            tempResult <= result >> gain;
+        end
     end
 
-    always_comb begin
+    always_ff @(negedge clk) begin
+        if(reset) finalVal <= 0;
         // change this to msb (previously 32:17)
-        if (done) finalVal = tempResult[15:0];
+        else if (done) finalVal <= tempResult[15:0];
     end
 
 
@@ -115,7 +107,7 @@ module faketop(input logic clk, reset, rst_i,
                 input logic signal_en,
                 input logic [23:0] signal,
                 input logic [7:0] eqVal,
-                output logic [32:0] result_o,
+                output logic [15:0] finalVal,
                 output logic done);
 
 logic [15:0] tapcoeff;
@@ -127,28 +119,8 @@ logic tapReset;
 logic [7:0] resetCounter = 0;
 logic [7:0] nextresetCounter = 0;
 logic dataDone;
-
-/*
-always_ff @(posedge clk)
-    if(reset | done) begin
-        resetCounter <= 0;
-    end
-    else begin
-        resetCounter <= nextresetCounter;
-    end
-
-always_comb begin
-    dspreset = done | rst_i;
-    if(resetCounter < 5 | reset) begin
-        tapReset = 1;
-        nextresetCounter = resetCounter + 1;
-    end
-    else begin
-        tapReset = 0;
-        nextresetCounter = resetCounter + 1;
-    end
-end
-*/
+logic [32:0] result_o;
+logic newsamplevalid;
 
 always_comb begin
     dspreset = done | rst_i;
@@ -160,7 +132,9 @@ new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
 
 signalwindow getsignal(clk, signal_en, reset, signal, signalWindow);
 
-dsp dspoutput(clk, clk_en_i, dspreset, tapcoeff, tapnum, signalWindow, result_o, done, dataDone);
+dsp dspoutput(clk, clk_en_i, dspreset, tapcoeff, tapnum, signalWindow, result_o, done);
+
+gainred getfinalVal(clk, reset, done, result_o, finalVal);
 
 
 endmodule
