@@ -43,7 +43,7 @@ module top(input logic nreset,
 	logic clk;
     HSOSC #(.CLKHF_DIV ("0b01")) hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));	// set divider to 0b10 to get 12MHz clock
 	
-	logic [13:0] finalVal;
+	logic [7:0] finalVal;
 	logic [31:0] eqVals;
 	logic [23:0] left, right;
 	logic [7:0] eqVal;
@@ -82,9 +82,9 @@ module top(input logic nreset,
 	assign sigwin3 = left[11];
 */
 	eq1_spi eqspi1(sck, sdi, sdo, done, eqVals, finalVal); //left[23:16]);  
-	eq1_core coretest(clk, left[23:16], right[23:16], load, eqVals, done, finalVal);
+	eq1_core coretest(clk, left[23:16], load, eqVals, done, finalVal);
 	//audio_deserializer plzwork(reset, clk, bclk, lrck, din, left, right, done);
-	i2s nowitllwork(clk, reset, din, bclk, lrck, scki, left, right, signal_en);
+	i2s nowitllwork(clk, reset, din, bclk, lrck, scki, left, right);// signal_en);
 	
 	/*
 	new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
@@ -130,7 +130,7 @@ endmodule
 
 module eq1_core(input logic clk, 
 			input logic [7:0] left,
-			input logic [7:0] right,
+			//input logic [7:0] right,
 			input  logic         load,
             input  logic [31:0] eqVals, 
             output logic         done, 
@@ -138,13 +138,13 @@ module eq1_core(input logic clk,
 			
 //logic [10:0] counter; 
 logic [7:0] leftTemp;
-logic [7:0] rightTemp;
+//logic [7:0] rightTemp;
 always_ff @(posedge clk) begin
 	if (load) begin
 		done <= 0;
 		//counter <= 0;
 		leftTemp <= left;
-		rightTemp <= right;
+		//rightTemp <= right;
 	end
 
 		
@@ -173,8 +173,8 @@ module i2s(input logic         clk,
            output logic        lrck, // left/right clk,       PA6_J1
            output logic        scki, // PCM1808 system clock, PA5_H4
            output logic [23:0] left, 
-           output logic [23:0] right,
-		   output logic newsample_valid);
+           output logic [23:0] right);
+		   //output logic newsample_valid);
            //output logic        done);
 
    /////////////////// clock ////////////////////////////////////
@@ -227,7 +227,7 @@ module i2s(input logic         clk,
    // this way, left and right will always contain a valid sample.
    logic newsample;
    assign newsample = (bit_state == 25 && lrck && prescaler[1:0] == 0); // once every cycle
-   assign newsample_valid = (bit_state >= 26 && lrck && prescaler[1:0] == 0); // once we can sample it!
+   //assign newsample_valid = (bit_state >= 26 && lrck && prescaler[1:0] == 0); // once we can sample it!
    always_ff @(posedge clk)
      begin
         if (reset)

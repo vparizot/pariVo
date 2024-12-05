@@ -108,7 +108,7 @@ module gainred(input logic clk, reset,
     always_ff @(negedge clk) begin
         if(reset) finalVal <= 0;
         // change this to msb (previously 32:17)
-        else if (done) finalVal <= tempResult[30:23];
+        else if (done) finalVal <= tempResult[7:0];
     end
 
 

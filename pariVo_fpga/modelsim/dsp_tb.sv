@@ -83,7 +83,7 @@ module faketop_tb();
 	logic signal_en;
     logic [23:0] signal;
     logic [7:0] eqVal;
-    logic [15:0] finalVal;
+    logic [7:0] finalVal;
     logic done;
 
 	faketop dut(.clk(clk), .reset(reset), .rst_i(rst_i), .clk_en_i(clk_en_i), .signal_en(signal_en), .signal(signal), .eqVal(eqVal), .finalVal(finalVal), .done(done));

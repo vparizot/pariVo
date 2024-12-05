@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Dec  5 04:48:15 2024
+Thu Dec  5 11:50:53 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f ProjectPariVo_impl_1_lattice.synproj -logfile ProjectPariVo_impl_1_lattice.srp -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/promote.xml 
@@ -140,9 +140,7 @@ Top module name (Verilog, mixed language): top
 INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(15): compiling module top. VERI-1018
 INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV="0b01"). VERI-1018
 INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(97): compiling module eq1_spi. VERI-1018
-WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(84): actual bit length 14 differs from formal bit length 8 for port finalVal. VERI-1330
 INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(131): compiling module eq1_core. VERI-1018
-WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(85): actual bit length 14 differs from formal bit length 8 for port finalVal. VERI-1330
 INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(169): compiling module i2s. VERI-1018
 WARNING <35931002> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): net signalWindow does not have a driver. VDB-1002
                                                          
@@ -170,6 +168,8 @@ WARNING <35931002> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo
 
 
 WARNING <35931038> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): ram signalWindow_original_ramnet has no write-port on it. VDB-1038
+CRITICAL <35002028> - synthesis: I/O Port signal_en 's net has no driver and is unused.
+######## Missing driver on net signal_en. Patching with GND.
 
 
 
@@ -187,7 +187,7 @@ HSOSC_CORE => 1
 IB => 5
 INV => 1
 IOL_B => 2
-LUT4 => 19
+LUT4 => 16
 OB => 10
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -204,15 +204,15 @@ Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : nowitllwork/bclk_c_enable_1, loads : 24
-  Net : nowitllwork/n125, loads : 18
+  Net : nowitllwork/n124, loads : 18
   Net : load_c, loads : 9
-  Net : nowitllwork/n120, loads : 9
-  Net : coretest/done_c_N_69, loads : 9
+  Net : nowitllwork/n119, loads : 9
+  Net : coretest/done_c_N_67, loads : 9
   Net : eqspi1/wasdone, loads : 8
-  Net : nowitllwork/bit_state[4], loads : 4
-  Net : nowitllwork/bit_state[3], loads : 4
-  Net : nowitllwork/bit_state[2], loads : 4
-  Net : nowitllwork/bit_state[1], loads : 4
+  Net : nowitllwork/lrck_c, loads : 3
+  Net : nowitllwork/bit_state[2], loads : 3
+  Net : nowitllwork/bit_state[1], loads : 3
+  Net : nowitllwork/bit_state[4], loads : 3
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -225,10 +225,10 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 85 MB
+Peak Memory Usage: 86 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: c875c3d68ffbc7b69b18b01c0c5835cf3024080
+Checksum -- synthesis -- netlist: b828deefb79d5dfb5d5e52fa793192bb521d2383

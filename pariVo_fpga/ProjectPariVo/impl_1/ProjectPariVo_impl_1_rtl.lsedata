@@ -1,9 +1,9 @@
 <top name = "top"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
+    <clockitem name = "scki"  type = "port" />
     <clockitem name = "sck"  type = "port" />
     <clockitem name = "bclk"  type = "net" />
-    <clockitem name = "scki"  type = "port" />
 </clocks>
 
 <!--

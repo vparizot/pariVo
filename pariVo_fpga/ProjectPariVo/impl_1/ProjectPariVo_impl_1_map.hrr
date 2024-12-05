@@ -4,8 +4,8 @@ Report for cell top
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       2.00        100.0
-                                  LUT4	        113        100.0
-                               LUTGATE	        103        100.0
+                                  LUT4	        110        100.0
+                               LUTGATE	        100        100.0
                                 LUTCCU	         10        100.0
                                  IOREG	          2        100.0
                                  IOBUF	         15        100.0
@@ -13,16 +13,16 @@ Report for cell top
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                               eq1_core	          1         0.9
-                               eq1_spi	          1         7.1
-                                   i2s	          1        16.8
+                               eq1_spi	          1         7.3
+                                   i2s	          1        14.5
 ---------------------------------------------------
 Report for cell i2s
    Instance path: top/nowitllwork
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        50.0
-                                  LUT4	         19        16.8
-                               LUTGATE	          9         8.7
+                                  LUT4	         16        14.5
+                               LUTGATE	          6         6.0
                                 LUTCCU	         10        100.0
                                  IOREG	          1        50.0
                                 PFUREG	         40        41.2
@@ -40,7 +40,7 @@ Report for cell eq1_spi
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        50.0
-                                  LUT4	          8         7.1
-                               LUTGATE	          8         7.8
+                                  LUT4	          8         7.3
+                               LUTGATE	          8         8.0
                                  IOREG	          1        50.0
                                 PFUREG	         40        41.2

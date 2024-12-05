@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "ProjectPariVo_impl_1_map.udb"
-Thu Dec  5 04:48:25 2024
+Thu Dec  5 11:51:03 2024
 
 PAR: Place And Route Radiant Software (64-bit) 2024.1.0.34.2.
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
@@ -23,12 +23,12 @@ Constraint Summary
    Total number of constraints: 16
    Total number of constraints dropped: 0
 
-Number of Signals: 225
-Number of Connections: 435
+Number of Signals: 222
+Number of Connections: 426
 Device utilization summary:
 
-   SLICE (est.)      60/2640          2% used
-     LUT            113/5280          2% used
+   SLICE (est.)      59/2640          2% used
+     LUT            110/5280          2% used
      REG             97/5280          2% used
    PIO               15/56           27% used
                      15/36           41% bonded
@@ -55,24 +55,24 @@ Pin Constraint Summary:
 Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
 
 
-................
+.................
 Finished Placer Phase 0 (AP).  CPU time: 0 secs , REAL time: 0 secs 
 
 Starting Placer Phase 1. CPU time: 0 secs , REAL time: 0 secs 
 ..  ..
 ....................
 
-Placer score = 16340.
+Placer score = 16459.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             60/2640          2% used
+   SLICE             58/2640          2% used
 
-Finished Placer Phase 1. CPU time: 2 secs , REAL time: 2 secs 
+Finished Placer Phase 1. CPU time: 1 secs , REAL time: 2 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  19137
+Placer score =  18559
 Finished Placer Phase 2.  CPU time: 2 secs , REAL time: 2 secs 
 
 
@@ -106,11 +106,11 @@ I/O Bank Usage Summary:
 Total Placer CPU time: 2 secs , REAL time: 2 secs 
 
 
-Checksum -- place: b123c0fb78fd1f5bc11cc1ea79c99198e3280217
+Checksum -- place: 4c7f60ad8be23fe35857eb75873a327fd682aee
 Writing design to file ProjectPariVo_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 04:48:27 12/05/24
+Start NBR router at 11:51:05 12/05/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -129,7 +129,7 @@ Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
 1 global clock signals routed
-131 connections routed (of 367 total) (35.69%)
+131 connections routed (of 358 total) (36.59%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (3 used out of 8 available):
@@ -148,31 +148,31 @@ Completed routing resource preassignment
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Start NBR section for initial routing at 04:48:28 12/05/24
+Start NBR section for initial routing at 11:51:05 12/05/24
 Level 4, iteration 1
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 30.485ns/0.000ns; real time: 0 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 31.040ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 04:48:28 12/05/24
+Start NBR section for normal routing at 11:51:06 12/05/24
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 30.485ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 31.040ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 04:48:28 12/05/24
+Start NBR section for setup/hold timing optimization with effort level 3 at 11:51:06 12/05/24
 
-Start NBR section for post-routing at 04:48:28 12/05/24
+Start NBR section for post-routing at 11:51:06 12/05/24
 
 End NBR router with 0 unrouted connection(s)
 
-Checksum -- route: e2435f7934242edb31f73bd92a4ad8f21e56089a
+Checksum -- route: 34b831ec57621847131e7988917ba16782edf396
 
 Total CPU time 1 secs 
 Total REAL time: 0 secs 
 Completely routed.
-End of route.  367 routed (100.00%); 0 unrouted.
+End of route.  358 routed (100.00%); 0 unrouted.
 
 Writing design to file ProjectPariVo_impl_1_par.dir/5_1.udb ...
 
@@ -182,7 +182,7 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Estimated worst slack<setup/<ns>> = 31.249
+PAR_SUMMARY::Estimated worst slack<setup/<ns>> = 31.502
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
 PAR_SUMMARY::Estimated worst slack<hold/<ns>> = 1.743
 PAR_SUMMARY::Timing score<hold/<ns>> = 0.000
@@ -192,7 +192,7 @@ Note: user must run 'timing' for timing closure signoff.
 
 Total CPU  Time: 3 secs 
 Total REAL Time: 3 secs 
-Peak Memory Usage: 125.32 MB
+Peak Memory Usage: 125.70 MB
 
 
 par done!

@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Thu Dec  5 04:48:21 2024
+Mapped on: Thu Dec  5 11:50:59 2024
 
 Design Information
 ------------------
@@ -24,8 +24,8 @@ Design Summary
 
    Number of slice registers:  97 out of  5280 (2%)
    Number of I/O registers:      2 out of   117 (2%)
-   Number of LUT4s:           113 out of  5280 (2%)
-      Number of logic LUT4s:              21
+   Number of LUT4s:           110 out of  5280 (2%)
+      Number of logic LUT4s:              18
       Number of inserted feedthru LUT4s:  81
       Number of replicated LUT4s:          1
       Number of ripple logic:              5 (10 LUT4s)
@@ -53,13 +53,13 @@ Design Summary
    Number of Clocks:  3
       Net scki_c: 31 loads, 31 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
       Net bclk_c: 24 loads, 24 rising, 0 falling (Driver: Pin
-     nowitllwork.prescaler_25_34__i2/Q)
+     nowitllwork.prescaler_25_30__i2/Q)
       Net sck_c: 41 loads, 39 rising, 2 falling (Driver: Port sck)
    Number of Clock Enables:  5
       Net VCC_net: 1 loads, 0 SLICEs
-      Net nowitllwork.n120: 9 loads, 9 SLICEs
+      Net nowitllwork.n119: 9 loads, 9 SLICEs
       Net nowitllwork.bclk_c_enable_1: 24 loads, 23 SLICEs
-      Net coretest.done_c_N_69: 8 loads, 8 SLICEs
+      Pin load: 8 loads, 8 SLICEs (Net: load_c)
 
                                     Page 1
 
@@ -69,20 +69,20 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Pin load: 8 loads, 8 SLICEs (Net: load_c)
+      Net coretest.done_c_N_67: 8 loads, 8 SLICEs
    Number of LSRs:  1
-      Net nowitllwork.n125: 14 loads, 14 SLICEs
+      Net nowitllwork.n124: 14 loads, 14 SLICEs
    Top 10 highest fanout non-clock nets:
       Net nowitllwork.bclk_c_enable_1: 24 loads
-      Net nowitllwork.n125: 14 loads
+      Net nowitllwork.n124: 14 loads
       Net load_c: 10 loads
-      Net nowitllwork.n120: 9 loads
-      Net coretest.done_c_N_69: 8 loads
+      Net nowitllwork.n119: 9 loads
+      Net coretest.done_c_N_67: 8 loads
       Net eqspi1.wasdone: 8 loads
       Net lrck_c: 4 loads
-      Net nowitllwork.bit_state[0]: 4 loads
-      Net nowitllwork.bit_state[1]: 4 loads
-      Net nowitllwork.bit_state[2]: 4 loads
+      Net nowitllwork.bit_state[0]: 3 loads
+      Net nowitllwork.bit_state[1]: 3 loads
+      Net nowitllwork.bit_state[2]: 3 loads
 
 
 
@@ -146,19 +146,19 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+-------+-------+-----------+
 | signal_en           | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| sigwin3             | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sigwin2             | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 | sigwin1             | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sigwin0             | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sdo                 | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | scki                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| sigwin2             | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sigwin3             | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdo                 | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | lrck                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sigwin0             | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | bclk                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -211,8 +211,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 64 MB
-Checksum -- map: 8800b66aaaf19ff7bedfc28247aad38485064e10
+   Peak Memory Usage: 65 MB
+Checksum -- map: d88761be4e72a085c714c5afdc2c76bca4c4de0
 
 
 

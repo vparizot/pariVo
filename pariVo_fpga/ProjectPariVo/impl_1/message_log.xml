@@ -19,11 +19,6 @@
             <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc</Navigation>
             <Navigation>12</Navigation>
         </Message>
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
     </Task>
     <Task name="Map">
         <Message>
@@ -463,32 +458,12 @@
             <Navigation>97</Navigation>
         </Message>
         <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(84): </Dynamic>
-            <Dynamic>14</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>finalVal</Dynamic>
-            <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>84</Navigation>
-        </Message>
-        <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
             <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(131): </Dynamic>
             <Dynamic>eq1_core</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
             <Navigation>131</Navigation>
-        </Message>
-        <Message>
-            <ID>35901330</ID>
-            <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(85): </Dynamic>
-            <Dynamic>14</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Dynamic>finalVal</Dynamic>
-            <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>85</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -513,6 +488,11 @@
             <Dynamic>signalWindow_original_ramnet</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
             <Navigation>56</Navigation>
+        </Message>
+        <Message>
+            <ID>35002028</ID>
+            <Severity>256</Severity>
+            <Dynamic>signal_en</Dynamic>
         </Message>
         <Message>
             <ID>35002028</ID>
