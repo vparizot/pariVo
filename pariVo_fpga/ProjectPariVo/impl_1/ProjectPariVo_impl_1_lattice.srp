@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Dec  4 22:05:05 2024
+Thu Dec  5 04:48:15 2024
 
 
 Command Line:  C:\lscc\radiant\2024.1\ispfpga\bin\nt64\synthesis.exe -f ProjectPariVo_impl_1_lattice.synproj -logfile ProjectPariVo_impl_1_lattice.srp -gui -msgset C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/promote.xml 
@@ -67,15 +67,11 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--sdc option: SDC file input is ProjectPariVo_impl_1_cpe.ldc.
 -path C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo (searchpath added)
--path C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/SB_MAC16 (searchpath added)
 -path C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/impl_1 (searchpath added)
 -path C:/lscc/radiant/2024.1/ispfpga/ice40tp/data (searchpath added)
 Mixed language design
 Verilog design file = C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.v
-Verilog design file = C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/SB_MAC16/rtl/SB_MAC16.v
-Verilog design file = C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv
 Verilog design file = C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv
 Verilog design file = C:/Users/vparizot/E155/pariVo/pariVo_fpga/hardware_test.sv
 Verilog design file = C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv
@@ -129,13 +125,11 @@ INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dp_be.v(49): 
 INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v(16): analyzing included file c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq_be.v. VERI-1328
 INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/2024.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
 INFO <35901328> - synthesis: c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2024.1/ip/pmi/pmi_dsp.v. VERI-1328
-Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/projectparivo/sb_mac16/rtl/sb_mac16.v. VERI-1482
-Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/dsp.sv. VERI-1482
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/recursivefilter.sv. VERI-1482
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/hardware_test.sv. VERI-1482
 Analyzing Verilog file c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv. VERI-1482
 WARNING <35901372> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(58): redeclaration of ansi port done is not allowed. VERI-1372
-WARNING <35901049> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(503): /* in comment. VERI-1049
+WARNING <35901049> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(511): /* in comment. VERI-1049
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2024.1/ip/pmi/pmi_ice40up.vhd
 
@@ -144,23 +138,13 @@ INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Use
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(15): compiling module top. VERI-1018
-INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV="0b10"). VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(96): compiling module eq1_spi. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(130): compiling module eq1_core. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(162): compiling module i2s. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/recursivefilter.sv(36): compiling module new_all_taps. VERI-1018
-WARNING <35901209> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/recursivefilter.sv(64): expression size 32 truncated to fit in target size 8. VERI-1209
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/recursivefilter.sv(18): compiling module get_tap. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/recursivefilter.sv(1): compiling module coeffs_sync. VERI-1018
-WARNING <35931002> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/recursivefilter.sv(8): net coeffs does not have a driver. VDB-1002
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/dsp.sv(1): compiling module signalwindow. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/dsp.sv(54): compiling module dsp. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/projectparivo/sb_mac16/rtl/sb_mac16.v(11): compiling module SB_MAC16. VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/projectparivo/sb_mac16/rtl/sb_mac16.v(98): compiling module SB_MAC16_ipgen_lscc_mult_accumulate(A_WIDTH=16,B_WIDTH=16,ACC_WIDTH=33,B_SIGNED="off",USE_IREG="off",IMPL="DSP",FAMILY="iCE40UP"). VERI-1018
-WARNING <35901209> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/projectparivo/sb_mac16/rtl/sb_mac16.v(161): expression size 65 truncated to fit in target size 33. VERI-1209
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/projectparivo/sb_mac16/rtl/sb_mac16.v(244): compiling module SB_MAC16_ipgen_lscc_multiplier(A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off",IMPL="DSP"). VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/projectparivo/sb_mac16/rtl/sb_mac16.v(599): compiling module SB_MAC16_ipgen_lscc_multiplier_dsp(USE_COEFF=0,A_WIDTH=16,B_WIDTH=16,B_SIGNED="off",USE_IREG="off",USE_OREG="off"). VERI-1018
-INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/dsp.sv(88): compiling module gainred. VERI-1018
+INFO <35901018> - synthesis: C:/lscc/radiant/2024.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV="0b01"). VERI-1018
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(97): compiling module eq1_spi. VERI-1018
+WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(84): actual bit length 14 differs from formal bit length 8 for port finalVal. VERI-1330
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(131): compiling module eq1_core. VERI-1018
+WARNING <35901330> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(85): actual bit length 14 differs from formal bit length 8 for port finalVal. VERI-1330
+INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(169): compiling module i2s. VERI-1018
+WARNING <35931002> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): net signalWindow does not have a driver. VDB-1002
                                                          
 
 
@@ -185,30 +169,25 @@ INFO <35901018> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/
                                                          
 
 
-WARNING <35935047> - synthesis: Unused instance getfinalVal is removed. VDB-5047
-WARNING <35001771> - synthesis: Initial value found on net nextCounter[7] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net nextCounter[6] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net nextCounter[5] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net nextCounter[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net nextCounter[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net nextCounter[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net nextCounter[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net nextCounter[0] will be ignored due to unrecognized driver type
-WARNING <35931038> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/modelsim/recursivefilter.sv(8): ram coeffs_original_ramnet has no write-port on it. VDB-1038
+WARNING <35931038> - synthesis: c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): ram signalWindow_original_ramnet has no write-port on it. VDB-1038
 
 
 
+CRITICAL <35002028> - synthesis: I/O Port sigwin0 's net has no driver and is unused.
+CRITICAL <35002028> - synthesis: I/O Port sigwin2 's net has no driver and is unused.
+CRITICAL <35002028> - synthesis: I/O Port sigwin3 's net has no driver and is unused.
+######## Missing driver on net sigwin3_c. Patching with GND.
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 102 of 5280 (1 % )
+Number of register bits => 97 of 5280 (1 % )
 CCU2 => 5
-FD1P3XZ => 102
+FD1P3XZ => 97
 HSOSC_CORE => 1
 IB => 5
 INV => 1
 IOL_B => 2
-LUT4 => 21
+LUT4 => 19
 OB => 10
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -225,15 +204,15 @@ Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : nowitllwork/bclk_c_enable_1, loads : 24
-  Net : getsignal/n350, loads : 22
-  Net : nowitllwork/n346, loads : 11
+  Net : nowitllwork/n125, loads : 18
   Net : load_c, loads : 9
-  Net : coretest/done_c_N_215, loads : 9
+  Net : nowitllwork/n120, loads : 9
+  Net : coretest/done_c_N_69, loads : 9
   Net : eqspi1/wasdone, loads : 8
-  Net : nowitllwork/bit_state[2], loads : 5
-  Net : nowitllwork/bit_state[1], loads : 5
-  Net : nowitllwork/bit_state[0], loads : 4
   Net : nowitllwork/bit_state[4], loads : 4
+  Net : nowitllwork/bit_state[3], loads : 4
+  Net : nowitllwork/bit_state[2], loads : 4
+  Net : nowitllwork/bit_state[1], loads : 4
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -246,10 +225,10 @@ Constraint Summary:
 Total number of design rule violations: 0
 ###################  End DRC Report  ######################
 
-Peak Memory Usage: 154 MB
+Peak Memory Usage: 85 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 258a36a4587b1b5a1f3597768f51949088ec5c2c
+Checksum -- synthesis -- netlist: c875c3d68ffbc7b69b18b01c0c5835cf3024080

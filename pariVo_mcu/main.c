@@ -35,9 +35,11 @@ void ms_delay(int ms){
 
   }
 }
- char leftAudioneg;
+ int8_t leftAudioneg;
  char leftAudio;
 
+ int8_t rightAudioneg;
+ char rightAudio;
 //char leftAudio1, leftAudio2, leftAudio3, leftAudio4;
 //uint8_t leftAudio[24];
 
@@ -48,8 +50,8 @@ void ms_delay(int ms){
 
 int main(void) {
   // Configure flash and PLL at 80 MHz
-  // configureFlash();
-  //configureClock();
+   configureFlash();
+  configureClock();
   
   //// Enable interrupts
   RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
@@ -58,6 +60,11 @@ int main(void) {
   // ENABLE PERIPHERALS: DMA1, DAC1, TIM7
   RCC->AHB1ENR |= (RCC_AHB1ENR_DMA1EN);   // Enable DMA 1
   RCC->APB1ENR1 |= RCC_APB1ENR1_DAC1EN; // Enable DAC1
+
+  RCC->AHB1ENR |= (RCC_AHB1ENR_DMA2EN);   // Enable DMA 2
+
+  
+
   RCC->APB1ENR1 |= (RCC_APB1ENR1_TIM7EN); // Enable TIM7
 
   /// Setup GPIO ///
@@ -87,7 +94,7 @@ int main(void) {
   initSPI(0b1,0,0);
 
   
-  // Init DMA 
+  // Init DMA for Audio #1 (left)
    DMA1_Channel3->CCR &= ~(0xffffffff); // reset values
    DMA1_Channel3->CPAR = (uint32_t) &(DAC1->DHR8R1); //Place DMA into DAC Outplacement 
    DMA1_Channel3->CMAR = (uint32_t) &leftAudio; // set source address to character array buffer in memory.
@@ -100,6 +107,20 @@ int main(void) {
    DMA1_Channel3->CCR |= _VAL2FLD(DMA_CCR_PSIZE, 0b00); // peripheral size = 8 bits, Defines the data size of each DMA transfer to the identified peripheral. Set to 8, 0b00
    DMA1_CSELR->CSELR |= _VAL2FLD(DMA_CSELR_C3S, 0b0110); // set dma channel 3 to DAC1_channel1
    DMA1_Channel3->CCR |= _VAL2FLD(DMA_CCR_EN, 0b1); 
+
+  // Init DMA for Audio #2 (right)
+   DMA2_Channel5->CCR &= ~(0xffffffff); // reset values
+   DMA2_Channel5->CPAR = (uint32_t) &(DAC1->DHR8R2); //Place DMA into DAC Outplacement 
+   DMA2_Channel5->CMAR = (uint32_t) &leftAudio; // set source address to character array buffer in memory.
+   DMA2_Channel5->CNDTR = sizeof(leftAudio); // Set DMA data transfer length (# of samples).
+   DMA2_Channel5->CCR |= _VAL2FLD(DMA_CCR_PL, 0b01);  // set priority lvl to very high B)
+   DMA2_Channel5->CCR |= _VAL2FLD(DMA_CCR_DIR, 0b1); // read from memory, 0b1
+   DMA2_Channel5->CCR |= _VAL2FLD(DMA_CCR_CIRC, 0b1); // enable circular mode
+   DMA2_Channel5->CCR |= _VAL2FLD(DMA_CCR_MINC, 0b1); // memory increment mode enabled
+   DMA2_Channel5->CCR |= _VAL2FLD(DMA_CCR_MSIZE, 0b00); //Memory size set to 8 bits, data size of DMA transfer in memory 
+   DMA2_Channel5->CCR |= _VAL2FLD(DMA_CCR_PSIZE, 0b00); // peripheral size = 8 bits, Defines the data size of each DMA transfer to the identified peripheral. Set to 8, 0b00
+   DMA2_CSELR->CSELR |= _VAL2FLD(DMA_CSELR_C5S, 0b0011); // set dma channel 3 to DAC1_channel1
+   DMA2_Channel5->CCR |= _VAL2FLD(DMA_CCR_EN, 0b1); 
 
  
   // Enable timer 2 for delay function
@@ -140,13 +161,21 @@ int main(void) {
   TIM7->CR2 |= (2 << 4); // Update Event
   TIM7->CR1 |= (1 << 0);  // Counter enable
 
-  // INITIALIZE DAC - initDAC();
+  // INITIALIZE DAC1 (LEFT) - initDAC();
    DAC1->CR |= _VAL2FLD(DAC_CR_TEN1, 0b1); // DAC channel1 trigger enable
    DAC1->CR |= _VAL2FLD(DAC_CR_TSEL1, 0b010); // : DAC channel1 trigger selection to TIM7 (pg. 492)
    DAC1->MCR |= _VAL2FLD(DAC_MCR_MODE1, 0b000); // 0b000 is: DAC Channel 2 is connected to external pin with Buffer enabled
    DAC->CR |= _VAL2FLD(DAC_CR_DMAEN1, 0b1); // Enable DMA
    DAC1->CR |= _VAL2FLD(DAC_CR_EN1, 0b1); // DAC channel powered on by setting its corresponding ENx bit in the DAC_CR register. (p. 489)
  
+// INITIALIZE DAC2 (right) - initDAC();
+   DAC1->CR |= _VAL2FLD(DAC_CR_TEN2, 0b1); // DAC channel1 trigger enable
+   DAC1->CR |= _VAL2FLD(DAC_CR_TSEL2, 0b010); // : DAC channel1 trigger selection to TIM7 (pg. 492)
+   DAC1->MCR |= _VAL2FLD(DAC_MCR_MODE2, 0b000); // 0b000 is: DAC Channel 2 is connected to external pin with Buffer enabled
+   DAC->CR |= _VAL2FLD(DAC_CR_DMAEN2, 0b1); // Enable DMA
+   DAC1->CR |= _VAL2FLD(DAC_CR_EN2, 0b1); // DAC channel powered on by setting its corresponding ENx bit in the DAC_CR register. (p. 489)
+ 
+
   ////////////////////////////////////////////
   ////// CALL ADC for EQ Fiters  
   ////////////////////////////////////////////
@@ -195,17 +224,17 @@ int main(void) {
   //printf("2nd channel: %d \n", convertedVals[1]);
   //printf("3rd channel: %d \n", convertedVals[2]);
   //printf("4th channel: %d \n", convertedVals[3]);
-  printf("sdo: %d \n", leftAudio);
-
+  printf("left: %d \n", leftAudio);
+  printf("right: %d \n", rightAudio);
   
 
   // Write LOAD high
   digitalWrite(PA9, 1);
 
  for(i = 0; i < 4; i++) {
-    digitalWrite(SPI_CE, 1); // Arificial CE high
+    //digitalWrite(SPI_CE, 1); // Arificial CE high
     spiSendReceive((char)convertedVals[i]);
-    digitalWrite(SPI_CE, 0); // Arificial CE low
+    //digitalWrite(SPI_CE, 0); // Arificial CE low
   }
   while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
   
@@ -215,13 +244,18 @@ int main(void) {
  // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
   while(!digitalRead(PA6));
 
-  digitalWrite(SPI_CE, 1); // Arificial CE high
-  leftAudioneg = spiSendReceive(0);  
-  
+  //digitalWrite(SPI_CE, 1); // Arificial CE high
+  leftAudioneg = spiSendReceive(0); 
+  leftAudio = leftAudioneg + 128; 
+  //digitalWrite(SPI_CE, 0); // Arificial CE low
 
-  
-  digitalWrite(SPI_CE, 0); // Arificial CE low
-  leftAudio = leftAudioneg + 128;
+  //digitalWrite(SPI_CE, 1);
+  //rightAudio = spiSendReceive(0);
+//digitalWrite(SPI_CE, 0);
+
+
+  //leftAudio = leftAudioneg + 128;
+  //rightAudio = rightAudioneg + 128;
 
 
 

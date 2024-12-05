@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE 
-// Netlist written on Wed Dec  4 22:05:04 2024
+// Netlist written on Thu Dec  5 02:03:33 2024
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/lscc/radiant/2024.1/ip/common/adder/rtl/lscc_adder.v"

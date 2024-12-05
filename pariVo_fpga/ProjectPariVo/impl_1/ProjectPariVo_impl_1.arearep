@@ -1,56 +1,47 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  102 of 5280 (1.932%)
+Register bits:  97 of 5280 (1.837%)
 I/O cells:      15
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2         5          100.0
-                            FD1P3XZ       102          100.0
+                            FD1P3XZ        97          100.0
                          HSOSC_CORE         1          100.0
                                  IB         5          100.0
                                 INV         1          100.0
                               IOL_B         2          100.0
-                               LUT4        21          100.0
+                               LUT4        19          100.0
                                  OB        10          100.0
 SUB MODULES
                            eq1_core         1
                             eq1_spi         1
                                 i2s         1
-                       signalwindow         1
-                              TOTAL       151
+                              TOTAL       143
 ----------------------------------------------------------------------
 Report for cell i2s.v1
 Instance Path : nowitllwork
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2         5          100.0
-                            FD1P3XZ        42           41.2
+                            FD1P3XZ        40           41.2
                               IOL_B         1           50.0
-                               LUT4        10           47.6
-                              TOTAL        58
-----------------------------------------------------------------------
-Report for cell eq1_spi.v1
-Instance Path : eqspi1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3XZ        40           39.2
-                                INV         1          100.0
-                              IOL_B         1           50.0
-                               LUT4         8           38.1
-                              TOTAL        50
+                               LUT4        10           52.6
+                              TOTAL        56
 ----------------------------------------------------------------------
 Report for cell eq1_core.v1
 Instance Path : coretest
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ        17           16.7
-                               LUT4         1            4.8
+                            FD1P3XZ        17           17.5
+                               LUT4         1            5.3
                               TOTAL        18
 ----------------------------------------------------------------------
-Report for cell signalwindow.v1
-Instance Path : getsignal
+Report for cell eq1_spi.v1
+Instance Path : eqspi1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         3            2.9
-                               LUT4         2            9.5
-                              TOTAL         5
+                            FD1P3XZ        40           41.2
+                                INV         1          100.0
+                              IOL_B         1           50.0
+                               LUT4         8           42.1
+                              TOTAL        50

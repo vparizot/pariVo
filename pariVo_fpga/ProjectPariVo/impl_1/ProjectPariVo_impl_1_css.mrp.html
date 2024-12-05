@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Wed Dec  4 22:05:11 2024
+Mapped on: Thu Dec  5 04:48:21 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -61,11 +61,11 @@ Command line:   map -pdc
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of slice registers: 102 out of  5280 (2%)
+   Number of slice registers:  97 out of  5280 (2%)
    Number of I/O registers:      2 out of   117 (2%)
-   Number of LUT4s:           119 out of  5280 (2%)
-      Number of logic LUT4s:              22
-      Number of inserted feedthru LUT4s:  86
+   Number of LUT4s:           113 out of  5280 (2%)
+      Number of logic LUT4s:              21
+      Number of inserted feedthru LUT4s:  81
       Number of replicated LUT4s:          1
       Number of ripple logic:              5 (10 LUT4s)
    Number of IO sites used:   15 out of 39 (38%)
@@ -90,30 +90,29 @@ Command line:   map -pdc
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  3
-      Net scki_c: 36 loads, 36 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
+      Net scki_c: 31 loads, 31 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
       Net bclk_c: 24 loads, 24 rising, 0 falling (Driver: Pin
-     nowitllwork.prescaler_24_36__i2/Q)
+     nowitllwork.prescaler_25_34__i2/Q)
       Net sck_c: 41 loads, 39 rising, 2 falling (Driver: Port sck)
-   Number of Clock Enables:  6
+   Number of Clock Enables:  5
       Net VCC_net: 1 loads, 0 SLICEs
+      Net nowitllwork.n120: 9 loads, 9 SLICEs
       Net nowitllwork.bclk_c_enable_1: 24 loads, 23 SLICEs
-      Net nowitllwork.n346: 11 loads, 11 SLICEs
-      Net coretest.done_c_N_215: 8 loads, 8 SLICEs
+      Net coretest.done_c_N_69: 8 loads, 8 SLICEs
       Pin load: 8 loads, 8 SLICEs (Net: load_c)
-      Net getsignal.n348: 3 loads, 3 SLICEs
    Number of LSRs:  1
-      Net n350: 19 loads, 19 SLICEs
+      Net nowitllwork.n125: 14 loads, 14 SLICEs
    Top 10 highest fanout non-clock nets:
       Net nowitllwork.bclk_c_enable_1: 24 loads
-      Net n350: 19 loads
-      Net nowitllwork.n346: 11 loads
+      Net nowitllwork.n125: 14 loads
       Net load_c: 10 loads
-      Net coretest.done_c_N_215: 8 loads
+      Net nowitllwork.n120: 9 loads
+      Net coretest.done_c_N_69: 8 loads
       Net eqspi1.wasdone: 8 loads
-      Net bit_state[1]: 6 loads
-      Net bit_state[2]: 6 loads
       Net lrck_c: 4 loads
       Net nowitllwork.bit_state[0]: 4 loads
+      Net nowitllwork.bit_state[1]: 4 loads
+      Net nowitllwork.bit_state[2]: 4 loads
 
    Number of warnings:  8
    Number of criticals: 0
@@ -148,20 +147,6 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| nreset              | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| bclk                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| done                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sigwin2             | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sigwin3             | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| signal_en           | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| lrck                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 | load                | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sdi                 | INPUT     |           | I     |       |           |
@@ -169,6 +154,16 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
 | sck                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | din                 | INPUT     |           | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| nreset              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| done                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| signal_en           | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sigwin3             | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sigwin2             | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sigwin1             | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -178,11 +173,14 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
 +---------------------+-----------+-----------+-------+-------+-----------+
 | scki                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| lrck                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| bclk                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
 Block eqspi1/i9_1_lut was optimized away.
-Block i1 was optimized away.
 
 <A name="mrp_osc"></A><B><U><big>OSC Summary</big></U></B>
 
@@ -191,7 +189,7 @@ OSC 1:                                 Pin/Node Value
   Power UP:                            NODE     VCC_net
   Enable Signal:                       NODE     VCC_net
   OSC Output:                          PIN,NODE scki_c
-  DIV Setting:                                  10
+  DIV Setting:                                  01
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
@@ -204,7 +202,7 @@ Instance Name: eqspi1/eqVals__i1
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 
-   Total number of constraints: 19
+   Total number of constraints: 18
    Total number of constraints dropped: 2
    Dropped constraints are:
      ldc_set_location -site {20} [get_ports leftMsb6]
@@ -214,8 +212,8 @@ Instance Name: eqspi1/eqVals__i1
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 65 MB
-Checksum -- map: 55a27893376e59266608090394bd5067786ac011
+   Peak Memory Usage: 64 MB
+Checksum -- map: 8800b66aaaf19ff7bedfc28247aad38485064e10
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.1.0.34.2
 
-Wed Dec  4 22:05:19 2024
+Thu Dec  5 04:48:29 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -48,11 +48,11 @@ Package Status:                     Preliminary    Version 1.5
 
 1.1  SDC Constraints
 =====================
-create_clock -name {scki_c} -period 83.3333 [get_pins {hf_osc/CLKHF }] 
+create_clock -name {scki_c} -period 41.6667 [get_pins {hf_osc/CLKHF }] 
 
 1.2  Constraint Coverage
 ---------------------------
-Constraint Coverage: 27.1642%
+Constraint Coverage: 25.2459%
 
 
 1.3  Overall Summary
@@ -70,20 +70,20 @@ Clocked but unconstrained timing start points
 -------------------------------------------------------------------
         Listing 10 Start Points         |           Type           
 -------------------------------------------------------------------
-coretest/finalVal_i0_i0/Q               |          No required time
-coretest/finalVal_i0_i1/Q               |          No required time
-coretest/finalVal_i0_i2/Q               |          No required time
-coretest/finalVal_i0_i3/Q               |          No required time
-coretest/finalVal_i0_i4/Q               |          No required time
-coretest/finalVal_i0_i5/Q               |          No required time
-coretest/finalVal_i0_i6/Q               |          No required time
-coretest/finalVal_i0_i7/Q               |          No required time
-getsignal/signalWindow[9]__i131/Q       |          No required time
-getsignal/signalWindow[9]__i132/Q       |          No required time
+nowitllwork/left__i1/Q                  |          No required time
+coretest/finalVal__i6/Q                 |          No required time
+coretest/finalVal__i5/Q                 |          No required time
+coretest/finalVal__i4/Q                 |          No required time
+coretest/finalVal__i3/Q                 |          No required time
+coretest/finalVal__i2/Q                 |          No required time
+coretest/finalVal__i1/Q                 |          No required time
+coretest/finalVal__i8/Q                 |          No required time
+coretest/finalVal__i7/Q                 |          No required time
+coretest/done/Q                         |          No required time
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing start po |                          
-ints                                    |                        12
+ints                                    |                        10
                                         |                          
 -------------------------------------------------------------------
 
@@ -91,24 +91,24 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-nowitllwork/prescaler_24_36__i8/SR      |           No arrival time
-{nowitllwork/prescaler_24_36__i6/SR   nowitllwork/prescaler_24_36__i7/SR}                           
+nowitllwork/prescaler_25_34__i8/SR      |           No arrival time
+{nowitllwork/prescaler_25_34__i6/SR   nowitllwork/prescaler_25_34__i7/SR}                           
                                         |           No arrival time
-{nowitllwork/prescaler_24_36__i4/SR   nowitllwork/prescaler_24_36__i5/SR}                           
+{nowitllwork/prescaler_25_34__i4/SR   nowitllwork/prescaler_25_34__i5/SR}                           
                                         |           No arrival time
-{nowitllwork/prescaler_24_36__i2/SR   nowitllwork/prescaler_24_36__i3/SR}                           
+{nowitllwork/prescaler_25_34__i2/SR   nowitllwork/prescaler_25_34__i3/SR}                           
                                         |           No arrival time
-nowitllwork/prescaler_24_36__i1/SR      |           No arrival time
+nowitllwork/prescaler_25_34__i1/SR      |           No arrival time
 nowitllwork/left__i1/D                  |           No arrival time
 nowitllwork/left__i1/SR                 |           No arrival time
-nowitllwork/left__i4/D                  |           No arrival time
 nowitllwork/left__i3/D                  |           No arrival time
-{nowitllwork/left__i3/SR   nowitllwork/left__i4/SR}                           
+nowitllwork/left__i2/D                  |           No arrival time
+{nowitllwork/left__i2/SR   nowitllwork/left__i3/SR}                           
                                         |           No arrival time
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                        34
+ts                                      |                        28
                                         |                          
 -------------------------------------------------------------------
 
@@ -128,19 +128,19 @@ create_generated_clock,
 -------------------------------------------------------------------
      Listing 10 Start or End Points     |           Type           
 -------------------------------------------------------------------
-nreset                                  |                     input
 load                                    |                     input
 sdi                                     |                     input
 sck                                     |                     input
 din                                     |                     input
-bclk                                    |                    output
+nreset                                  |                     input
 done                                    |                    output
-sigwin2                                 |                    output
-sigwin3                                 |                    output
 signal_en                               |                    output
+sigwin1                                 |                    output
+sdo                                     |                    output
+scki                                    |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                        15
+Number of I/O ports without constraint  |                        12
                                         |                          
 -------------------------------------------------------------------
 
@@ -149,7 +149,7 @@ Define a clock on a top level port or a generated clock on a clock divider pin a
 -------------------------------------------------------------------
             Listing 2 Net(s)            |        Source pin        
 -------------------------------------------------------------------
-bclk_c                                  |nowitllwork/prescaler_24_36__i2/Q
+bclk_c                                  |nowitllwork/prescaler_25_34__i2/Q
 sck_c                                   |         sck_pad.bb_inst/O
 -------------------------------------------------------------------
                                         |                          
@@ -172,13 +172,13 @@ None
 
 2.1.1 Clock "scki_c"
 =======================
-create_clock -name {scki_c} -period 83.3333 [get_pins {hf_osc/CLKHF }] 
+create_clock -name {scki_c} -period 41.6667 [get_pins {hf_osc/CLKHF }] 
 
 Single Clock Domain
 -------------------------------------------------------------------------------------------------------
               Clock scki_c              |                    |       Period       |     Frequency      
 -------------------------------------------------------------------------------------------------------
- From scki_c                            |             Target |          83.333 ns |         12.000 MHz 
+ From scki_c                            |             Target |          41.667 ns |         24.000 MHz 
                                         | Actual (all paths) |          20.792 ns |         48.095 MHz 
 hf_osc/CLKHF (MPW)                      |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
 -------------------------------------------------------------------------------------------------------
@@ -190,21 +190,20 @@ Clock Domain Crossing
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-{nowitllwork/left__i15/SP   nowitllwork/left__i16/SP}              
-                                         |   72.191 ns 
-{nowitllwork/left__i13/SP   nowitllwork/left__i14/SP}              
-                                         |   72.191 ns 
-{nowitllwork/left__i11/SP   nowitllwork/left__i12/SP}              
-                                         |   72.191 ns 
-{nowitllwork/left__i9/SP   nowitllwork/left__i10/SP}              
-                                         |   72.191 ns 
-getsignal/signalWindow[9]__i129/SP       |   72.363 ns 
-getsignal/signalWindow[9]__i132/SP       |   72.363 ns 
-getsignal/signalWindow[9]__i131/SP       |   72.363 ns 
-{nowitllwork/left__i3/SP   nowitllwork/left__i4/SP}              
-                                         |   72.707 ns 
-nowitllwork/left__i1/SP                  |   72.707 ns 
-nowitllwork/prescaler_24_36__i8/D        |   76.028 ns 
+{nowitllwork/left__i8/SP   nowitllwork/left__i9/SP}              
+                                         |   30.486 ns 
+{nowitllwork/left__i6/SP   nowitllwork/left__i7/SP}              
+                                         |   30.486 ns 
+{nowitllwork/left__i4/SP   nowitllwork/left__i5/SP}              
+                                         |   30.486 ns 
+{nowitllwork/left__i2/SP   nowitllwork/left__i3/SP}              
+                                         |   30.486 ns 
+nowitllwork/left__i1/SP                  |   32.786 ns 
+nowitllwork/prescaler_25_34__i8/D        |   34.362 ns 
+nowitllwork/prescaler_25_34__i7/D        |   35.194 ns 
+nowitllwork/prescaler_25_34__i6/D        |   35.471 ns 
+nowitllwork/prescaler_25_34__i5/D        |   35.748 ns 
+nowitllwork/prescaler_25_34__i4/D        |   36.025 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -227,568 +226,617 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : {nowitllwork/left__i15/SP   nowitllwork/left__i16/SP}  (SLICE_R16C6A)
+Path Begin       : nowitllwork/prescaler_25_34__i4/Q  (SLICE_R13C3C)
+Path End         : {nowitllwork/left__i8/SP   nowitllwork/left__i9/SP}  (SLICE_R16C5C)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 3
-Delay Ratio      : 79.1% (route), 20.9% (logic)
+Delay Ratio      : 79.2% (route), 20.8% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.191 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 30.485 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY           5.499                  5.499  21      
+{nowitllwork/prescaler_25_34__i4/CK   nowitllwork/prescaler_25_34__i5/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-nowitllwork.i26_4_lut/D->nowitllwork.i26_4_lut/Z
-                                          SLICE_R14C3B       D1_TO_F1_DELAY      0.449                 13.125  6       
-nowitllwork/n346                                             NET DELAY           3.318                 16.443  6       
-{nowitllwork/left__i15/SP   nowitllwork/left__i16/SP}
-                                                             ENDPOINT            0.000                 16.443  1       
+nowitllwork/prescaler_25_34__i4/CK->nowitllwork/prescaler_25_34__i4/Q
+                                          SLICE_R13C3C       CLK_TO_Q0_DELAY     1.388                  6.887  4       
+nowitllwork/bit_state[1]                                     NET DELAY           2.022                  8.909  4       
+nowitllwork/i174_2_lut/B->nowitllwork/i174_2_lut/Z
+                                          SLICE_R14C3C       C0_TO_F0_DELAY      0.449                  9.358  2       
+nowitllwork/n311                                             NET DELAY           2.168                 11.526  2       
+nowitllwork.i27_4_lut/B->nowitllwork.i27_4_lut/Z
+                                          SLICE_R14C3B       D0_TO_F0_DELAY      0.449                 11.975  5       
+nowitllwork/n120                                             NET DELAY           4.507                 16.482  5       
+{nowitllwork/left__i8/SP   nowitllwork/left__i9/SP}
+                                                             ENDPOINT            0.000                 16.482  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-{nowitllwork/left__i15/CK   nowitllwork/left__i16/CK}
-                                                             CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY           5.499                 47.165  21      
+{nowitllwork/left__i8/CK   nowitllwork/left__i9/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(16.442)  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(16.481)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.191  
+Path Slack  (Passed)                                                                                   30.485  
 
 
 
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : {nowitllwork/left__i13/SP   nowitllwork/left__i14/SP}  (SLICE_R16C6D)
+Path Begin       : nowitllwork/prescaler_25_34__i4/Q  (SLICE_R13C3C)
+Path End         : {nowitllwork/left__i6/SP   nowitllwork/left__i7/SP}  (SLICE_R16C5D)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 3
-Delay Ratio      : 79.1% (route), 20.9% (logic)
+Delay Ratio      : 79.2% (route), 20.8% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.191 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 30.485 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY           5.499                  5.499  21      
+{nowitllwork/prescaler_25_34__i4/CK   nowitllwork/prescaler_25_34__i5/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-nowitllwork.i26_4_lut/D->nowitllwork.i26_4_lut/Z
-                                          SLICE_R14C3B       D1_TO_F1_DELAY      0.449                 13.125  6       
-nowitllwork/n346                                             NET DELAY           3.318                 16.443  6       
-{nowitllwork/left__i13/SP   nowitllwork/left__i14/SP}
-                                                             ENDPOINT            0.000                 16.443  1       
+nowitllwork/prescaler_25_34__i4/CK->nowitllwork/prescaler_25_34__i4/Q
+                                          SLICE_R13C3C       CLK_TO_Q0_DELAY     1.388                  6.887  4       
+nowitllwork/bit_state[1]                                     NET DELAY           2.022                  8.909  4       
+nowitllwork/i174_2_lut/B->nowitllwork/i174_2_lut/Z
+                                          SLICE_R14C3C       C0_TO_F0_DELAY      0.449                  9.358  2       
+nowitllwork/n311                                             NET DELAY           2.168                 11.526  2       
+nowitllwork.i27_4_lut/B->nowitllwork.i27_4_lut/Z
+                                          SLICE_R14C3B       D0_TO_F0_DELAY      0.449                 11.975  5       
+nowitllwork/n120                                             NET DELAY           4.507                 16.482  5       
+{nowitllwork/left__i6/SP   nowitllwork/left__i7/SP}
+                                                             ENDPOINT            0.000                 16.482  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-{nowitllwork/left__i13/CK   nowitllwork/left__i14/CK}
-                                                             CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY           5.499                 47.165  21      
+{nowitllwork/left__i6/CK   nowitllwork/left__i7/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(16.442)  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(16.481)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.191  
+Path Slack  (Passed)                                                                                   30.485  
 
 
 
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : {nowitllwork/left__i11/SP   nowitllwork/left__i12/SP}  (SLICE_R16C6C)
+Path Begin       : nowitllwork/prescaler_25_34__i4/Q  (SLICE_R13C3C)
+Path End         : {nowitllwork/left__i4/SP   nowitllwork/left__i5/SP}  (SLICE_R16C5B)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 3
-Delay Ratio      : 79.1% (route), 20.9% (logic)
+Delay Ratio      : 79.2% (route), 20.8% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.191 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 30.485 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY           5.499                  5.499  21      
+{nowitllwork/prescaler_25_34__i4/CK   nowitllwork/prescaler_25_34__i5/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-nowitllwork.i26_4_lut/D->nowitllwork.i26_4_lut/Z
-                                          SLICE_R14C3B       D1_TO_F1_DELAY      0.449                 13.125  6       
-nowitllwork/n346                                             NET DELAY           3.318                 16.443  6       
-{nowitllwork/left__i11/SP   nowitllwork/left__i12/SP}
-                                                             ENDPOINT            0.000                 16.443  1       
+nowitllwork/prescaler_25_34__i4/CK->nowitllwork/prescaler_25_34__i4/Q
+                                          SLICE_R13C3C       CLK_TO_Q0_DELAY     1.388                  6.887  4       
+nowitllwork/bit_state[1]                                     NET DELAY           2.022                  8.909  4       
+nowitllwork/i174_2_lut/B->nowitllwork/i174_2_lut/Z
+                                          SLICE_R14C3C       C0_TO_F0_DELAY      0.449                  9.358  2       
+nowitllwork/n311                                             NET DELAY           2.168                 11.526  2       
+nowitllwork.i27_4_lut/B->nowitllwork.i27_4_lut/Z
+                                          SLICE_R14C3B       D0_TO_F0_DELAY      0.449                 11.975  5       
+nowitllwork/n120                                             NET DELAY           4.507                 16.482  5       
+{nowitllwork/left__i4/SP   nowitllwork/left__i5/SP}
+                                                             ENDPOINT            0.000                 16.482  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-{nowitllwork/left__i11/CK   nowitllwork/left__i12/CK}
-                                                             CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY           5.499                 47.165  21      
+{nowitllwork/left__i4/CK   nowitllwork/left__i5/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(16.442)  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(16.481)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.191  
+Path Slack  (Passed)                                                                                   30.485  
 
 
 
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : {nowitllwork/left__i9/SP   nowitllwork/left__i10/SP}  (SLICE_R16C6B)
+Path Begin       : nowitllwork/prescaler_25_34__i4/Q  (SLICE_R13C3C)
+Path End         : {nowitllwork/left__i2/SP   nowitllwork/left__i3/SP}  (SLICE_R16C5A)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 3
-Delay Ratio      : 79.1% (route), 20.9% (logic)
+Delay Ratio      : 79.2% (route), 20.8% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.191 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 30.485 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY           5.499                  5.499  21      
+{nowitllwork/prescaler_25_34__i4/CK   nowitllwork/prescaler_25_34__i5/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-nowitllwork.i26_4_lut/D->nowitllwork.i26_4_lut/Z
-                                          SLICE_R14C3B       D1_TO_F1_DELAY      0.449                 13.125  6       
-nowitllwork/n346                                             NET DELAY           3.318                 16.443  6       
-{nowitllwork/left__i9/SP   nowitllwork/left__i10/SP}
-                                                             ENDPOINT            0.000                 16.443  1       
+nowitllwork/prescaler_25_34__i4/CK->nowitllwork/prescaler_25_34__i4/Q
+                                          SLICE_R13C3C       CLK_TO_Q0_DELAY     1.388                  6.887  4       
+nowitllwork/bit_state[1]                                     NET DELAY           2.022                  8.909  4       
+nowitllwork/i174_2_lut/B->nowitllwork/i174_2_lut/Z
+                                          SLICE_R14C3C       C0_TO_F0_DELAY      0.449                  9.358  2       
+nowitllwork/n311                                             NET DELAY           2.168                 11.526  2       
+nowitllwork.i27_4_lut/B->nowitllwork.i27_4_lut/Z
+                                          SLICE_R14C3B       D0_TO_F0_DELAY      0.449                 11.975  5       
+nowitllwork/n120                                             NET DELAY           4.507                 16.482  5       
+{nowitllwork/left__i2/SP   nowitllwork/left__i3/SP}
+                                                             ENDPOINT            0.000                 16.482  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-{nowitllwork/left__i9/CK   nowitllwork/left__i10/CK}
-                                                             CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY           5.499                 47.165  21      
+{nowitllwork/left__i2/CK   nowitllwork/left__i3/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(16.442)  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(16.481)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.191  
+Path Slack  (Passed)                                                                                   30.485  
 
 
 
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : getsignal/signalWindow[9]__i129/SP  (SLICE_R13C2A)
+Path Begin       : nowitllwork/prescaler_25_34__i4/Q  (SLICE_R13C3C)
+Path End         : nowitllwork/left__i1/SP  (SLICE_R15C3D)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 3
-Delay Ratio      : 78.8% (route), 21.2% (logic)
+Delay Ratio      : 73.7% (route), 26.3% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.363 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 32.785 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY           5.499                  5.499  21      
+{nowitllwork/prescaler_25_34__i4/CK   nowitllwork/prescaler_25_34__i5/CK}
+                                                             CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-getsignal/i27_2_lut_3_lut_4_lut/C->getsignal/i27_2_lut_3_lut_4_lut/Z
-                                          SLICE_R14C3C       D1_TO_F1_DELAY      0.449                 13.125  3       
-getsignal/n348                                               NET DELAY           3.146                 16.271  3       
-getsignal/signalWindow[9]__i129/SP                           ENDPOINT            0.000                 16.271  1       
+nowitllwork/prescaler_25_34__i4/CK->nowitllwork/prescaler_25_34__i4/Q
+                                          SLICE_R13C3C       CLK_TO_Q0_DELAY     1.388                  6.887  4       
+nowitllwork/bit_state[1]                                     NET DELAY           2.022                  8.909  4       
+nowitllwork/i174_2_lut/B->nowitllwork/i174_2_lut/Z
+                                          SLICE_R14C3C       C0_TO_F0_DELAY      0.449                  9.358  2       
+nowitllwork/n311                                             NET DELAY           2.168                 11.526  2       
+nowitllwork.i27_4_lut/B->nowitllwork.i27_4_lut/Z
+                                          SLICE_R14C3B       D0_TO_F0_DELAY      0.449                 11.975  5       
+nowitllwork/n120                                             NET DELAY           2.207                 14.182  5       
+nowitllwork/left__i1/SP                                      ENDPOINT            0.000                 14.182  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-getsignal/signalWindow[9]__i129/CK                           CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
+                                                             CONSTRAINT          0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY           5.499                 47.165  21      
+nowitllwork/left__i1/CK                                      CLOCK PIN           0.000                 47.165  1       
+                                                             Uncertainty      -(0.000)                 47.165  
+                                                             Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(16.270)  
+Required Time                                                                                          46.967  
+Arrival Time                                                                                        -(14.181)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.363  
+Path Slack  (Passed)                                                                                   32.785  
 
 
 
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : getsignal/signalWindow[9]__i132/SP  (SLICE_R13C2C)
+Path Begin       : nowitllwork/prescaler_25_34__i1/Q  (SLICE_R13C3A)
+Path End         : nowitllwork/prescaler_25_34__i8/D  (SLICE_R13C4A)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
-Logic Level      : 3
-Delay Ratio      : 78.8% (route), 21.2% (logic)
+Logic Level      : 9
+Delay Ratio      : 45.6% (route), 54.4% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.363 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 34.361 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY               5.499                  5.499  21      
+nowitllwork/prescaler_25_34__i1/CK                           CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-getsignal/i27_2_lut_3_lut_4_lut/C->getsignal/i27_2_lut_3_lut_4_lut/Z
-                                          SLICE_R14C3C       D1_TO_F1_DELAY      0.449                 13.125  3       
-getsignal/n348                                               NET DELAY           3.146                 16.271  3       
-getsignal/signalWindow[9]__i132/SP                           ENDPOINT            0.000                 16.271  1       
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+nowitllwork/prescaler_25_34__i1/CK->nowitllwork/prescaler_25_34__i1/Q
+                                          SLICE_R13C3A       CLK_TO_Q1_DELAY         1.388                  6.887  2       
+nowitllwork/prescaler[0]                                     NET DELAY               2.022                  8.909  2       
+nowitllwork/prescaler_25_34_add_4_1/C1->nowitllwork/prescaler_25_34_add_4_1/CO1
+                                          SLICE_R13C3A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nowitllwork/n233                                             NET DELAY               0.000                  9.252  2       
+nowitllwork/prescaler_25_34_add_4_3/CI0->nowitllwork/prescaler_25_34_add_4_3/CO0
+                                          SLICE_R13C3B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nowitllwork/n418                                             NET DELAY               0.000                  9.529  2       
+nowitllwork/prescaler_25_34_add_4_3/CI1->nowitllwork/prescaler_25_34_add_4_3/CO1
+                                          SLICE_R13C3B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nowitllwork/n235                                             NET DELAY               0.000                  9.806  2       
+nowitllwork/prescaler_25_34_add_4_5/CI0->nowitllwork/prescaler_25_34_add_4_5/CO0
+                                          SLICE_R13C3C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nowitllwork/n421                                             NET DELAY               0.000                 10.083  2       
+nowitllwork/prescaler_25_34_add_4_5/CI1->nowitllwork/prescaler_25_34_add_4_5/CO1
+                                          SLICE_R13C3C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nowitllwork/n237                                             NET DELAY               0.000                 10.360  2       
+nowitllwork/prescaler_25_34_add_4_7/CI0->nowitllwork/prescaler_25_34_add_4_7/CO0
+                                          SLICE_R13C3D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nowitllwork/n424                                             NET DELAY               0.000                 10.637  2       
+nowitllwork/prescaler_25_34_add_4_7/CI1->nowitllwork/prescaler_25_34_add_4_7/CO1
+                                          SLICE_R13C3D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nowitllwork/n239                                             NET DELAY               1.216                 12.130  2       
+nowitllwork/prescaler_25_34_add_4_9/D0->nowitllwork/prescaler_25_34_add_4_9/S0
+                                          SLICE_R13C4A       D0_TO_F0_DELAY          0.476                 12.606  1       
+nowitllwork/n37[7]                                           NET DELAY               0.000                 12.606  1       
+nowitllwork/prescaler_25_34__i8/D                            ENDPOINT                0.000                 12.606  1       
 
 
 Destination Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-getsignal/signalWindow[9]__i132/CK                           CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(16.270)  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.363  
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY               5.499                 47.165  21      
+nowitllwork/prescaler_25_34__i8/CK                           CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(12.605)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       34.361  
 
 
 
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : getsignal/signalWindow[9]__i131/SP  (SLICE_R13C2D)
+Path Begin       : nowitllwork/prescaler_25_34__i1/Q  (SLICE_R13C3A)
+Path End         : nowitllwork/prescaler_25_34__i7/D  (SLICE_R13C3D)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
-Logic Level      : 3
-Delay Ratio      : 78.8% (route), 21.2% (logic)
+Logic Level      : 8
+Delay Ratio      : 42.8% (route), 57.2% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.363 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 35.193 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY               5.499                  5.499  21      
+nowitllwork/prescaler_25_34__i1/CK                           CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-getsignal/i27_2_lut_3_lut_4_lut/C->getsignal/i27_2_lut_3_lut_4_lut/Z
-                                          SLICE_R14C3C       D1_TO_F1_DELAY      0.449                 13.125  3       
-getsignal/n348                                               NET DELAY           3.146                 16.271  3       
-getsignal/signalWindow[9]__i131/SP                           ENDPOINT            0.000                 16.271  1       
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+nowitllwork/prescaler_25_34__i1/CK->nowitllwork/prescaler_25_34__i1/Q
+                                          SLICE_R13C3A       CLK_TO_Q1_DELAY         1.388                  6.887  2       
+nowitllwork/prescaler[0]                                     NET DELAY               2.022                  8.909  2       
+nowitllwork/prescaler_25_34_add_4_1/C1->nowitllwork/prescaler_25_34_add_4_1/CO1
+                                          SLICE_R13C3A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nowitllwork/n233                                             NET DELAY               0.000                  9.252  2       
+nowitllwork/prescaler_25_34_add_4_3/CI0->nowitllwork/prescaler_25_34_add_4_3/CO0
+                                          SLICE_R13C3B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nowitllwork/n418                                             NET DELAY               0.000                  9.529  2       
+nowitllwork/prescaler_25_34_add_4_3/CI1->nowitllwork/prescaler_25_34_add_4_3/CO1
+                                          SLICE_R13C3B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nowitllwork/n235                                             NET DELAY               0.000                  9.806  2       
+nowitllwork/prescaler_25_34_add_4_5/CI0->nowitllwork/prescaler_25_34_add_4_5/CO0
+                                          SLICE_R13C3C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nowitllwork/n421                                             NET DELAY               0.000                 10.083  2       
+nowitllwork/prescaler_25_34_add_4_5/CI1->nowitllwork/prescaler_25_34_add_4_5/CO1
+                                          SLICE_R13C3C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nowitllwork/n237                                             NET DELAY               0.000                 10.360  2       
+nowitllwork/prescaler_25_34_add_4_7/CI0->nowitllwork/prescaler_25_34_add_4_7/CO0
+                                          SLICE_R13C3D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nowitllwork/n424                                             NET DELAY               0.661                 11.298  2       
+nowitllwork/prescaler_25_34_add_4_7/D1->nowitllwork/prescaler_25_34_add_4_7/S1
+                                          SLICE_R13C3D       D1_TO_F1_DELAY          0.476                 11.774  1       
+nowitllwork/n37[6]                                           NET DELAY               0.000                 11.774  1       
+nowitllwork/prescaler_25_34__i7/D                            ENDPOINT                0.000                 11.774  1       
 
 
 Destination Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-getsignal/signalWindow[9]__i131/CK                           CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(16.270)  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.363  
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY               5.499                 47.165  21      
+{nowitllwork/prescaler_25_34__i6/CK   nowitllwork/prescaler_25_34__i7/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(11.773)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       35.193  
 
 
 
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : {nowitllwork/left__i3/SP   nowitllwork/left__i4/SP}  (SLICE_R14C2A)
+Path Begin       : nowitllwork/prescaler_25_34__i1/Q  (SLICE_R13C3A)
+Path End         : nowitllwork/prescaler_25_34__i6/D  (SLICE_R13C3D)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
-Logic Level      : 3
-Delay Ratio      : 78.1% (route), 21.9% (logic)
+Logic Level      : 7
+Delay Ratio      : 44.7% (route), 55.3% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.707 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 35.470 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY               5.499                  5.499  21      
+nowitllwork/prescaler_25_34__i1/CK                           CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-nowitllwork.i26_4_lut/D->nowitllwork.i26_4_lut/Z
-                                          SLICE_R14C3B       D1_TO_F1_DELAY      0.449                 13.125  6       
-nowitllwork/n346                                             NET DELAY           2.802                 15.927  6       
-{nowitllwork/left__i3/SP   nowitllwork/left__i4/SP}
-                                                             ENDPOINT            0.000                 15.927  1       
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+nowitllwork/prescaler_25_34__i1/CK->nowitllwork/prescaler_25_34__i1/Q
+                                          SLICE_R13C3A       CLK_TO_Q1_DELAY         1.388                  6.887  2       
+nowitllwork/prescaler[0]                                     NET DELAY               2.022                  8.909  2       
+nowitllwork/prescaler_25_34_add_4_1/C1->nowitllwork/prescaler_25_34_add_4_1/CO1
+                                          SLICE_R13C3A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nowitllwork/n233                                             NET DELAY               0.000                  9.252  2       
+nowitllwork/prescaler_25_34_add_4_3/CI0->nowitllwork/prescaler_25_34_add_4_3/CO0
+                                          SLICE_R13C3B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nowitllwork/n418                                             NET DELAY               0.000                  9.529  2       
+nowitllwork/prescaler_25_34_add_4_3/CI1->nowitllwork/prescaler_25_34_add_4_3/CO1
+                                          SLICE_R13C3B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nowitllwork/n235                                             NET DELAY               0.000                  9.806  2       
+nowitllwork/prescaler_25_34_add_4_5/CI0->nowitllwork/prescaler_25_34_add_4_5/CO0
+                                          SLICE_R13C3C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nowitllwork/n421                                             NET DELAY               0.000                 10.083  2       
+nowitllwork/prescaler_25_34_add_4_5/CI1->nowitllwork/prescaler_25_34_add_4_5/CO1
+                                          SLICE_R13C3C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nowitllwork/n237                                             NET DELAY               0.661                 11.021  2       
+nowitllwork/prescaler_25_34_add_4_7/D0->nowitllwork/prescaler_25_34_add_4_7/S0
+                                          SLICE_R13C3D       D0_TO_F0_DELAY          0.476                 11.497  1       
+nowitllwork/n37[5]                                           NET DELAY               0.000                 11.497  1       
+nowitllwork/prescaler_25_34__i6/D                            ENDPOINT                0.000                 11.497  1       
 
 
 Destination Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-{nowitllwork/left__i3/CK   nowitllwork/left__i4/CK}
-                                                             CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(15.926)  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.707  
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY               5.499                 47.165  21      
+{nowitllwork/prescaler_25_34__i6/CK   nowitllwork/prescaler_25_34__i7/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(11.496)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       35.470  
 
 
 
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i8/Q  (SLICE_R13C4A)
-Path End         : nowitllwork/left__i1/SP  (SLICE_R14C2C)
+Path Begin       : nowitllwork/prescaler_25_34__i1/Q  (SLICE_R13C3A)
+Path End         : nowitllwork/prescaler_25_34__i5/D  (SLICE_R13C3C)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
-Logic Level      : 3
-Delay Ratio      : 78.1% (route), 21.9% (logic)
+Logic Level      : 6
+Delay Ratio      : 46.9% (route), 53.1% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 72.707 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 35.747 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY           5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN           0.000                  5.499  1       
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY               5.499                  5.499  21      
+nowitllwork/prescaler_25_34__i1/CK                           CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i8/CK->nowitllwork/prescaler_24_36__i8/Q
-                                          SLICE_R13C4A       CLK_TO_Q0_DELAY     1.388                  6.887  4       
-nowitllwork/lrck_c                                           NET DELAY           3.172                 10.059  4       
-nowitllwork/i3_4_lut/B->nowitllwork/i3_4_lut/Z
-                                          SLICE_R14C3A       A1_TO_F1_DELAY      0.449                 10.508  3       
-getsignal/n439                                               NET DELAY           2.168                 12.676  3       
-nowitllwork.i26_4_lut/D->nowitllwork.i26_4_lut/Z
-                                          SLICE_R14C3B       D1_TO_F1_DELAY      0.449                 13.125  6       
-nowitllwork/n346                                             NET DELAY           2.802                 15.927  6       
-nowitllwork/left__i1/SP                                      ENDPOINT            0.000                 15.927  1       
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+nowitllwork/prescaler_25_34__i1/CK->nowitllwork/prescaler_25_34__i1/Q
+                                          SLICE_R13C3A       CLK_TO_Q1_DELAY         1.388                  6.887  2       
+nowitllwork/prescaler[0]                                     NET DELAY               2.022                  8.909  2       
+nowitllwork/prescaler_25_34_add_4_1/C1->nowitllwork/prescaler_25_34_add_4_1/CO1
+                                          SLICE_R13C3A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nowitllwork/n233                                             NET DELAY               0.000                  9.252  2       
+nowitllwork/prescaler_25_34_add_4_3/CI0->nowitllwork/prescaler_25_34_add_4_3/CO0
+                                          SLICE_R13C3B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nowitllwork/n418                                             NET DELAY               0.000                  9.529  2       
+nowitllwork/prescaler_25_34_add_4_3/CI1->nowitllwork/prescaler_25_34_add_4_3/CO1
+                                          SLICE_R13C3B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nowitllwork/n235                                             NET DELAY               0.000                  9.806  2       
+nowitllwork/prescaler_25_34_add_4_5/CI0->nowitllwork/prescaler_25_34_add_4_5/CO0
+                                          SLICE_R13C3C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nowitllwork/n421                                             NET DELAY               0.661                 10.744  2       
+nowitllwork/prescaler_25_34_add_4_5/D1->nowitllwork/prescaler_25_34_add_4_5/S1
+                                          SLICE_R13C3C       D1_TO_F1_DELAY          0.476                 11.220  1       
+nowitllwork/n37[4]                                           NET DELAY               0.000                 11.220  1       
+nowitllwork/prescaler_25_34__i5/D                            ENDPOINT                0.000                 11.220  1       
 
 
 Destination Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-                                                             CONSTRAINT          0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY           5.499                 88.832  25      
-nowitllwork/left__i1/CK                                      CLOCK PIN           0.000                 88.832  1       
-                                                             Uncertainty      -(0.000)                 88.832  
-                                                             Setup time       -(0.198)                 88.634  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Required Time                                                                                          88.634  
-Arrival Time                                                                                        -(15.926)  
-----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   72.707  
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY               5.499                 47.165  21      
+{nowitllwork/prescaler_25_34__i4/CK   nowitllwork/prescaler_25_34__i5/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(11.219)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                       35.747  
 
 
 
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/prescaler_24_36__i1/Q  (SLICE_R13C3A)
-Path End         : nowitllwork/prescaler_24_36__i8/D  (SLICE_R13C4A)
+Path Begin       : nowitllwork/prescaler_25_34__i1/Q  (SLICE_R13C3A)
+Path End         : nowitllwork/prescaler_25_34__i4/D  (SLICE_R13C3C)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
-Logic Level      : 9
-Delay Ratio      : 45.6% (route), 54.4% (logic)
+Logic Level      : 5
+Delay Ratio      : 49.3% (route), 50.7% (logic)
 Clock Skew       : 0.000 ns 
-Setup Constraint : 83.333 ns 
-Path Slack       : 76.028 ns  (Passed)
+Setup Constraint : 41.666 ns 
+Path Slack       : 36.024 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  25      
-getsignal/scki_c                                             NET DELAY               5.499                  5.499  25      
-nowitllwork/prescaler_24_36__i1/CK                           CLOCK PIN               0.000                  5.499  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  21      
+coretest/scki_c                                              NET DELAY               5.499                  5.499  21      
+nowitllwork/prescaler_25_34__i1/CK                           CLOCK PIN               0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nowitllwork/prescaler_24_36__i1/CK->nowitllwork/prescaler_24_36__i1/Q
+nowitllwork/prescaler_25_34__i1/CK->nowitllwork/prescaler_25_34__i1/Q
                                           SLICE_R13C3A       CLK_TO_Q1_DELAY         1.388                  6.887  2       
 nowitllwork/prescaler[0]                                     NET DELAY               2.022                  8.909  2       
-nowitllwork/prescaler_24_36_add_4_1/C1->nowitllwork/prescaler_24_36_add_4_1/CO1
+nowitllwork/prescaler_25_34_add_4_1/C1->nowitllwork/prescaler_25_34_add_4_1/CO1
                                           SLICE_R13C3A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nowitllwork/n490                                             NET DELAY               0.000                  9.252  2       
-nowitllwork/prescaler_24_36_add_4_3/CI0->nowitllwork/prescaler_24_36_add_4_3/CO0
+nowitllwork/n233                                             NET DELAY               0.000                  9.252  2       
+nowitllwork/prescaler_25_34_add_4_3/CI0->nowitllwork/prescaler_25_34_add_4_3/CO0
                                           SLICE_R13C3B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nowitllwork/n654                                             NET DELAY               0.000                  9.529  2       
-nowitllwork/prescaler_24_36_add_4_3/CI1->nowitllwork/prescaler_24_36_add_4_3/CO1
+nowitllwork/n418                                             NET DELAY               0.000                  9.529  2       
+nowitllwork/prescaler_25_34_add_4_3/CI1->nowitllwork/prescaler_25_34_add_4_3/CO1
                                           SLICE_R13C3B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nowitllwork/n492                                             NET DELAY               0.000                  9.806  2       
-nowitllwork/prescaler_24_36_add_4_5/CI0->nowitllwork/prescaler_24_36_add_4_5/CO0
-                                          SLICE_R13C3C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nowitllwork/n657                                             NET DELAY               0.000                 10.083  2       
-nowitllwork/prescaler_24_36_add_4_5/CI1->nowitllwork/prescaler_24_36_add_4_5/CO1
-                                          SLICE_R13C3C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nowitllwork/n494                                             NET DELAY               0.000                 10.360  2       
-nowitllwork/prescaler_24_36_add_4_7/CI0->nowitllwork/prescaler_24_36_add_4_7/CO0
-                                          SLICE_R13C3D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nowitllwork/n660                                             NET DELAY               0.000                 10.637  2       
-nowitllwork/prescaler_24_36_add_4_7/CI1->nowitllwork/prescaler_24_36_add_4_7/CO1
-                                          SLICE_R13C3D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nowitllwork/n496                                             NET DELAY               1.216                 12.130  2       
-nowitllwork/prescaler_24_36_add_4_9/D0->nowitllwork/prescaler_24_36_add_4_9/S0
-                                          SLICE_R13C4A       D0_TO_F0_DELAY          0.476                 12.606  1       
-nowitllwork/n37[7]                                           NET DELAY               0.000                 12.606  1       
-nowitllwork/prescaler_24_36__i8/D                            ENDPOINT                0.000                 12.606  1       
+nowitllwork/n235                                             NET DELAY               0.661                 10.467  2       
+nowitllwork/prescaler_25_34_add_4_5/D0->nowitllwork/prescaler_25_34_add_4_5/S0
+                                          SLICE_R13C3C       D0_TO_F0_DELAY          0.476                 10.943  1       
+nowitllwork/n37[3]                                           NET DELAY               0.000                 10.943  1       
+nowitllwork/prescaler_25_34__i4/D                            ENDPOINT                0.000                 10.943  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-                                                             CONSTRAINT              0.000                 83.333  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 83.333  25      
-getsignal/scki_c                                             NET DELAY               5.499                 88.832  25      
-nowitllwork/prescaler_24_36__i8/CK                           CLOCK PIN               0.000                 88.832  1       
-                                                             Uncertainty          -(0.000)                 88.832  
-                                                             Setup time           -(0.198)                 88.634  
+                                                             CONSTRAINT              0.000                 41.666  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 41.666  21      
+coretest/scki_c                                              NET DELAY               5.499                 47.165  21      
+{nowitllwork/prescaler_25_34__i4/CK   nowitllwork/prescaler_25_34__i5/CK}
+                                                             CLOCK PIN               0.000                 47.165  1       
+                                                             Uncertainty          -(0.000)                 47.165  
+                                                             Setup time           -(0.198)                 46.967  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-Required Time                                                                                              88.634  
-Arrival Time                                                                                            -(12.605)  
+Required Time                                                                                              46.967  
+Arrival Time                                                                                            -(10.942)  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                       76.028  
+Path Slack  (Passed)                                                                                       36.024  
 
 
 
@@ -810,16 +858,16 @@ Path Slack  (Passed)                                                            
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-coretest/finalVal_i0_i2/D                |    1.743 ns 
-coretest/finalVal_i0_i3/D                |    1.743 ns 
-coretest/leftTemp_i0_i1/D                |    1.743 ns 
-coretest/leftTemp_i0_i0/D                |    1.743 ns 
-coretest/leftTemp_i0_i3/D                |    1.743 ns 
 coretest/leftTemp_i0_i2/D                |    1.743 ns 
-coretest/leftTemp_i0_i5/D                |    1.743 ns 
-coretest/leftTemp_i0_i4/D                |    1.743 ns 
-coretest/finalVal_i0_i0/D                |    1.743 ns 
-coretest/finalVal_i0_i1/D                |    1.743 ns 
+coretest/leftTemp_i0_i3/D                |    1.743 ns 
+coretest/leftTemp_i0_i0/D                |    1.743 ns 
+coretest/leftTemp_i0_i1/D                |    1.743 ns 
+coretest/finalVal__i8/D                  |    1.743 ns 
+coretest/finalVal__i7/D                  |    1.743 ns 
+coretest/finalVal__i2/D                  |    1.743 ns 
+coretest/finalVal__i1/D                  |    1.743 ns 
+coretest/finalVal__i4/D                  |    1.743 ns 
+coretest/finalVal__i3/D                  |    1.743 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -842,8 +890,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : coretest/leftTemp_i0_i2/Q  (SLICE_R17C6C)
-Path End         : coretest/finalVal_i0_i2/D  (SLICE_R18C6D)
+Path Begin       : nowitllwork/left__i4/Q  (SLICE_R16C5B)
+Path End         : coretest/leftTemp_i0_i2/D  (SLICE_R17C5C)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -856,31 +904,30 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i3/CK   coretest/leftTemp_i0_i2/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{nowitllwork/left__i4/CK   nowitllwork/left__i5/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-coretest/leftTemp_i0_i2/CK->coretest/leftTemp_i0_i2/Q
-                                          SLICE_R17C6C       CLK_TO_Q1_DELAY  0.779                  3.863  1       
-coretest/leftTemp[2]                                         NET DELAY        0.712                  4.575  1       
-coretest.SLICE_89/D0->coretest.SLICE_89/F0
-                                          SLICE_R18C6D       D0_TO_F0_DELAY   0.252                  4.827  1       
-coretest.leftTemp[2].sig_076.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
-coretest/finalVal_i0_i2/D                                    ENDPOINT         0.000                  4.827  1       
+nowitllwork/left__i4/CK->nowitllwork/left__i4/Q
+                                          SLICE_R16C5B       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+coretest/left[18]                                            NET DELAY        0.712                  4.575  1       
+SLICE_47/D0->SLICE_47/F0                  SLICE_R17C5C       D0_TO_F0_DELAY   0.252                  4.827  1       
+left[18].sig_041.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
+coretest/leftTemp_i0_i2/D                                    ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/finalVal_i0_i2/CK   coretest/finalVal_i0_i3/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i2/CK   coretest/leftTemp_i0_i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -895,8 +942,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : coretest/leftTemp_i0_i3/Q  (SLICE_R17C6C)
-Path End         : coretest/finalVal_i0_i3/D  (SLICE_R18C6D)
+Path Begin       : nowitllwork/left__i5/Q  (SLICE_R16C5B)
+Path End         : coretest/leftTemp_i0_i3/D  (SLICE_R17C5C)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -909,31 +956,30 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i3/CK   coretest/leftTemp_i0_i2/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{nowitllwork/left__i4/CK   nowitllwork/left__i5/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-coretest/leftTemp_i0_i3/CK->coretest/leftTemp_i0_i3/Q
-                                          SLICE_R17C6C       CLK_TO_Q0_DELAY  0.779                  3.863  1       
-coretest/leftTemp[3]                                         NET DELAY        0.712                  4.575  1       
-coretest.SLICE_89/D1->coretest.SLICE_89/F1
-                                          SLICE_R18C6D       D1_TO_F1_DELAY   0.252                  4.827  1       
-coretest.leftTemp[3].sig_077.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
-coretest/finalVal_i0_i3/D                                    ENDPOINT         0.000                  4.827  1       
+nowitllwork/left__i5/CK->nowitllwork/left__i5/Q
+                                          SLICE_R16C5B       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+coretest/left[19]                                            NET DELAY        0.712                  4.575  1       
+SLICE_47/D1->SLICE_47/F1                  SLICE_R17C5C       D1_TO_F1_DELAY   0.252                  4.827  1       
+left[19].sig_042.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
+coretest/leftTemp_i0_i3/D                                    ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/finalVal_i0_i2/CK   coretest/finalVal_i0_i3/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i2/CK   coretest/leftTemp_i0_i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -948,8 +994,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/left__i10/Q  (SLICE_R16C6B)
-Path End         : coretest/leftTemp_i0_i1/D  (SLICE_R17C6B)
+Path Begin       : nowitllwork/left__i2/Q  (SLICE_R16C5A)
+Path End         : coretest/leftTemp_i0_i0/D  (SLICE_R17C5B)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -962,30 +1008,30 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{nowitllwork/left__i9/CK   nowitllwork/left__i10/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{nowitllwork/left__i2/CK   nowitllwork/left__i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-nowitllwork/left__i10/CK->nowitllwork/left__i10/Q
-                                          SLICE_R16C6B       CLK_TO_Q1_DELAY  0.779                  3.863  1       
-coretest/left[17]                                            NET DELAY        0.712                  4.575  1       
-SLICE_87/D0->SLICE_87/F0                  SLICE_R17C6B       D0_TO_F0_DELAY   0.252                  4.827  1       
-left[17].sig_074.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
-coretest/leftTemp_i0_i1/D                                    ENDPOINT         0.000                  4.827  1       
+nowitllwork/left__i2/CK->nowitllwork/left__i2/Q
+                                          SLICE_R16C5A       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+coretest/left[16]                                            NET DELAY        0.712                  4.575  1       
+SLICE_44/D0->SLICE_44/F0                  SLICE_R17C5B       D0_TO_F0_DELAY   0.252                  4.827  1       
+left[16].sig_039.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
+coretest/leftTemp_i0_i0/D                                    ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i1/CK   coretest/leftTemp_i0_i0/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i0/CK   coretest/leftTemp_i0_i1/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1000,8 +1046,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/left__i9/Q  (SLICE_R16C6B)
-Path End         : coretest/leftTemp_i0_i0/D  (SLICE_R17C6B)
+Path Begin       : nowitllwork/left__i3/Q  (SLICE_R16C5A)
+Path End         : coretest/leftTemp_i0_i1/D  (SLICE_R17C5B)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -1014,30 +1060,30 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{nowitllwork/left__i9/CK   nowitllwork/left__i10/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{nowitllwork/left__i2/CK   nowitllwork/left__i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-nowitllwork/left__i9/CK->nowitllwork/left__i9/Q
-                                          SLICE_R16C6B       CLK_TO_Q0_DELAY  0.779                  3.863  1       
-coretest/left[16]                                            NET DELAY        0.712                  4.575  1       
-SLICE_87/D1->SLICE_87/F1                  SLICE_R17C6B       D1_TO_F1_DELAY   0.252                  4.827  1       
-left[16].sig_082.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
-coretest/leftTemp_i0_i0/D                                    ENDPOINT         0.000                  4.827  1       
+nowitllwork/left__i3/CK->nowitllwork/left__i3/Q
+                                          SLICE_R16C5A       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+coretest/left[17]                                            NET DELAY        0.712                  4.575  1       
+SLICE_44/D1->SLICE_44/F1                  SLICE_R17C5B       D1_TO_F1_DELAY   0.252                  4.827  1       
+left[17].sig_040.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
+coretest/leftTemp_i0_i1/D                                    ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i1/CK   coretest/leftTemp_i0_i0/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i0/CK   coretest/leftTemp_i0_i1/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1052,8 +1098,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/left__i12/Q  (SLICE_R16C6C)
-Path End         : coretest/leftTemp_i0_i3/D  (SLICE_R17C6C)
+Path Begin       : coretest/leftTemp_i0_i7/Q  (SLICE_R17C5D)
+Path End         : coretest/finalVal__i8/D  (SLICE_R18C5B)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -1066,30 +1112,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{nowitllwork/left__i11/CK   nowitllwork/left__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i6/CK   coretest/leftTemp_i0_i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-nowitllwork/left__i12/CK->nowitllwork/left__i12/Q
-                                          SLICE_R16C6C       CLK_TO_Q1_DELAY  0.779                  3.863  1       
-coretest/left[19]                                            NET DELAY        0.712                  4.575  1       
-SLICE_85/D0->SLICE_85/F0                  SLICE_R17C6C       D0_TO_F0_DELAY   0.252                  4.827  1       
-left[19].sig_072.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
-coretest/leftTemp_i0_i3/D                                    ENDPOINT         0.000                  4.827  1       
+coretest/leftTemp_i0_i7/CK->coretest/leftTemp_i0_i7/Q
+                                          SLICE_R17C5D       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+coretest/leftTemp[7]                                         NET DELAY        0.712                  4.575  1       
+coretest.SLICE_42/D0->coretest.SLICE_42/F0
+                                          SLICE_R18C5B       D0_TO_F0_DELAY   0.252                  4.827  1       
+coretest.leftTemp[7].sig_037.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
+coretest/finalVal__i8/D                                      ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i3/CK   coretest/leftTemp_i0_i2/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/finalVal__i8/CK   coretest/finalVal__i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1104,8 +1151,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/left__i11/Q  (SLICE_R16C6C)
-Path End         : coretest/leftTemp_i0_i2/D  (SLICE_R17C6C)
+Path Begin       : coretest/leftTemp_i0_i6/Q  (SLICE_R17C5D)
+Path End         : coretest/finalVal__i7/D  (SLICE_R18C5B)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -1118,30 +1165,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{nowitllwork/left__i11/CK   nowitllwork/left__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i6/CK   coretest/leftTemp_i0_i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-nowitllwork/left__i11/CK->nowitllwork/left__i11/Q
-                                          SLICE_R16C6C       CLK_TO_Q0_DELAY  0.779                  3.863  1       
-coretest/left[18]                                            NET DELAY        0.712                  4.575  1       
-SLICE_85/D1->SLICE_85/F1                  SLICE_R17C6C       D1_TO_F1_DELAY   0.252                  4.827  1       
-left[18].sig_073.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
-coretest/leftTemp_i0_i2/D                                    ENDPOINT         0.000                  4.827  1       
+coretest/leftTemp_i0_i6/CK->coretest/leftTemp_i0_i6/Q
+                                          SLICE_R17C5D       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+coretest/leftTemp[6]                                         NET DELAY        0.712                  4.575  1       
+coretest.SLICE_42/D1->coretest.SLICE_42/F1
+                                          SLICE_R18C5B       D1_TO_F1_DELAY   0.252                  4.827  1       
+coretest.leftTemp[6].sig_047.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
+coretest/finalVal__i7/D                                      ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i3/CK   coretest/leftTemp_i0_i2/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/finalVal__i8/CK   coretest/finalVal__i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1156,8 +1204,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/left__i14/Q  (SLICE_R16C6D)
-Path End         : coretest/leftTemp_i0_i5/D  (SLICE_R17C6A)
+Path Begin       : coretest/leftTemp_i0_i1/Q  (SLICE_R17C5B)
+Path End         : coretest/finalVal__i2/D  (SLICE_R18C5A)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -1170,30 +1218,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{nowitllwork/left__i13/CK   nowitllwork/left__i14/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i0/CK   coretest/leftTemp_i0_i1/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-nowitllwork/left__i14/CK->nowitllwork/left__i14/Q
-                                          SLICE_R16C6D       CLK_TO_Q1_DELAY  0.779                  3.863  1       
-coretest/left[21]                                            NET DELAY        0.712                  4.575  1       
-SLICE_83/D0->SLICE_83/F0                  SLICE_R17C6A       D0_TO_F0_DELAY   0.252                  4.827  1       
-left[21].sig_070.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
-coretest/leftTemp_i0_i5/D                                    ENDPOINT         0.000                  4.827  1       
+coretest/leftTemp_i0_i1/CK->coretest/leftTemp_i0_i1/Q
+                                          SLICE_R17C5B       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+coretest/leftTemp[1]                                         NET DELAY        0.712                  4.575  1       
+coretest.SLICE_41/D0->coretest.SLICE_41/F0
+                                          SLICE_R18C5A       D0_TO_F0_DELAY   0.252                  4.827  1       
+coretest.leftTemp[1].sig_036.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
+coretest/finalVal__i2/D                                      ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i5/CK   coretest/leftTemp_i0_i4/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/finalVal__i2/CK   coretest/finalVal__i1/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1208,8 +1257,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nowitllwork/left__i13/Q  (SLICE_R16C6D)
-Path End         : coretest/leftTemp_i0_i4/D  (SLICE_R17C6A)
+Path Begin       : coretest/leftTemp_i0_i0/Q  (SLICE_R17C5B)
+Path End         : coretest/finalVal__i1/D  (SLICE_R18C5A)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -1222,30 +1271,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{nowitllwork/left__i13/CK   nowitllwork/left__i14/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i0/CK   coretest/leftTemp_i0_i1/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-nowitllwork/left__i13/CK->nowitllwork/left__i13/Q
-                                          SLICE_R16C6D       CLK_TO_Q0_DELAY  0.779                  3.863  1       
-coretest/left[20]                                            NET DELAY        0.712                  4.575  1       
-SLICE_83/D1->SLICE_83/F1                  SLICE_R17C6A       D1_TO_F1_DELAY   0.252                  4.827  1       
-left[20].sig_071.FeedThruLUT                                 NET DELAY        0.000                  4.827  1       
-coretest/leftTemp_i0_i4/D                                    ENDPOINT         0.000                  4.827  1       
+coretest/leftTemp_i0_i0/CK->coretest/leftTemp_i0_i0/Q
+                                          SLICE_R17C5B       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+coretest/leftTemp[0]                                         NET DELAY        0.712                  4.575  1       
+coretest.SLICE_41/D1->coretest.SLICE_41/F1
+                                          SLICE_R18C5A       D1_TO_F1_DELAY   0.252                  4.827  1       
+coretest.leftTemp[0].sig_038.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
+coretest/finalVal__i1/D                                      ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i5/CK   coretest/leftTemp_i0_i4/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/finalVal__i2/CK   coretest/finalVal__i1/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1260,8 +1310,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : coretest/leftTemp_i0_i0/Q  (SLICE_R17C6B)
-Path End         : coretest/finalVal_i0_i0/D  (SLICE_R18C6A)
+Path Begin       : coretest/leftTemp_i0_i3/Q  (SLICE_R17C5C)
+Path End         : coretest/finalVal__i4/D  (SLICE_R18C5C)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -1274,31 +1324,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i1/CK   coretest/leftTemp_i0_i0/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i2/CK   coretest/leftTemp_i0_i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-coretest/leftTemp_i0_i0/CK->coretest/leftTemp_i0_i0/Q
-                                          SLICE_R17C6B       CLK_TO_Q1_DELAY  0.779                  3.863  1       
-coretest/leftTemp[0]                                         NET DELAY        0.712                  4.575  1       
-coretest.SLICE_81/D0->coretest.SLICE_81/F0
-                                          SLICE_R18C6A       D0_TO_F0_DELAY   0.252                  4.827  1       
-coretest.leftTemp[0].sig_068.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
-coretest/finalVal_i0_i0/D                                    ENDPOINT         0.000                  4.827  1       
+coretest/leftTemp_i0_i3/CK->coretest/leftTemp_i0_i3/Q
+                                          SLICE_R17C5C       CLK_TO_Q1_DELAY  0.779                  3.863  1       
+coretest/leftTemp[3]                                         NET DELAY        0.712                  4.575  1       
+coretest.SLICE_39/D0->coretest.SLICE_39/F0
+                                          SLICE_R18C5C       D0_TO_F0_DELAY   0.252                  4.827  1       
+coretest.leftTemp[3].sig_034.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
+coretest/finalVal__i4/D                                      ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/finalVal_i0_i0/CK   coretest/finalVal_i0_i1/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/finalVal__i4/CK   coretest/finalVal__i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1313,8 +1363,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : coretest/leftTemp_i0_i1/Q  (SLICE_R17C6B)
-Path End         : coretest/finalVal_i0_i1/D  (SLICE_R18C6A)
+Path Begin       : coretest/leftTemp_i0_i2/Q  (SLICE_R17C5C)
+Path End         : coretest/finalVal__i3/D  (SLICE_R18C5C)
 Source Clock     : scki_c (R)
 Destination Clock: scki_c (R)
 Logic Level      : 2
@@ -1327,31 +1377,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/leftTemp_i0_i1/CK   coretest/leftTemp_i0_i0/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/leftTemp_i0_i2/CK   coretest/leftTemp_i0_i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-coretest/leftTemp_i0_i1/CK->coretest/leftTemp_i0_i1/Q
-                                          SLICE_R17C6B       CLK_TO_Q0_DELAY  0.779                  3.863  1       
-coretest/leftTemp[1]                                         NET DELAY        0.712                  4.575  1       
-coretest.SLICE_81/D1->coretest.SLICE_81/F1
-                                          SLICE_R18C6A       D1_TO_F1_DELAY   0.252                  4.827  1       
-coretest.leftTemp[1].sig_075.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
-coretest/finalVal_i0_i1/D                                    ENDPOINT         0.000                  4.827  1       
+coretest/leftTemp_i0_i2/CK->coretest/leftTemp_i0_i2/Q
+                                          SLICE_R17C5C       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+coretest/leftTemp[2]                                         NET DELAY        0.712                  4.575  1       
+coretest.SLICE_39/D1->coretest.SLICE_39/F1
+                                          SLICE_R18C5C       D1_TO_F1_DELAY   0.252                  4.827  1       
+coretest.leftTemp[2].sig_035.FeedThruLUT                     NET DELAY        0.000                  4.827  1       
+coretest/finalVal__i3/D                                      ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  26      
-getsignal/scki_c                                             NET DELAY        3.084                  3.084  26      
-{coretest/finalVal_i0_i0/CK   coretest/finalVal_i0_i1/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  22      
+coretest/scki_c                                              NET DELAY        3.084                  3.084  22      
+{coretest/finalVal__i4/CK   coretest/finalVal__i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  

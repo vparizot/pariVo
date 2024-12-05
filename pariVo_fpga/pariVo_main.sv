@@ -41,9 +41,9 @@ module top(input logic nreset,
 	assign reset = ~(nreset);
 	
 	logic clk;
-    HSOSC #(.CLKHF_DIV ("0b10")) hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));	// set divider to 0b10 to get 12MHz clock
+    HSOSC #(.CLKHF_DIV ("0b01")) hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));	// set divider to 0b10 to get 12MHz clock
 	
-	logic [7:0] finalVal;
+	logic [13:0] finalVal;
 	logic [31:0] eqVals;
 	logic [23:0] left, right;
 	logic [7:0] eqVal;
@@ -82,15 +82,16 @@ module top(input logic nreset,
 	assign sigwin3 = left[11];
 */
 	eq1_spi eqspi1(sck, sdi, sdo, done, eqVals, finalVal); //left[23:16]);  
-	eq1_core coretest(clk, left[23:16], load, eqVals, done, finalVal);
+	eq1_core coretest(clk, left[23:16], right[23:16], load, eqVals, done, finalVal);
 	//audio_deserializer plzwork(reset, clk, bclk, lrck, din, left, right, done);
 	i2s nowitllwork(clk, reset, din, bclk, lrck, scki, left, right, signal_en);
 	
+	/*
 	new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
 	signalwindow getsignal(clk, signal_en, reset, left, signalWindow);
 	dsp dspoutput(clk, clk_en_i, dspreset, tapcoeff, tapnum, signalWindow, result_o, dspdone);
 	gainred getfinalVal(clk, reset, dspdone, result_o, dspfinalVal);
-	
+	*/
 endmodule
 
 module eq1_spi(
@@ -129,6 +130,7 @@ endmodule
 
 module eq1_core(input logic clk, 
 			input logic [7:0] left,
+			input logic [7:0] right,
 			input  logic         load,
             input  logic [31:0] eqVals, 
             output logic         done, 
@@ -136,20 +138,25 @@ module eq1_core(input logic clk,
 			
 //logic [10:0] counter; 
 logic [7:0] leftTemp;
-
+logic [7:0] rightTemp;
 always_ff @(posedge clk) begin
 	if (load) begin
 		done <= 0;
 		//counter <= 0;
 		leftTemp <= left;
+		rightTemp <= right;
 	end
+
+		
+		
+	
 	else begin
 	//	counter <= counter +1;
 	//end
 	
 	//if (counter == 3)
 	//	begin
-			finalVal <= leftTemp;
+			finalVal <= leftTemp;//, rightTemp};
 			done <= 1;
 		end
 end	
@@ -230,11 +237,12 @@ module i2s(input logic         clk,
 			 // done <=0;
           end
         else if (newsample)
-          begin
+          begin // if neg, take twos complement
              left <= lsreg;
              right <= rsreg;
 			 //done <= 1;
           end
+	
         else
           begin
              left <= left;
