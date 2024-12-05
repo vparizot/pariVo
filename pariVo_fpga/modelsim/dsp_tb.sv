@@ -75,7 +75,6 @@ module dsp_tb();
 endmodule 
 
 
-
 module faketop_tb();
 	logic clk;
 	logic reset;
@@ -162,11 +161,13 @@ endmodule
 module signalwindow_tb();
     logic clk;
     logic en;
-    logic [24:0] signal;
-	logic [15:0] signalWindow [0:3];
+    logic [23:0] signal;
+	logic [15:0] signalWindow [0:9];
+	logic reset;
+
     
 
-	signalwindow dut(.clk(clk), .en(en), .signal(signal), .signalWindow(signalWindow));
+	signalwindow dut(.clk(clk), .en(en), .reset(reset), .signal(signal), .signalWindow(signalWindow));
 	always
 		begin
 		clk = 0; #5;
@@ -174,6 +175,11 @@ module signalwindow_tb();
 		end
 	initial
 		begin
+
+		reset = 0; #5;
+		reset = 1; #5;
+		reset = 0; #5;
+
         en = 1;
 		signal = 24'h111111;
 		//tap = 16'h1234;

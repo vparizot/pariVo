@@ -27,8 +27,11 @@ module top(input logic nreset,
 		   //input  logic ce,
 		   //output logic ledTest,
 		   //output logic eqVals,
-		   //output logic testTap,
-		   //output logic testCoeff,
+		   output logic sigwin0,
+		   output logic sigwin1,
+		   output logic sigwin2,
+		   output logic sigwin3,
+		   output logic signal_en,
 		   output logic done  // SPI!!
 		   //output logic leftMsb, leftMsb2, leftMsb3, leftMsb4, leftMsb5, leftMsb6
 		  );
@@ -43,19 +46,50 @@ module top(input logic nreset,
 	logic [7:0] finalVal;
 	logic [31:0] eqVals;
 	logic [23:0] left, right;
+	logic [7:0] eqVal;
 	
-	//assign leftMsb = left[23];
-	//assign leftMsb2 = left[22];
-	//assign leftMsb3 = left[21];
-	//assign leftMsb4 = left[20];
-	//assign leftMsb5 = left[19];
-	//assign leftMsb6 = left[18];
-	//assign leftMSB = left[23:15];
-
+	assign eqVal = 8'h0;
+	
+	logic [15:0] tapcoeff;
+	logic [7:0] tapnum;
+	//logic signal_en;
+	logic [15:0] signalWindow [0:9];
+	logic [32:0] result_o;
+	logic done;
+	logic clk_en_i;
+	logic dspreset;
+	logic dspdone;
+	logic [7:0] dspfinalVal;
+	
+	// check what should enable this?
+	assign clk_en_i = 1;
+	
+	always_comb begin
+		dspreset = dspdone | reset;
+	end
+	
+	//test vals 
+	
+	assign sigwin0 = signalWindow[0][0];
+	assign sigwin1 = left[8];
+	assign sigwin2 = signalWindow[0][2];
+	assign sigwin3 = signalWindow[0][3];
+	
+	/*
+	assign sigwin0 = left[8];
+	assign sigwin1 = left[9];
+	assign sigwin2 = left[10];
+	assign sigwin3 = left[11];
+*/
 	eq1_spi eqspi1(sck, sdi, sdo, done, eqVals, finalVal); //left[23:16]);  
-	eq1_core coretest(clk,  left[23:16], load, eqVals, done, finalVal);
+	eq1_core coretest(clk, left[23:16], load, eqVals, done, finalVal);
 	//audio_deserializer plzwork(reset, clk, bclk, lrck, din, left, right, done);
-	i2s nowitllwork(clk, reset, din, bclk, lrck, scki, left, right);
+	i2s nowitllwork(clk, reset, din, bclk, lrck, scki, left, right, signal_en);
+	
+	new_all_taps getalltaps(clk, reset, eqVal, tapcoeff, tapnum);
+	signalwindow getsignal(clk, signal_en, reset, left, signalWindow);
+	dsp dspoutput(clk, clk_en_i, dspreset, tapcoeff, tapnum, signalWindow, result_o, dspdone);
+	gainred getfinalVal(clk, reset, dspdone, result_o, dspfinalVal);
 	
 endmodule
 
@@ -132,7 +166,8 @@ module i2s(input logic         clk,
            output logic        lrck, // left/right clk,       PA6_J1
            output logic        scki, // PCM1808 system clock, PA5_H4
            output logic [23:0] left, 
-           output logic [23:0] right);
+           output logic [23:0] right,
+		   output logic newsample_valid);
            //output logic        done);
 
    /////////////////// clock ////////////////////////////////////
@@ -185,7 +220,7 @@ module i2s(input logic         clk,
    // this way, left and right will always contain a valid sample.
    logic newsample;
    assign newsample = (bit_state == 25 && lrck && prescaler[1:0] == 0); // once every cycle
-   // assign newsample_valid = (bit_state >= 26 && lrck && prescaler[1:0] == 0); // once we can sample it!
+   assign newsample_valid = (bit_state >= 26 && lrck && prescaler[1:0] == 0); // once we can sample it!
    always_ff @(posedge clk)
      begin
         if (reset)

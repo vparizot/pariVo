@@ -8,6 +8,9 @@ set para(gui_mode) "1"
 set para(prj_dir) "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo"
 # synthesize IPs
 # synthesize VMs
+# propgate constraints
+file delete -force -- ProjectPariVo_impl_1_cpe.ldc
+::radiant::runengine::run_engine_newmsg cpe -syn lse -f "ProjectPariVo_impl_1.cprj" "SB_MAC16.cprj" -a "iCE40UP"  -o ProjectPariVo_impl_1_cpe.ldc
 # synthesize top design
 file delete -force -- ProjectPariVo_impl_1.vm ProjectPariVo_impl_1.ldc
 ::radiant::runengine::run_engine_newmsg synthesis -f "ProjectPariVo_impl_1_lattice.synproj" -logfile "ProjectPariVo_impl_1_lattice.srp"

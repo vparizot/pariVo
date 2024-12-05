@@ -5,13 +5,6 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 Top level modules:
 	gettap_tb
 
-} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/i2s_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/i2s_tb.sv
-Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module i2s_testbench
-
-Top level modules:
-	i2s_testbench
-
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter_tb.sv
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module get_all_taps_tb
@@ -19,18 +12,12 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 Top level modules:
 	get_all_taps_tb
 
-} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/i2s_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/i2s_tb.sv
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module dsp_tb
--- Compiling module faketop_tb
--- Compiling module signalwindow_tb
--- Compiling module gain_tb
+-- Compiling module i2s_testbench
 
 Top level modules:
-	dsp_tb
-	faketop_tb
-	signalwindow_tb
-	gain_tb
+	i2s_testbench
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/adcClock.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/adcClock.sv
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
@@ -47,6 +34,13 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 
 Top level modules:
 	new_all_taps
+
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/i2s.sv {1 {vlog -work work -sv -stats=none {C:\Users\vparizot\E155\pariVo\pariVo_fpga\modelsim\i2s.sv}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module i2spcm
+
+Top level modules:
+	i2spcm
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v {1 {vlog -work work -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_RP/SB_MAC16/rtl/SB_MAC16.v
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
@@ -66,6 +60,17 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 Top level modules:
 	fakeMac16_tb
 
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv {2 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module signalwindow
+-- Compiling module dsp
+** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(57): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module gainred
+-- Compiling module faketop
+
+Top level modules:
+	faketop
+
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMac16.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/fakeMac16.sv
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module fakeMac16
@@ -79,22 +84,5 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 
 Top level modules:
 	coeffssync_tb
-
-} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv {2 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv
-Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module signalwindow
--- Compiling module dsp
-** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(45): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling module gainred
--- Compiling module faketop
--- Compiling module secondtop
-** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(145): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling module fakedsp
-** Warning: C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv(163): (vlog-13314) Defaulting port 'signalWindow' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	faketop
-	secondtop
-	fakedsp
 
 } {} {}}

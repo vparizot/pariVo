@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2024.1.0.34.2
-Mapped on: Wed Dec  4 15:32:16 2024
+Mapped on: Wed Dec  4 22:05:11 2024
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -61,22 +61,22 @@ Command line:   map -pdc
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
 
-   Number of slice registers:  96 out of  5280 (2%)
+   Number of slice registers: 102 out of  5280 (2%)
    Number of I/O registers:      2 out of   117 (2%)
-   Number of LUT4s:           109 out of  5280 (2%)
-      Number of logic LUT4s:              18
-      Number of inserted feedthru LUT4s:  80
+   Number of LUT4s:           119 out of  5280 (2%)
+      Number of logic LUT4s:              22
+      Number of inserted feedthru LUT4s:  86
       Number of replicated LUT4s:          1
       Number of ripple logic:              5 (10 LUT4s)
-   Number of IO sites used:   10 out of 39 (26%)
-      Number of IO sites used for general PIO: 10
+   Number of IO sites used:   15 out of 39 (38%)
+      Number of IO sites used for general PIO: 15
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 10 out of 36 (28%)
+      Number of IO sites used for PIO+I3C: 15 out of 36 (42%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 10 out of 39 (26%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 15 out of 39 (38%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  1 out of 1 (100%)
@@ -90,31 +90,32 @@ Command line:   map -pdc
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  3
-      Net scki_c: 30 loads, 30 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
-      Net sck_c: 41 loads, 39 rising, 2 falling (Driver: Port sck)
+      Net scki_c: 36 loads, 36 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
       Net bclk_c: 24 loads, 24 rising, 0 falling (Driver: Pin
-     nowitllwork.prescaler_19_26__i2/Q)
-   Number of Clock Enables:  5
+     nowitllwork.prescaler_24_36__i2/Q)
+      Net sck_c: 41 loads, 39 rising, 2 falling (Driver: Port sck)
+   Number of Clock Enables:  6
       Net VCC_net: 1 loads, 0 SLICEs
-      Net coretest.done_c_N_65: 8 loads, 8 SLICEs
-      Pin load: 8 loads, 8 SLICEs (Net: load_c)
       Net nowitllwork.bclk_c_enable_1: 24 loads, 23 SLICEs
-      Net nowitllwork.n114: 8 loads, 8 SLICEs
+      Net nowitllwork.n346: 11 loads, 11 SLICEs
+      Net coretest.done_c_N_215: 8 loads, 8 SLICEs
+      Pin load: 8 loads, 8 SLICEs (Net: load_c)
+      Net getsignal.n348: 3 loads, 3 SLICEs
    Number of LSRs:  1
-      Net nowitllwork.n116: 13 loads, 13 SLICEs
+      Net n350: 19 loads, 19 SLICEs
    Top 10 highest fanout non-clock nets:
       Net nowitllwork.bclk_c_enable_1: 24 loads
-      Net nowitllwork.n116: 13 loads
+      Net n350: 19 loads
+      Net nowitllwork.n346: 11 loads
       Net load_c: 10 loads
-      Net coretest.done_c_N_65: 8 loads
+      Net coretest.done_c_N_215: 8 loads
       Net eqspi1.wasdone: 8 loads
-      Net nowitllwork.n114: 8 loads
+      Net bit_state[1]: 6 loads
+      Net bit_state[2]: 6 loads
+      Net lrck_c: 4 loads
       Net nowitllwork.bit_state[0]: 4 loads
-      Net nowitllwork.bit_state[1]: 4 loads
-      Net nowitllwork.bit_state[2]: 4 loads
-      Net nowitllwork.bit_state[3]: 4 loads
 
-   Number of warnings:  28
+   Number of warnings:  8
    Number of criticals: 0
    Number of errors:    0
 
@@ -124,72 +125,22 @@ WARNING &lt;1026001&gt; - map:
      C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (2) : No
      port matched &apos;leftMsb6&apos;.
 WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (10) : No
-     port matched &apos;leftMsb2&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (11) : No
-     port matched &apos;leftMsb&apos;.
-WARNING &lt;1026001&gt; - map:
      C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (12) : No
      port matched &apos;testSig&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (15) : No
-     port matched &apos;leftMsb3&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (16) : No
-     port matched &apos;leftMsb4&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (17) : No
-     port matched &apos;leftMsb5&apos;.
 WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb6&apos;.
 WARNING &lt;1026001&gt; - map:
      C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (2) :
      Can&apos;t resolve object &apos;leftMsb6&apos; in constraint &apos;ldc_set_location -site {20}
      [get_ports leftMsb6]&apos;.
-WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb2&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (10) :
-     Can&apos;t resolve object &apos;leftMsb2&apos; in constraint &apos;ldc_set_location -site {46}
-     [get_ports leftMsb2]&apos;.
-WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (11) :
-     Can&apos;t resolve object &apos;leftMsb&apos; in constraint &apos;ldc_set_location -site {45}
-     [get_ports leftMsb]&apos;.
 WARNING &lt;1027013&gt; - map: No port matched &apos;testSig&apos;.
 WARNING &lt;1026001&gt; - map:
      C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (12) :
      Can&apos;t resolve object &apos;testSig&apos; in constraint &apos;ldc_set_location -site {11}
      [get_ports testSig]&apos;.
-WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb3&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (15) :
-     Can&apos;t resolve object &apos;leftMsb3&apos; in constraint &apos;ldc_set_location -site {3}
-     [get_ports leftMsb3]&apos;.
-WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb4&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (16) :
-     Can&apos;t resolve object &apos;leftMsb4&apos; in constraint &apos;ldc_set_location -site {44}
-     [get_ports leftMsb4]&apos;.
-WARNING &lt;1027013&gt; - map: No port matched &apos;leftMsb5&apos;.
-WARNING &lt;1026001&gt; - map:
-     C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc (17) :
-     Can&apos;t resolve object &apos;leftMsb5&apos; in constraint &apos;ldc_set_location -site {9}
-     [get_ports leftMsb5]&apos;.
 WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {20}
      [get_ports leftMsb6]&apos;.
-WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {46}
-     [get_ports leftMsb2]&apos;.
-WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {45}
-     [get_ports leftMsb]&apos;.
 WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {11}
      [get_ports testSig]&apos;.
-WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {3}
-     [get_ports leftMsb3]&apos;.
-WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {44}
-     [get_ports leftMsb4]&apos;.
-WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location -site {9}
-     [get_ports leftMsb5]&apos;.
 
 <A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
 
@@ -197,25 +148,35 @@ WARNING &lt;1011001&gt; - map: Remove invalid constraint &apos;ldc_set_location 
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| nreset              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | bclk                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| lrck                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| scki                | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sdo                 | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | done                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| nreset              | INPUT     |           |       |       |           |
+| sigwin2             | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| din                 | INPUT     |           | I     |       |           |
+| sigwin3             | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| sck                 | INPUT     |           |       |       |           |
+| signal_en           | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| lrck                | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| load                | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sdi                 | INPUT     |           | I     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| load                | INPUT     |           |       |       |           |
+| sck                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| din                 | INPUT     |           | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sigwin1             | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sigwin0             | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdo                 | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| scki                | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
@@ -236,30 +197,25 @@ OSC 1:                                 Pin/Node Value
 
 Instance Name: hf_osc
          Type: HFOSC
-Instance Name: eqspi1/eqVals__i1
-         Type: IOLOGIC
 Instance Name: nowitllwork/lsreg_i0_i0
+         Type: IOLOGIC
+Instance Name: eqspi1/eqVals__i1
          Type: IOLOGIC
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 
-   Total number of constraints: 18
-   Total number of constraints dropped: 7
+   Total number of constraints: 19
+   Total number of constraints dropped: 2
    Dropped constraints are:
      ldc_set_location -site {20} [get_ports leftMsb6]
-     ldc_set_location -site {46} [get_ports leftMsb2]
-     ldc_set_location -site {45} [get_ports leftMsb]
      ldc_set_location -site {11} [get_ports testSig]
-     ldc_set_location -site {3} [get_ports leftMsb3]
-     ldc_set_location -site {44} [get_ports leftMsb4]
-     ldc_set_location -site {9} [get_ports leftMsb5]
 
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 64 MB
-Checksum -- map: f9de5a2ead5282a18b2bc5fbf9cc4c73ac9648e
+   Peak Memory Usage: 65 MB
+Checksum -- map: 55a27893376e59266608090394bd5067786ac011
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

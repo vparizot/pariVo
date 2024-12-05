@@ -4,43 +4,52 @@ Report for cell top
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       2.00        100.0
-                                  LUT4	        109        100.0
-                               LUTGATE	         99        100.0
+                                  LUT4	        119        100.0
+                               LUTGATE	        109        100.0
                                 LUTCCU	         10        100.0
                                  IOREG	          2        100.0
-                                 IOBUF	         10        100.0
-                                PFUREG	         96        100.0
+                                 IOBUF	         15        100.0
+                                PFUREG	        102        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                              eq1_core	          1         0.9
-                               eq1_spi	          1         7.3
-                                   i2s	          1        16.5
----------------------------------------------------
-Report for cell eq1_core
-   Instance path: top/coretest
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          1         0.9
-                               LUTGATE	          1         1.0
-                                PFUREG	         17        17.7
----------------------------------------------------
-Report for cell eq1_spi
-   Instance path: top/eqspi1
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                 IOLGC	       1.00        50.0
-                                  LUT4	          8         7.3
-                               LUTGATE	          8         8.1
-                                 IOREG	          1        50.0
-                                PFUREG	         40        41.7
+                              eq1_core	          1         0.8
+                               eq1_spi	          1         6.7
+                                   i2s	          1        16.0
+                          signalwindow	          1         1.7
 ---------------------------------------------------
 Report for cell i2s
    Instance path: top/nowitllwork
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        50.0
-                                  LUT4	         18        16.5
-                               LUTGATE	          8         8.1
+                                  LUT4	         19        16.0
+                               LUTGATE	          9         8.3
                                 LUTCCU	         10        100.0
                                  IOREG	          1        50.0
-                                PFUREG	         39        40.6
+                                PFUREG	         42        41.2
+---------------------------------------------------
+Report for cell eq1_spi
+   Instance path: top/eqspi1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        50.0
+                                  LUT4	          8         6.7
+                               LUTGATE	          8         7.3
+                                 IOREG	          1        50.0
+                                PFUREG	         40        39.2
+---------------------------------------------------
+Report for cell eq1_core
+   Instance path: top/coretest
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          1         0.8
+                               LUTGATE	          1         0.9
+                                PFUREG	         17        16.7
+---------------------------------------------------
+Report for cell signalwindow
+   Instance path: top/getsignal
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         1.7
+                               LUTGATE	          2         1.8
+                                PFUREG	          3         2.9

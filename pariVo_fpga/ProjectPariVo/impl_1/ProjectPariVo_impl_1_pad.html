@@ -48,7 +48,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Wed Dec  4 15:32:22 2024
+Wed Dec  4 22:05:17 2024
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------------------+
@@ -64,6 +64,11 @@ Pinout by Port Name:
 | scki      | 4/2      | LVCMOS33_OUT | PL10A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | sdi       | 10/1     | LVCMOS33_IN  | PL17A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | sdo       | 12/1     | LVCMOS33_OUT | PL19A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| signal_en | 9/1      | LVCMOS33_OUT | PL16A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| sigwin0   | 45/2     | LVCMOS33_OUT | PL8B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| sigwin1   | 46/2     | LVCMOS33_OUT | PL6A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| sigwin2   | 3/2      | LVCMOS33_OUT | PL10B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| sigwin3   | 44/2     | LVCMOS33_OUT | PL7B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 +-----------+----------+--------------+-------+------------------------------------------+
 
 Vccio by Bank:
@@ -80,10 +85,10 @@ Vccio by Bank:
 | Pin/Bank | Pin Info            | Constraint | Buffer Type  | Site  | Dual Function    |
 +----------+---------------------+------------+--------------+-------+------------------+
 | 2/2      |     unused, PULL:UP |            |              | PL9A  |                  |
-| 3/2      |     unused, PULL:UP |            |              | PL10B |                  |
+| 3/2      | sigwin2             | LOCATED    | LVCMOS33_OUT | PL10B |                  |
 | 4/2      | scki                | LOCATED    | LVCMOS33_OUT | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
-| 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
+| 9/1      | signal_en           | LOCATED    | LVCMOS33_OUT | PL16A |                  |
 | 10/1     | sdi                 | LOCATED    | LVCMOS33_IN  | PL17A |                  |
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
 | 12/1     | sdo                 | LOCATED    | LVCMOS33_OUT | PL19A |                  |
@@ -113,9 +118,9 @@ Vccio by Bank:
 | 41/0     |                     |            |              | PR7A  | RGB2             |
 | 42/0     |     unused, PULL:UP |            |              | PR9A  |                  |
 | 43/0     |     unused, PULL:UP |            |              | PR10A |                  |
-| 44/2     |     unused, PULL:UP |            |              | PL7B  | PCLKT2_0         |
-| 45/2     |     unused, PULL:UP |            |              | PL8B  |                  |
-| 46/2     |     unused, PULL:UP |            |              | PL6A  |                  |
+| 44/2     | sigwin3             | LOCATED    | LVCMOS33_OUT | PL7B  | PCLKT2_0         |
+| 45/2     | sigwin0             | LOCATED    | LVCMOS33_OUT | PL8B  |                  |
+| 46/2     | sigwin1             | LOCATED    | LVCMOS33_OUT | PL6A  |                  |
 | 47/2     |     unused, PULL:UP |            |              | PL7A  |                  |
 | 48/2     |     unused, PULL:UP |            |              | PL8A  |                  |
 | PL6B/2   |     unused, PULL:UP |            |              | PL6B  |                  |
@@ -150,6 +155,11 @@ ldc_set_location -site {21} [ get_ports {sck} ]
 ldc_set_location -site {4} [ get_ports {scki} ]
 ldc_set_location -site {10} [ get_ports {sdi} ]
 ldc_set_location -site {12} [ get_ports {sdo} ]
+ldc_set_location -site {9} [ get_ports {signal_en} ]
+ldc_set_location -site {45} [ get_ports {sigwin0} ]
+ldc_set_location -site {46} [ get_ports {sigwin1} ]
+ldc_set_location -site {3} [ get_ports {sigwin2} ]
+ldc_set_location -site {44} [ get_ports {sigwin3} ]
 
 
 
@@ -157,7 +167,7 @@ ldc_set_location -site {12} [ get_ports {sdo} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Wed Dec  4 15:32:22 2024
+Wed Dec  4 22:05:17 2024
 
 
 

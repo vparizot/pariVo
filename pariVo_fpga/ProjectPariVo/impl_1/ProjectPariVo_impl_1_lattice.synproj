@@ -36,11 +36,16 @@
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
+-sdc "ProjectPariVo_impl_1_cpe.ldc"
+-path "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/SB_MAC16"
 -path "C:/lscc/radiant/2024.1/ispfpga/ice40tp/data" "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/impl_1" "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo"
 -ver "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2024.1/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/vparizot/E155/pariVo/pariVo_fpga/hardware_test.sv"
+-sver "C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp.sv"
+"C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv"
+"C:/Users/vparizot/E155/pariVo/pariVo_fpga/hardware_test.sv"
 "C:/Users/vparizot/E155/pariVo/pariVo_fpga/pariVo_main.sv"
+-ver "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/SB_MAC16/rtl/SB_MAC16.v"
 
 
 -path "C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo"

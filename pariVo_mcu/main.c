@@ -35,8 +35,8 @@ void ms_delay(int ms){
 
   }
 }
-
-char leftAudio;
+ char leftAudioneg;
+ char leftAudio;
 
 //char leftAudio1, leftAudio2, leftAudio3, leftAudio4;
 //uint8_t leftAudio[24];
@@ -216,8 +216,13 @@ int main(void) {
   while(!digitalRead(PA6));
 
   digitalWrite(SPI_CE, 1); // Arificial CE high
-  leftAudio= spiSendReceive(0);  
+  leftAudioneg = spiSendReceive(0);  
+  
+
+  
   digitalWrite(SPI_CE, 0); // Arificial CE low
+  leftAudio = leftAudioneg + 128;
+
 
 
   //if (counter ==1){
