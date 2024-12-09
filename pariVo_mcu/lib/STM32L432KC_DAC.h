@@ -13,9 +13,7 @@
 
 
 void initDAC();
+void initDMA();
 
-void initDMA(); 
-
-void initDMATIM(TIM_TypeDef * TIMx);
 
 #endif

@@ -36,4 +36,5 @@ Output/Debug/Obj/Executable_1/main.o: \
  C:\Users\vparizot\E155\pariVo\pariVo_mcu\lib/STM32L432KC_USART.h \
  C:\Users\vparizot\E155\pariVo\pariVo_mcu\lib/STM32L432KC_TIM.h \
  C:\Users\vparizot\E155\pariVo\pariVo_mcu\lib/STM32L432KC_SPI.h \
+ C:\Users\vparizot\E155\pariVo\pariVo_mcu\lib/STM32L432KC_DAC.h \
  C:\Users\vparizot\E155\pariVo\pariVo_mcu\main.h

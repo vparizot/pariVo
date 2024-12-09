@@ -24,16 +24,13 @@ module top(input logic nreset,
 		   
            output logic sdo, // SPI!!
            input  logic load, // SPI!!
-		   //input  logic ce,
-		   //output logic ledTest,
-		   //output logic eqVals,
+
 		   output logic sigwin0,
 		   output logic sigwin1,
 		   output logic sigwin2,
 		   output logic sigwin3,
 		   output logic signal_en,
 		   output logic done  // SPI!!
-		   //output logic leftMsb, leftMsb2, leftMsb3, leftMsb4, leftMsb5, leftMsb6
 		  );
 		  
     // assign reset
@@ -41,7 +38,7 @@ module top(input logic nreset,
 	assign reset = ~(nreset);
 	
 	logic clk;
-    HSOSC #(.CLKHF_DIV ("0b01")) hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));	// set divider to 0b10 to get 12MHz clock
+    HSOSC #(.CLKHF_DIV ("0b01")) hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(clk));	// set divider to 0b01 get 24MHz clock
 	
 	logic [7:0] finalVal;
 	logic [31:0] eqVals;

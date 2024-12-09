@@ -19,6 +19,11 @@
             <Navigation>C:/Users/vparizot/E155/pariVo/pariVo_fpga/ProjectPariVo/pinz.pdc</Navigation>
             <Navigation>12</Navigation>
         </Message>
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
     </Task>
     <Task name="Map">
         <Message>
@@ -407,17 +412,17 @@
         <Message>
             <ID>35901372</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(58): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(55): </Dynamic>
             <Dynamic>done</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>58</Navigation>
+            <Navigation>55</Navigation>
         </Message>
         <Message>
             <ID>35901049</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(511): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(508): </Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>511</Navigation>
+            <Navigation>508</Navigation>
         </Message>
         <Message>
             <ID>35921014</ID>
@@ -452,42 +457,42 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(97): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(94): </Dynamic>
             <Dynamic>eq1_spi</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>97</Navigation>
+            <Navigation>94</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(131): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(128): </Dynamic>
             <Dynamic>eq1_core</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>131</Navigation>
+            <Navigation>128</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(169): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(166): </Dynamic>
             <Dynamic>i2s</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>169</Navigation>
+            <Navigation>166</Navigation>
         </Message>
         <Message>
             <ID>35931002</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(53): </Dynamic>
             <Dynamic>signalWindow</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>56</Navigation>
+            <Navigation>53</Navigation>
         </Message>
         <Message>
             <ID>35931038</ID>
             <Severity>16</Severity>
-            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(56): </Dynamic>
+            <Dynamic>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv(53): </Dynamic>
             <Dynamic>signalWindow_original_ramnet</Dynamic>
             <Navigation>c:/users/vparizot/e155/parivo/parivo_fpga/parivo_main.sv</Navigation>
-            <Navigation>56</Navigation>
+            <Navigation>53</Navigation>
         </Message>
         <Message>
             <ID>35002028</ID>

@@ -21,8 +21,4 @@
 #define printTIM TIM2
 
 
-
-// SPI Communication Pins
-//#define FPGA_RESET PA11
-
 #endif

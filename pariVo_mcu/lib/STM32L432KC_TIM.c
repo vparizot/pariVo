@@ -24,3 +24,11 @@ void delay_millis(TIM_TypeDef * TIMx, uint32_t ms){
 
   while(!(TIMx->SR & 1)); // Wait for UIF to go high
 }
+
+void inittim7(){
+   RCC->APB1ENR1 |= (1 << 5);  // Enable Timer 7
+   TIM7->PSC = 9; //42;  // Prescaler = 99
+   TIM7->ARR = 9;  // Period =  35
+   TIM7->CR2 |= (2 << 4); // Update Event
+   TIM7->CR1 |= (1 << 0);  // Counter enable
+   }
