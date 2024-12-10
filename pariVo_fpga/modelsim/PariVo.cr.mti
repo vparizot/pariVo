@@ -19,21 +19,25 @@ Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oc
 Top level modules:
 	i2s_testbench
 
+} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/dsp_tb.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module dsp_tb
+-- Compiling module faketop_tb
+-- Compiling module signalwindow_tb
+-- Compiling module gain_tb
+
+Top level modules:
+	dsp_tb
+	faketop_tb
+	signalwindow_tb
+	gain_tb
+
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/adcClock.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/adcClock.sv
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
 -- Compiling module adcClock
 
 Top level modules:
 	adcClock
-
-} {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv {1 {vlog -work work -sv -stats=none C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/recursiveFilter.sv
-Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
--- Compiling module coeffs_sync
--- Compiling module get_tap
--- Compiling module new_all_taps
-
-Top level modules:
-	new_all_taps
 
 } {} {}} C:/Users/vparizot/E155/pariVo/pariVo_fpga/modelsim/i2s.sv {1 {vlog -work work -sv -stats=none {C:\Users\vparizot\E155\pariVo\pariVo_fpga\modelsim\i2s.sv}
 Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021

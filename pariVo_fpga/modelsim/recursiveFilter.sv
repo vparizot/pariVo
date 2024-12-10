@@ -24,10 +24,8 @@ module get_tap(input logic clk,
             logic [15:0] currentAddr;
             logic [15:0] tempCoeff;
 
-            assign baseAddr = (filterNum << 2);
-            assign currentAddr =  baseAddr + (tapnum);
-            // assign baseAddr = (filterNum << 4) << 3; // baseAddress = size of each tap (16 bits) * number of taps (8 taps) * filter #
-            // assign  currentAddr = baseAddr + (tapnum << 4); // baseAddress + currentTap# * size of tap (16 bit)
+            assign baseAddr = (filterNum << 2); // baseAddress = size of each tap (16 bits) * number of taps (4 taps) * filter #
+            assign currentAddr =  baseAddr + (tapnum); // baseAddress + currentTap#
             coeffs_sync gettap(currentAddr, clk, tempCoeff);
 
             assign tapcoeff = tempCoeff;
@@ -55,8 +53,7 @@ module new_all_taps(input logic clk, reset,
         end
     
 
-    // get filter number 
-	
+    // get filter number based on eqVals
     always_comb 
             begin
             if      (eqVal < 20)  filterNum = 4'h0;
@@ -68,6 +65,5 @@ module new_all_taps(input logic clk, reset,
     get_tap gettaps(clk, filterNum, tapnum, tapcoeff);
     assign tapnum = counter;
     assign outputTapnum = counter;
-	//assign filterNum = 4'h0;
    
 endmodule

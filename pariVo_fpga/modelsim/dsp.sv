@@ -7,7 +7,8 @@ module signalwindow (input logic clk, en, reset,
     logic [15:0] shortSignal;
     assign shortSignal = signal[23:8]; 
     logic [15:0] tempsignalWindow [0:3];
-
+	
+	// creates a signal window of past 10 inputs to be used for FIR filtering 
     always_ff @(posedge clk)
       if (reset) begin
             signalWindow[9] <= 0;
@@ -61,7 +62,7 @@ module dsp(input logic clk_i, clk_en_i, rst_i,
     logic [15:0] data_a_i;
     logic [15:0] data_b_i;
     
-
+	// sets inputs of MAC to be the tap and its corresponding signal
     always_ff @(posedge clk_i) begin  
        if(rst_i) begin
        data_a_i <= 0;
@@ -78,7 +79,8 @@ module dsp(input logic clk_i, clk_en_i, rst_i,
         else done = 1;
    
     end
-
+	
+	// utilizes on-board MAC block 
     SB_MAC16 realmac(.clk_i(clk_i), .clk_en_i(clk_en_i), .rst_i(rst_i), .data_a_i(data_a_i), .data_b_i(data_b_i), .result_o(result_o));
 
    
@@ -92,10 +94,11 @@ module gainred(input logic clk, reset,
 
     logic [32:0] tempResult;
     logic[3:0] gain;
-
+	
+	// hard coded gain value
     assign gain = 4'h0;
 
-
+	// divides final result from MAC by gain of filters
     always_ff @(posedge clk) begin
         if(reset) begin 
             tempResult <= 0;
@@ -121,6 +124,8 @@ module faketop(input logic clk, reset, rst_i,
                 input logic [7:0] eqVal,
                 output logic [15:0] finalVal,
                 output logic done);
+
+// top module for only digital filtering
 
 logic [15:0] tapcoeff;
 logic [7:0] tapnum;

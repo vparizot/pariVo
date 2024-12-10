@@ -1,22 +1,51 @@
-module i2spcm(input logic      clk,
-           input logic         reset,
-		   input logic         load,
-           input logic         din, //  PCM1808 DOUT,         PB6
-           output logic        bck, //  bit clock,            PA7
-           output logic        lrck, // left/right clk,       PA6
-           output logic        scki, // PCM1808 system clock, PA5
-           output logic [23:0] left, 
-           output logic [23:0] right,
-		   //output logic done);
+// Victoria Parizot & Audrey Vo
+// vparizot@hmc.edu & avo@g.hmc.edu
+// 10/31/2024
+// I2S Communication & SPI Handler
 
-   /////////////////// clock ////////////////////////////////////
+
+module eq1_core(input logic clk, 
+			input logic [7:0] left,
+			//input logic [7:0] right,
+			input  logic         load,
+            input  logic [31:0] eqVals, 
+            output logic         done, 
+            output logic [7:0] finalVal);
+			
+//logic [10:0] counter; 
+logic [7:0] leftTemp;
+//logic [7:0] rightTemp;
+always_ff @(posedge clk) begin
+	if (load) begin
+		done <= 0;
+		//counter <= 0;
+		leftTemp <= left;
+		//rightTemp <= right;
+    end
+	else begin	
+			finalVal <= leftTemp;//, rightTemp};
+			done <= 1;
+		end
+end	
+endmodule 
+
+
+module i2s(input logic         clk,
+           input logic         reset,
+           input logic         din, //  PCM1808 DOUT,         PB6_G12
+           output logic        bck, //  bit clock,            PA7_J2
+           output logic        lrck, // left/right clk,       PA6_J1
+           output logic        scki, // PCM1808 system clock, PA5_H4
+           output logic [23:0] left, 
+           output logic [23:0] right);
+		  
   
-   //   Fs = 46.875 KHzk 
+   //   Fs = 92KkHz
    logic [8:0]                 prescaler; // 9-bit prescaler
-   assign scki = clk;          // 256 * Fs = 12 MHz
-   assign bck  = prescaler[1]; // 64  * Fs = 3 MHz = 12 MHz / 4
-   assign lrck = prescaler[7]; // 1   * Fs = 12 Mhz / 256
-	
+   assign scki = clk;          // 256 * Fs = 24 Mhz
+   assign bck  = prescaler[1]; // 64  * Fs
+   assign lrck = prescaler[7]; // 1   * Fs 
+
    always_ff @(posedge clk)
      begin
         if (reset)
@@ -28,9 +57,6 @@ module i2spcm(input logic      clk,
 
    // left and right shift registers
    logic [23:0]                lsreg, rsreg;
-   logic [23:0]                lsreg2, rsreg2;
-   
-   logic lselec, rselec;
 
    // samples the prescaler to figure out what bit should currently be sampled.
    // sampling occurs on bit 1 and bit 24, NOT bit 0!
@@ -47,40 +73,14 @@ module i2spcm(input logic      clk,
      begin
         if (!lrck && shift_en)     // left
           begin
-				 if(lselec) begin
-				 lsreg <= {lsreg[22:0], din};
-				 rsreg <= rsreg;
-				 lsreg2 <= lsreg2;
-				 rsreg2 <= rsreg2;
-			 end
-				 else begin
-				 lsreg2 <= {lsreg2[22:0], din};
-				 rsreg2 <= rsreg2;
-				 lsreg <= lsreg;
-				 rsreg <= rsreg;
-				 end
-			 end
-
+             lsreg <= {lsreg[22:0], din};
+             rsreg <= rsreg;
+          end
         else if (lrck && shift_en) // right
-
-			 if(rselec) begin 
+          begin
              rsreg <= {rsreg[22:0], din};
              lsreg <= lsreg;
-			 lsreg2 <= lsreg2;
-			 rsreg2 <= rsreg2;
           end
-			 else begin
-			 rsreg2 <= {rsreg2[22:0], din};
-             lsreg <= lsreg;
-			 lsreg2 <= lsreg2;
-			 rsreg <= rsreg;
-		  end
-		  else begin
-			  rsreg <= 24'd0;
-			  lsreg <= 24'd0;
-			  rsreg2 <= 24'd0;
-			  lsreg2 <= 24'd0;
-			end
      end // shift register operation 
 
    // load shift regs into output regs.
@@ -88,125 +88,28 @@ module i2spcm(input logic      clk,
    // this way, left and right will always contain a valid sample.
    logic newsample;
    assign newsample = (bit_state == 25 && lrck && prescaler[1:0] == 0); // once every cycle
-   assign done = (bit_state == 26 && lrck && prescaler[1:0] == 0); // once we can sample it!
-   logic counter;
-   
+   //assign newsample_valid = (bit_state >= 26 && lrck && prescaler[1:0] == 0); // once we can sample it!
    always_ff @(posedge clk)
      begin
-        if (reset|load)
-          begin  
+        if (reset)
+          begin
              left <= 0;
              right <= 0;
 			 
           end
         else if (newsample)
-          begin
-			 if(lselec) left <= lsreg2;
-		     else left <= lsreg;
-             if(rselec) right <= rsreg2;
-		     else right <= rsreg;
+          begin // if neg, take twos complement
+             left <= lsreg;
+             right <= rsreg;
+			 
           end
+	
         else
           begin
              left <= left;
              right <= right;
           end
      end
-endmodule 
-/*
-module i2sOut( 
-    input   logic           clk, //clk
-    input   logic           reset,
-    output  logic           dout, // dout
-    // Parallel Data Input
-    input   logic [23 : 0]  left, //left
-    input   logic [23 : 0]  right //right
-    //input   logic           valid //valid?
-);
+   
+endmodule // i2s
 
-    // Main FSM
-    typedef enum logic [3:0]  {S0 = 0, S1 = 1, S2 = 2} statetype;
-    statetype state, nextstate;
-
-   //   Fs = 46.875 KHzk 
-   logic [8:0] prescaler; // 9-bit prescaler
-   logic bclk, ws;
-   assign bclk  = prescaler[1]; // 64  * Fs = 3 MHz = 12 MHz / 4
-   assign ws = prescaler[7]; // 1   * Fs = 12 Mhz / 256
-   logic valid;
-   always_ff @(posedge clk)
-     begin
-        if (reset) begin
-          prescaler <= 0;
-	        valid <= 1;
-        end else begin
-          prescaler <= prescaler + 9'd1;
-        end
-     end   
-
-
-
-
-    logic [4 : 0] bit_counter, nextbit_counter;
-    logic signed [23 : 0] shift_register_left;
-    logic signed [23 : 0] shift_register_right;
-    
-    always_ff @(posedge bclk) begin
-        if (reset) begin
-            state <= S0;
-            //bit_counter <= 0;
-        end 
-        state <= nextstate;
-        bit_counter = nextbit_counter;
-    end
-
-    always_comb 
-        case (state)
-            S0 : begin
-                nextbit_counter <= 0;
-                shift_register_left <= 0;
-                shift_register_right <= 0;
-                dout <= 0;
-                if (valid == 1) begin
-                    nextstate <= S1;
-                    shift_register_left <= left;
-                    shift_register_right <= right;
-                end
-            end
-
-            S1 : begin
-                dout <= shift_register_left[23];
-                nextbit_counter <= bit_counter + 1;
-                if (bit_counter == 23) begin
-                    nextstate <= S2;
-                    nextbit_counter <= 0;
-                end else begin
-                    shift_register_left <= {shift_register_left[22:0], 1'b0};
-                    nextstate <= state;
-                end
-            end
-
-            S2 : begin
-                dout <= shift_register_right[23];
-    
-                nextbit_counter <= bit_counter + 1;
-                if (bit_counter == 23) begin
-                    nextstate <= S0;
-                    nextbit_counter <= 0;
-                end else begin
-                    shift_register_right <= {shift_register_right[22:0], 1'b0};
-                    nextstate <= state;
-                end
-            end
-            default : begin
-                nextstate <= S0;
-                dout <= 0;
-                nextbit_counter <= 0;
-            end
-        endcase
-
-        // assign 
-    
-
-endmodule
-*/
