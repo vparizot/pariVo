@@ -140,47 +140,20 @@ int main(void) {
     uint16_t convertedVals[5] = {0, 0, 0, 0, 0};
     int i;
 
-/* EQ Value SPI init for FIR filter thresholds
-      // Write LOAD high
-  digitalWrite(PA9, 1);
-
-  convertedVals[0] = (uint16_t) 0x0012;
-  convertedVals[1] = (uint16_t) 0x0034;
-  convertedVals[2] = (uint16_t) 0x0056;
-  convertedVals[3] = (uint16_t) 0x0078;
-  convertedVals[4] = (uint16_t) 0x0099;
-  // Send the key
-  for(i = 0; i < 5; i++) {
-    digitalWrite(SPI_CE, 1); // Arificial CE high
-    spiSendReceive((char)convertedVals[i]);
-    digitalWrite(SPI_CE, 0); // Arificial CE low
-  }
-
-  while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
-  digitalWrite(PA9, 0); // Write LOAD low
-*/
-
   int counter = 0;
   while(1) {
 
   readADC(convertedVals); 
 
-  // debugging printF statements
-  //printf("1st channel: %d \n", convertedVals[0]);
-  //printf("2nd channel: %d \n", convertedVals[1]);
-  //printf("3rd channel: %d \n", convertedVals[2]);
-  //printf("4th channel: %d \n", convertedVals[3]);
+  
   printf("left: %d \n", leftAudio);
-  //printf("right: %d \n", rightAudio);
   
 
   // Write LOAD high
   digitalWrite(PA9, 1);
 
   for(i = 0; i < 4; i++) {
-    //digitalWrite(SPI_CE, 1); // Arificial CE high
     spiSendReceive((char)convertedVals[i]);
-    //digitalWrite(SPI_CE, 0); // Arificial CE low
   }
   while(SPI1->SR & SPI_SR_BSY); // Confirm all SPI transactions are completed
   digitalWrite(PA9, 0); // Write LOAD low
@@ -188,11 +161,8 @@ int main(void) {
 
  // Wait for DONE signal to be asserted by FPGA signifying that the data is ready to be read out.
   while(!digitalRead(PA6));
-
-  
   leftAudioneg = spiSendReceive(0); 
   leftAudio = leftAudioneg + 128; // shift to get signed to unsigned (DAC cannot send negative voltages)
- 
 }
 }
 
